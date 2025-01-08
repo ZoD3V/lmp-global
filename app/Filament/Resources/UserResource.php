@@ -8,6 +8,7 @@ use App\Filament\Resources\UserResource\RelationManagers;
 use App\Models\User;
 use Filament\Forms;
 use Filament\Forms\Components\Card;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Form;
 use Filament\Pages\Page;
 use Filament\Resources\Resource;
@@ -42,8 +43,12 @@ class UserResource extends Resource
                         ->password()
                         ->dehydrateStateUsing(fn($state) => Hash::make($state))
                         ->dehydrated(fn($state) => filled($state))
-                        ->required(fn (Page $livewire) => ($livewire instanceof CreateUser))
+                        ->required(fn(Page $livewire) => ($livewire instanceof CreateUser))
                         ->maxLength(255),
+                    Select::make('roles')
+                        ->multiple()
+                        ->relationship(titleAttribute: 'name')
+                        ->preload()
                 ])->columns(2)
             ]);
     }
@@ -97,4 +102,10 @@ class UserResource extends Resource
             'edit' => Pages\EditUser::route('/{record}/edit'),
         ];
     }
+
+    public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
+    }
+
 }
