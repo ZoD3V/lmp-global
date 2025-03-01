@@ -36,7 +36,10 @@ class AdminPanelProvider extends PanelProvider
                 'warning' => Color::Orange,
             ])
             ->font('Poppins')
-            ->favicon(asset('images/favicon.png'))
+            ->favicon(asset('images/logo_lmp.png'))
+            ->brandName('')
+            ->brandLogo(asset('images/logo_lmp.png'))
+            ->brandLogoHeight('3rem')
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
             ->pages([
