@@ -1,26 +1,21 @@
 <?php
 
-namespace App\Filament\Resources\RoleResource\Pages;
+namespace App\Filament\Resources\ProductResource\Pages;
 
-use App\Filament\Resources\RoleResource;
+use App\Filament\Resources\ProductResource;
 use Filament\Actions;
 use Filament\Notifications\Notification;
 use Filament\Resources\Pages\EditRecord;
 
-class EditRole extends EditRecord
+class EditProduct extends EditRecord
 {
-    protected static string $resource = RoleResource::class;
+    protected static string $resource = ProductResource::class;
 
     protected function getHeaderActions(): array
     {
         return [
             Actions\DeleteAction::make(),
         ];
-    }
-
-    protected function getCreatedNotificationTitle(): ?string
-    {
-        return 'Role updated.';
     }
 
     protected function getRedirectUrl(): string
@@ -32,7 +27,7 @@ class EditRole extends EditRecord
     {
         return Notification::make()
             ->success()
-            ->title('Role updated.')
-            ->body('The role has been updated successfully.');
+            ->title('Product updated.')
+            ->body('The product has been updated successfully.');
     }
 }

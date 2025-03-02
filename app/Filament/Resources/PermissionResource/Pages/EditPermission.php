@@ -4,6 +4,7 @@ namespace App\Filament\Resources\PermissionResource\Pages;
 
 use App\Filament\Resources\PermissionResource;
 use Filament\Actions;
+use Filament\Notifications\Notification;
 use Filament\Resources\Pages\EditRecord;
 
 class EditPermission extends EditRecord
@@ -17,15 +18,16 @@ class EditPermission extends EditRecord
         ];
     }
 
-    protected function getCreatedNotificationTitle(): ?string
+    protected function getSavedNotification(): ?Notification
     {
-        return 'Permission updated.';
+        return Notification::make()
+            ->success()
+            ->title('Permission updated.')
+            ->body('The permission has been updated successfully.');
     }
 
     protected function getRedirectUrl(): string
     {
         return $this->getResource()::getUrl('index');
     }
-
-
 }

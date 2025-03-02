@@ -9,15 +9,19 @@ class Product extends Model
     protected $fillable = [
         'name',
         'desc',
-        'key_char',
         'image',
         'brochure',
         'category_id',
     ];
 
-    public function service_products()
+    public function category()
     {
-        return $this->belongsTo(Category::class, 'category_id', 'id', 'name');
+        return $this->belongsTo(Category::class);
+    }
+
+    public function keyCharacters()
+    {
+        return $this->belongsToMany(KeyCharacter::class,'product_key_character');
     }
 
 }
