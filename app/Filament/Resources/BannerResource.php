@@ -32,7 +32,7 @@ class BannerResource extends Resource
                     ->required()
                     ->disk('public')
                     ->directory('banners')
-                    ->maxSize(1024),
+                    ->maxSize(4096),
             ]);
     }
 
