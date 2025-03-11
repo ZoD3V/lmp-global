@@ -38,13 +38,17 @@ html {
     animation: marquee 25s linear infinite;
 }
 
-.swiper-slide {
+.testimonials-swiper {
+    padding: 20px 0;
+}
+
+.testimonials-swiper .swiper-slide {
     height: auto;
 }
 
 /* Hide default Swiper navigation buttons */
-.swiper-button-next::after,
-.swiper-button-prev::after {
+.testimonials-swiper .swiper-button-next::after,
+.testimonials-swiper .swiper-button-prev::after {
     display: none;
 }
 
@@ -58,7 +62,6 @@ html {
     opacity: 0.5;
     cursor: not-allowed;
 }
-
 .col-xs-10 {
     width: 83.33333%;
 }

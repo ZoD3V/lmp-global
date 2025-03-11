@@ -34,7 +34,7 @@ const GroupSection = () => {
     return (
         <section
             id="about"
-            className="w-full bg-gray-50 py-16"
+            className="w-full py-16 my-12"
         >
             <div className="max-w-[1200px] mx-auto">
                 <motion.div

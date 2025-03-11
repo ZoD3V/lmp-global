@@ -20,7 +20,6 @@ const Hero = ({
                 backgroundImage: `url('/storage/${banner[0].image}')`,
             }}
         >
-            <div className="absolute inset-0 bg-black opacity-30"></div>
             <div className="max-w-[1200px] mx-auto h-full flex items-center justify-center xl:justify-start px-4 sm:px-6 xl:px-0">
                 <motion.div
                     variants={textVariant(0.3)}

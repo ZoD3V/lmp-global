@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../Components/Navbar";
-import Footer from "../components/footer";
+import Footer from "../components/Footer";
 import Hero from "../Components/Hero";
 import ProfileSection from "../Components/ProfileSection";
 import AboutGreeting from "../Components/AboutGreeting";
@@ -24,7 +24,6 @@ const About = ({ banner }) => {
                 <AboutGreeting />
                 <ProfileSection />
                 <ResearchDevelopmentSection />
-                <ProductSection />
                 <TimelineSection />
                 <Footer />
             </div>

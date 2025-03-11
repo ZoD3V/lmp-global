@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { fadeIn, textVariant } from "../utils/motion"; // Pastikan fungsi animasi ini sudah ada di utils/motion.js
+import { fadeIn, textVariant } from "../utils/motion";
 
 const TimelineSection = () => {
     const data = [
@@ -41,7 +41,7 @@ const TimelineSection = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="max-w-[1200px] mx-auto py-16"
+            className="max-w-[1200px] mx-auto py-16 my-12"
         >
             <motion.div
                 variants={fadeIn("up", 0.3)}

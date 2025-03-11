@@ -17,7 +17,7 @@ const ResearchDevelopmentSection = (props) => {
     ];
 
     return (
-        <section id="about" className="w-full py-16">
+        <section className="w-full py-16 my-12">
             <motion.div
                 variants={fadeIn("up", 0.2)}
                 initial="hidden"

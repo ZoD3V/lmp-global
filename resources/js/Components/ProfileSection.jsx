@@ -26,7 +26,7 @@ const ProfileSection = (props) => {
     ];
 
     return (
-        <section className="bg-gray-50 w-full">
+        <section className="w-full my-12">
             <motion.div
                 variants={fadeIn("up", 0.2)}
                 initial="hidden"

@@ -5,9 +5,9 @@ import CompanyLogo from "../Components/CompanyLogo";
 import PurposeSection from "../Components/PurposeSection";
 import FeaturesSection from "../Components/FeatureSection";
 import GroupSection from "../Components/GroupSection";
-import ServicesSection from "../Components/ServicesSection";
-import Footer from "../components/footer";
+import Footer from "../components/Footer";
 import CertificateSection from "../Components/CertificateSection";
+import CertificateIsoSection from "../Components/CertificateISOSection";
 
 const Home = ({ banner }) => {
     return (
@@ -30,7 +30,7 @@ const Home = ({ banner }) => {
                 <PurposeSection />
                 <FeaturesSection />
                 <GroupSection />
-                <ServicesSection />
+                <CertificateIsoSection />
                 <CertificateSection />
                 <Footer />
             </div>

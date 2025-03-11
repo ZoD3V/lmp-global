@@ -85,7 +85,7 @@ const Navbar = () => {
                         variants={fadeIn("left", 0.3)}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="hidden lg:block border-2 border-blue-600 text-blue-600 hover:text-white px-6 py-2 rounded-lg hover:bg-blue-700 text-sm font-medium transition-all hover:shadow-lg hover:shadow-blue-100"
+                        className="hidden lg:block border-[1px] font-bold border-blue-600 text-blue-600 hover:text-white px-6 py-2 rounded-lg hover:bg-blue-700 text-sm transition-all hover:shadow-lg hover:shadow-blue-100"
                     >
                         <a href="/sign-up">Sign up</a>
                     </motion.button>
@@ -93,7 +93,7 @@ const Navbar = () => {
                         variants={fadeIn("left", 0.3)}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="hidden lg:block bg-blue-600 text-white px-6 py-2.5 rounded-lg hover:bg-blue-700 text-sm font-medium transition-all hover:shadow-lg hover:shadow-blue-100"
+                        className="hidden lg:block bg-blue-600 font-bold text-white px-6 py-2.5 rounded-lg hover:bg-blue-700 text-sm transition-all hover:shadow-lg hover:shadow-blue-100"
                     >
                         <a href="/sign-in">Sign in</a>
                     </motion.button>

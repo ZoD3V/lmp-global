@@ -47,7 +47,7 @@ const ProductSection = () => {
     ];
 
     return (
-        <section className="bg-gray-100 py-16">
+        <section className="py-16 mb-12">
             <motion.div
                 variants={fadeIn("up", 0.2)}
                 initial="hidden"
@@ -65,7 +65,7 @@ const ProductSection = () => {
                         viewport={{ once: true }}
                         className="text-3xl font-bold mb-4"
                     >
-                        Our Expertise
+                        Our Product
                     </motion.h2>
                     <motion.p
                         variants={fadeIn("up", 0.4)}

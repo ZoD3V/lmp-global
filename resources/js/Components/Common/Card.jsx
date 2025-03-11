@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { HiArrowRight } from "react-icons/hi2";
 
 const Card = ({ item, index, fadeIn, textVariant }) => {
     return (
@@ -37,11 +38,14 @@ const Card = ({ item, index, fadeIn, textVariant }) => {
                 {item.description}
             </motion.p>
             <motion.a
-                variants={fadeIn("up", 0.6 * (index + 1))}
                 href={item.link}
-                className="text-indigo-600 font-medium hover:text-indigo-700 transition-colors"
+                variants={fadeIn("up", 0.6 * (index + 1))}
+                className="flex items-center gap-2"
             >
-                Learn More
+                <motion.p className="text-indigo-600 font-bold hover:text-indigo-700 transition-colors">
+                    See Details
+                </motion.p>
+                <HiArrowRight className="text-indigo-600 text-lg"/>
             </motion.a>
         </motion.div>
     );

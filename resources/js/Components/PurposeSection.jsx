@@ -18,7 +18,7 @@ const PurposeSection = () => {
     ];
 
     return (
-        <section id="about" className="w-full bg-gray-50 py-16 px-4 md:px-8">
+        <section id="about" className="w-full py-16 px-4 md:px-8 my-12">
             <div className="max-w-6xl mx-auto">
                 <motion.div
                     variants={fadeIn("right", 0.2)}
