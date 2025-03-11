@@ -1,14 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../Components/Navbar";
 import Footer from "../components/Footer";
 import Hero from "../Components/Hero";
 import ProfileSection from "../Components/ProfileSection";
 import AboutGreeting from "../Components/AboutGreeting";
 import ResearchDevelopmentSection from "../Components/ResearchDevelopmentSection";
-import ProductSection from "../Components/ProductSection";
 import TimelineSection from "../Components/TimelineSection";
 
-const About = ({ banner }) => {
+const About = ({ banner, timeline }) => {
     return (
         <main className="relative min-h-screen overflow-x-hidden">
             <div className="overflow-hidden">
@@ -24,7 +23,7 @@ const About = ({ banner }) => {
                 <AboutGreeting />
                 <ProfileSection />
                 <ResearchDevelopmentSection />
-                <TimelineSection />
+                <TimelineSection timeline={timeline} />
                 <Footer />
             </div>
         </main>

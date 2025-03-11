@@ -2,16 +2,15 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Banner extends Model
+class LMPProfile extends Model
 {
-    use HasFactory;
+    protected $table = 'lmp_profiles';
 
     protected $fillable = [
-        'image',
         'name',
+        'image',
         'description',
     ];
 }

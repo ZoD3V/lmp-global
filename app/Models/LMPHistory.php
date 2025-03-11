@@ -5,13 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Banner extends Model
+class LMPHistory extends Model
 {
     use HasFactory;
+    protected $table = 'lmp_histories';
 
     protected $fillable = [
-        'image',
-        'name',
+        'title',
+        'date',
         'description',
     ];
 }

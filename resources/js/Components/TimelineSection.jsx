@@ -1,39 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
 
-const TimelineSection = () => {
-    const data = [
-        {
-            title: "Event Title",
-            date: "2018 October",
-            description: "MTE Established in Bekasi, West Java Indonesia.",
-        },
-        {
-            title: "Event Title",
-            date: "2019 October",
-            description:
-                "Established Fiber Optic Assembling Plant & Launch LMP Networks Fiber Optic Patchcord MPO Manageable. The 1st Manageable MPO that produce in Indonesia. Support By Global Manufactures.",
-        },
-        {
-            title: "Event Title",
-            date: "2021 October",
-            description:
-                "Launch LMP Ultra High Density Enclosure Solution for Hyperscale Data Center. Pointed Two Authorized Distributor.",
-        },
-        {
-            title: "Event Title",
-            date: "2022 October",
-            description:
-                "Launch LMP Network Cooper cable, Smart Patch Panel (Fiber & Cooper) & DCIM, AIO Container DC. Pointed Five Authorized Distributor.",
-        },
-        {
-            title: "Event Title",
-            date: "2023 October",
-            description:
-                "Launch LMP Cooling System, Ups, Cold Aisle Containment & Hot Aisle Containment.",
-        },
-    ];
+const TimelineSection = ({ timeline }) => {
 
     return (
         <motion.section
@@ -66,7 +35,7 @@ const TimelineSection = () => {
             <div className="row example-centered">
                 <div className="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
                     <ul className="timeline timeline-centered">
-                        {data.map((item, index) => (
+                        {timeline.map((item, index) => (
                             <motion.li
                                 key={index}
                                 className="timeline-item"

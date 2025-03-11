@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\CsrController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PatnersController;
 use App\Http\Controllers\ProductController;
@@ -18,3 +19,4 @@ Route::get('/product', [ProductController::class, 'index']);
 Route::get('/contact', [ContactController::class, 'index']);
 Route::get('/research-development', [ResearchDevelopmentController::class, 'index']);
 Route::get('/patner', [PatnersController::class, 'index']);
+Route::get('/csr', [CsrController::class, 'index']);

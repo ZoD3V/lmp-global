@@ -5,6 +5,9 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\BannerResource\Pages;
 use App\Models\Banner;
 use Filament\Forms;
+use Filament\Forms\Components\Card;
+use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Forms\Components\FileUpload;
@@ -27,12 +30,23 @@ class BannerResource extends Resource
     {
         return $form
             ->schema([
-                FileUpload::make('image')
-                    ->image()
-                    ->required()
-                    ->disk('public')
-                    ->directory('banners')
-                    ->maxSize(4096),
+                Card::make()->schema([
+                    TextInput::make('name')
+                        ->label('Banner Name')
+                        ->required()
+                        ->maxLength(255),
+                    Textarea::make('description')
+                        ->label('Description')
+                        ->required()
+                        ->maxLength(1000)
+                        ->rows(4),
+                    FileUpload::make('image')
+                        ->image()
+                        ->required()
+                        ->disk('public')
+                        ->directory('banners')
+                        ->maxSize(4096),
+                ])->columns(1)
             ]);
     }
 
@@ -40,15 +54,15 @@ class BannerResource extends Resource
     {
         return $table
             ->columns([
+                TextColumn::make('name')->sortable()->searchable()
+                ->limit(50),
+                TextColumn::make('description')->sortable()->searchable()
+                ->limit(50),
                 ImageColumn::make('image')
                     ->disk('public')
-                    ->height(height: 250)
                     ->extraAttributes(['class' => 'custom-image-spacing'])
                 ,
-                TextColumn::make('created_at')
-                    ->label('Created At')
-                    ->sortable()
-                    ->date(),
+
             ])
             ->filters([
             ])
