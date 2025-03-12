@@ -1,23 +1,15 @@
-import React from "react";
+import React, { use, useEffect } from "react";
 import Navbar from "../Components/Navbar";
 import Hero from "../Components/Hero";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
-import server from "../../../public/images/researchdevelopment.png";
 import Footer from "../components/Footer";
-import FeatureCard from "../Components/common/FeaturedCard";
+import CsrSection from "../Components/CsrSection";
 
-const CSR = ({ banner }) => {
-    const dataCSR = [
-        {
-            img: server,
-            title: "Kangen water machine donation",
-            description:
-                "Donation of Kangen Water machine for one of the Islamic boarding schools in Bogor, as a water filter for consumption of students and all residents of the Islamic boarding school. This donation aims to ensure the quality of water consumed by students is safer and healthier, so that it can support their health and well-being in carrying out daily activities.",
-            buttonLink: "/research-development",
-            showButton: false,
-        },
-    ];
+const CSR = ({ banner, csr }) => {
+    useEffect(() => {
+        console.log(csr);
+    }, []);
 
     return (
         <main className="relative min-h-screen overflow-x-hidden">
@@ -38,17 +30,48 @@ const CSR = ({ banner }) => {
                     viewport={{ once: true }}
                     className="max-w-[1200px] mx-auto py-16 px-4 sm:px-6 xl:px-0"
                 >
-                    {dataCSR.map((item, index) => (
-                        <FeatureCard
-                            key={index}
-                            item={item}
-                            index={index}
-                            fadeIn={fadeIn}
-                            textVariant={textVariant}
-                            showButton={item.showButton}
-                            buttonLink={item.buttonLink}
-                        />
-                    ))}
+                    <motion.h1
+                        variants={textVariant(0.2)}
+                        initial="hidden"
+                        whileInView="show"
+                        viewport={{ once: true }}
+                        className="text-3xl text-center mb-12 max-w-5xl mx-auto italic"
+                    >
+                        "{csr[0].headline}"
+                    </motion.h1>
+
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+                        <motion.div
+                            variants={fadeIn("up", 0.2)}
+                            initial="hidden"
+                            whileInView="show"
+                            viewport={{ once: true }}
+                            className="flex flex-col col-span-2 gap-4 max-w-2xl"
+                        >
+                            <motion.h2
+                                variants={textVariant(0.2)}
+                                initial="hidden"
+                                whileInView="show"
+                                viewport={{ once: true }}
+                                className="text-3xl font-bold"
+                            >
+                                {csr[0].title}
+                            </motion.h2>
+
+                            <div
+                                style={{
+                                    display: "block",
+                                    listStyleType: "auto",
+                                }}
+                                className="text-justify"
+                                dangerouslySetInnerHTML={{
+                                    __html: csr[0].content,
+                                }}
+                            />
+                        </motion.div>
+                    </div>
+
+                    <CsrSection />
                 </motion.section>
                 <Footer />
             </div>

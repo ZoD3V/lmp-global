@@ -48,7 +48,7 @@ const ServiceProductSection = ({ banner, title, description }) => {
             >
                 <motion.div
                     variants={fadeIn("right", 0.3)}
-                    className="flex flex-col lg:flex-row items-start lg:items-center lg:gap-24 justify-between col-span-2 mb-20"
+                    className="flex flex-col lg:flex-row items-start lg:items-center lg:gap-24 justify-between col-span-2 mb-12"
                 >
                     <div className="flex flex-col">
                         <motion.div

@@ -38,7 +38,7 @@ const CertificateIsoSection = () => {
                     viewport={{ once: true }}
                     initial="hidden"
                     whileInView="show"
-                    className="flex flex-col lg:flex-row items-start lg:gap-24 justify-between col-span-2 mb-14"
+                    className="flex flex-col lg:flex-row items-start lg:gap-24 justify-between col-span-2 mb-12"
                 >
                     <div className="flex flex-col">
                         <motion.h1
@@ -72,7 +72,7 @@ const CertificateIsoSection = () => {
                     viewport={{ once: true }}
                     initial="hidden"
                     whileInView="show"
-                    className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 justify-items-center mt-12 col-span-2"
+                    className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 justify-items-center col-span-2"
                 >
                     {services.map((service, index) => (
                         <motion.div
@@ -82,11 +82,11 @@ const CertificateIsoSection = () => {
                             initial="hidden"
                             whileInView="show"
                             whileHover={{ scale: 1.05 }}
-                            className="flex flex-col items-center hover:bg-white hover:border-[1px] hover:border-slate-200 hover:shadow-sm transition-all duration-200 justify-center text-center gap-2 lg:gap-4 w-[135px] lg:w-[175px] h-[135px] lg:h-[175px] bg-slate-50 rounded-full"
+                            className="flex flex-col items-center hover:bg-white hover:border-[1px] hover:border-slate-200 hover:shadow-sm transition-all duration-200 justify-center text-center gap-2 lg:gap-4 w-[135px] lg:w-[200px] h-[135px] lg:h-[200px] bg-slate-50 rounded-full"
                         >
                             <svg
                                 id="fi_4667049"
-                                enable-background="new 0 0 512 512"
+                                enableBackground="new 0 0 512 512"
                                 height="50"
                                 viewBox="0 0 512 512"
                                 width="50"

@@ -9,39 +9,46 @@ import { fadeIn, textVariant } from "../utils/motion";
 const cuztomize = [
     {
         id: 1,
-        name: "Edge Data Center",
+        title: "Edge Data Center",
+        sub_title: "Customize your edge computing with LMP global solutions",
         text: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast.",
     },
     {
         id: 2,
-        name: "Customize your edge computing with LMP global solutions",
+        title: "Edge Data Center",
+        sub_title: "Customize your edge computing with LMP global solutions",
         text: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.",
     },
     {
         id: 3,
-        name: "LMP micro data centers tailored for your needs",
+        title: "Micro Data Center",
+        sub_title: "LMP micro data centers tailored for your needs",
         text: "When she reached the first hills of the Mountains, she had a last view back on the of her hometown Bookmarksgrove, the headline.",
     },
     {
         id: 4,
-        name: "Leverage LMP global solutions for customized cable landing stations",
+        title: "Edge Data Center",
+        sub_title:
+            "Leverage LMP global solutions for customized cable landing stations",
         text: "The customer service has been exceptional. They went above and beyond to help me solve my problems and were always available when I needed them.",
     },
     {
         id: 5,
-        name: "Edge Data Center",
+        title: "Edge Data Center",
+        sub_title: "Edge Data Center",
         text: "I've been using their services for over a year now and couldn't be happier. The platform is intuitive and the features are exactly what I needed for my business.",
     },
     {
         id: 6,
-        name: "Edge Data Center",
+        title: "Edge Data Center",
+        sub_title: "Edge Data Center",
         text: "What impressed me most was how quickly they responded to my requests. The team is professional, knowledgeable, and truly cares about their customers' success.",
     },
 ];
 
 const CustomizeSection = () => {
     return (
-        <section className="py-16 px-4 sm:px-6 xl:px-0 max-w-7xl mx-auto container my-12">
+        <section className="py-16 px-4 sm:px-6 xl:px-0 max-w-[1200px] mx-auto container my-12">
             <motion.div
                 variants={fadeIn("up", 0.3)}
                 className="text-center mb-12"
@@ -84,21 +91,29 @@ const CustomizeSection = () => {
                     {cuztomize.map((testimonial, index) => (
                         <SwiperSlide
                             key={testimonial.id}
-                            className="h-full md:py-12 py-4"
+                            className="swiper-wrapper"
                         >
                             <motion.div
                                 variants={fadeIn("up", 0.3 * (index + 1))}
-                                className="text-center bg-white p-4 rounded-lg shadow-md h-full flex flex-col"
+                                className="text-start swiper-slide flex flex-col group bg-white border border-solid h-auto border-gray-300 rounded-lg p-5 xl:p-6 transition-all duration-500 w-full hover:border-indigo-600 slide-active:border-indigo-600"
                             >
-                                <motion.h3
-                                    variants={textVariant(0.3)}
-                                    className="font-semibold text-xl mb-3"
-                                >
-                                    {testimonial.name}
-                                </motion.h3>
+                                <div className="flex flex-col gap-1 h-24">
+                                    <motion.h2
+                                        variants={textVariant(0.3)}
+                                        className="font-semibold"
+                                    >
+                                        {testimonial.title}
+                                    </motion.h2>
+                                    <motion.h3
+                                        variants={textVariant(0.3)}
+                                        className="font-medium text-sm xl:text-base"
+                                    >
+                                        {testimonial.sub_title}
+                                    </motion.h3>
+                                </div>
                                 <motion.p
                                     variants={fadeIn("up", 0.6 * (index + 1))}
-                                    className="text-gray-600"
+                                    className="text-gray-600 h-24 text-sm xl:text-base"
                                 >
                                     {testimonial.text}
                                 </motion.p>
@@ -107,7 +122,6 @@ const CustomizeSection = () => {
                     ))}
                 </Swiper>
 
-                {/* Custom Navigation Buttons */}
                 <motion.div
                     variants={fadeIn("up", 0.7)}
                     className="flex justify-center gap-4 mt-8"
