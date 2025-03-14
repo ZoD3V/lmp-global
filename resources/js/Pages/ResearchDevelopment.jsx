@@ -1,10 +1,10 @@
 import React from "react";
-import Navbar from "../Components/Navbar";
-import Hero from "../Components/Hero";
+import Navbar from "../Components/Common/Navbar";
+import Hero from "../Components/Common/Hero";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
 import server from "../../../public/images/researchdevelopment.png";
-import Footer from "../components/Footer";
+import Footer from "../components/Common/Footer";
 
 const About = ({ banner }) => {
     return (
@@ -32,12 +32,17 @@ const About = ({ banner }) => {
                         className="flex flex-col md:flex-row items-center justify-between gap-8"
                     >
                         <motion.div
-                            variants={fadeIn("down", 0.5)}
+                            variants={fadeIn("down", 0.3)}
                             viewport={{ once: true }}
+                            initial="hidden"
+                            whileInView="show"
                             className={`md:w-1/2 flex flex-col items-center md:items-end justify-center order-2 md:order-1`}
                         >
                             <motion.p
-                                variants={fadeIn("up", 0.5)}
+                                variants={fadeIn("right", 0.3)}
+                                initial="hidden"
+                                whileInView="show"
+                                viewport={{ once: true }}
                                 className="text-slate-600 text-lg mb-4 text-center md:text-start"
                             >
                                 We thrive on change and have built a culture
@@ -46,7 +51,10 @@ const About = ({ banner }) => {
                                 our customers
                             </motion.p>
                             <motion.p
-                                variants={fadeIn("up", 0.5)}
+                                variants={fadeIn("right", 0.3)}
+                                initial="hidden"
+                                viewport={{ once: true }}
+                                whileInView="show"
                                 className="text-slate-600 text-lg mb-4 text-center md:text-start"
                             >
                                 Our R&D teams regularly share expertise across
@@ -57,12 +65,12 @@ const About = ({ banner }) => {
                         </motion.div>
 
                         <motion.div
-                            variants={fadeIn("down", 0.5)}
+                            variants={fadeIn("down", 0.3)}
                             viewport={{ once: true }}
                             className={`w-full md:max-w-[400px] h-[350px] mx-auto xl:mx-0 order-1 md:order-2`}
                         >
                             <motion.img
-                                variants={fadeIn("right", 0.3)}
+                                variants={fadeIn("left", 0.3)}
                                 viewport={{ once: true }}
                                 className="card-img h-full w-full object-cover"
                                 src={server}

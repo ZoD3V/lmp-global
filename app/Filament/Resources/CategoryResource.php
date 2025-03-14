@@ -28,6 +28,19 @@ class CategoryResource extends Resource
                     Forms\Components\TextInput::make('name')
                         ->required()
                         ->maxLength(255),
+
+                    Forms\Components\Select::make('parent_id')
+                        ->label('Parent Category')
+                        ->options(function (callable $get) {
+                            $categoryId = $get('id');
+                            return Category::whereNull('parent_id')
+                                ->where('id', '!=', $categoryId)
+                                ->pluck('name', 'id');
+                        })
+                        ->nullable()
+                        ->default(null)
+                        ->searchable()
+                        ->placeholder('Select Parent Category'),
                 ])
             ]);
     }
@@ -38,6 +51,8 @@ class CategoryResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
+                Tables\Columns\TextColumn::make('parent.name')->label('Parent Category')->sortable()->searchable(),
+
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -58,7 +73,8 @@ class CategoryResource extends Resource
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
                 ]),
-            ]);
+            ])
+            ->defaultSort('parent_id', 'asc');
     }
 
     public static function getRelations(): array

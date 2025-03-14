@@ -1,8 +1,8 @@
 import React from "react";
 import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { fadeIn, textVariant } from "../utils/motion";
-import logo_lmp from "../../../public/images/logo_lmp.png";
+import { fadeIn, textVariant } from "../../utils/motion";
+import logo_lmp from "../../../../public/images/logo_lmp.png";
 
 const Footer = () => {
     const footerLinks = {

@@ -12,10 +12,10 @@ const GroupSection = () => {
         {
             icon: <HiUserGroup className="w-8 h-8 text-indigo-600" />,
             title: "190",
-            description: "EMPLOYEES.",
+            description: "EMPLOYEES",
         },
         {
-            icon: <HiMiniChartPie className="w-8 h-8 text-amber-400" />,
+            icon: <HiMiniChartPie className="w-8 h-8 text-pink-600" />,
             title: "30-67%",
             description: "TKDN",
         },
@@ -25,7 +25,7 @@ const GroupSection = () => {
             description: "REVENUE",
         },
         {
-            icon: <HiMiniUsers className="w-8 h-8 text-cyan-400" />,
+            icon: <HiMiniUsers className="w-8 h-8 text-orange-400" />,
             title: "15M",
             description: "MAJOR CLIENTS",
         },

@@ -1,13 +1,13 @@
 import React from "react";
-import Navbar from "../Components/Navbar";
-import Hero from "../Components/Hero";
+import Navbar from "../Components/Common/Navbar";
+import Hero from "../Components/Common/Hero";
 import CompanyLogo from "../Components/CompanyLogo";
 import PurposeSection from "../Components/PurposeSection";
 import FeaturesSection from "../Components/FeatureSection";
 import GroupSection from "../Components/GroupSection";
-import Footer from "../components/Footer";
 import CertificateSection from "../Components/CertificateSection";
 import CertificateIsoSection from "../Components/CertificateISOSection";
+import Footer from "../Components/Common/Footer";
 
 const Home = ({ banner }) => {
     return (

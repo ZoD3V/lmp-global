@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
-import Navbar from "../Components/Navbar";
-import Footer from "../components/Footer";
-import Hero from "../Components/Hero";
+import Hero from "../Components/Common/Hero";
 import ProfileSection from "../Components/ProfileSection";
 import AboutGreeting from "../Components/AboutGreeting";
 import ResearchDevelopmentSection from "../Components/ResearchDevelopmentSection";
 import TimelineSection from "../Components/TimelineSection";
+import Navbar from "../Components/Common/Navbar";
+import Footer from "../Components/Common/Footer";
 
 const About = ({ banner, timeline }) => {
     return (

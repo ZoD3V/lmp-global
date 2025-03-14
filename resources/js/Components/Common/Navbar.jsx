@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
 import { motion } from "framer-motion";
-import { fadeIn } from "../utils/motion";
-import logo_lmp from "../../../public/images/logo_lmp.png";
+import { fadeIn } from "../../utils/motion";
+import logo_lmp from "../../../../public/images/logo_lmp.png";
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);

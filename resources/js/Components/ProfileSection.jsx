@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
 import logo_lmp from "../../../public/images/containment_lmp.png";
 
-const ProfileSection = (props) => {
+const ProfileSection = () => {
     const dataProfile = [
         {
             img: logo_lmp,

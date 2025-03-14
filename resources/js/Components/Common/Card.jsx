@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { HiArrowRight } from "react-icons/hi2";
 
-const Card = ({ item, index, fadeIn, textVariant }) => {
+const Card = ({ item, index, fadeIn, textVariant, showButton }) => {
     return (
         <motion.div
             key={index}
@@ -26,7 +26,7 @@ const Card = ({ item, index, fadeIn, textVariant }) => {
             <motion.h3
                 variants={textVariant(0.3)}
                 viewport={{ once: true }}
-                className="text-2xl font-bold"
+                className="text-2xl font-manrope font-semibold text-gray-900"
             >
                 {item.title}
             </motion.h3>
@@ -37,16 +37,18 @@ const Card = ({ item, index, fadeIn, textVariant }) => {
             >
                 {item.description}
             </motion.p>
-            <motion.a
-                href={item.link}
-                variants={fadeIn("up", 0.6 * (index + 1))}
-                className="flex items-center gap-2"
-            >
-                <motion.p className="text-indigo-600 font-bold hover:text-indigo-700 transition-colors">
-                    See Details
-                </motion.p>
-                <HiArrowRight className="text-indigo-600 text-lg"/>
-            </motion.a>
+            {showButton && (
+                <motion.a
+                    href={item.link}
+                    variants={fadeIn("up", 0.6 * (index + 1))}
+                    className="flex items-center gap-2"
+                >
+                    <motion.p className="text-indigo-600 font-bold hover:text-indigo-700 transition-colors">
+                        See Details
+                    </motion.p>
+                    <HiArrowRight className="text-indigo-600 text-lg" />
+                </motion.a>
+            )}
         </motion.div>
     );
 };

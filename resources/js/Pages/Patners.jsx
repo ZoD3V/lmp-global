@@ -1,19 +1,19 @@
 import React from "react";
-import Navbar from "../Components/Navbar";
-import Hero from "../Components/Hero";
+import Navbar from "../Components/Common/Navbar";
+import Hero from "../Components/Common/Hero";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
-import logo_ashrae from "../../../public/images/logo_ashrae.png";
-import logo_akacp from "../../../public/images/logo_akacp.png";
-import logo_carel from "../../../public/images/logo_carel.png";
-import logo_corning from "../../../public/images/logo_corning.png";
-import logo_ecfan from "../../../public/images/logo_ecfan.png";
-import logo_mitsubishi from "../../../public/images/logo_mitsubishi.png";
-import logo_panasonic from "../../../public/images/logo_panasonic.png";
-import logo_redots from "../../../public/images/logo_redots.png";
-import logo_sumitomo from "../../../public/images/logo_sumitomo.png";
-import logo_viavi from "../../../public/images/logo_viavi.png";
-import Footer from "../components/Footer";
+import logo_ashrae from "../../../public/images/logo/logo_ashrae.png";
+import logo_akacp from "../../../public/images/logo/logo_akacp.png";
+import logo_carel from "../../../public/images/logo/logo_carel.png";
+import logo_corning from "../../../public/images/logo/logo_corning.png";
+import logo_ecfan from "../../../public/images/logo/logo_ecfan.png";
+import logo_mitsubishi from "../../../public/images/logo/logo_mitsubishi.png";
+import logo_panasonic from "../../../public/images/logo/logo_panasonic.png";
+import logo_redots from "../../../public/images/logo/logo_redots.png";
+import logo_sumitomo from "../../../public/images/logo/logo_sumitomo.png";
+import logo_viavi from "../../../public/images/logo/logo_viavi.png";
+import Footer from "../components/Common/Footer";
 
 const About = ({ banner }) => {
     const patners = [
@@ -21,64 +21,46 @@ const About = ({ banner }) => {
             id: 2,
             title: "AKACP",
             image: logo_akacp,
-            description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec ultricies ultricies, nunc nisl ultricies nunc, nec ultricies nunc nisl nec ultricies.",
         },
         {
             id: 3,
             title: "CAREL",
             image: logo_carel,
-            description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec ultricies ultricies, nunc nisl ultricies nunc, nec ultricies nunc nisl",
         },
         {
             id: 4,
             title: "CORNING",
             image: logo_corning,
-            description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec ultricies ultricies, nunc nisl ultricies nunc, nec ultricies nunc nisl",
         },
         {
             id: 5,
             title: "ECFAN",
             image: logo_ecfan,
-            description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec ultricies ultricies, nunc nisl ultricies nunc, nec ultricies nunc nisl",
         },
         {
             id: 6,
             title: "MISTSUBISHI",
             image: logo_mitsubishi,
-            description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec ultricies ultricies, nunc nisl ultricies nunc, nec ultricies nunc nisl",
         },
         {
             id: 7,
             title: "PANASONIC",
             image: logo_panasonic,
-            description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec ultricies ultricies, nunc nisl ultricies nunc, nec ultricies nunc nisl",
         },
         {
             id: 8,
             title: "RED DOT",
             image: logo_redots,
-            description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec ultricies ultricies, nunc nisl ultricies nunc, nec ultricies nunc nisl",
         },
         {
             id: 9,
             title: "SUMITOMO",
             image: logo_sumitomo,
-            description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec ultricies ultricies, nunc nisl ultricies nunc, nec ultricies nunc nisl",
         },
         {
             id: 10,
             title: "VIAVI",
             image: logo_viavi,
-            description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec ultricies ultricies, nunc nisl ultricies nunc, nec ultricies nunc nisl",
         },
     ];
 
@@ -103,6 +85,7 @@ const About = ({ banner }) => {
                 >
                     <motion.div
                         variants={fadeIn("up", 0.3)}
+                        viewport={{ once: true }}
                         className="flex flex-col items-center justify-center gap-12"
                     >
                         <motion.div

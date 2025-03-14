@@ -363,3 +363,7 @@ html {
 .marker-outline .timeline-item:hover .timeline-marker:before {
     background: oklch(0.546 0.245 262.881); /* Primary color */
 }
+
+.custom-shadow-1 {
+    box-shadow: 0 5px 25px #051e4b0f;
+}
