@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Button from "./Button";
 
 const FeatureCard = ({
     item,
@@ -12,56 +13,55 @@ const FeatureCard = ({
     return (
         <motion.div
             key={index}
-            variants={fadeIn("up", 0.3)}
+            variants={fadeIn("down", 0.3)}
             viewport={{ once: true }}
-            className="flex flex-col md:flex-row items-center justify-between gap-8"
+            className="w-full justify-start items-center gap-8 grid md:grid-cols-2 grid-cols-1"
         >
-            {/* Image */}
             <motion.div
                 variants={fadeIn("down", 0.5)}
                 viewport={{ once: true }}
-                className={`w-full md:max-w-[400px] h-[350px] mx-auto lg:mx-0`}
+                className="md:mx-0 mx-autoh-full md:h-[350px] lg:h-[400px]"
             >
                 <motion.img
                     variants={fadeIn("right", 0.3)}
                     viewport={{ once: true }}
-                    className="card-img h-full w-full object-cover"
+                    className="card-img h-full object-cover"
                     src={item.img}
-                    alt="Logo"
+                    alt="Featured Image"
                 />
             </motion.div>
-
-            {/* Title and Image Swap */}
-            <motion.div
-                variants={fadeIn("down", 0.5)}
-                viewport={{ once: true }}
-                className={`md:w-1/2 flex flex-col items-center md:items-end justify-center`}
-            >
-                <motion.h2
-                    variants={textVariant(0.2)}
-                    className="text-3xl lg:text-4xl font-bold mb-4 text-center md:text-end"
-                >
-                    {item.title}
-                </motion.h2>
-                <motion.p
-                    variants={fadeIn("up", 0.5)}
-                    className="text-slate-600 text-lg mb-4 text-center md:text-end"
-                >
-                    {item.description}
-                </motion.p>
-
-                {/* Conditional Rendering of Button */}
-                {showButton && (
-                    <motion.button
-                        variants={fadeIn("left", 0.3)}
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="border-2 text-blue-600 border-blue-600 hover:text-white px-6 py-2.5 rounded-lg hover:bg-blue-700 text-sm font-medium transition-all hover:shadow-lg hover:shadow-blue-100"
+            <div className="w-full flex-col justify-start md:items-start items-center gap-10 inline-flex">
+                <div className="w-full flex-col justify-start md:items-start items-center gap-4 flex">
+                    <motion.h2
+                        variants={textVariant(0.2)}
+                        viewport={{ once: true }}
+                        className="text-gray-900 text-3xl md:text-4xl font-bold font-manrope leading-normal md:text-start text-center"
                     >
-                        <a href={buttonLink}>Read More</a>
-                    </motion.button>
+                        {item.title}
+                    </motion.h2>
+                    <motion.p
+                        variants={textVariant(0.2)}
+                        viewport={{ once: true }}
+                        className="text-gray-500 text-base font-normal leading-relaxed md:text-start text-center"
+                    >
+                        {item.description}
+                    </motion.p>
+                </div>
+
+                {showButton && (
+                    <motion.div
+                        variants={fadeIn("down", 0.5)}
+                        viewport={{ once: true }}
+                    >
+                        <Button
+                            buttonText="Read More"
+                            buttonLink={buttonLink}
+                            showArrow={true}
+                            outline={false}
+                        />
+                    </motion.div>
                 )}
-            </motion.div>
+            </div>
         </motion.div>
     );
 };

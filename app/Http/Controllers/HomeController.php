@@ -9,7 +9,10 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $banner = Banner::all();
+        $banner = Banner::whereHas('page', function ($query) {
+            $query->where('name', 'Home');
+        })->get();
+
         return Inertia::render('Home', [
             'banner' => $banner
         ]);

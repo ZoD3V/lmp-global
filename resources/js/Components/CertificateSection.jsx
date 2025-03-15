@@ -58,7 +58,7 @@ const CertificateSection = () => {
                     <motion.p
                         variants={fadeIn("up", 0.4)}
                         viewport={{ once: true }}
-                        className="text-gray-600"
+                        className="text-slate-600"
                     >
                         ANSI/TIA-942-B-2017{" "}
                         <span className="text-blue-600 font-bold">RATED-3</span>

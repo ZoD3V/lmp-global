@@ -113,7 +113,7 @@ const CustomizeSection = () => {
                                 </div>
                                 <motion.p
                                     variants={fadeIn("up", 0.6 * (index + 1))}
-                                    className="text-gray-600 h-24 text-sm xl:text-base"
+                                    className="text-slate-600 h-24 text-sm xl:text-base"
                                 >
                                     {testimonial.text}
                                 </motion.p>

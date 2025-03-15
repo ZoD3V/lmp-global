@@ -10,7 +10,7 @@ const ResearchDevelopmentSection = (props) => {
             img: server,
             title: "Research & Development",
             description:
-            "The multidisciplinary nature of our focused Philosophy Research Center has been the major strength of our research since we began our work in 2018.",
+                "The multidisciplinary nature of our focused Philosophy Research Center has been the major strength of our research since we began our work in 2018.",
             buttonLink: "/research-development",
             showButton: true,
         },

@@ -8,7 +8,7 @@ const Card = ({ item, index, fadeIn, textVariant, showButton }) => {
             key={index}
             variants={fadeIn("up", 0.3 * (index + 1))}
             viewport={{ once: true }}
-            className="flex flex-col items-start gap-4"
+            className="flex flex-col gap-4"
         >
             <motion.div
                 variants={fadeIn("down", 0.5)}
@@ -26,14 +26,14 @@ const Card = ({ item, index, fadeIn, textVariant, showButton }) => {
             <motion.h3
                 variants={textVariant(0.3)}
                 viewport={{ once: true }}
-                className="text-2xl font-manrope font-semibold text-gray-900"
+                className="text-2xl font-manrope font-semibold text-gray-900 text-center"
             >
                 {item.title}
             </motion.h3>
             <motion.p
                 variants={fadeIn("up", 0.6 * (index + 1))}
                 viewport={{ once: true }}
-                className="text-slate-600"
+                className="text-gray-500 text-base font-normal leading-relaxed text-center"
             >
                 {item.description}
             </motion.p>

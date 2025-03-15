@@ -6,6 +6,9 @@ use App\Filament\Resources\CategoryResource\Pages;
 use App\Models\Category;
 use Filament\Forms;
 use Filament\Forms\Components\Card;
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -25,11 +28,11 @@ class CategoryResource extends Resource
         return $form
             ->schema([
                 Card::make()->schema([
-                    Forms\Components\TextInput::make('name')
+                    TextInput::make('name')
                         ->required()
                         ->maxLength(255),
 
-                    Forms\Components\Select::make('parent_id')
+                    Select::make('parent_id')
                         ->label('Parent Category')
                         ->options(function (callable $get) {
                             $categoryId = $get('id');
@@ -41,7 +44,16 @@ class CategoryResource extends Resource
                         ->default(null)
                         ->searchable()
                         ->placeholder('Select Parent Category'),
-                ])
+                    FileUpload::make('image')
+                        ->image()
+                        ->required()
+                        ->disk('public')
+                        ->directory('products')
+                        ->maxSize(1024),
+                    Forms\Components\Textarea::make('desc')
+                        ->required(),
+
+                ])->columns(2),
             ]);
     }
 

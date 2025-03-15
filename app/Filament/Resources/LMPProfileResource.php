@@ -56,7 +56,6 @@ class LMPProfileResource extends Resource
                         ->required()
                         ->maxSize(1024)
                         ->directory('lmp_profiles')
-                        ->preserveFilenames(),
                 ])
             ]);
     }

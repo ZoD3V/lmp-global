@@ -8,7 +8,9 @@ use App\Models\Product;
 use Filament\Forms;
 use Filament\Forms\Components\Card;
 use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\MultiSelect;
 use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Textarea;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -35,20 +37,20 @@ class ProductResource extends Resource
                 Forms\Components\TextInput::make('name')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\Textarea::make('desc')
+                Textarea::make('desc')
                     ->required(),
-                Forms\Components\MultiSelect::make('keyCharacters')
+                MultiSelect::make('keyCharacters')
                     ->relationship('keyCharacters', 'name')
                     ->required()
                     ->preload(),
-                Forms\Components\Select::make('category_id')
+                Select::make('category_id')
                     ->relationship('category', 'name')
                     ->required(),
                 FileUpload::make('image')
                     ->image()
                     ->required()
                     ->disk('public')
-                    ->directory('image')
+                    ->directory('products')
                     ->maxSize(1024)
                 ,
                 FileUpload::make('brochure')

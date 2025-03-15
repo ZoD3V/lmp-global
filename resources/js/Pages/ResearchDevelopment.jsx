@@ -39,7 +39,7 @@ const About = ({ banner }) => {
                             className={`md:w-1/2 flex flex-col items-center md:items-end justify-center order-2 md:order-1`}
                         >
                             <motion.p
-                                variants={fadeIn("right", 0.3)}
+                                variants={textVariant(0.3)}
                                 initial="hidden"
                                 whileInView="show"
                                 viewport={{ once: true }}
@@ -51,7 +51,7 @@ const About = ({ banner }) => {
                                 our customers
                             </motion.p>
                             <motion.p
-                                variants={fadeIn("right", 0.3)}
+                                variants={textVariant(0.3)}
                                 initial="hidden"
                                 viewport={{ once: true }}
                                 whileInView="show"

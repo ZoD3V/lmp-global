@@ -3,6 +3,7 @@ import { HiMenu, HiX } from "react-icons/hi";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../utils/motion";
 import logo_lmp from "../../../../public/images/logo_lmp.png";
+import Button from "./Button";
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,7 +25,7 @@ const Navbar = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-sm z-50 border-b border-gray-100 shadow-sm"
+            className="fixed top-0 left-0 right-0 bg-white backdrop-blur-sm border-solid z-50 border-b border-gray-200"
         >
             <div className="max-w-[1200px] flex justify-between items-center container mx-auto px-4 sm:px-6 xl:px-0 md:h-20 h-16">
                 {/* Logo */}
@@ -53,7 +54,6 @@ const Navbar = () => {
                     )}
                 </motion.button>
 
-                {/* Navigation Links - Desktop */}
                 <motion.div
                     variants={fadeIn("down", 0.3)}
                     className="hidden lg:flex items-center gap-10"
@@ -78,25 +78,20 @@ const Navbar = () => {
 
                 {/* CTA Button */}
                 <motion.div
-                    variants={fadeIn("down", 0.3)}
+                    variants={fadeIn("left", 0.3)}
                     className="hidden lg:flex items-center gap-4"
                 >
-                    <motion.button
-                        variants={fadeIn("left", 0.3)}
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="hidden lg:block border-[1px] font-bold border-blue-600 text-blue-600 hover:text-white px-6 py-2 rounded-lg hover:bg-blue-700 text-sm transition-all hover:shadow-lg hover:shadow-blue-100"
-                    >
-                        <a href="/sign-up">Sign up</a>
-                    </motion.button>
-                    <motion.button
-                        variants={fadeIn("left", 0.3)}
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="hidden lg:block bg-blue-600 font-bold text-white px-6 py-2.5 rounded-lg hover:bg-blue-700 text-sm transition-all hover:shadow-lg hover:shadow-blue-100"
-                    >
-                        <a href="/sign-in">Sign in</a>
-                    </motion.button>
+                    <Button
+                        buttonText="Sign up"
+                        buttonLink="/sign-up"
+                        showArrow={false}
+                        outline={true}
+                    />
+                    <Button
+                        buttonText="Sign in"
+                        buttonLink="/sign-in"
+                        showArrow={false}
+                    />
                 </motion.div>
             </div>
 
@@ -131,14 +126,19 @@ const Navbar = () => {
                                 {link.label}
                             </motion.a>
                         ))}
-                        <motion.button
-                            variants={fadeIn("up", 0.4)}
-                            whileHover={{ scale: 1.02 }}
-                            whileTap={{ scale: 0.98 }}
-                            className="w-full bg-blue-600 text-white px-6 py-2.5 rounded-lg hover:bg-blue-700 text-sm font-medium transition-all hover:shadow-lg hover:shadow-blue-100"
-                        >
-                            Sign in
-                        </motion.button>
+                        <div className="flex flex-col gap-2 w-full">
+                            <Button
+                                buttonText="Sign In"
+                                buttonLink="/sign-in"
+                                showArrow={false}
+                            />
+                            <Button
+                                buttonText="Sign up"
+                                buttonLink="/sign-up"
+                                showArrow={false}
+                                outline={true}
+                            />
+                        </div>
                     </motion.div>
                 </motion.div>
             )}

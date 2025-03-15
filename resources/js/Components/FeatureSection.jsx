@@ -48,7 +48,7 @@ const FeaturesSection = () => {
                     <motion.p
                         variants={fadeIn("up", 0.4)}
                         viewport={{ once: true }}
-                        className="text-gray-600"
+                        className="text-slate-600"
                     >
                         When you resell besnik, you build trust and increase
                     </motion.p>

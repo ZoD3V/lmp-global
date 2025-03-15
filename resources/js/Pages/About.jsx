@@ -1,11 +1,12 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Hero from "../Components/Common/Hero";
 import ProfileSection from "../Components/ProfileSection";
 import AboutGreeting from "../Components/AboutGreeting";
 import ResearchDevelopmentSection from "../Components/ResearchDevelopmentSection";
 import TimelineSection from "../Components/TimelineSection";
 import Navbar from "../Components/Common/Navbar";
-import Footer from "../Components/Common/Footer";
+import Footer from "../components/Common/Footer";
+import ProductSection from "../Components/ProductSection";
 
 const About = ({ banner, timeline }) => {
     return (
@@ -23,6 +24,7 @@ const About = ({ banner, timeline }) => {
                 <AboutGreeting />
                 <ProfileSection />
                 <ResearchDevelopmentSection />
+                <ProductSection />
                 <TimelineSection timeline={timeline} />
                 <Footer />
             </div>

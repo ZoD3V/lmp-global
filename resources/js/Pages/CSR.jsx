@@ -1,4 +1,4 @@
-import React, { use, useEffect } from "react";
+import React from "react";
 import Navbar from "../Components/Common/Navbar";
 import Hero from "../Components/Common/Hero";
 import { motion } from "framer-motion";
@@ -71,7 +71,7 @@ const CSR = ({ banner, csr }) => {
                                 <motion.h2 className="text-xl font-medium">
                                     CSR VISION
                                 </motion.h2>
-                                <ul class="list-disc text-sm">
+                                <ul class="list-disc list-inside text-sm">
                                     <li>
                                         The realization of a harmonious
                                         relationship between companies and
@@ -88,7 +88,7 @@ const CSR = ({ banner, csr }) => {
                                 <motion.h2 className="text-xl font-medium">
                                     CSR MISSION
                                 </motion.h2>
-                                <ul class="list-disc text-sm">
+                                <ul class="list-disc list-inside text-sm">
                                     <li>
                                         Maintaining environmental sustainability
                                     </li>

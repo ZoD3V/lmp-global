@@ -3,6 +3,7 @@
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CsrController;
+use App\Http\Controllers\DesignCollaborationCenterController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PatnersController;
 use App\Http\Controllers\ProductController;
@@ -24,3 +25,4 @@ Route::get('/patner', [PatnersController::class, 'index']);
 Route::get('/csr', [CsrController::class, 'index']);
 Route::get('/services', [ServicesController::class, 'index']);
 Route::get('/support', [SupportController::class, 'index']);
+Route::get('/design-collaboration-center', [DesignCollaborationCenterController::class, 'index']);

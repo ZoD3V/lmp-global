@@ -1,74 +1,48 @@
 import React from "react";
+import logo_lmp from "../../../public/images/containment_lmp.png";
+import server from "../../../public/images/researchdevelopment.png";
+import { fadeIn, textVariant } from "../utils/motion";
+import MultiFeatureCard from "./Common/MultiFeaturedCard";
+import Heading from "./Common/Heading";
 
 const CentersSection = () => {
+    const dataCenters = [
+        {
+            img: server,
+            title: "Leading Data Center Infrastructure",
+            buttonLink: "/research-development",
+            description:
+                "LMP is a leading data center infrastructure manufacturer and edge data center operator in Indonesia. With a 46.99% Domestic Component Level (TKDN), LMP supports digital transformation and local content development. It plays a vital role in enhancing Indonesia's technological self-sufficiency.",
+        },
+        {
+            img: logo_lmp,
+            title: "Localized Data Center Solutions for Indonesia",
+            buttonLink: "/research-development",
+            description:
+                "By prioritizing local content development, LMP not only strengthens Indonesia's economy but also ensures that the data center infrastructure is aligned with the nation's unique requirements and challenges. With a deep understanding of Indonesia's diverse geography and population distribution, LMP  designs and deploys data center solutions that cater to both urban centers and remote areas, fostering inclusivity and bridging the digital divide.",
+        },
+    ];
+
     return (
-        <section class="py-16 bg-white max-w-[1200px] container mx-auto px-4 sm:px-6 xl:px-0">
-            <div class="container mx-auto text-center">
-                <h2 class="text-3xl font-semibold text-gray-900">About Us</h2>
-                <p class="mt-4 text-lg text-gray-500">
-                    As a Web Development Services, We are Committed to Building
-                    Custom Web Solutions that Drive Business Success.
-                </p>
-            </div>
+        <section className="py-16 bg-white max-w-[1200px] flex flex-col gap-10 container mx-auto px-4 sm:px-6 xl:px-0 my-12">
+            <Heading
+                title={"Our Centers"}
+                description={
+                    " As a Web Development Services, We are Committed to Building Custom Web Solutions that Drive Business Success."
+                }
+            />
 
-            <div class="mt-12 grid grid-cols-1 lg:grid-cols-2 md:gap-2 bg-slate-100 rounded-lg">
-                <div class="relative md:h-[400px]">
-                    <img
-                        class="w-full h-full object-cover object-center rounded-t-lg md:rounded-s-lg md:rounded-r-none"
-                        src="https://loremflickr.com/800/600"
-                        alt="Our Mission"
-                        width="800"
-                        height="500"
-                    />
-                </div>
-                <div class="flex flex-col justify-center p-7">
-                    <h3 class="text-2xl font-bold text-gray-900">
-                        Our Mission
-                    </h3>
-                    <p class="mt-4 text-base md:text-lg text-gray-500">
-                        Our training and development courses can advance skills
-                        and technical knowledge in both industry best practices
-                        and LMP products, to help realize the full potential of
-                        your IT infrastructure or facilities. Standard or
-                        specialized trainings can take place at LMP Learning or
-                        at your location upon request.
-                    </p>
-                    <a
-                        href="#"
-                        class="mt-6 text-indigo-600 hover:text-indigo-800"
-                    >
-                        Read More →
-                    </a>
-                </div>
-            </div>
-
-            <div class="mt-12 grid grid-cols-1 lg:grid-cols-2 md:gap-2 bg-slate-100 rounded-lg">
-                <div class="flex flex-col justify-center p-7 order-2 md:order-1">
-                    <h3 class="text-2xl font-bold text-gray-900">
-                        Our Mission
-                    </h3>
-                    <p class="mt-4 text-base md:text-lg text-gray-500">
-                        Our team can collaborate with your team to create
-                        effective and innovative design solutions that structure
-                        and optimize the design process for better results.
-                    </p>
-                    <a
-                        href="#"
-                        class="mt-6 text-indigo-600 hover:text-indigo-800"
-                    >
-                        Read More →
-                    </a>
-                </div>
-                <div class="relative order-1 md:order-2 md:h-[400px]">
-                    <img
-                        class="w-full h-full object-cover object-center rounded-t-lg md:rounded-r-lg md:rounded-l-none"
-                        src="https://loremflickr.com/800/600"
-                        alt="Our Values"
-                        width="800"
-                        height="600"
-                    />
-                </div>
-            </div>
+            {dataCenters.map((item, index) => (
+                <MultiFeatureCard
+                    key={index}
+                    item={item}
+                    index={index}
+                    fadeIn={fadeIn}
+                    textVariant={textVariant}
+                    showButton={true}
+                    buttonLink={item.buttonLink}
+                />
+            ))}
         </section>
     );
 };

@@ -2,23 +2,16 @@
 
 namespace App\Models;
 
-use App\Models\Page;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Banner extends Model
+class ProductFeature extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'image',
-        'name',
+        'title',
+        'subtitle',
         'description',
-        'page_id',
     ];
-
-    public function page()
-    {
-        return $this->belongsTo(Page::class);
-    }
 }

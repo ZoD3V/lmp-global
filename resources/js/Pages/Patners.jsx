@@ -96,7 +96,7 @@ const About = ({ banner }) => {
                             <motion.h2
                                 variants={textVariant(0.2)}
                                 viewport={{ once: true }}
-                                className="text-3xl font-bold mb-4"
+                                className="text-center text-gray-900 text-3xl font-bold font-manrope leading-normal"
                             >
                                 Member Of ASHRAE Since December 2023
                             </motion.h2>

@@ -6,6 +6,7 @@ import product1 from "../../../public/images/product1.png";
 import product2 from "../../../public/images/product2.jpeg";
 import product3 from "../../../public/images/product3.png";
 import Card from "./common/Card";
+import Heading from "./Common/Heading";
 
 const ProductSection = () => {
     const features = [
@@ -53,30 +54,14 @@ const ProductSection = () => {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true }}
-                className="max-w-[1200px] container mx-auto px-4 sm:px-6 xl:px-0"
+                className="max-w-[1200px] container mx-auto px-4 sm:px-6 xl:px-0 gap-10 flex flex-col"
             >
-                <motion.div
-                    variants={fadeIn("up", 0.3)}
-                    viewport={{ once: true }}
-                    className="text-center max-w-3xl mx-auto mb-12"
-                >
-                    <motion.h2
-                        variants={textVariant(0.2)}
-                        viewport={{ once: true }}
-                        className="text-3xl font-bold mb-4"
-                    >
-                        Our Product
-                    </motion.h2>
-                    <motion.p
-                        variants={fadeIn("up", 0.4)}
-                        viewport={{ once: true }}
-                        className="text-slate-600"
-                    >
-                        ivamus a ligula ut velit placerat egestas at id leo.
-                        Nulla ac volutpat nunc. Suspendisse ut magna porttitor,
-                        sollicitudin ligula at, molestie dolor.{" "}
-                    </motion.p>
-                </motion.div>
+                <Heading
+                    title={"Our Product"}
+                    description={
+                        "ivamus a ligula ut velit placerat egestas at id leo. Nulla ac volutpat nunc. Suspendisse ut magna porttitor, sollicitudin ligula at, molestie dolor."
+                    }
+                />
 
                 <motion.div
                     variants={fadeIn("up", 0.5)}

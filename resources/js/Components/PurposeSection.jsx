@@ -18,7 +18,7 @@ const PurposeSection = () => {
     ];
 
     return (
-        <section id="about" className="w-full py-16 px-4 md:px-8 my-12">
+        <section className="w-full py-16 px-4 md:px-8 my-12">
             <div className="max-w-6xl mx-auto">
                 <motion.div
                     variants={fadeIn("right", 0.2)}
@@ -79,7 +79,7 @@ const PurposeSection = () => {
                                     <motion.p
                                         variants={fadeIn("up", 0.4)}
                                         viewport={{ once: true }}
-                                        className="text-gray-600"
+                                        className="text-slate-600"
                                     >
                                         {feature.description}
                                     </motion.p>

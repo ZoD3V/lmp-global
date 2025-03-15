@@ -4,8 +4,10 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\BannerResource\Pages;
 use App\Models\Banner;
+use App\Models\Page;
 use Filament\Forms;
 use Filament\Forms\Components\Card;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Resources\Resource;
@@ -46,7 +48,11 @@ class BannerResource extends Resource
                         ->disk('public')
                         ->directory('banners')
                         ->maxSize(4096),
-                ])->columns(1)
+                    Select::make('page_id')
+                        ->label('Page')
+                        ->options(Page::all()->pluck('name', 'id'))
+                        ->required(),
+                ])->columns(2)
             ]);
     }
 
@@ -55,9 +61,11 @@ class BannerResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('name')->sortable()->searchable()
-                ->limit(50),
+                    ->limit(50),
+                Tables\Columns\TextColumn::make('page.name')->label('Page'),
+
                 TextColumn::make('description')->sortable()->searchable()
-                ->limit(50),
+                    ->limit(50),
                 ImageColumn::make('image')
                     ->disk('public')
                     ->extraAttributes(['class' => 'custom-image-spacing'])
