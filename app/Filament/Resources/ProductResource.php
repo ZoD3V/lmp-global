@@ -14,6 +14,7 @@ use Filament\Forms\Components\Textarea;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -41,10 +42,13 @@ class ProductResource extends Resource
                     ->required(),
                 MultiSelect::make('keyCharacters')
                     ->relationship('keyCharacters', 'name')
-                    ->required()
+                    ->default(null)
+                    ->nullable()
                     ->preload(),
                 Select::make('category_id')
                     ->relationship('category', 'name')
+                    ->searchable()
+                    ->preload()
                     ->required(),
                 FileUpload::make('image')
                     ->image()
@@ -67,14 +71,14 @@ class ProductResource extends Resource
     public static function table(Table $table): Table
     {
         return $table->columns([
-            Tables\Columns\TextColumn::make('name')
+            TextColumn::make('name')
                 ->searchable()
                 ->sortable(),
-            Tables\Columns\TextColumn::make('desc')
+            TextColumn::make('desc')
                 ->searchable()
                 ->limit(50),
-            Tables\Columns\TextColumn::make('category.name')->label('Category'),
-            Tables\Columns\TextColumn::make('keyCharacters.name')
+            TextColumn::make('category.name')->label('Category'),
+            TextColumn::make('keyCharacters.name')
                 ->label('Key Characters')
                 ->limit(45)
                 ->searchable()

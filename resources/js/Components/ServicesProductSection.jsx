@@ -39,7 +39,7 @@ const ServiceProductSection = ({ banner, title, description }) => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="max-w-[1200px] container mx-auto px-4 sm:px-6 xl:px-0 flex flex-col items-center justify-center py-16 my-12"
+            className="max-w-[1200px] container mx-auto px-4 sm:px-6 xl:px-0 flex flex-col items-center justify-center py-16"
         >
             <motion.div
                 variants={fadeIn("up", 0.3)}
@@ -59,14 +59,14 @@ const ServiceProductSection = ({ banner, title, description }) => {
                             Our Services
                         </motion.div>
                         <motion.h1
-                            variants={textVariant(0.5)}
+                            variants={textVariant(0.3)}
                             className="text-3xl md:text-4xl lg:text-5xl font-medium text-gray-900"
                         >
                             Efficient & Personalized Process
                         </motion.h1>
                     </div>
                     <motion.p
-                        variants={textVariant(0.5)}
+                        variants={fadeIn("down", 0.5)}
                         className="text-slate-600"
                     >
                         Design a financial operating system that works for your
@@ -76,7 +76,12 @@ const ServiceProductSection = ({ banner, title, description }) => {
 
                 <motion.div className="col-span-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
                     {dataServices.map((service, index) => (
-                        <motion.div key={index} className="flex flex-col gap-2">
+                        <motion.div
+                            variants={fadeIn("up", 0.3 * (index + 1))}
+                            viewport={{ once: true }}
+                            key={index}
+                            className="flex flex-col gap-2"
+                        >
                             <div className="mb-4">{service.icon}</div>
                             <motion.h2 className="font-bold text-xl">
                                 {service.title}

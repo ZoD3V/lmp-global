@@ -36,7 +36,7 @@ const CsrSection = (props) => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="mx-auto py-16 flex flex-col gap-8 w-full justify-center my-12"
+            className="mx-auto py-16 flex flex-col gap-8 w-full justify-center"
         >
             <div class="flex flex-col gap-10">
                 <Heading

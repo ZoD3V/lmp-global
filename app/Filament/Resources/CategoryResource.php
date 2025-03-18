@@ -8,6 +8,7 @@ use Filament\Forms;
 use Filament\Forms\Components\Card;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -44,14 +45,18 @@ class CategoryResource extends Resource
                         ->default(null)
                         ->searchable()
                         ->placeholder('Select Parent Category'),
+
+                    TextInput::make('link')
+                        ->nullable()
+                        ->default(null)
+                        ->maxLength(100),
+                    Textarea::make('desc')
+                        ->default(null),
                     FileUpload::make('image')
                         ->image()
-                        ->required()
                         ->disk('public')
                         ->directory('products')
                         ->maxSize(1024),
-                    Forms\Components\Textarea::make('desc')
-                        ->required(),
 
                 ])->columns(2),
             ]);

@@ -20,12 +20,12 @@ const FeatureCard = ({
             <motion.div
                 variants={fadeIn("down", 0.5)}
                 viewport={{ once: true }}
-                className="md:mx-0 mx-autoh-full md:h-[350px] lg:h-[400px]"
+                className="md:mx-0 mx-auto h-full md:h-[350px] lg:h-[400px]"
             >
                 <motion.img
                     variants={fadeIn("right", 0.3)}
                     viewport={{ once: true }}
-                    className="card-img h-full object-cover"
+                    className="card-img w-full h-full object-cover"
                     src={item.img}
                     alt="Featured Image"
                 />

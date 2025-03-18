@@ -2,7 +2,14 @@ import React from "react";
 import { motion } from "framer-motion";
 import { HiArrowRight } from "react-icons/hi2";
 
-const Card = ({ item, index, fadeIn, textVariant, showButton }) => {
+const Card = ({
+    item,
+    index,
+    fadeIn,
+    textVariant,
+    showButton,
+    useStorage = false,
+}) => {
     return (
         <motion.div
             key={index}
@@ -19,7 +26,7 @@ const Card = ({ item, index, fadeIn, textVariant, showButton }) => {
                     variants={fadeIn("right", 0.3)}
                     viewport={{ once: true }}
                     className="card-img w-full h-full object-cover object-center"
-                    src={item.img}
+                    src={useStorage ? `/storage/${item.image}` : item.image}
                     alt="Logo"
                 />
             </motion.div>
@@ -28,14 +35,14 @@ const Card = ({ item, index, fadeIn, textVariant, showButton }) => {
                 viewport={{ once: true }}
                 className="text-2xl font-manrope font-semibold text-gray-900 text-center"
             >
-                {item.title}
+                {item.name}
             </motion.h3>
             <motion.p
                 variants={fadeIn("up", 0.6 * (index + 1))}
                 viewport={{ once: true }}
                 className="text-gray-500 text-base font-normal leading-relaxed text-center"
             >
-                {item.description}
+                {item.desc}
             </motion.p>
             {showButton && (
                 <motion.a

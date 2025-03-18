@@ -18,14 +18,14 @@ const PurposeSection = () => {
     ];
 
     return (
-        <section className="w-full py-16 px-4 md:px-8 my-12">
+        <section className="w-full py-16 px-4 md:px-8">
             <div className="max-w-6xl mx-auto">
                 <motion.div
                     variants={fadeIn("right", 0.2)}
                     initial="hidden"
                     whileInView="show"
                     viewport={{ once: true }}
-                    className="grid md:grid-cols-3 grid-cols-1 gap-8"
+                    className="grid md:grid-cols-3 grid-cols-1 gap-12"
                 >
                     <motion.div variants={fadeIn("right", 0.3)}>
                         <motion.div

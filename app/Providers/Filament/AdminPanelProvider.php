@@ -37,7 +37,7 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->font('Poppins')
             ->favicon(asset('images/favicon_lmp.svg'))
-            ->brandName('')
+            ->brandName('LMP')
             ->brandLogo(asset('images/logo_lmp.png'))
             ->brandLogoHeight('2rem')
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')

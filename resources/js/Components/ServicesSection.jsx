@@ -10,7 +10,7 @@ const ServicesSection = (props) => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="mx-auto flex flex-col w-full justify-center py-16 mb-12"
+            className="mx-auto flex flex-col w-full justify-center py-16"
         >
             <Feature features={props.features} />
         </motion.section>

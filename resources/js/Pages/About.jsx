@@ -6,9 +6,9 @@ import ResearchDevelopmentSection from "../Components/ResearchDevelopmentSection
 import TimelineSection from "../Components/TimelineSection";
 import Navbar from "../Components/Common/Navbar";
 import Footer from "../components/Common/Footer";
-import ProductSection from "../Components/ProductSection";
+import AboutProductSection from "../Components/AboutProductSection";
 
-const About = ({ banner, timeline }) => {
+const About = ({ banner, timeline, product }) => {
     return (
         <main className="relative min-h-screen overflow-x-hidden">
             <div className="overflow-hidden">
@@ -24,7 +24,7 @@ const About = ({ banner, timeline }) => {
                 <AboutGreeting />
                 <ProfileSection />
                 <ResearchDevelopmentSection />
-                <ProductSection />
+                <AboutProductSection dataProduct={product} />
                 <TimelineSection timeline={timeline} />
                 <Footer />
             </div>

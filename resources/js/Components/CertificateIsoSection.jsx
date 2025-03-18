@@ -12,7 +12,7 @@ const CertificateIsoSection = () => {
     ];
 
     return (
-        <section className="py-16 max-w-[1200px] mx-auto px-4 sm:px-6 xl:px-0 grid grid-cols-1 lg:grid-cols-2 justify-items-center my-12">
+        <section className="py-16 max-w-[1200px] mx-auto px-4 sm:px-6 xl:px-0 grid grid-cols-1 lg:grid-cols-2 justify-items-center">
             <motion.div
                 variants={fadeIn("right", 0.3)}
                 viewport={{ once: true }}

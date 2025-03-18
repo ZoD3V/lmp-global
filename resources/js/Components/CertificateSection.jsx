@@ -25,7 +25,7 @@ const CertificateSection = () => {
     ];
 
     return (
-        <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 xl:px-0 my-12">
+        <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 xl:px-0">
             <motion.div
                 variants={fadeIn("up", 0.3)}
                 className="flex flex-row items-center justify-center lg:justify-between gap-12"

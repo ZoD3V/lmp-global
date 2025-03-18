@@ -33,6 +33,7 @@ const MultiFeatureCard = ({
                         variants={textVariant(0.2)}
                         initial="hidden"
                         whileInView="show"
+                        viewport={{ once: true }}
                         className={`text-gray-900 text-3xl md:text-4xl font-bold font-manrope leading-normal ${
                             index % 2 !== 0
                                 ? "text-center md:text-end"
@@ -45,6 +46,7 @@ const MultiFeatureCard = ({
                         variants={fadeIn("up", 0.5)}
                         initial="hidden"
                         whileInView="show"
+                        viewport={{ once: true }}
                         className={`text-gray-500 text-base font-normal leading-relaxed ${
                             index % 2 !== 0
                                 ? "text-center md:text-end"

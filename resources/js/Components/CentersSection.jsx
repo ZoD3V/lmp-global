@@ -24,7 +24,7 @@ const CentersSection = () => {
     ];
 
     return (
-        <section className="py-16 bg-white max-w-[1200px] flex flex-col gap-10 container mx-auto px-4 sm:px-6 xl:px-0 my-12">
+        <section className="py-16 bg-white max-w-[1200px] flex flex-col gap-12 container mx-auto px-4 sm:px-6 xl:px-0">
             <Heading
                 title={"Our Centers"}
                 description={

@@ -32,13 +32,13 @@ const GroupSection = () => {
     ];
 
     return (
-        <section className="max-w-[1200px] mx-auto py-16 my-12">
+        <section className="max-w-[1200px] mx-auto py-16">
             <motion.div
                 variants={fadeIn("right", 0.2)}
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true }}
-                className="grid md:grid-cols-3 grid-cols-1 gap-8 px-4 sm:px-6 xl:px-0"
+                className="grid md:grid-cols-3 grid-cols-1 gap-12 px-4 sm:px-6 xl:px-0"
             >
                 <motion.div variants={fadeIn("right", 0.3)}>
                     <motion.h1

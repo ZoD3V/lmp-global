@@ -1,0 +1,29 @@
+import React from "react";
+import Hero from "../Components/Common/Hero";
+import ProfileSection from "../Components/ProfileSection";
+import ResearchDevelopmentSection from "../Components/ResearchDevelopmentSection";
+import Navbar from "../Components/Common/Navbar";
+import Footer from "../components/Common/Footer";
+import NetworkProduct from "../Components/NetworkProduct";
+
+const Networks = ({ banner }) => {
+    return (
+        <main className="relative min-h-screen overflow-x-hidden">
+            <div className="overflow-hidden">
+                <Navbar />
+                <Hero
+                    banner={banner}
+                    title="LMP Networks"
+                    description="LMP Networks provide Ultra High Density Solution for connectivity in Data Center. Optimizing Space - Air flow and Efficiency in Cooling Systems & Energy consumption."
+                    showButton={false}
+                    buttonText="See All Product"
+                    buttonLink="/product"
+                />
+                <NetworkProduct />
+                <Footer />
+            </div>
+        </main>
+    );
+};
+
+export default Networks;

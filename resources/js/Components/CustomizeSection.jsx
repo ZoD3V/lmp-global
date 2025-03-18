@@ -5,6 +5,7 @@ import "swiper/css/navigation";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
+import Heading from "./Common/Heading";
 
 const cuztomize = [
     {
@@ -48,26 +49,21 @@ const cuztomize = [
 
 const CustomizeSection = () => {
     return (
-        <section className="py-16 px-4 sm:px-6 xl:px-0 max-w-[1200px] mx-auto container my-12">
-            <motion.div
-                variants={fadeIn("up", 0.3)}
-                className="text-center mb-12"
-            >
-                <motion.h2
-                    variants={textVariant(0.2)}
-                    className="text-3xl md:text-4xl font-bold mb-4"
-                >
-                    Customized for your needs
-                </motion.h2>
-                <motion.p
-                    variants={fadeIn("up", 0.4)}
-                    className="text-slate-600"
-                >
-                    Things that make it the best place to start trading
-                </motion.p>
-            </motion.div>
+        <section className="py-16 px-4 sm:px-6 xl:px-0 max-w-[1200px] mx-auto container flex flex-col gap-12">
+            <Heading
+                title={"Customized for your needs"}
+                description={
+                    "Things that make it the best place to start trading"
+                }
+            />
 
-            <motion.div variants={fadeIn("up", 0.5)} className="relative">
+            <motion.div
+                variants={fadeIn("up", 0.5)}
+                viewport={{ once: true }}
+                initial="hidden"
+                whileInView="show"
+                className="relative"
+            >
                 <Swiper
                     modules={[Navigation]}
                     spaceBetween={30}
@@ -95,11 +91,13 @@ const CustomizeSection = () => {
                         >
                             <motion.div
                                 variants={fadeIn("up", 0.3 * (index + 1))}
+                                viewport={{ once: true }}
                                 className="text-start swiper-slide flex flex-col group bg-white border border-solid h-auto border-gray-300 rounded-lg p-5 xl:p-6 transition-all duration-500 w-full hover:border-indigo-600 slide-active:border-indigo-600"
                             >
                                 <div className="flex flex-col gap-1 h-24">
                                     <motion.h2
                                         variants={textVariant(0.3)}
+                                        viewport={{ once: true }}
                                         className="font-semibold"
                                     >
                                         {testimonial.title}
@@ -112,7 +110,8 @@ const CustomizeSection = () => {
                                     </motion.h3>
                                 </div>
                                 <motion.p
-                                    variants={fadeIn("up", 0.6 * (index + 1))}
+                                    variants={fadeIn("up", 0.3 * (index + 1))}
+                                    viewport={{ once: true }}
                                     className="text-slate-600 h-24 text-sm xl:text-base"
                                 >
                                     {testimonial.text}
@@ -124,6 +123,7 @@ const CustomizeSection = () => {
 
                 <motion.div
                     variants={fadeIn("up", 0.7)}
+                    viewport={{ once: true }}
                     className="flex justify-center gap-4 mt-8"
                 >
                     <motion.button

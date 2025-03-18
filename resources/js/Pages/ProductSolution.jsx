@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../Components/Common/Navbar";
 import Footer from "../components/Common/Footer";
 import Hero from "../Components/Common/Hero";
@@ -7,7 +7,7 @@ import SolutionSection from "../Components/SolutionSection";
 import ServiceProductSection from "../Components/ServicesProductSection";
 import CustomizeSection from "../Components/CustomizeSection";
 
-const ProductSolution = ({ banner }) => {
+const ProductSolution = ({ banner, categories }) => {
     return (
         <main className="relative min-h-screen overflow-x-hidden">
             <div className="overflow-hidden">
@@ -20,7 +20,7 @@ const ProductSolution = ({ banner }) => {
                     buttonText="See All Product"
                     buttonLink="/product"
                 />
-                <ProductSection />
+                <ProductSection dataProduct={categories} />
                 <SolutionSection
                     banner={banner}
                     title="Data Center Solution"

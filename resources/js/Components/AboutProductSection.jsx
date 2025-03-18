@@ -2,9 +2,9 @@ import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
 import Heading from "./Common/Heading";
-import CardProduct from "./Common/CardProduct";
+import Card from "./common/Card";
 
-const ProductSection = ({ dataProduct }) => {
+const AboutProductSection = ({ dataProduct }) => {
     useEffect(() => {
         console.log(dataProduct);
     }, []);
@@ -30,13 +30,13 @@ const ProductSection = ({ dataProduct }) => {
                     className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
                 >
                     {dataProduct?.map((item, index) => (
-                        <CardProduct
+                        <Card
                             key={index}
                             item={item}
                             index={index}
                             fadeIn={fadeIn}
                             textVariant={textVariant}
-                            children={item.children}
+                            useStorage={true}
                         />
                     ))}
                 </motion.div>
@@ -45,4 +45,4 @@ const ProductSection = ({ dataProduct }) => {
     );
 };
 
-export default ProductSection;
+export default AboutProductSection;

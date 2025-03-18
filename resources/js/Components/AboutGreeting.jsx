@@ -10,7 +10,7 @@ const AboutGreeting = (props) => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="mx-auto py-16 flex flex-col gap-8 w-full justify-center mb-12"
+            className="mx-auto py-16 flex flex-col gap-12 w-full justify-center"
         >
             <motion.div
                 variants={fadeIn("up", 0.3)}

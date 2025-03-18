@@ -25,7 +25,7 @@ const FeaturesSection = () => {
     ];
 
     return (
-        <section className="w-full my-12">
+        <section className="w-full">
             <motion.div
                 variants={fadeIn("up", 0.2)}
                 initial="hidden"

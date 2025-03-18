@@ -38,22 +38,22 @@ const Services = ({ banner }) => {
 
     const features = [
         {
-            img: product3,
-            title: "Design Engineering",
-            description: "Learn about advanced design principles.",
+            image: product3,
+            name: "Design Engineering",
+            desc: "Learn about advanced design principles.",
             link: "/design-engineering",
         },
         {
-            img: product1,
-            title: "HVAC Services",
-            description:
+            image: product1,
+            name: "HVAC Services",
+            desc:
                 "Explore our HVAC installation and maintenance services.",
             link: "/hvac-services",
         },
         {
-            img: product2,
-            title: "Connectivity",
-            description: "Get connected with high-speed data solutions.",
+            image: product2,
+            name: "Connectivity",
+            desc: "Get connected with high-speed data solutions.",
             link: "/connectivity",
         },
     ];

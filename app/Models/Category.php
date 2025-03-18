@@ -12,6 +12,7 @@ class Category extends Model
         'name',
         'image',
         'desc',
+        'link',
         'parent_id',
     ];
 
@@ -38,4 +39,9 @@ class Category extends Model
     {
         return $this->hasMany(Product::class);
     }
+
+    public function products()
+{
+    return $this->hasMany(Product::class);
+}
 }

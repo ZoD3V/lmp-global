@@ -34,7 +34,7 @@ const ProfileSection = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="max-w-[1200px] mx-auto py-16 my-12 flex flex-col gap-10 px-4 sm:px-6 xl:px-0"
+            className="max-w-[1200px] mx-auto py-16 flex flex-col gap-12 px-4 sm:px-6 xl:px-0"
         >
             <Heading
                 title={"LMP Profile"}
