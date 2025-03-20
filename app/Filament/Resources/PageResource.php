@@ -10,6 +10,7 @@ use Filament\Forms\Components\Card;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -40,8 +41,8 @@ class PageResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('name')->label('Page Name'),
-                Tables\Columns\TextColumn::make('created_at')->label('Created At')->date(),
+                TextColumn::make('name')->label('Page Name'),
+                TextColumn::make('created_at')->label('Created At')->date(),
             ])
             ->filters([
                 //
@@ -71,5 +72,10 @@ class PageResource extends Resource
             'create' => Pages\CreatePage::route('/create'),
             'edit' => Pages\EditPage::route('/{record}/edit'),
         ];
+    }
+
+    public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
     }
 }

@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Filament\Resources\PageResource\Pages;
+namespace App\Filament\Resources\LMPNetworkResource\Pages;
 
-use App\Filament\Resources\PageResource;
+use App\Filament\Resources\LMPNetworkResource;
 use Filament\Actions;
 use Filament\Notifications\Notification;
 use Filament\Resources\Pages\CreateRecord;
 
-class CreatePage extends CreateRecord
+class CreateLMPNetwork extends CreateRecord
 {
-    protected static string $resource = PageResource::class;
+    protected static string $resource = LMPNetworkResource::class;
 
     protected function getRedirectUrl(): string
     {
@@ -20,8 +20,8 @@ class CreatePage extends CreateRecord
     {
         return Notification::make()
             ->success()
-            ->title('Page created.')
-            ->body('The Page has been saved successfully.');
+            ->title('LMP Network created.')
+            ->body('The LMP Network has been saved successfully.');
     }
 
 }

@@ -1,19 +1,30 @@
 import React from "react";
+import { motion } from "framer-motion";
 
-const NetworkProductCard = ({ image, title }) => {
+const NetworkProductCard = ({ item, index, fadeIn, textVariant }) => {
     return (
-        <div className="border-[1px] rounded-lg border-gray-200">
-            <img
-                src={image}
+        <motion.div
+            variants={fadeIn("up", 0.3 * (index + 1))}
+            viewport={{ once: true }}
+            className="border rounded-lg border-gray-200 shadow-sm"
+        >
+            <motion.img
+                variants={fadeIn("right", 0.3)}
+                viewport={{ once: true }}
+                src={`/storage/${item.image_path}`}
                 alt="Product Image"
-                className="w-full h-40 object-cover"
+                className="w-full h-40 object-cover rounded-t-lg"
             />
             <div className="p-4">
-                <h3 className="font-normal text-sm leading-6 text-gray-900 text-center">
-                    {title}
-                </h3>
+                <motion.h3
+                    variants={textVariant(0.3)}
+                    viewport={{ once: true }}
+                    className="font-normal text-sm leading-6 text-gray-900 text-center"
+                >
+                    {item.caption}
+                </motion.h3>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

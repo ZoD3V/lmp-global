@@ -1,46 +1,60 @@
 import React from "react";
 import Heading from "./Common/Heading";
-import jumperLCLC from "../../../public/images/jumperLCLC.png";
 import NetworkProductCard from "./Common/NetworkProductCard";
+import { motion } from "framer-motion";
+import { fadeIn, textVariant } from "../utils/motion";
 
-const NetworkProduct = () => {
-    const products = [
-        {
-            id: 1,
-            image: jumperLCLC,
-            title: "LMP Networks Multi Mode OM3 Jumper LC-LC",
-        },
-        {
-            id: 2,
-            image: jumperLCLC,
-            title: "LMP Networks Multi Mode OM3 Jumper LC-LC",
-        },
-        {
-            id: 3,
-            image: jumperLCLC,
-            title: "LMP Networks Multi Mode OM3 Jumper LC-LC",
-        },
-    ];
-
+const NetworkProduct = ({ networkDataArray }) => {
     return (
-        <section className="container mx-auto py-16 max-w-[1200px] px-4 sm:px-6 xl:px-0 flex flex-col gap-12">
-            <Heading
-                title={"LMP Networks"}
-                description={
-                    "Provide interconnect and cross-connect of applications over installations in entrance facilities, telecommunicati-ons rooms, data center and at the desk."
-                }
-            />
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                {products.map((product) => (
-                    <NetworkProductCard
-                        key={product.id}
-                        image={product.image}
-                        title={product.title}
-                        description={product.description}
-                    />
-                ))}
-            </div>
-        </section>
+        <div>
+            {networkDataArray.map((networkData, index) => (
+                <motion.section
+                    key={index}
+                    variants={fadeIn("up", 0.2)}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true }}
+                    className="container mx-auto py-16 max-w-[1200px] px-4 sm:px-6 xl:px-0 flex flex-col gap-12"
+                >
+                    <Heading title={networkData.title} description={networkData.desc} />
+                    <motion.div
+                        variants={fadeIn("up", 0.5)}
+                        viewport={{ once: true }}
+                        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+                    >
+                        {networkData.products.map((item, index) => (
+                            <NetworkProductCard
+                                key={index}
+                                item={item}
+                                index={index}
+                                fadeIn={fadeIn}
+                                textVariant={textVariant}
+                            />
+                        ))}
+                    </motion.div>
+                    <div className="flex flex-col gap-4">
+                        <motion.h3
+                            variants={textVariant(0.3)}
+                            viewport={{ once: true }}
+                            initial="hidden"
+                            whileInView="show"
+                            className="text-center font-medium text-neutral-900 text-xl"
+                        >
+                            {networkData.module_info}
+                        </motion.h3>
+                        <motion.p
+                            variants={textVariant(0.3)}
+                            viewport={{ once: true }}
+                            initial="hidden"
+                            whileInView="show"
+                            className="font-normal text-base leading-6 text-gray-900 text-center"
+                        >
+                            {networkData.patch_cord_info}
+                        </motion.p>
+                    </div>
+                </motion.section>
+            ))}
+        </div>
     );
 };
 

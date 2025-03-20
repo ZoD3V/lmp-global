@@ -17,6 +17,7 @@ use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class ProductResource extends Resource
@@ -30,6 +31,18 @@ class ProductResource extends Resource
     protected static ?int $navigationSort = 2;
 
     protected static ?string $navigationLabel = 'Product';
+
+    public static function getGloballySearchableAttributes(): array
+    {
+        return ['name', 'category.name'];
+    }
+
+    public static function getGlobalSearchResultDetails(Model $record): array
+    {
+        return [
+            'Category' => $record->category->name,
+        ];
+    }
 
     public static function form(Form $form): Form
     {
@@ -111,5 +124,10 @@ class ProductResource extends Resource
             'create' => Pages\CreateProduct::route('/create'),
             'edit' => Pages\EditProduct::route('/{record}/edit'),
         ];
+    }
+
+    public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
     }
 }

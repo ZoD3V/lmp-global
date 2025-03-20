@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Filament\Resources\PageResource\Pages;
+namespace App\Filament\Resources\LMPNetworkResource\Pages;
 
-use App\Filament\Resources\PageResource;
+use App\Filament\Resources\LMPNetworkResource;
 use Filament\Actions;
 use Filament\Notifications\Notification;
 use Filament\Resources\Pages\EditRecord;
 
-class EditPage extends EditRecord
+class EditLMPNetwork extends EditRecord
 {
-    protected static string $resource = PageResource::class;
+    protected static string $resource = LMPNetworkResource::class;
 
     protected function getHeaderActions(): array
     {
@@ -27,7 +27,7 @@ class EditPage extends EditRecord
     {
         return Notification::make()
             ->success()
-            ->title('Page updated.')
-            ->body('The Page has been updated successfully.');
+            ->title('Lmp Network updated.')
+            ->body('The Lmp Network has been updated successfully.');
     }
 }

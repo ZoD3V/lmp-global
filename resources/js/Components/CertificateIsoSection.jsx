@@ -56,6 +56,7 @@ const CertificateIsoSection = () => {
             >
                 {dataCertificate.map((item, index) => (
                     <img
+                        key={index}
                         src={item.logo}
                         alt={item.title}
                         className="w-full h-16"

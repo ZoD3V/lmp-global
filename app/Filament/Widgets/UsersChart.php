@@ -12,6 +12,8 @@ class UsersChart extends ChartWidget
 {
     protected static ?string $heading = 'Product Key Character';
 
+    protected static string $color = 'warning';
+
     protected function getData(): array
     {
         $data = Trend::model(KeyCharacter::class)

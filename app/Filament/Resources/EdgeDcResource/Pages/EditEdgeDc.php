@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Filament\Resources\PageResource\Pages;
+namespace App\Filament\Resources\EdgeDcResource\Pages;
 
-use App\Filament\Resources\PageResource;
+use App\Filament\Resources\EdgeDcResource;
 use Filament\Actions;
 use Filament\Notifications\Notification;
 use Filament\Resources\Pages\EditRecord;
 
-class EditPage extends EditRecord
+class EditEdgeDc extends EditRecord
 {
-    protected static string $resource = PageResource::class;
+    protected static string $resource = EdgeDcResource::class;
 
     protected function getHeaderActions(): array
     {
@@ -27,7 +27,7 @@ class EditPage extends EditRecord
     {
         return Notification::make()
             ->success()
-            ->title('Page updated.')
-            ->body('The Page has been updated successfully.');
+            ->title('Edge Dc updated.')
+            ->body('The Edge Dc has been updated successfully.');
     }
 }

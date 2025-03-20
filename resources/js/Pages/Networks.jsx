@@ -1,12 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Hero from "../Components/Common/Hero";
-import ProfileSection from "../Components/ProfileSection";
-import ResearchDevelopmentSection from "../Components/ResearchDevelopmentSection";
 import Navbar from "../Components/Common/Navbar";
 import Footer from "../components/Common/Footer";
 import NetworkProduct from "../Components/NetworkProduct";
 
-const Networks = ({ banner }) => {
+const Networks = ({ banner,networks }) => {
     return (
         <main className="relative min-h-screen overflow-x-hidden">
             <div className="overflow-hidden">
@@ -19,7 +17,8 @@ const Networks = ({ banner }) => {
                     buttonText="See All Product"
                     buttonLink="/product"
                 />
-                <NetworkProduct />
+                <NetworkProduct networkDataArray={networks} />
+
                 <Footer />
             </div>
         </main>

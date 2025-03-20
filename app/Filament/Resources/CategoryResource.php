@@ -24,6 +24,8 @@ class CategoryResource extends Resource
     protected static ?int $navigationSort = 2;
     protected static ?string $navigationGroup = 'Manage Content';
 
+    protected static ?string $recordTitleAttribute = 'name';
+
     public static function form(Form $form): Form
     {
         return $form
@@ -108,5 +110,10 @@ class CategoryResource extends Resource
             'create' => Pages\CreateCategory::route('/create'),
             'edit' => Pages\EditCategory::route('/{record}/edit'),
         ];
+    }
+
+    public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
     }
 }

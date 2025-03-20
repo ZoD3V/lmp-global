@@ -25,6 +25,11 @@ class ProductFeatureResource extends Resource
     protected static ?string $navigationGroup = 'Manage Content';
     protected static ?int $navigationSort = 7;
 
+    public static function getGloballySearchableAttributes(): array
+    {
+        return ['title', 'subtitle', 'description'];
+    }
+
     public static function form(Form $form): Form
     {
         return $form

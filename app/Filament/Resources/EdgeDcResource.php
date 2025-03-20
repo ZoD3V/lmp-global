@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\LMPProfileResource\Pages;
-use App\Filament\Resources\LMPProfileResource\RelationManagers;
-use App\Models\LMPProfile;
+use App\Filament\Resources\EdgeDcResource\Pages;
+use App\Filament\Resources\EdgeDcResource\RelationManagers;
+use App\Models\EdgeDc;
 use Filament\Forms;
 use Filament\Forms\Components\Card;
 use Filament\Forms\Components\FileUpload;
@@ -19,43 +19,33 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class LMPProfileResource extends Resource
+class EdgeDcResource extends Resource
 {
-    protected static ?string $model = LMPProfile::class;
+    protected static ?string $model = EdgeDc::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-user-circle';
+    protected static ?string $navigationIcon = 'heroicon-o-server';
 
-    protected static ?string $navigationGroup = 'Manage LMP Content';
+    protected static ?int $navigationSort = 7;
+    protected static ?string $navigationGroup = 'Manage Content';
 
-    protected static ?string $navigationLabel = 'LMP Profile';
-
-    protected static ?int $navigationSort = 1;
-
-    protected static ?string $slug = 'lmp-profiles';
+    protected static ?string $recordTitleAttribute = 'title';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
                 Card::make()->schema([
-
-                    TextInput::make('name')
-                        ->label('Name')
+                    TextInput::make('title')
                         ->required()
                         ->maxLength(255),
-
-                    Textarea::make('description')
+                    Textarea::make('desc')
                         ->label('Description')
-                        ->required()
-                        ->maxLength(1000)
-                        ->rows(4),
-
+                        ->nullable(),
                     FileUpload::make('image')
                         ->label('Image')
+                        ->directory('edge-dc-images')
                         ->image()
-                        ->required()
-                        ->maxSize(1024)
-                        ->directory('lmp_profiles')
+                        ->maxSize(2048)
                 ])
             ]);
     }
@@ -64,16 +54,19 @@ class LMPProfileResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('name')->sortable()->searchable(),
-                ImageColumn::make('image')->sortable()->searchable(),
-                TextColumn::make('description')->sortable()->searchable(),
+                TextColumn::make('title')->sortable()->searchable(),
+                TextColumn::make('desc')->limit(50),
+                ImageColumn::make('image')
+                    ->label('Image')
+                    ->width(100)
+                    ->height(100),
+                TextColumn::make('created_at')->dateTime()->sortable(),
             ])
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -92,9 +85,9 @@ class LMPProfileResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListLMPProfiles::route('/'),
-            'create' => Pages\CreateLMPProfile::route('/create'),
-            'edit' => Pages\EditLMPProfile::route('/{record}/edit'),
+            'index' => Pages\ListEdgeDcs::route('/'),
+            'create' => Pages\CreateEdgeDc::route('/create'),
+            'edit' => Pages\EditEdgeDc::route('/{record}/edit'),
         ];
     }
 }
