@@ -6,14 +6,14 @@ const NetworkProductCard = ({ item, index, fadeIn, textVariant }) => {
         <motion.div
             variants={fadeIn("up", 0.3 * (index + 1))}
             viewport={{ once: true }}
-            className="border rounded-lg border-gray-200 shadow-sm"
+            className="border rounded-lg border-gray-200 shadow-sm flex flex-col items-center justify-center"
         >
             <motion.img
                 variants={fadeIn("right", 0.3)}
                 viewport={{ once: true }}
                 src={`/storage/${item.image_path}`}
                 alt="Product Image"
-                className="w-full h-40 object-cover rounded-t-lg"
+                className="object-cover max-h-60 rounded-t-lg object-center p-4"
             />
             <div className="p-4">
                 <motion.h3

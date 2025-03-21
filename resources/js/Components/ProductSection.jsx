@@ -1,13 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
 import Heading from "./Common/Heading";
 import CardProduct from "./Common/CardProduct";
 
 const ProductSection = ({ dataProduct }) => {
-    useEffect(() => {
-        console.log(dataProduct);
-    }, []);
     return (
         <section className="py-16">
             <motion.div

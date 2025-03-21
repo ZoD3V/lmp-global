@@ -3,20 +3,24 @@ import Heading from "./Common/Heading";
 import NetworkProductCard from "./Common/NetworkProductCard";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
+import Button from "./Common/Button";
 
 const NetworkProduct = ({ networkDataArray }) => {
     return (
-        <div>
+        <section className="container mx-auto py-16 max-w-[1200px] px-4 sm:px-6 xl:px-0 flex flex-col gap-12">
             {networkDataArray.map((networkData, index) => (
-                <motion.section
+                <motion.div
                     key={index}
                     variants={fadeIn("up", 0.2)}
                     initial="hidden"
                     whileInView="show"
                     viewport={{ once: true }}
-                    className="container mx-auto py-16 max-w-[1200px] px-4 sm:px-6 xl:px-0 flex flex-col gap-12"
+                    className="mx-auto flex flex-col gap-12"
                 >
-                    <Heading title={networkData.title} description={networkData.desc} />
+                    <Heading
+                        title={networkData.title}
+                        description={networkData.desc}
+                    />
                     <motion.div
                         variants={fadeIn("up", 0.5)}
                         viewport={{ once: true }}
@@ -52,9 +56,25 @@ const NetworkProduct = ({ networkDataArray }) => {
                             {networkData.patch_cord_info}
                         </motion.p>
                     </div>
-                </motion.section>
+                </motion.div>
             ))}
-        </div>
+            {networkDataArray.length > 0 && (
+                <motion.div
+                    variants={fadeIn("up", 0.5)}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true }}
+                    className="md:ml-auto"
+                >
+                    <Button
+                        buttonText="All Product"
+                        buttonLink={"/product"}
+                        showArrow={true}
+                        outline={true}
+                    />
+                </motion.div>
+            )}
+        </section>
     );
 };
 

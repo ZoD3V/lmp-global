@@ -4,7 +4,7 @@ import Navbar from "../Components/Common/Navbar";
 import Footer from "../components/Common/Footer";
 import NetworkProduct from "../Components/NetworkProduct";
 
-const Networks = ({ banner,networks }) => {
+const Networks = ({ banner, networks }) => {
     return (
         <main className="relative min-h-screen overflow-x-hidden">
             <div className="overflow-hidden">
@@ -18,7 +18,6 @@ const Networks = ({ banner,networks }) => {
                     buttonLink="/product"
                 />
                 <NetworkProduct networkDataArray={networks} />
-
                 <Footer />
             </div>
         </main>
