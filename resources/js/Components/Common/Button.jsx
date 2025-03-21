@@ -10,7 +10,11 @@ const Button = ({
     outline = false,
 }) => {
     const navigateDetailProduct = (item) => {
-        router.visit(item);
+        if (item === "/app") {
+            window.location.href = item;
+        } else {
+            router.visit(item);
+        }
     };
 
     const buttonClass = outline

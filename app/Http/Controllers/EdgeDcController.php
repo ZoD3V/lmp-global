@@ -11,7 +11,7 @@ class EdgeDCController extends Controller
     public function index()
     {
         $banner = Banner::all();
-        return Inertia::render('EdgeDC', [
+        return Inertia::render('EdgeDc', [
             'banner' => $banner,
         ]);
     }

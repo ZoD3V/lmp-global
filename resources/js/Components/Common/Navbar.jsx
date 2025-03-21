@@ -27,7 +27,7 @@ const Navbar = () => {
             viewport={{ once: true }}
             className="fixed top-0 left-0 right-0 bg-white backdrop-blur-sm border-solid z-50 border-b border-gray-200"
         >
-            <div className="max-w-[1200px] flex justify-between items-center container mx-auto px-4 sm:px-6 xl:px-0 md:h-20 h-16">
+            <div className="max-w-[1200px] flex justify-between items-center container mx-auto px-4 sm:px-6 xl:px-0 h-16">
                 {/* Logo */}
                 <motion.a
                     href="/"
@@ -83,13 +83,13 @@ const Navbar = () => {
                 >
                     <Button
                         buttonText="Sign up"
-                        buttonLink="/sign-up"
+                        buttonLink="/app"
                         showArrow={false}
                         outline={true}
                     />
                     <Button
                         buttonText="Sign in"
-                        buttonLink="/sign-in"
+                        buttonLink="/app"
                         showArrow={false}
                     />
                 </motion.div>
@@ -129,12 +129,12 @@ const Navbar = () => {
                         <div className="flex flex-col gap-2 w-full">
                             <Button
                                 buttonText="Sign In"
-                                buttonLink="/sign-in"
+                                buttonLink="/app"
                                 showArrow={false}
                             />
                             <Button
                                 buttonText="Sign up"
-                                buttonLink="/sign-up"
+                                buttonLink="/app"
                                 showArrow={false}
                                 outline={true}
                             />
