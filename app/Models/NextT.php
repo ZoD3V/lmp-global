@@ -5,15 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class KeyCharacter extends Model
+class NextT extends Model
 {
     use HasFactory;
-    protected $fillable = [
-        'name',
-    ];
 
-    public function products()
-    {
-        return $this->belongsToMany(Product::class, 'product_key_character');
-    }
+    protected $table = 'next_t';
+
+    protected $fillable = [
+        'title',
+        'sub_title',
+        'image',
+        'content',
+    ];
 }

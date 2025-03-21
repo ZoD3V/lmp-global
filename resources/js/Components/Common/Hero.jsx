@@ -16,7 +16,7 @@ const Hero = ({
     return (
         <section
             id="home"
-            className="h-[640px] xl:h-[840px] bg-hero bg-center lg:bg-cover bg-no-repeat bg-fixed relative xl:rounded-bl-[290px] z-20"
+            className="h-[640px] xl:h-[740px] bg-hero bg-center lg:bg-cover bg-no-repeat bg-fixed relative xl:rounded-bl-[290px] z-20"
             style={{
                 backgroundImage: `url('/storage/${banner[0].image}')`,
             }}

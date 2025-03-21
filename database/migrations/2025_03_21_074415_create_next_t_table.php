@@ -11,8 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('categories', function (Blueprint $table) {
-            $table->string('link')->nullable();
+        Schema::create('next_t', function (Blueprint $table) {
+            $table->id();
+            $table->string('title');
+            $table->string('sub_title')->nullable();
+            $table->string('image')->nullable();
+            $table->longText('content');
+            $table->timestamps();
         });
     }
 
@@ -21,8 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('categories', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('next_t');
     }
 };
