@@ -64,9 +64,7 @@ const Support = ({ banner }) => {
                     banner={banner}
                     title="LMP Support"
                     description="Locate your specific product for the latest user manuals, system application guides, data sheets, warranties, software downloads and more."
-                    showButton={false}
-                    buttonText="See All Product"
-                    buttonLink="/product"
+
                 />
                 <ServicesSection features={featuresData} />
                 <SolutionSection

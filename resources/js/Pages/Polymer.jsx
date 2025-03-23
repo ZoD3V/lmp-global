@@ -13,9 +13,7 @@ const Polymer = ({ banner, polymer }) => {
                     banner={banner}
                     title="LMP Polymer"
                     description="Since 2021 MTE expand new business to Design Prototyping, Mass Production Plastic product."
-                    showButton={false}
-                    buttonText="See All Product"
-                    buttonLink="/product"
+
                 />
                 <PolymerSection polymerData={polymer} />
                 <Footer />

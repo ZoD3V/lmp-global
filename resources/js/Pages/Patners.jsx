@@ -71,9 +71,7 @@ const About = ({ banner }) => {
                 <Hero
                     banner={banner}
                     title="LMP Partner"
-                    showButton={false}
-                    buttonText="See All Product"
-                    buttonLink="/product"
+
                     description="We believe that collaboration is the key to achieving sustainable success. In every step of our journey, we are committed to building mutually beneficial and highly competitive partnerships with various parties. Together with our Partners, we strive to deliver innovation, quality, and solutions that meet the needs of our customers."
                 />
                 <motion.section

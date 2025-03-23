@@ -4,6 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Lmp Global">
 
     <title>Lmp Global</title>
     <link rel="icon" href="{{ asset('images/favicon_lmp.svg') }}" type="image/png" />

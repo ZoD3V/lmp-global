@@ -13,9 +13,7 @@ const EdgeDC = ({ banner, edgeDc }) => {
                     banner={banner}
                     title="LMP EdgeDC"
                     description="Locate your specific product for the latest user manuals, system application guides, data sheets, warranties, software downloads and more."
-                    showButton={false}
-                    buttonText="See All Product"
-                    buttonLink="/product"
+
                 />
                 <EdgeDcSection edgeDc={edgeDc} />
                 <Footer />

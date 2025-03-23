@@ -17,9 +17,7 @@ const About = ({ banner, timeline, product, lmp_profile }) => {
                     banner={banner}
                     title="About LMP"
                     description="LMP Networks is driven by a passion for Design Engineering, combining Mechanical-Electrical HVAC design, Enclosure Engineering, Digital Twins, and Modular Architecture to accelerate deployment and improve visualization of assets, transforming the modular data center and connectivity industry."
-                    showButton={false}
-                    buttonText="See All Product"
-                    buttonLink="/product"
+
                 />
                 <AboutGreeting />
                 <ProfileSection lmp_profile={lmp_profile} />

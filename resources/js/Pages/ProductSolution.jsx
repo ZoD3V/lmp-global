@@ -16,9 +16,7 @@ const ProductSolution = ({ banner, categories }) => {
                     banner={banner}
                     title="Product & Solution"
                     description="LMP offers essential infrastructure technology and specialized solutions that can be swiftly implemented to meet your business needs."
-                    showButton={false}
-                    buttonText="See All Product"
-                    buttonLink="/product"
+
                 />
                 <ProductSection dataProduct={categories} />
                 <SolutionSection

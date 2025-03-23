@@ -13,9 +13,7 @@ const Networks = ({ banner, networks }) => {
                     banner={banner}
                     title="LMP Networks"
                     description="LMP Networks provide Ultra High Density Solution for connectivity in Data Center. Optimizing Space - Air flow and Efficiency in Cooling Systems & Energy consumption."
-                    showButton={false}
-                    buttonText="See All Product"
-                    buttonLink="/product"
+
                 />
                 <NetworkProduct networkDataArray={networks} />
                 <Footer />

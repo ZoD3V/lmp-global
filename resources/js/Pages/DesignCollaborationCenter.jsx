@@ -14,9 +14,7 @@ const DesignCollaborationCenter = ({ banner }) => {
                     banner={banner}
                     title="Design & Collaboration Center LMP"
                     description="Our team can collaborate with your team to create effective and innovative design solutions that structure and optimize the design process for better results."
-                    showButton={false}
-                    buttonText="See All Product"
-                    buttonLink="/product"
+
                 />
                 <motion.section
                     variants={fadeIn("up", 0.2)}

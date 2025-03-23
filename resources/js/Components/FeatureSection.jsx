@@ -111,6 +111,8 @@ const FeaturesSection = () => {
                     className="text-center mt-12"
                 >
                     <motion.button
+                        id="button"
+                        aria-label="button"
                         variants={fadeIn("up", 0.8)}
                         viewport={{ once: true }}
                         whileHover={{ scale: 1.05 }}

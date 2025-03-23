@@ -2,17 +2,10 @@ import React from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { motion } from "framer-motion";
-import { fadeIn, textVariant } from "../../utils/motion";
-import { HiArrowRight } from "react-icons/hi2";
+import { fadeIn,textVariant } from "../../utils/motion";
+import Button from "../Common/Button";
 
-const Hero = ({
-    title,
-    description,
-    banner,
-    showButton,
-    buttonText,
-    buttonLink,
-}) => {
+const Hero = ({ title, description, banner, showButton }) => {
     return (
         <section
             id="home"
@@ -43,18 +36,19 @@ const Hero = ({
                     </motion.p>
 
                     {showButton && (
-                        <motion.button
-                            variants={fadeIn("up", 0.3)}
+                        <motion.div
+                            variants={fadeIn("up", 0.5)}
                             initial="hidden"
                             whileInView="show"
                             viewport={{ once: true }}
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="px-6 duration-300 text-white bg-blue-600 py-3 rounded-lg hover:bg-blue-700 text-sm font-medium transition-all mx-auto xl:mx-0 flex items-center gap-2"
                         >
-                            <a href={buttonLink}>{buttonText}</a>
-                            <HiArrowRight />
-                        </motion.button>
+                            <Button
+                                buttonText="See All Product"
+                                buttonLink={"/product"}
+                                showArrow={true}
+                                outline={false}
+                            />
+                        </motion.div>
                     )}
                 </div>
             </div>

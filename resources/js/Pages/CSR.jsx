@@ -14,9 +14,7 @@ const CSR = ({ banner, csr }) => {
                 <Hero
                     banner={banner}
                     title="Corporate Social Responsibility"
-                    showButton={false}
-                    buttonText="See All Product"
-                    buttonLink="/product"
+
                     description="Implementing corporate social responsibility (CSR) has become an important part of business sustainability. In this case, the Company realizes that every success achieved cannot be separated from the support of many parties, including employees, the community and the surrounding environment."
                 />
                 <motion.section
