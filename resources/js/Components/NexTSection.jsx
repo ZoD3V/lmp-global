@@ -2,7 +2,7 @@ import React from "react";
 import Heading from "./Common/Heading";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
-import Button from "./common/Button";
+import Button from "./Common/Button";
 
 const NextTSection = ({ nexT }) => {
     return (

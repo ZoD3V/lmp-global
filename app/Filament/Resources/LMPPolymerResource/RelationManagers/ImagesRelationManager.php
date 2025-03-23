@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Filament\Resources\LMPNetworkResource\RelationManagers;
+namespace App\Filament\Resources\LMPPolymerResource\RelationManagers;
 
 use Filament\Forms;
 use Filament\Forms\Components\FileUpload;
@@ -20,7 +20,6 @@ class ImagesRelationManager extends RelationManager
 
     protected static ?string $recordTitleAttribute = 'image_path';
 
-
     public function form(Form $form): Form
     {
         return $form
@@ -28,7 +27,7 @@ class ImagesRelationManager extends RelationManager
                 FileUpload::make('image_path')
                     ->label('Image URL or Path')
                     ->disk('public')
-                    ->directory('lmp_network_images')
+                    ->directory('lmp_polymer_images')
                     ->image()
                     ->required(),
 
@@ -41,21 +40,14 @@ class ImagesRelationManager extends RelationManager
     public function table(Table $table): Table
     {
         return $table
-            ->recordTitleAttribute('images')
+            ->recordTitleAttribute('name')
             ->columns([
                 ImageColumn::make('image_path')
-                    ->label('Image')
-                    ->width(100)
-                    ->height(100),
-
+                    ->label('Gambar')
+                    ->circular(),
                 TextColumn::make('caption')
                     ->label('Caption')
-                    ->searchable(),
-
-                TextColumn::make('created_at')
-                    ->label('Created At')
-                    ->dateTime()
-                    ->sortable(),
+                    ->limit(50),
             ])
             ->filters([
                 //

@@ -10,12 +10,11 @@ return new class extends Migration {
      */
     public function up(): void
     {
-        Schema::create('images', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('lmp_network_id')->nullable()->constrained()->onDelete('cascade');
-            $table->string('image_path');
-            $table->string('caption')->nullable();
-            $table->timestamps();
+        Schema::table('images', function (Blueprint $table) {
+            $table->foreignId('lmp_polymer_id')
+                ->nullable()
+                ->constrained('lmp_polymers')
+                ->onDelete('cascade');
         });
     }
 
@@ -24,6 +23,8 @@ return new class extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists('images');
+        Schema::table('images', function (Blueprint $table) {
+            //
+        });
     }
 };
