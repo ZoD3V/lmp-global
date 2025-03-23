@@ -9,6 +9,7 @@ const MultiFeatureCard = ({
     textVariant,
     showButton,
     buttonLink,
+    isImageStatic = false,
 }) => {
     return (
         <motion.div
@@ -98,7 +99,7 @@ const MultiFeatureCard = ({
                     whileInView="show"
                     viewport={{ once: true }}
                     className="card-img h-full w-full object-cover"
-                    src={`/storage/${item.img}`}
+                    src={isImageStatic ? item.img : `/storage/${item.img}`}
                     alt="Featured Image"
                 />
             </motion.div>

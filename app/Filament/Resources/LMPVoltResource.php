@@ -2,13 +2,12 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\LMPPolymerResource\Pages;
-use App\Filament\Resources\LMPPolymerResource\RelationManagers;
-use App\Filament\Resources\LMPPolymerResource\RelationManagers\ImagesRelationManager;
-use App\Models\LMPPolymer;
+use App\Filament\Resources\LMPVoltResource\Pages;
+use App\Filament\Resources\LMPVoltResource\RelationManagers;
+use App\Models\LMPVolt;
 use Filament\Forms;
 use Filament\Forms\Components\Card;
-use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -17,28 +16,27 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class LMPPolymerResource extends Resource
+class LMPVoltResource extends Resource
 {
-    protected static ?string $model = LMPPolymer::class;
+    protected static ?string $model = LMPVolt::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-bolt';
+    protected static ?string $navigationLabel = 'Lmp Volts';
+
+    protected static ?string $slug = 'lmp-volts';
 
     protected static ?string $navigationGroup = 'Manage LMP Content';
-
-    protected static ?string $navigationLabel = 'LMP Polymer';
-
-    protected static ?string $slug = 'lmp-polymer';
-
-    protected static ?int $navigationSort = 5;
+    protected static ?int $navigationSort = 6;
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
                 Card::make()->schema([
-                    Textarea::make('desc')
+                    RichEditor::make('desc')
+                        ->required()
                         ->label('Description')
-                        ->required(),
+                        ->columnSpan(2),
                 ])
             ]);
     }
@@ -47,7 +45,10 @@ class LMPPolymerResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('desc')->label('Description')->limit(50),
+                TextColumn::make('desc')
+                    ->label('Description')
+                    ->limit(50)
+                    ->html()
             ])
             ->filters([
                 //
@@ -66,16 +67,16 @@ class LMPPolymerResource extends Resource
     public static function getRelations(): array
     {
         return [
-            ImagesRelationManager::class,
+            //
         ];
     }
 
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListLMPPolymers::route('/'),
-            'create' => Pages\CreateLMPPolymer::route('/create'),
-            'edit' => Pages\EditLMPPolymer::route('/{record}/edit'),
+            'index' => Pages\ListLMPVolts::route('/'),
+            'create' => Pages\CreateLMPVolt::route('/create'),
+            'edit' => Pages\EditLMPVolt::route('/{record}/edit'),
         ];
     }
 }

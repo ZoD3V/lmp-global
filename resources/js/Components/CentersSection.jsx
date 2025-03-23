@@ -40,6 +40,7 @@ const CentersSection = () => {
                     fadeIn={fadeIn}
                     textVariant={textVariant}
                     showButton={true}
+                    isImageStatic={true}
                     buttonLink={item.buttonLink}
                 />
             ))}

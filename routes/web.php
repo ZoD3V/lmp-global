@@ -14,6 +14,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ResearchDevelopmentController;
 use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\SupportController;
+use App\Http\Controllers\VoltsController;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -30,6 +31,7 @@ Route::get('/patner', [PatnersController::class, 'index']);
 Route::get('/networks', [NetworksController::class, 'index']);
 Route::get('/edge-dc', [EdgeDCController::class, 'index']);
 Route::get('/csr', [CsrController::class, 'index']);
+Route::get('/volts', [VoltsController::class, 'index']);
 Route::get('/polymer', [PolymerController::class, 'index']);
 Route::get('/next-t', [NextTController::class, 'index']);
 Route::get('/services', [ServicesController::class, 'index']);

@@ -8,7 +8,7 @@ import CsrSection from "../Components/CsrSection";
 
 const CSR = ({ banner, csr }) => {
     return (
-        <main className="relative min-h-screen overflow-x-hidden custom-list">
+        <main className="relative min-h-screen overflow-x-hidden custom-rich-editor">
             <div className="overflow-hidden">
                 <Navbar />
                 <Hero
