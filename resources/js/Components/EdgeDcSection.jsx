@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import server from "../../../public/images/containment.jpeg";
 import server2 from "../../../public/images/containment2.png";
 import server3 from "../../../public/images/containment3.png";
@@ -6,7 +6,10 @@ import { fadeIn, textVariant } from "../utils/motion";
 import Heading from "./Common/Heading";
 import MultiContainmentCard from "./Common/MultiContainmentCard";
 
-const EdgeDcSection = () => {
+const EdgeDcSection = ({edgeDc}) => {
+    useEffect(() => {
+        console.log(edgeDc)
+    }, []);
     const dataCenters = [
         {
             img: server,
@@ -40,7 +43,7 @@ const EdgeDcSection = () => {
                 }
             />
 
-            {dataCenters.map((item, index) => (
+            {edgeDc.map((item, index) => (
                 <MultiContainmentCard
                     key={index}
                     item={item}

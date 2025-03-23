@@ -4,7 +4,6 @@ import { fadeIn, textVariant } from "../utils/motion";
 import logo_lmp from "../../../public/images/containment_lmp.png";
 import product1 from "../../../public/images/product1.png";
 import product2 from "../../../public/images/product2.jpeg";
-import product3 from "../../../public/images/product3.png";
 import Card from "./common/Card";
 import Heading from "./Common/Heading";
 

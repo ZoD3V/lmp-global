@@ -1,32 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
-import logo_lmp from "../../../public/images/containment_lmp.png";
-import server from "../../../public/images/researchdevelopment.png";
 import MultiFeatureCard from "./Common/MultiFeaturedCard";
 import Heading from "./Common/Heading";
 
-const ProfileSection = () => {
-    const dataProfile = [
-        {
-            img: server,
-            title: "Leading Data Center Infrastructure",
-            description:
-                "LMP is a leading data center infrastructure manufacturer and edge data center operator in Indonesia. With a 46.99% Domestic Component Level (TKDN), LMP supports digital transformation and local content development. It plays a vital role in enhancing Indonesia's technological self-sufficiency.",
-        },
-        {
-            img: logo_lmp,
-            title: "Localized Data Center Solutions for Indonesia",
-            description:
-                "By prioritizing local content development, LMP not only strengthens Indonesia's economy but also ensures that the data center infrastructure is aligned with the nation's unique requirements and challenges. With a deep understanding of Indonesia's diverse geography and population distribution, LMP  designs and deploys data center solutions that cater to both urban centers and remote areas, fostering inclusivity and bridging the digital divide.",
-        },
-        {
-            img: server,
-            title: "Digital Progress and Connectivity through Innovation",
-            description:
-                "LMP empowers businesses and connects communities by driving Indonesia's digital progress. With a high TKDN rate and commitment to innovation, LMP leads the nation's connectivity revolution. It enables limitless possibilities for Indonesians in the interconnected world.",
-        },
-    ];
+const ProfileSection = ({ lmp_profile }) => {
 
     return (
         <motion.section
@@ -42,7 +20,7 @@ const ProfileSection = () => {
                     "ivamus a ligula ut velit placerat egestas at id leo. Nulla ac volutpat nunc. Suspendisse ut magna porttitor, sollicitudin ligula at, molestie dolor.."
                 }
             />
-            {dataProfile.map((item, index) => (
+            {lmp_profile.map((item, index) => (
                 <MultiFeatureCard
                     key={index}
                     item={item}

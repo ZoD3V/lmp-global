@@ -28,7 +28,13 @@ const MultiFeatureCard = ({
                     index % 2 !== 0 ? "md:order-2" : ""
                 }`}
             >
-                <div className="w-full flex-col justify-start md:items-start items-center gap-4 flex">
+                <div
+                    className={`w-full flex-col justify-start gap-4 flex ${
+                        index % 2 !== 0
+                            ? "items-center md:items-end"
+                            : "items-center md:items-start"
+                    }`}
+                >
                     <motion.h2
                         variants={textVariant(0.2)}
                         initial="hidden"
@@ -92,7 +98,7 @@ const MultiFeatureCard = ({
                     whileInView="show"
                     viewport={{ once: true }}
                     className="card-img h-full w-full object-cover"
-                    src={item.img}
+                    src={`/storage/${item.img}`}
                     alt="Featured Image"
                 />
             </motion.div>

@@ -11,7 +11,7 @@ const Navbar = () => {
 
     const navLinks = [
         { href: "/about", label: "About" },
-        { href: "/next-T", label: "Next-T" },
+        { href: "/next-t", label: "Next-T" },
         { href: "/product", label: "Product & Solution" },
         { href: "/services", label: "Services" },
         { href: "/patner", label: "Patner" },

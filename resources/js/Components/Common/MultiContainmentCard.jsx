@@ -41,7 +41,7 @@ const MultiContainmentCard = ({
                         viewport={{ once: true }}
                         className={`text-gray-500 text-base font-normal leading-relaxed text-center md:text-justify`}
                     >
-                        {item.description}
+                        {item.desc}
                     </motion.p>
                 </div>
 
@@ -60,7 +60,7 @@ const MultiContainmentCard = ({
                     whileInView="show"
                     viewport={{ once: true }}
                     className="h-[400px] w-full object-contain order-1 md:order-2"
-                    src={item.img}
+                    src={`/storage/${item.image}`}
                     alt="Featured Image"
                 />
             </motion.div>

@@ -17,11 +17,22 @@ html {
     scroll-padding-top: 100px;
 }
 
-ol,
-ul,
-menu {
-    list-style: auto;
-    list-style: inside;
+.custom-list {
+    ol,
+    ul,
+    menu {
+        list-style-type: auto;
+        list-style-position: inside;
+        li {
+            margin-bottom: 0.5rem;
+          }
+
+        ul,
+        ol,
+        menu {
+            margin-left: 1.5rem;
+        }
+    }
 }
 
 .active {

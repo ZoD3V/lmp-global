@@ -3,7 +3,7 @@ import Heading from "./Common/Heading";
 import NetworkProductCard from "./Common/NetworkProductCard";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
-import Button from "./Common/Button";
+import Button from "./common/Button";
 
 const NetworkProduct = ({ networkDataArray }) => {
     return (

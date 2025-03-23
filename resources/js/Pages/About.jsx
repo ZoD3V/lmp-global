@@ -8,7 +8,7 @@ import Navbar from "../Components/Common/Navbar";
 import Footer from "../components/Common/Footer";
 import AboutProductSection from "../Components/AboutProductSection";
 
-const About = ({ banner, timeline, product }) => {
+const About = ({ banner, timeline, product, lmp_profile }) => {
     return (
         <main className="relative min-h-screen overflow-x-hidden">
             <div className="overflow-hidden">
@@ -22,7 +22,7 @@ const About = ({ banner, timeline, product }) => {
                     buttonLink="/product"
                 />
                 <AboutGreeting />
-                <ProfileSection />
+                <ProfileSection lmp_profile={lmp_profile} />
                 <ResearchDevelopmentSection />
                 <AboutProductSection dataProduct={product} />
                 <TimelineSection timeline={timeline} />

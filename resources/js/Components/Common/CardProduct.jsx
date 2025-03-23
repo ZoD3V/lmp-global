@@ -8,7 +8,9 @@ const CardProduct = ({ item, index, fadeIn, textVariant, children }) => {
     const [isHovered, setIsHovered] = useState(false);
 
     const navigateDetailProduct = (item) => {
-        router.visit(`/${item.link}`);
+        if (item.link !== null && item.link !== undefined && item.link?.length > 0) {
+            router.visit(`/${item.link}`);
+        }
     };
 
     return (

@@ -25,9 +25,9 @@ class NextTResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-document-text';
 
-    protected static ?string $navigationGroup = 'Manage Content';
+    protected static ?string $navigationGroup = 'Manage LMP Content';
 
-    protected static ?int $navigationSort = 9;
+    protected static ?int $navigationSort = 5;
 
     protected static ?string $navigationLabel = 'Next-T';
 
