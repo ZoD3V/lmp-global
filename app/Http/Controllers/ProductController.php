@@ -55,24 +55,42 @@ class ProductController extends Controller
 
     public function detail($id): Response
     {
+        // Mengambil data banner
         $banner = Banner::all();
-        $product = Product::with('keyCharacters')->findOrFail($id);
 
-        $product->load('keyCharacters');
+        // Mengambil produk berdasarkan ID dan memuat relasi keyCharacters dan features
+        $product = Product::with('keyCharacters', 'features')->findOrFail($id);
+
+        // Menyembunyikan field pivot untuk keyCharacters dan features
         $product->keyCharacters->makeHidden('pivot');
+        $product->features->makeHidden('pivot');
 
+        // Memfilter fitur berdasarkan kategori
+        $designFeatures = $product->features->filter(function ($feature) {
+            return $feature->category === 'Design Features';
+        });
+
+        $performanceBenefits = $product->features->filter(function ($feature) {
+            return $feature->category === 'Performance Benefits';
+        });
+
+        // Mengambil kategori ID produk
         $categoryId = $product->category_id;
 
+        // Mengambil produk populer dari kategori yang sama (kecuali produk yang sedang ditampilkan)
         $popularProducts = Product::where('category_id', $categoryId)
             ->where('id', '!=', $id)
             ->take(4)
             ->get();
 
-
+        // Mengembalikan data ke tampilan menggunakan Inertia
         return Inertia::render('DetailProduct', [
             'banner' => $banner,
             'product' => $product,
+            'designFeatures' => $designFeatures,   // Menambahkan fitur dengan kategori Design Features
+            'performanceBenefits' => $performanceBenefits, // Menambahkan fitur dengan kategori Performance Benefits
             'popularProducts' => $popularProducts,
         ]);
     }
+
 }

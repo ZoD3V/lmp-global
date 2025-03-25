@@ -7,6 +7,7 @@ use App\Filament\Resources\ProductResource\RelationManagers;
 use App\Models\Product;
 use Filament\Forms;
 use Filament\Forms\Components\Card;
+use Filament\Forms\Components\CheckboxList;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\MultiSelect;
 use Filament\Forms\Components\Select;
@@ -58,11 +59,20 @@ class ProductResource extends Resource
                     ->default(null)
                     ->nullable()
                     ->preload(),
+                MultiSelect::make('features')
+                    ->relationship('features', 'name')
+                    ->default(null)
+                    ->nullable()
+                    ->preload(),
                 Select::make('category_id')
                     ->relationship('category', 'name')
                     ->searchable()
                     ->preload()
                     ->required(),
+                Textarea::make('product_overview')
+                    ->label('Product Overview')
+                    ->required()
+                    ->maxLength(500),
                 FileUpload::make('image')
                     ->image()
                     ->required()
@@ -75,7 +85,7 @@ class ProductResource extends Resource
                     ->required()
                     ->disk('public')
                     ->directory('brochure')
-                    ->maxSize(1024),
+                    ->maxSize(1024)
             ])->columns(2),
         ]);
     }

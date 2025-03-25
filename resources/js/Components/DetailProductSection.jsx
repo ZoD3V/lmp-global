@@ -36,10 +36,15 @@ const downloadFile = (filePath, fileName) => {
 };
 
 const handleClick = () => {
-    router.visit('/product');
+    router.visit("/product");
 };
 
-const DetailProductSection = ({ detailData, popularProducts }) => {
+const DetailProductSection = ({
+    detailData,
+    popularProducts,
+    designFeatures,
+    performanceBenefits,
+}) => {
     const [imageLoaded, setImageLoaded] = useState(false);
 
     const fadeIn = {
@@ -159,7 +164,7 @@ const DetailProductSection = ({ detailData, popularProducts }) => {
             </div>
 
             {/* Tabs Section */}
-            <Tabs defaultValue="details" className="mb-12">
+            <Tabs defaultValue="details">
                 <TabsList className="grid w-full grid-cols-3 mb-8">
                     <TabsTrigger value="details">Product Details</TabsTrigger>
                     <TabsTrigger value="features">
@@ -174,19 +179,9 @@ const DetailProductSection = ({ detailData, popularProducts }) => {
                             Product Overview
                         </h3>
                         <p className="mb-4">
-                            There are two type of Module, Pre-conn Type for MPO
-                            – LC and Splice type for splicing method. This
-                            solution makes it easier for network architects to
-                            design networks according to their needs.
-                        </p>
-                        <p className="mb-4">
-                            Because of this versatility, the enclosure is able
-                            to serve as a transition from backbone cabling to
-                            distribution switching, an interconnect to active
-                            equipment, or as a cross-connect or interconnect in
-                            a main or horizontal distribution area. Users can
-                            even easily access the fibres through front pull out
-                            Modules. Steel, 1 RU, 12 ports.
+                            {detailData.product_overview
+                                ? detailData.product_overview
+                                : "No product overview available."}
                         </p>
                     </div>
                 </TabsContent>
@@ -199,57 +194,47 @@ const DetailProductSection = ({ detailData, popularProducts }) => {
                         <div className="grid md:grid-cols-2 gap-6">
                             <div className="space-y-3">
                                 <h4 className="font-medium">Design Features</h4>
-                                <ul className="space-y-2">
-                                    <li className="flex items-start">
-                                        <CheckCircle2 className="h-5 w-5 mr-2 text-primary shrink-0 mt-0.5" />
-                                        <span>
-                                            Compact 1U rack mount design saves
-                                            valuable rack space
-                                        </span>
-                                    </li>
-                                    <li className="flex items-start">
-                                        <CheckCircle2 className="h-5 w-5 mr-2 text-primary shrink-0 mt-0.5" />
-                                        <span>
-                                            Durable steel construction for
-                                            long-term reliability
-                                        </span>
-                                    </li>
-                                    <li className="flex items-start">
-                                        <CheckCircle2 className="h-5 w-5 mr-2 text-primary shrink-0 mt-0.5" />
-                                        <span>
-                                            Front pull-out drawer design for
-                                            easy access
-                                        </span>
-                                    </li>
-                                </ul>
+                                {designFeatures && designFeatures.length > 0 ? (
+                                    <ul className="space-y-2">
+                                        {designFeatures.map((item, index) => (
+                                            <li
+                                                key={index}
+                                                className="flex items-start"
+                                            >
+                                                <CheckCircle2 className="h-5 w-5 mr-2 text-primary shrink-0 mt-0.5" />
+                                                <span>{item.name}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                ) : (
+                                    <p className="text-gray-500">
+                                        No Features specifications available.
+                                    </p>
+                                )}
                             </div>
                             <div className="space-y-3">
                                 <h4 className="font-medium">
                                     Performance Benefits
                                 </h4>
-                                <ul className="space-y-2">
-                                    <li className="flex items-start">
-                                        <CheckCircle2 className="h-5 w-5 mr-2 text-primary shrink-0 mt-0.5" />
-                                        <span>
-                                            Supports high-density fiber
-                                            applications
-                                        </span>
-                                    </li>
-                                    <li className="flex items-start">
-                                        <CheckCircle2 className="h-5 w-5 mr-2 text-primary shrink-0 mt-0.5" />
-                                        <span>
-                                            Versatile module options for
-                                            different network requirements
-                                        </span>
-                                    </li>
-                                    <li className="flex items-start">
-                                        <CheckCircle2 className="h-5 w-5 mr-2 text-primary shrink-0 mt-0.5" />
-                                        <span>
-                                            Excellent cable management for
-                                            optimal performance
-                                        </span>
-                                    </li>
-                                </ul>
+                                {performanceBenefits.length > 0 ? (
+                                    <ul className="space-y-2">
+                                        {performanceBenefits.map(
+                                            (item, index) => (
+                                                <li
+                                                    key={index}
+                                                    className="flex items-start"
+                                                >
+                                                    <CheckCircle2 className="h-5 w-5 mr-2 text-primary shrink-0 mt-0.5" />
+                                                    <span>{item.name}</span>
+                                                </li>
+                                            )
+                                        )}
+                                    </ul>
+                                ) : (
+                                    <p className="text-gray-500">
+                                        No Performance specifications available.
+                                    </p>
+                                )}
                             </div>
                         </div>
                     </div>
