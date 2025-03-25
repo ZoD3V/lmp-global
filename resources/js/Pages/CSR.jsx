@@ -8,7 +8,7 @@ import CsrSection from "../Components/CsrSection";
 
 const CSR = ({ banner, csr }) => {
     return (
-        <main className="relative min-h-screen overflow-x-hidden custom-rich-editor">
+        <main className="relative min-h-screen overflow-x-hidden">
             <div className="overflow-hidden">
                 <Navbar />
                 <Hero
@@ -40,7 +40,7 @@ const CSR = ({ banner, csr }) => {
                             initial="hidden"
                             whileInView="show"
                             viewport={{ once: true }}
-                            className="flex flex-col col-span-2 gap-4 max-w-2xl"
+                            className="flex flex-col col-span-2 gap-4 max-w-2xl custom-rich-editor"
                         >
                             <motion.h2
                                 variants={textVariant(0.2)}

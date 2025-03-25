@@ -7,7 +7,6 @@ import { Server, Shield, Clock, Cpu, BarChart, Globe } from "lucide-react";
 import researchImage from "../../../public/images/researchdevelopment.png";
 
 const ProfileSection = ({ lmp_profile }) => {
-    console.log(lmp_profile);
     const ref1 = useRef(null);
     const ref2 = useRef(null);
     const ref3 = useRef(null);

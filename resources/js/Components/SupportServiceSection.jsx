@@ -1,9 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
-import { Server, Thermometer, FileText } from "lucide-react";
+import { Server, Users, Lightbulb } from "lucide-react";
 
-const ServicesSection = () => {
+const SupportServiceSection = () => {
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -42,7 +42,7 @@ const ServicesSection = () => {
                 viewport={{ once: true }}
                 className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
             >
-                <div className="py-16">
+                <div className="px-4">
                     <div className="max-w-7xl mx-auto">
                         <motion.div
                             className="text-center mb-16"
@@ -85,7 +85,7 @@ const ServicesSection = () => {
                                         <Server className="h-8 w-8 text-white" />
                                     </div>
                                     <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">
-                                        Data Center Design
+                                        Technical Support
                                     </h3>
                                 </div>
                             </motion.div>
@@ -99,10 +99,10 @@ const ServicesSection = () => {
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-rose-50 rounded-bl-full -mr-16 -mt-16 transition-all duration-300 group-hover:bg-rose-100"></div>
                                 <div className="relative">
                                     <div className="bg-gradient-to-br from-rose-500 to-rose-600 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-8 shadow-md transform transition-transform group-hover:rotate-3 group-hover:scale-110">
-                                        <Thermometer className="h-8 w-8 text-white" />
+                                        <Users className="h-8 w-8 text-white" />
                                     </div>
                                     <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">
-                                        Cooling Management
+                                        Consultant products
                                     </h3>
                                 </div>
                             </motion.div>
@@ -116,10 +116,10 @@ const ServicesSection = () => {
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-teal-50 rounded-bl-full -mr-16 -mt-16 transition-all duration-300 group-hover:bg-teal-100"></div>
                                 <div className="relative">
                                     <div className="bg-gradient-to-br from-teal-500 to-teal-600 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-8 shadow-md transform transition-transform group-hover:rotate-3 group-hover:scale-110">
-                                        <FileText className="h-8 w-8 text-white" />
+                                        <Lightbulb className="h-8 w-8 text-white" />
                                     </div>
                                     <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">
-                                        Data Reporting
+                                        Consultant Data Center
                                     </h3>
                                 </div>
                             </motion.div>
@@ -131,4 +131,4 @@ const ServicesSection = () => {
     );
 };
 
-export default ServicesSection;
+export default SupportServiceSection;

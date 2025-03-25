@@ -27,7 +27,7 @@ const Heading = ({ title, description, align = "center" }) => {
             viewport={{ once: true }}
         >
             <motion.h2
-                className="text-gray-900 text-3xl font-bold font-manrope leading-normal"
+                className="text-gray-900 text-3xl md:text-4xl font-bold font-manrope leading-normal"
                 variants={textVariant(0.2)}
                 viewport={{ once: true }}
             >
@@ -35,7 +35,7 @@ const Heading = ({ title, description, align = "center" }) => {
             </motion.h2>
 
             <motion.p
-                className={`max-w-4xl ${alignmentStyles[align].paragraph} text-gray-500 text-lg font-normal leading-8`}
+                className={`${alignmentStyles[align].paragraph} max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed`}
                 variants={fadeIn("down", 0.5)}
             >
                 {description}

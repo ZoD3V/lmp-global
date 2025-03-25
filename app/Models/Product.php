@@ -24,4 +24,5 @@ class Product extends Model
         return $this->belongsToMany(KeyCharacter::class,'product_key_character');
     }
 
+
 }

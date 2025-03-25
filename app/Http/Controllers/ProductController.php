@@ -56,11 +56,23 @@ class ProductController extends Controller
     public function detail($id): Response
     {
         $banner = Banner::all();
-        $product = Product::findOrFail($id);
+        $product = Product::with('keyCharacters')->findOrFail($id);
+
+        $product->load('keyCharacters');
+        $product->keyCharacters->makeHidden('pivot');
+
+        $categoryId = $product->category_id;
+
+        $popularProducts = Product::where('category_id', $categoryId)
+            ->where('id', '!=', $id)
+            ->take(4)
+            ->get();
+
 
         return Inertia::render('DetailProduct', [
             'banner' => $banner,
             'product' => $product,
+            'popularProducts' => $popularProducts,
         ]);
     }
 }

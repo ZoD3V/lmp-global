@@ -41,7 +41,7 @@ const About = ({ banner }) => {
                                 initial="hidden"
                                 whileInView="show"
                                 viewport={{ once: true }}
-                                className="text-slate-600 text-lg mb-4 text-center md:text-start"
+                                className="text-slate-600 text-lg mb-4 text-justify md:text-start"
                             >
                                 We thrive on change and have built a culture
                                 that enables us to remain at the forefront of
@@ -53,7 +53,7 @@ const About = ({ banner }) => {
                                 initial="hidden"
                                 viewport={{ once: true }}
                                 whileInView="show"
-                                className="text-slate-600 text-lg mb-4 text-center md:text-start"
+                                className="text-slate-600 text-lg mb-4 text-justify md:text-start"
                             >
                                 Our R&D teams regularly share expertise across
                                 both materials and businesses, enabling us to
@@ -65,7 +65,7 @@ const About = ({ banner }) => {
                         <motion.div
                             variants={fadeIn("down", 0.3)}
                             viewport={{ once: true }}
-                            className={`w-full md:max-w-[400px] h-[350px] mx-auto xl:mx-0 order-1 md:order-2`}
+                            className={`w-full md:w-[500px] md:h-[350px] mx-auto xl:mx-0 order-1 md:order-2`}
                         >
                             <motion.img
                                 variants={fadeIn("left", 0.3)}

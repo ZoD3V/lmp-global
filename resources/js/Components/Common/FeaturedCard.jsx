@@ -1,6 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Button from "./Button";
+import { ArrowRight } from "lucide-react";
+import { Button } from "../ui/button";
+import { router } from "@inertiajs/react";
 
 const FeatureCard = ({
     item,
@@ -10,6 +12,10 @@ const FeatureCard = ({
     showButton,
     buttonLink,
 }) => {
+    const handleClick = () => {
+        router.visit(buttonLink)
+    };
+
     return (
         <motion.div
             key={index}
@@ -53,12 +59,10 @@ const FeatureCard = ({
                         variants={fadeIn("down", 0.5)}
                         viewport={{ once: true }}
                     >
-                        <Button
-                            buttonText="Read More"
-                            buttonLink={buttonLink}
-                            showArrow={true}
-                            outline={false}
-                        />
+                        <Button variant="theme" onClick={handleClick}>
+                            Read More
+                            <ArrowRight className="ml-2" />
+                        </Button>
                     </motion.div>
                 )}
             </div>
