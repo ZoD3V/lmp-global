@@ -31,4 +31,9 @@ class Product extends Model
         return $this->belongsToMany(Feature::class, 'product_feature');
     }
 
+    public function technicalSpecs()
+    {
+        return $this->hasMany(ProductTechnicalSpec::class);
+    }
+
 }

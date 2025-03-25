@@ -44,7 +44,10 @@ const DetailProductSection = ({
     popularProducts,
     designFeatures,
     performanceBenefits,
+    PhysicalSpecifications,
+    Capacity,
 }) => {
+    console.log(PhysicalSpecifications);
     const [imageLoaded, setImageLoaded] = useState(false);
 
     const fadeIn = {
@@ -178,7 +181,7 @@ const DetailProductSection = ({
                             <Server className="mr-2 h-5 w-5 text-primary" />
                             Product Overview
                         </h3>
-                        <p className="mb-4">
+                        <p className="mb-4 text-gray-500">
                             {detailData.product_overview
                                 ? detailData.product_overview
                                 : "No product overview available."}
@@ -208,7 +211,7 @@ const DetailProductSection = ({
                                     </ul>
                                 ) : (
                                     <p className="text-gray-500">
-                                        No Features specifications available.
+                                        No design features available.
                                     </p>
                                 )}
                             </div>
@@ -232,7 +235,7 @@ const DetailProductSection = ({
                                     </ul>
                                 ) : (
                                     <p className="text-gray-500">
-                                        No Performance specifications available.
+                                        No performance available.
                                     </p>
                                 )}
                             </div>
@@ -250,76 +253,57 @@ const DetailProductSection = ({
                                     Physical Specifications
                                 </h4>
                                 <ul className="space-y-2">
-                                    <li className="flex justify-between border-b pb-2">
-                                        <span className="text-muted-foreground">
-                                            Height
-                                        </span>
-                                        <span className="font-medium">
-                                            1U (1.75")
-                                        </span>
-                                    </li>
-                                    <li className="flex justify-between border-b pb-2">
-                                        <span className="text-muted-foreground">
-                                            Width
-                                        </span>
-                                        <span className="font-medium">
-                                            19" Rack Mount
-                                        </span>
-                                    </li>
-                                    <li className="flex justify-between border-b pb-2">
-                                        <span className="text-muted-foreground">
-                                            Material
-                                        </span>
-                                        <span className="font-medium">
-                                            Steel
-                                        </span>
-                                    </li>
-                                    <li className="flex justify-between border-b pb-2">
-                                        <span className="text-muted-foreground">
-                                            Color
-                                        </span>
-                                        <span className="font-medium">
-                                            Black
-                                        </span>
-                                    </li>
+                                    {PhysicalSpecifications &&
+                                    PhysicalSpecifications.length > 0 ? (
+                                        PhysicalSpecifications.map(
+                                            (spec, index) => (
+                                                <li
+                                                    key={index}
+                                                    className="flex justify-between border-b pb-2"
+                                                >
+                                                    <span className="text-muted-foreground">
+                                                        {spec.spec_name}
+                                                    </span>
+                                                    <span className="font-medium">
+                                                        {spec.spec_value}
+                                                    </span>
+                                                </li>
+                                            )
+                                        )
+                                    ) : (
+                                        <p className="text-gray-500">
+                                            No physical specifications
+                                            available.
+                                        </p>
+                                    )}
                                 </ul>
+
                             </div>
                             <div>
                                 <h4 className="font-medium mb-2">Capacity</h4>
                                 <ul className="space-y-2">
-                                    <li className="flex justify-between border-b pb-2">
-                                        <span className="text-muted-foreground">
-                                            Fiber Capacity
-                                        </span>
-                                        <span className="font-medium">
-                                            Up to 144 fibers
-                                        </span>
-                                    </li>
-                                    <li className="flex justify-between border-b pb-2">
-                                        <span className="text-muted-foreground">
-                                            Module Capacity
-                                        </span>
-                                        <span className="font-medium">
-                                            12 Modules
-                                        </span>
-                                    </li>
-                                    <li className="flex justify-between border-b pb-2">
-                                        <span className="text-muted-foreground">
-                                            Adapter Types
-                                        </span>
-                                        <span className="font-medium">
-                                            MPO, LC, SC
-                                        </span>
-                                    </li>
-                                    <li className="flex justify-between border-b pb-2">
-                                        <span className="text-muted-foreground">
-                                            Connector Types
-                                        </span>
-                                        <span className="font-medium">
-                                            MPO-LC, LC-DX
-                                        </span>
-                                    </li>
+                                    {Capacity && Capacity.length > 0 ? (
+                                        Capacity.map((spec, index) => (
+                                            <li
+                                                key={index}
+                                                className="flex justify-between border-b pb-2"
+                                            >
+                                                <span className="text-muted-foreground">
+                                                    {spec.spec_name}
+                                                </span>
+                                                <span className="font-medium">
+                                                    {spec.spec_value}
+                                                </span>
+                                            </li>
+                                        ))
+                                    ) : (
+                                        <p className="text-gray-500">
+                                            No capacity
+                                            available.
+                                        </p>
+                                    )}
                                 </ul>
+
                             </div>
                         </div>
                     </div>

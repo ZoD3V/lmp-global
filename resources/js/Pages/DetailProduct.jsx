@@ -6,8 +6,14 @@ import DetailProductSection from "@/Components/DetailProductSection";
 
 const DetailProduct = () => {
     const { props } = usePage();
-    const { product, popularProducts, designFeatures, performanceBenefits } =
-        props;
+    const {
+        product,
+        popularProducts,
+        designFeatures,
+        performanceBenefits,
+        PhysicalSpecifications,
+        Capacity
+    } = props;
 
     return (
         <main className="relative min-h-screen overflow-x-hidden">
@@ -17,6 +23,8 @@ const DetailProduct = () => {
                 popularProducts={popularProducts}
                 performanceBenefits={performanceBenefits}
                 designFeatures={designFeatures}
+                PhysicalSpecifications={PhysicalSpecifications}
+                Capacity={Capacity}
             />
             <Footer />
         </main>

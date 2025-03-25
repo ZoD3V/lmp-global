@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Banner;
 use App\Models\Category;
 use App\Models\Product;
+use App\Models\ProductTechnicalSpec;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 use Inertia\Response;
@@ -55,17 +56,13 @@ class ProductController extends Controller
 
     public function detail($id): Response
     {
-        // Mengambil data banner
         $banner = Banner::all();
 
-        // Mengambil produk berdasarkan ID dan memuat relasi keyCharacters dan features
         $product = Product::with('keyCharacters', 'features')->findOrFail($id);
 
-        // Menyembunyikan field pivot untuk keyCharacters dan features
         $product->keyCharacters->makeHidden('pivot');
         $product->features->makeHidden('pivot');
 
-        // Memfilter fitur berdasarkan kategori
         $designFeatures = $product->features->filter(function ($feature) {
             return $feature->category === 'Design Features';
         });
@@ -74,22 +71,30 @@ class ProductController extends Controller
             return $feature->category === 'Performance Benefits';
         });
 
-        // Mengambil kategori ID produk
         $categoryId = $product->category_id;
 
-        // Mengambil produk populer dari kategori yang sama (kecuali produk yang sedang ditampilkan)
         $popularProducts = Product::where('category_id', $categoryId)
             ->where('id', '!=', $id)
             ->take(4)
             ->get();
 
-        // Mengembalikan data ke tampilan menggunakan Inertia
+        $PhysicalSpecifications = ProductTechnicalSpec::where('product_id', $id)
+            ->where('category', 'Physical Specifications')
+            ->get();
+
+        $Capacity = ProductTechnicalSpec::where('product_id', $id)
+            ->where('category', 'Capacity')
+            ->get();
+
+
         return Inertia::render('DetailProduct', [
             'banner' => $banner,
             'product' => $product,
-            'designFeatures' => $designFeatures,   // Menambahkan fitur dengan kategori Design Features
-            'performanceBenefits' => $performanceBenefits, // Menambahkan fitur dengan kategori Performance Benefits
+            'designFeatures' => $designFeatures,
+            'performanceBenefits' => $performanceBenefits,
             'popularProducts' => $popularProducts,
+            'PhysicalSpecifications' => $PhysicalSpecifications,
+            'Capacity' => $Capacity,
         ]);
     }
 
