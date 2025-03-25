@@ -28,7 +28,7 @@ const Feature = ({ features }) => {
                     viewport={{ once: true }}
                     className="text-4xl text-center font-bold text-gray-900 py-5"
                 >
-                    Revolutionary Features
+                    Revolutionary Data Center Solutions
                 </motion.h2>
                 <motion.p
                     variants={textVariant(0.2)}
@@ -37,9 +37,8 @@ const Feature = ({ features }) => {
                     viewport={{ once: true }}
                     className="text-lg font-normal text-gray-500 max-w-md md:max-w-2xl mx-auto"
                 >
-                    Provides advanced features like time tracking, integrating
-                    with third-party apps (calendar / Google drive), creating
-                    subtasks.
+                    Explore advanced features that enhance the management,
+                    efficiency, and insight of your data center operations.
                 </motion.p>
             </div>
             <div className="flex justify-center items-center gap-x-5 gap-y-8 lg:gap-y-0 flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between lg:gap-x-8">

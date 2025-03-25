@@ -14,13 +14,13 @@ const Contact = (banner) => {
                 backgroundImage: `url('/storage/${banner.banner[0].image}')`,
             }}
         >
-            <div className="max-w-[1200px] mx-auto h-full flex items-center justify-center xl:justify-start">
+            <div className="container px-4 md:px-6 h-full flex items-center justify-center xl:justify-start">
                 <motion.div
                     variants={textVariant(0.3)}
                     initial="hidden"
                     whileInView="show"
                     viewport={{ once: true }}
-                    className="w-full flex flex-row items-center justify-center md:justify-start text-center text-white z-10 gap-8 px-4 sm:px-6 xl:px-0"
+                    className="w-full flex flex-row items-center justify-center md:justify-start text-center text-white z-10 gap-8"
                 >
                     <h1 className="text-5xl md:text-6xl xl:text-7xl leading-none font-bold tracking-wide mt-12">
                         Contact Us

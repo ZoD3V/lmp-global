@@ -27,7 +27,7 @@ const Navbar = () => {
             viewport={{ once: true }}
             className="fixed top-0 left-0 right-0 bg-white backdrop-blur-sm border-solid z-50 border-b border-gray-200"
         >
-            <div className="max-w-[1200px] flex justify-between items-center container mx-auto px-4 sm:px-6 xl:px-0 h-16">
+            <div className="flex justify-between items-center max-w-[1200px] container relative z-20 px-4 md:px-6 xl:px-0 h-16">
                 {/* Logo */}
                 <motion.a
                     href="/"

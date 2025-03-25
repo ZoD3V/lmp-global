@@ -10,7 +10,7 @@ const TimelineSection = ({ timeline }) => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="max-w-[1200px] mx-auto py-16"
+            className="max-w-[1200px] mx-auto py-24"
         >
             <motion.div
                 variants={fadeIn("up", 0.3)}

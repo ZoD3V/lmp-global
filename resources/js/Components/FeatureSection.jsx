@@ -1,6 +1,45 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { fadeIn, textVariant } from "../utils/motion";
+import { fadeIn } from "../utils/motion";
+import { Badge } from "./ui/badge";
+import { useInView } from "react-intersection-observer";
+import { Leaf, Shield, Clock, Award } from "lucide-react";
+import containment from "../../../public/images/containment_lmp.png";
+
+const FadeInSection = ({ children, className }) => {
+    const [ref, inView] = useInView({
+        triggerOnce: true,
+        threshold: 0.1,
+    });
+
+    return (
+        <motion.div
+            ref={ref}
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+            variants={fadeIn}
+            className={className}
+        >
+            {children}
+        </motion.div>
+    );
+};
+
+function FeatureItem({ icon, title, description }) {
+    return (
+        <div className="group rounded-xl border p-4 transition-all duration-300 hover:border-blue-500/20 hover:bg-blue-500/5">
+            <div className="flex items-start gap-4">
+                <div className="rounded-full bg-blue-500/10 p-2 transition-colors group-hover:bg-blue-500/20">
+                    {icon}
+                </div>
+                <div className="space-y-1">
+                    <h3 className="text-xl font-bold">{title}</h3>
+                    <p className="text-muted-foreground">{description}</p>
+                </div>
+            </div>
+        </div>
+    );
+}
 
 const FeaturesSection = () => {
     const features = [
@@ -25,105 +64,83 @@ const FeaturesSection = () => {
     ];
 
     return (
-        <section className="w-full">
-            <motion.div
-                variants={fadeIn("up", 0.2)}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true }}
-                className="max-w-[1200px] mx-auto py-16"
-            >
-                <motion.div
-                    variants={fadeIn("up", 0.3)}
-                    viewport={{ once: true }}
-                    className="text-center mb-12"
-                >
-                    <motion.h2
-                        variants={textVariant(0.2)}
-                        viewport={{ once: true }}
-                        className="text-3xl font-bold mb-4"
-                    >
-                        How can we help your business?
-                    </motion.h2>
-                    <motion.p
-                        variants={fadeIn("up", 0.4)}
-                        viewport={{ once: true }}
-                        className="text-slate-600"
-                    >
-                        When you resell besnik, you build trust and increase
-                    </motion.p>
-                </motion.div>
-
-                <motion.div
-                    variants={fadeIn("up", 0.5)}
-                    viewport={{ once: true }}
-                    className="grid grid-cols-1 md:grid-cols-3 gap-8"
-                >
-                    {features.map((feature, index) => (
-                        <motion.div
-                            key={index}
-                            variants={fadeIn("up", 0.3 * (index + 1))}
-                            viewport={{ once: true }}
-                            className="flex flex-col items-center p-6"
+        <section id="features" className="w-full py-20 md:py-32 bg-white">
+            <div className="container px-4 md:px-6 xl:px-0 max-w-[1200px]">
+                <FadeInSection className="flex flex-col items-center justify-center space-y-4 text-center">
+                    <div className="space-y-2">
+                        <Badge
+                            className="inline-flex bg-blue-500/10 text-blue-600 hover:bg-blue-500/20"
+                            variant="secondary"
                         >
-                            <motion.div
-                                variants={fadeIn("down", 0.4 * (index + 1))}
-                                viewport={{ once: true }}
-                                className="w-24 h-24 rounded-full mb-6 flex items-center justify-center"
-                                style={{
-                                    backgroundColor:
-                                        index === 0
-                                            ? "#F1EFFD"
-                                            : index === 1
-                                            ? "#FFE7E7"
-                                            : "#FFF3E4",
-                                }}
-                            >
-                                <motion.div
-                                    variants={fadeIn("up", 0.5 * (index + 1))}
-                                    viewport={{ once: true }}
-                                    className="text-3xl"
-                                >
-                                    {feature.icon}
-                                </motion.div>
-                            </motion.div>
-                            <motion.h3
-                                variants={textVariant(0.3)}
-                                viewport={{ once: true }}
-                                className="text-2xl font-medium mb-3 text-center"
-                            >
-                                {feature.title}
-                            </motion.h3>
-                            <motion.p
-                                variants={fadeIn("up", 0.6 * (index + 1))}
-                                viewport={{ once: true }}
-                                className="text-slate-600 text-center"
-                            >
-                                {feature.description}
-                            </motion.p>
-                        </motion.div>
-                    ))}
-                </motion.div>
+                            Why Choose Us
+                        </Badge>
+                        <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
+                            Enterprise-Grade Solutions for Critical
+                            Infrastructure
+                        </h2>
+                        <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed">
+                            Our solutions are specifically designed to meet the
+                            demanding requirements of modern data centers,
+                            ensuring reliability, performance, and
+                            sustainability.
+                        </p>
+                    </div>
+                </FadeInSection>
 
-                <motion.div
-                    variants={fadeIn("up", 0.7)}
-                    viewport={{ once: true }}
-                    className="text-center mt-12"
-                >
-                    <motion.button
-                        id="button"
-                        aria-label="button"
-                        variants={fadeIn("up", 0.8)}
-                        viewport={{ once: true }}
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="bg-blue-600 text-white cursor-pointer px-8 py-3 rounded-full font-medium hover:bg-blue-700 transition-colors relative"
-                    >
-                        Become a Partner
-                        <div className="absolute -z-10 w-full h-full rounded-full bg-blue-600/30 blur-xl top-0 left-0"></div>
-                    </motion.button>
-                </motion.div>
-            </motion.div>
+                <div className="mx-auto grid items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
+                    <FadeInSection className="order-2 lg:order-1">
+                        <div className="flex flex-col justify-center space-y-6">
+                            <FeatureItem
+                                icon={
+                                    <Shield className="h-6 w-6 text-blue-600" />
+                                }
+                                title="Reliability & Security"
+                                description="All components undergo rigorous testing to ensure they meet or exceed industry specifications, providing the reliability critical for 24/7 operations."
+                            />
+                            <FeatureItem
+                                icon={
+                                    <Clock className="h-6 w-6 text-blue-600" />
+                                }
+                                title="Minimize Downtime"
+                                description="Our solutions are designed to maximize uptime and ensure business continuity, even in the most demanding environments."
+                            />
+                            <FeatureItem
+                                icon={
+                                    <Leaf className="h-6 w-6 text-green-600" />
+                                }
+                                title="Eco-Friendly Solutions"
+                                description="We're committed to developing sustainable technologies that reduce energy consumption and environmental impact without compromising performance."
+                            />
+                            <FeatureItem
+                                icon={
+                                    <Award className="h-6 w-6 text-blue-600" />
+                                }
+                                title="Expert Support"
+                                description="Our team of specialists provides comprehensive support to ensure smooth implementation and ongoing operation of our solutions."
+                            />
+                        </div>
+                    </FadeInSection>
+
+                    <FadeInSection className="order-1 lg:order-2">
+                        <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                            <img
+                                src={containment}
+                                alt="Data Center Features"
+                                width={500}
+                                height={400}
+                                className="w-full object-cover transition-transform hover:scale-105 duration-700"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                            <div className="absolute bottom-4 left-4 right-4 p-4 bg-background/80 backdrop-blur-md rounded-xl">
+                                <p className="text-sm font-medium">
+                                    Enterprise-grade components with guaranteed
+                                    reliability
+                                </p>
+                            </div>
+                        </div>
+                    </FadeInSection>
+                </div>
+            </div>
         </section>
     );
 };

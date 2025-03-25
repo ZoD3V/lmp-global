@@ -3,16 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Models\Banner;
-use App\Models\EdgeDc;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
-class EdgeDCController extends Controller
+class EnergyController extends Controller
 {
     public function index()
     {
         $banner = Banner::all();
-        return Inertia::render('EdgeDc', [
+
+        return Inertia::render('Energy', [
             'banner' => $banner,
         ]);
     }

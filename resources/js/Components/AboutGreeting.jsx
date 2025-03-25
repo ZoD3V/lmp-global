@@ -1,9 +1,13 @@
 import React from "react";
-import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
-import atom from "../../../public/images/icons/ic-atom.png";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import { Server, Shield, Clock, Cpu, BarChart, Globe } from "lucide-react";
 
 const AboutGreeting = (props) => {
+    const refHero = useRef(null);
+    const isInViewHero = useInView(refHero, { once: true });
+
     return (
         <motion.section
             variants={fadeIn("up", 0.2)}
@@ -12,34 +16,108 @@ const AboutGreeting = (props) => {
             viewport={{ once: true }}
             className="mx-auto py-16 flex flex-col gap-12 w-full justify-center"
         >
-            <motion.div
-                variants={fadeIn("up", 0.3)}
-                viewport={{ once: true }}
-                className="px-4 sm:px-6 xl:px-0 justify-center items-center flex flex-col gap-8"
+            <div
+                ref={refHero}
+                className="flex flex-col items-center justify-center text-center"
             >
-                {/* Image */}
                 <motion.div
-                    variants={fadeIn("down", 0.5)}
-                    viewport={{ once: true }}
-                    className={`max-w-[150px] md:max-w-[170px] mx-auto xl:mx-0`}
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    className="relative w-64 h-64"
                 >
-                    <motion.img
-                        variants={fadeIn("right", 0.3)}
-                        viewport={{ once: true }}
-                        src={atom}
-                        alt="Logo Atom"
+                    {/* Inti Atom di Tengah */}
+                    <motion.div
+                        className="absolute inset-0 m-auto w-12 h-12 bg-black rounded-full shadow-xl shadow-blue-500/30 z-10"
+                        animate={{
+                            scale: [1, 1.15, 1],
+                        }}
+                        transition={{
+                            duration: 2,
+                            repeat: Infinity,
+                            ease: "easeInOut",
+                        }}
                     />
+
+                    {/* Orbit 1 - Horizontal */}
+                    <motion.div
+                        className="absolute left-0 top-0 -translate-x-1/2 -translate-y-1/2
+            w-full h-full border-2 border-slate-200/20 rounded-full"
+                        animate={{
+                            rotate: 360,
+                        }}
+                        transition={{
+                            duration: 12,
+                            repeat: Infinity,
+                            ease: "linear",
+                        }}
+                    >
+                        <motion.div
+                            className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2
+              w-5 h-5 bg-black rounded-full shadow-md shadow-blue-500/30"
+                            animate={{
+                                rotate: -360, // Counter-rotation
+                            }}
+                            transition={{
+                                duration: 12,
+                                repeat: Infinity,
+                                ease: "linear",
+                            }}
+                        />
+                    </motion.div>
+
+                    {/* Orbit 2 - Vertikal */}
+
+
+                    {/* Orbit 3 - Diagonal */}
+                    <motion.div
+                        className="absolute left-0 top-0 -translate-x-1/2 -translate-y-1/2
+            w-[60%] h-[60%] border-2 border-slate-200/20 rounded-full"
+                        style={{ transformStyle: "preserve-3d" }}
+                        animate={{
+                            rotateX: 360,
+                        }}
+                        transition={{
+                            duration: 20,
+                            repeat: Infinity,
+                            ease: "linear",
+                        }}
+                    >
+                        <motion.div
+                            className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2
+              w-3 h-3 bg-black rounded-full shadow-sm shadow-blue-500/30"
+                            animate={{
+                                rotateX: -360,
+                            }}
+                            transition={{
+                                duration: 20,
+                                repeat: Infinity,
+                                ease: "linear",
+                            }}
+                        />
+                    </motion.div>
                 </motion.div>
 
-                <motion.p
-                    variants={fadeIn("up", 0.4)}
-                    viewport={{ once: true }}
-                    className="text-slate-600 text-lg text-center font-medium"
+                <motion.h2
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={isInViewHero ? { opacity: 1, y: 0 } : {}}
+                    transition={{ delay: 0.6, duration: 0.8 }}
+                    className="text-2xl md:text-3xl font-medium text-slate-800 max-w-3xl leading-relaxed"
                 >
-                    At LMP we design and manufacture all the solution by
-                    considering and put forward environment sustainability
-                </motion.p>
-            </motion.div>
+                    At LMP we design and manufacture all the solutions by
+                    considering and putting forward
+                    <span className="text-green-600 font-semibold">
+                        {" "}
+                        environmental sustainability
+                    </span>
+                </motion.h2>
+
+                <motion.div
+                    initial={{ opacity: 0, scaleX: 0 }}
+                    animate={isInViewHero ? { opacity: 1, scaleX: 1 } : {}}
+                    transition={{ delay: 1, duration: 0.8 }}
+                    className="h-px w-24 bg-slate-300 mt-12"
+                />
+            </div>
         </motion.section>
     );
 };

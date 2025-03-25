@@ -2,8 +2,9 @@ import React from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { motion } from "framer-motion";
-import { fadeIn,textVariant } from "../../utils/motion";
-import Button from "../Common/Button";
+import { fadeIn, textVariant } from "../../utils/motion";
+import { Button } from "@/components/ui/button";
+import { IoIosArrowForward } from "react-icons/io";
 
 const Hero = ({ title, description, banner, showButton }) => {
     return (
@@ -14,14 +15,14 @@ const Hero = ({ title, description, banner, showButton }) => {
                 backgroundImage: `url('/storage/${banner[0].image}')`,
             }}
         >
-            <div className="max-w-[1200px] mx-auto h-full flex items-center justify-center xl:justify-start px-4 sm:px-6 xl:px-0">
-                <div className="w-[567px] flex flex-col items-center text-center xl:text-left xl:items-start text-white z-10 gap-8">
+            <div className="max-w-[1200px] container px-4 md:px-6 xl:px-0 h-full flex items-center justify-center xl:justify-start">
+                <div className="w-[567px] flex flex-col items-center text-center xl:text-left xl:items-start z-10 gap-8">
                     <motion.h1
                         variants={textVariant(0.3)}
                         initial="hidden"
                         whileInView="show"
                         viewport={{ once: true }}
-                        className="text-5xl md:text-6xl xl:text-7xl leading-none font-bold tracking-wide"
+                        className="text-5xl md:text-6xl xl:text-7xl leading-none font-bold tracking-wide text-white"
                     >
                         {title}
                     </motion.h1>
@@ -42,12 +43,10 @@ const Hero = ({ title, description, banner, showButton }) => {
                             whileInView="show"
                             viewport={{ once: true }}
                         >
-                            <Button
-                                buttonText="See All Product"
-                                buttonLink={"/product"}
-                                showArrow={true}
-                                outline={false}
-                            />
+                            <Button variant="theme">
+                                See All Product
+                                <IoIosArrowForward />
+                            </Button>
                         </motion.div>
                     )}
                 </div>

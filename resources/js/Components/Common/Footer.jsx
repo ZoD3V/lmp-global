@@ -37,7 +37,7 @@ const Footer = () => {
             viewport={{ once: true }}
             className="bg-gray-50"
         >
-            <div className="px-4 sm:px-6 xl:px-0 py-16 container mx-auto max-w-[1200px]">
+            <div className="px-4 md:px-6 xl:px-0 py-16 container max-w-[1200px]">
                 <motion.div
                     variants={fadeIn("up", 0.3)}
                     viewport={{ once: true }}

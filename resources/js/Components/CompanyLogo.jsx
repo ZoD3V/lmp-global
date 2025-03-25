@@ -62,7 +62,7 @@ const CompanyLogo = () => {
 
     return (
         <section className="w-full mb-12">
-            <div className="max-w-[1200px] mx-auto py-20 overflow-hidden flex flex-col gap-20 px-4 sm:px-6 xl:px-0 tems-center justify-center">
+            <div className="max-w-[1200px] container px-4 md:px-6 xl:px-0 py-20 overflow-hidden flex flex-col gap-20 tems-center justify-center">
                 <Heading
                     title={"With great partners"}
                     description={
@@ -92,25 +92,26 @@ const CompanyLogo = () => {
                         ))}
                     </div>
                 </div>
-
-                <div className="flex animate-marquee-right whitespace-nowrap">
-                    {logoVertical.map((logo, index) => (
-                        <img
-                            key={index}
-                            src={logo}
-                            alt={`Company Logo ${index + 1}`}
-                            className="mx-4 h-16 w-36 object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all"
-                        />
-                    ))}
-                    {/* Duplicate logos for seamless loop */}
-                    {logoVertical.map((logo, index) => (
-                        <img
-                            key={`duplicate-${index}`}
-                            src={logo}
-                            alt={`Company Logo ${index + 1}`}
-                            className="mx-4 h-16 w-36 object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all"
-                        />
-                    ))}
+                <div className="marquee-container overflow-hidden relative w-full">
+                    <div className="flex animate-marquee-right whitespace-nowrap">
+                        {logoVertical.map((logo, index) => (
+                            <img
+                                key={index}
+                                src={logo}
+                                alt={`Company Logo ${index + 1}`}
+                                className="mx-4 h-16 w-36 object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all"
+                            />
+                        ))}
+                        {/* Duplicate logos for seamless loop */}
+                        {logoVertical.map((logo, index) => (
+                            <img
+                                key={`duplicate-${index}`}
+                                src={logo}
+                                alt={`Company Logo ${index + 1}`}
+                                className="mx-4 h-16 w-36 object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all"
+                            />
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>
