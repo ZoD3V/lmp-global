@@ -47,7 +47,6 @@ const DetailProductSection = ({
     PhysicalSpecifications,
     Capacity,
 }) => {
-    console.log(PhysicalSpecifications);
     const [imageLoaded, setImageLoaded] = useState(false);
 
     const fadeIn = {
@@ -169,11 +168,11 @@ const DetailProductSection = ({
             {/* Tabs Section */}
             <Tabs defaultValue="details">
                 <TabsList className="grid w-full grid-cols-3 mb-8">
-                    <TabsTrigger value="details">Product Details</TabsTrigger>
+                    <TabsTrigger value="details">Details</TabsTrigger>
                     <TabsTrigger value="features">
-                        Features & Benefits
+                        Features
                     </TabsTrigger>
-                    <TabsTrigger value="specs">Technical Specs</TabsTrigger>
+                    <TabsTrigger value="specs">Specsifications</TabsTrigger>
                 </TabsList>
                 <TabsContent value="details" className="space-y-4">
                     <div className="bg-white dark:bg-gray-800 rounded-xl p-6">

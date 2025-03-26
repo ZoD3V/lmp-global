@@ -14,21 +14,7 @@ import { Link } from "@inertiajs/react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { ArrowRight, Server, Leaf, Zap, ChevronUp } from "lucide-react";
-
-const fadeIn = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-};
-
-const staggerContainer = {
-    hidden: { opacity: 0 },
-    visible: {
-        opacity: 1,
-        transition: {
-            staggerChildren: 0.2,
-        },
-    },
-};
+import { fadeIn } from "../utils/motion";
 
 const FadeInSection = ({ children, className }) => {
     const [ref, inView] = useInView({
@@ -40,7 +26,8 @@ const FadeInSection = ({ children, className }) => {
         <motion.div
             ref={ref}
             initial="hidden"
-            animate={inView ? "visible" : "hidden"}
+            whileInView="show"
+            viewport={{ once: true }}
             variants={fadeIn}
             className={className}
         >
@@ -68,6 +55,7 @@ const Home = ({ banner }) => {
 
                 <div className="fixed bottom-6 left-6 z-50">
                     <Button
+                        aria-label="Name"
                         onClick={() =>
                             window.scrollTo({ top: 0, behavior: "smooth" })
                         }
@@ -177,9 +165,9 @@ const Home = ({ banner }) => {
                                             variant="outline"
                                             size="lg"
                                         >
-                                            <Link href="tel:+18005551234">
-                                                Call Sales: 1-800-555-1234
-                                            </Link>
+                                            <a href="https://wa.me/082320218200">
+                                                Call Sales: 082-320-218-200
+                                            </a>
                                         </Button>
                                     </div>
                                 </div>

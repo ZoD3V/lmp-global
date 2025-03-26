@@ -18,6 +18,10 @@ return Application::configure(basePath: dirname(__DIR__))
             'role.admin' => \App\Http\Middleware\EnsureUserHasRoleAdmin::class,
             'role.user' => \App\Http\Middleware\EnsureUserHasRoleUser::class,
         ]);
+
+        $middleware->web(append: [
+            HandleInertiaRequests::class,
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //

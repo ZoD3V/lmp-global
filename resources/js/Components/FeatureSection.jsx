@@ -67,7 +67,13 @@ const FeaturesSection = () => {
         <section id="features" className="w-full py-20 md:py-32 bg-white">
             <div className="container px-4 md:px-6 xl:px-0 max-w-[1200px]">
                 <FadeInSection className="flex flex-col items-center justify-center space-y-4 text-center">
-                    <div className="space-y-2">
+                    <motion.div
+                        variants={fadeIn("up", 0.3)}
+                        viewport={{ once: true }}
+                        initial="hidden"
+                        whileInView="show"
+                        className="space-y-2"
+                    >
                         <Badge
                             className="inline-flex bg-blue-500/10 text-blue-600 hover:bg-blue-500/20"
                             variant="secondary"
@@ -84,12 +90,18 @@ const FeaturesSection = () => {
                             ensuring reliability, performance, and
                             sustainability.
                         </p>
-                    </div>
+                    </motion.div>
                 </FadeInSection>
 
                 <div className="mx-auto grid items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
                     <FadeInSection className="order-2 lg:order-1">
-                        <div className="flex flex-col justify-center space-y-6">
+                        <motion.div
+                            variants={fadeIn("right", 0.3)}
+                            viewport={{ once: true }}
+                            initial="hidden"
+                            whileInView="show"
+                            className="flex flex-col justify-center space-y-6"
+                        >
                             <FeatureItem
                                 icon={
                                     <Shield className="h-6 w-6 text-blue-600" />
@@ -118,11 +130,17 @@ const FeaturesSection = () => {
                                 title="Expert Support"
                                 description="Our team of specialists provides comprehensive support to ensure smooth implementation and ongoing operation of our solutions."
                             />
-                        </div>
+                        </motion.div>
                     </FadeInSection>
 
                     <FadeInSection className="order-1 lg:order-2">
-                        <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                        <motion.div
+                            variants={fadeIn("left", 0.3)}
+                            viewport={{ once: true }}
+                            initial="hidden"
+                            whileInView="show"
+                            className="relative overflow-hidden rounded-2xl shadow-2xl"
+                        >
                             <img
                                 src={containment}
                                 alt="Data Center Features"
@@ -131,13 +149,7 @@ const FeaturesSection = () => {
                                 className="w-full object-cover transition-transform hover:scale-105 duration-700"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-                            <div className="absolute bottom-4 left-4 right-4 p-4 bg-background/80 backdrop-blur-md rounded-xl">
-                                <p className="text-sm font-medium">
-                                    Enterprise-grade components with guaranteed
-                                    reliability
-                                </p>
-                            </div>
-                        </div>
+                        </motion.div>
                     </FadeInSection>
                 </div>
             </div>

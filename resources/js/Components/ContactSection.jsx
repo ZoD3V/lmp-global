@@ -17,8 +17,8 @@ const FadeInSection = ({ children, className }) => {
         <motion.div
             ref={ref}
             initial="hidden"
-            animate={inView ? "visible" : "hidden"}
-            variants={fadeIn}
+            whileInView="show"
+            variants={fadeIn('up',0.4)}
             className={className}
         >
             {children}

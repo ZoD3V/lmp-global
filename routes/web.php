@@ -41,3 +41,9 @@ Route::get('/energy', [EnergyController::class, 'index']);
 Route::get('/pac', [PACController::class, 'index']);
 Route::get('/support', [SupportController::class, 'index']);
 Route::get('/design-collaboration-center', [DesignCollaborationCenterController::class, 'index']);
+Route::post('/logout', function () {
+    auth()->logout();
+    session()->invalidate();
+    session()->regenerateToken();
+    return redirect('/');
+})->name('logout');

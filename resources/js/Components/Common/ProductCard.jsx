@@ -29,7 +29,7 @@ const ProductCard = ({ title, description, imageSrc, link }) => {
                         src={imageSrc || "/placeholder.svg"}
                         alt={title}
                         fill="none"
-                        className="object-contain p-4"
+                        className="object-cover p-4"
                     />
                     <motion.div
                         className="absolute inset-0 bg-black/60 flex items-center justify-center"

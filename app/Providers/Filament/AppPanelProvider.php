@@ -18,6 +18,7 @@ use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
+use Joaopaulolndev\FilamentEditProfile\FilamentEditProfilePlugin;
 
 class AppPanelProvider extends PanelProvider
 {
@@ -67,6 +68,16 @@ class AppPanelProvider extends PanelProvider
             ])
             ->authMiddleware([
                 Authenticate::class,
+            ])
+            ->plugins([
+                FilamentEditProfilePlugin::make()
+                    ->setTitle('My Profile')
+                    ->setNavigationLabel('My Profile')
+                    ->setNavigationGroup('Profile')
+                    ->setIcon('heroicon-o-user')
+                    ->shouldRegisterNavigation(true)
+                    ->shouldShowDeleteAccountForm(true)
+                    ->shouldShowBrowserSessionsForm()
             ]);
     }
 }

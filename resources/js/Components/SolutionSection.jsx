@@ -24,7 +24,7 @@ const SolutionSection = ({ banner, title, description }) => {
                     initial="hidden"
                     whileInView="show"
                     viewport={{ once: true }}
-                    className="container mx-auto flex flex-col items-center text-white z-10 gap-8 text-center"
+                    className="container max-w-[1200px] flex flex-col items-center text-white z-10 gap-8 text-center"
                 >
                     <h1 className="text-5xl md:text-6xl leading-none font-bold tracking-wide">
                         {title}
