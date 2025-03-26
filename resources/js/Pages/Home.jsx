@@ -1,13 +1,9 @@
 import React from "react";
 import Navbar from "../Components/Common/Navbar";
 import Hero from "../Components/Common/Hero";
-import CompanyLogo from "../Components/CompanyLogo";
 import PurposeSection from "../Components/PurposeSection";
 import FeaturesSection from "../Components/FeatureSection";
-import GroupSection from "../Components/GroupSection";
-import CertificateSection from "../Components/CertificateSection";
 import Footer from "../components/Common/Footer";
-import CertificateIsoSection from "../Components/CertificateIsoSection";
 import { Badge } from "@/Components/ui/badge";
 import { Button } from "@/Components/ui/button";
 import { Link } from "@inertiajs/react";
@@ -15,6 +11,10 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { ArrowRight, Server, Leaf, Zap, ChevronUp } from "lucide-react";
 import { fadeIn } from "../utils/motion";
+import CertificateIsoSection from "@/Components/Home/CertificateIsoSection";
+import CertificateSection from "@/Components/Home/CertificateSection";
+import CompanyLogo from "@/Components/Home/CompanyLogo";
+import GroupSection from "@/Components/Home/GroupSection";
 
 const FadeInSection = ({ children, className }) => {
     const [ref, inView] = useInView({
@@ -43,11 +43,8 @@ const Home = ({ banner }) => {
                 <Navbar />
                 <Hero
                     banner={banner}
-                    title="Empowering a Greener Future with Innovation"
-                    description=" Harness renewable energy, optimize data center
-                        performance, and achieve sustainability while ensuring
-                        regulatory compliance—paving the way for a cleaner,
-                        modern, and eco-friendly world."
+                    title={banner[0].name}
+                    description={banner[0].description}
                     showButton={true}
                     buttonText="See All Product"
                     buttonLink="/product"

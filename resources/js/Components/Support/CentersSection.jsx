@@ -1,10 +1,10 @@
 import React from "react";
-import Heading from "./Common/Heading";
+import Heading from "../Common/Heading";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Server, ArrowRight, Globe } from "lucide-react";
-import researchImage from "../../../public/images/researchdevelopment.png";
-import { Button } from "./ui/button";
+import researchImage from "../../../../public/images/researchdevelopment.png";
+import { Button } from "../ui/button";
 import { Link } from "@inertiajs/react";
 
 const CentersSection = () => {

@@ -11,7 +11,10 @@ class VoltsController extends Controller
 {
     public function index()
     {
-        $banner = Banner::all();
+        $banner = Banner::whereHas('page', function ($query) {
+            $query->where('name', 'Volts');
+        })->get();
+
         $lmpVolts = LmpVolt::all();
 
         return Inertia::render('Volts', [

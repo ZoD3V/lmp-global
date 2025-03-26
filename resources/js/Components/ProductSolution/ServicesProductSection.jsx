@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { fadeIn, textVariant } from "../utils/motion";
+import { fadeIn, textVariant } from "../../utils/motion";
 import { HiComputerDesktop } from "react-icons/hi2";
 import { HiServerStack } from "react-icons/hi2";
 import { GoContainer } from "react-icons/go";

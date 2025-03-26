@@ -7,6 +7,7 @@ use App\Http\Controllers\DesignCollaborationCenterController;
 use App\Http\Controllers\EdgeDCController;
 use App\Http\Controllers\EnergyController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\KyrosMiraeController;
 use App\Http\Controllers\NetworksController;
 use App\Http\Controllers\NextTController;
 use App\Http\Controllers\PACController;
@@ -40,6 +41,7 @@ Route::get('/services', [ServicesController::class, 'index']);
 Route::get('/energy', [EnergyController::class, 'index']);
 Route::get('/pac', [PACController::class, 'index']);
 Route::get('/support', [SupportController::class, 'index']);
+Route::get('/kyros-mirae', [KyrosMiraeController::class, 'index']);
 Route::get('/design-collaboration-center', [DesignCollaborationCenterController::class, 'index']);
 Route::post('/logout', function () {
     auth()->logout();

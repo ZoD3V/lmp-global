@@ -10,7 +10,10 @@ class ResearchDevelopmentController extends Controller
 {
     public function index()
     {
-        $banner = Banner::all();
+        $banner = Banner::whereHas('page', function ($query) {
+            $query->where('name', 'ResearchDevelopment');
+        })->get();
+
         return Inertia::render('ResearchDevelopment', [
             'banner' => $banner
         ]);

@@ -1,9 +1,9 @@
 import React from "react";
 import { useState, useRef } from "react";
 import { Link } from "@inertiajs/react";
-import { color, motion, useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import Heading from "./Common/Heading";
+import Heading from "../Common/Heading";
 
 const AboutProductSection = ({ dataProduct }) => {
     const [hoveredCard, setHoveredCard] = useState(null);

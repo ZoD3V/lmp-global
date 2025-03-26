@@ -103,7 +103,7 @@ const NetworkSection = ({ networkProduct }) => {
                                         <h3 className="text-lg font-bold mb-2">
                                             LMP Networks®
                                         </h3>
-                                        <p className="text-sm font-medium">
+                                        <p className="text-sm font-medium line-clamp-1">
                                             {data.caption}
                                         </p>
                                         <div className="mt-4 space-y-2">
@@ -120,7 +120,7 @@ const NetworkSection = ({ networkProduct }) => {
                                                     )
                                                 )}
                                             </div>
-                                            <p className="text-sm text-muted-foreground">
+                                            <p className="text-sm text-muted-foreground line-clamp-2">
                                                 {data.details}
                                             </p>
                                         </div>

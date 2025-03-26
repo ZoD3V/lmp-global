@@ -13,9 +13,8 @@ const About = ({ banner }) => {
                 <Navbar />
                 <Hero
                     banner={banner}
-                    title="Research & Development"
-
-                    description="At LMP, we create an environment in R&D that empowers the world's best scientific minds to drive innovations shaping our future.Our R&D teams regularly share expertise across materials and businesses, fostering collaboration.This approach allows us to dynamically allocate resources to the most promising opportunities.."
+                    title={banner[0].name}
+                    description={banner[0].description}
                 />
                 <motion.section
                     variants={fadeIn("up", 0.2)}

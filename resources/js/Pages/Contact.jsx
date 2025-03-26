@@ -14,7 +14,7 @@ const Contact = (banner) => {
                 backgroundImage: `url('/storage/${banner.banner[0].image}')`,
             }}
         >
-            <div className="container px-4 md:px-6 h-full flex items-center justify-center xl:justify-start">
+            <div className="container px-4 md:px-6 xl:px-0 max-w-[1200px] h-full flex items-center justify-center xl:justify-start">
                 <motion.div
                     variants={textVariant(0.3)}
                     initial="hidden"

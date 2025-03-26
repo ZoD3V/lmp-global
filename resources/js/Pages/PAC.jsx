@@ -23,8 +23,8 @@ const PAC = ({ banner }) => {
                 <Navbar />
                 <Hero
                     banner={banner}
-                    title="LMP PAC"
-                    description="Locate your specific product for the latest user manuals, system application guides, data sheets, warranties, software downloads and more."
+                    title={banner[0].name}
+                    description={banner[0].description}
                 />
                 <AirConditioning />
                 <EnergyEfficiency />

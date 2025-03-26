@@ -10,7 +10,9 @@ class EnergyController extends Controller
 {
     public function index()
     {
-        $banner = Banner::all();
+        $banner = Banner::whereHas('page', function ($query) {
+            $query->where('name', 'Energy');
+        })->get();
 
         return Inertia::render('Energy', [
             'banner' => $banner,

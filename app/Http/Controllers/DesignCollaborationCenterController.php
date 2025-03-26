@@ -10,7 +10,10 @@ class DesignCollaborationCenterController extends Controller
 {
     public function index()
     {
-        $banner = Banner::all();
+        $banner = Banner::whereHas('page', function ($query) {
+            $query->where('name', 'DesignCollaborationCenter');
+        })->get();
+
         return Inertia::render('DesignCollaborationCenter', [
             'banner' => $banner,
         ]);

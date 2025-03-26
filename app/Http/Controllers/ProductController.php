@@ -14,7 +14,9 @@ class ProductController extends Controller
 {
     public function index(): Response
     {
-        $banner = Banner::all();
+        $banner = Banner::whereHas('page', function ($query) {
+            $query->where('name', 'ProductSolution');
+        })->get();
 
         $categories = Category::whereNull('parent_id')
             ->with([

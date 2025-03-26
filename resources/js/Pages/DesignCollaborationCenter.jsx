@@ -12,8 +12,8 @@ const DesignCollaborationCenter = ({ banner }) => {
                 <Navbar />
                 <Hero
                     banner={banner}
-                    title="Design & Collaboration Center LMP"
-                    description="Our team can collaborate with your team to create effective and innovative design solutions that structure and optimize the design process for better results."
+                    title={banner[0].name}
+                    description={banner[0].description}
 
                 />
                 <motion.section

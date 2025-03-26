@@ -23,7 +23,13 @@ class ProductTechnicalSpecResource extends Resource
 {
     protected static ?string $model = ProductTechnicalSpec::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-cpu-chip';
+
+    protected static ?string $navigationGroup = 'Manage Content';
+
+    protected static ?int $navigationSort = 8;
+
+    protected static ?string $navigationLabel = 'Products Technical Specs';
 
     public static function form(Form $form): Form
     {

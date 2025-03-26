@@ -11,8 +11,8 @@ const EdgeDC = ({ banner, edgeDc }) => {
                 <Navbar />
                 <Hero
                     banner={banner}
-                    title="LMP EdgeDC"
-                    description="Locate your specific product for the latest user manuals, system application guides, data sheets, warranties, software downloads and more."
+                    title={banner[0].name}
+                    description={banner[0].description}
 
                 />
                 <EdgeDcSection edgeDc={edgeDc} />

@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { fadeIn } from "../utils/motion";
+import { fadeIn } from "../../utils/motion";
 import { Server, Users, Lightbulb } from "lucide-react";
 
 const SupportServiceSection = () => {
@@ -33,7 +33,7 @@ const SupportServiceSection = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="mx-auto flex flex-col w-full justify-center max-w-6xl"
+            className="mx-auto flex flex-col w-full justify-center max-w-6xl py-16"
         >
             <motion.div
                 variants={fadeIn("up", 0.2)}

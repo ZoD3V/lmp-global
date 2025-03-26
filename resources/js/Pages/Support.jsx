@@ -2,9 +2,9 @@ import React from "react";
 import Footer from "../components/Common/Footer";
 import Navbar from "../Components/Common/Navbar";
 import Hero from "../Components/Common/Hero";
-import SolutionSection from "../Components/SolutionSection";
-import CentersSection from "../Components/CentersSection";
-import SupportServiceSection from "@/Components/SupportServiceSection";
+import SupportServiceSection from "@/Components/Support/SupportServiceSection";
+import SolutionSection from "@/Components/SolutionSection";
+import CentersSection from "@/Components/Support/CentersSection";
 
 const Support = ({ banner }) => {
     return (
@@ -13,8 +13,8 @@ const Support = ({ banner }) => {
                 <Navbar />
                 <Hero
                     banner={banner}
-                    title="LMP Support"
-                    description="Locate your specific product for the latest user manuals, system application guides, data sheets, warranties, software downloads and more."
+                    title={banner[0].name}
+                    description={banner[0].description}
                 />
                 <SupportServiceSection />
                 <SolutionSection

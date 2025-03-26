@@ -12,8 +12,8 @@ const Networks = ({ banner, networks }) => {
                 <Navbar />
                 <Hero
                     banner={banner}
-                    title="LMP Networks"
-                    description="LMP Networks provide Ultra High Density Solution for connectivity in Data Center. Optimizing Space - Air flow and Efficiency in Cooling Systems & Energy consumption."
+                    title={banner[0].name}
+                    description={banner[0].description}
                 />
                 {networks[0] && <NetworkSection networkProduct={networks[0]} />}
                 {networks[1] && <CentriniumSection networkProduct={networks[0]} />}

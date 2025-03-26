@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from "../components/Common/Footer";
 import Navbar from "../Components/Common/Navbar";
-import NextTSection from "../Components/NexTSection";
+import NextTSection from "../Components/NexT/NexTSection";
 
 const NextT = ({ nexT }) => {
     return (

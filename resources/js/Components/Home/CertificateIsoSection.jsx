@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Badge } from "./ui/badge";
+import { Badge } from "../ui/badge";
 import {
     CheckCircle2,
     BadgeCheck,

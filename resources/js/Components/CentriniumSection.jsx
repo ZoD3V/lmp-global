@@ -105,9 +105,9 @@ const CentriniumSection = ({ networkProduct }) => {
                                     </div>
                                     <div className="p-6">
                                         <h3 className="text-lg font-bold mb-2">
-                                            LMP Networks®
+                                            LMP Centrinium®
                                         </h3>
-                                        <p className="text-sm font-medium">
+                                        <p className="text-sm font-medium line-clamp-1">
                                             {data.caption}
                                         </p>
                                         <div className="mt-4 space-y-2">
@@ -124,7 +124,7 @@ const CentriniumSection = ({ networkProduct }) => {
                                                     )
                                                 )}
                                             </div>
-                                            <p className="text-sm text-muted-foreground">
+                                            <p className="text-sm text-muted-foreground line-clamp-2">
                                                 {data.details}
                                             </p>
                                         </div>

@@ -1,11 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { fadeIn } from "../utils/motion";
-import logo_lmp from "../../../public/images/containment_lmp.png";
-import product1 from "../../../public/images/product1.png";
-import product2 from "../../../public/images/product2.jpeg";
+import { fadeIn } from "../../utils/motion";
+import logo_lmp from "../../../../public/images/containment_lmp.png";
+import product1 from "../../../../public/images/product1.png";
+import product2 from "../../../../public/images/product2.jpeg";
 import { Card, CardContent } from "@/components/ui/card";
-import Heading from "./Common/Heading";
+import Heading from "../Common/Heading";
 
 const CsrSection = () => {
     const containerVariants = {

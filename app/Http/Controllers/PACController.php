@@ -10,7 +10,9 @@ class PACController extends Controller
 {
     public function index()
     {
-        $banner = Banner::all();
+        $banner = Banner::whereHas('page', function ($query) {
+            $query->where('name', 'Pac');
+        })->get();
 
         return Inertia::render('PAC', [
             'banner' => $banner,

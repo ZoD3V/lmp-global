@@ -49,7 +49,7 @@ class LMPPartnerResource extends Resource
                 Tables\Columns\ImageColumn::make('image')
                     ->label('Image')
                     ->sortable()
-                    ->height(250)
+                    ->height(100)
                     ->searchable(),
             ])
             ->filters([

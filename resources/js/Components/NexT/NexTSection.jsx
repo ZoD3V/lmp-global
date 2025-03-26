@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Cpu, Leaf, Zap, Server, Globe, Database } from "lucide-react";
+import { Cpu, Leaf, Zap, Server, Globe, Database,Info } from "lucide-react";
 import {
     Card,
     CardContent,
@@ -91,7 +91,7 @@ const NextTSection = ({ nexT }) => {
                         Next Generation Data Centers
                     </Badge>
                     <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-white mb-4">
-                        <span className="text-blue-600 dark:text-blue-400">
+                        <span className="text-gray-800 dark:text-blue-400">
                             {nexT[0].title}
                         </span>
                     </h2>
@@ -123,20 +123,23 @@ const NextTSection = ({ nexT }) => {
                             <TabsList className="grid grid-cols-3 mb-8 bg-blue-100/50 dark:bg-blue-900/20">
                                 <TabsTrigger
                                     value="overview"
-                                    className="data-[state=active]:bg-blue-600 data-[state=active]:text-white"
+                                    className="data-[state=active]:bg-blue-600 data-[state=active]:text-white text-blue-600 hover:text-blue-800 transition-all"
                                 >
+                                    <Info className="w-5 h-5 mr-2" />
                                     Overview
                                 </TabsTrigger>
                                 <TabsTrigger
                                     value="technology"
-                                    className="data-[state=active]:bg-blue-600 data-[state=active]:text-white"
+                                    className="data-[state=active]:bg-blue-600 data-[state=active]:text-white text-blue-600 hover:text-blue-800 transition-all"
                                 >
+                                    <Cpu className="w-5 h-5 mr-2" />
                                     Technology
                                 </TabsTrigger>
                                 <TabsTrigger
                                     value="sustainability"
-                                    className="data-[state=active]:bg-blue-600 data-[state=active]:text-white"
+                                    className="data-[state=active]:bg-blue-600 data-[state=active]:text-white text-blue-600 hover:text-blue-800 transition-all"
                                 >
+                                    <Leaf className="w-5 h-5 mr-2" />
                                     Sustainability
                                 </TabsTrigger>
                             </TabsList>

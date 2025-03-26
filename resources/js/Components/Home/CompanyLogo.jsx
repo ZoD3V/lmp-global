@@ -1,33 +1,33 @@
 // horizontal
-import tcm from "../../../public/images/icons/ic-tcm.png";
-import trust from "../../../public/images/icons/ic-trust.png";
-import gpk from "../../../public/images/icons/ic-gpk.png";
-import npr from "../../../public/images/icons/ic-npr.png";
-import itm from "../../../public/images/icons/ic-itm.png";
-import banpu from "../../../public/images/icons/ic-banpu.png";
-import psn from "../../../public/images/icons/ic-psn.png";
-import freeport from "../../../public/images/icons/ic-freeport.png";
-import indosat from "../../../public/images/icons/ic-indosat.png";
-import pegadaian from "../../../public/images/icons/ic-pegadaian.png";
-import sig from "../../../public/images/icons/ic-sig.png";
-import telkomakses from "../../../public/images/icons/ic-telkomakses.png";
-import telkomselsigma from "../../../public/images/icons/ic-telkomsigma.png";
-import wir from "../../../public/images/icons/ic-wir.png";
+import tcm from "../../../../public/images/icons/ic-tcm.png";
+import trust from "../../../../public/images/icons/ic-trust.png";
+import gpk from "../../../../public/images/icons/ic-gpk.png";
+import npr from "../../../../public/images/icons/ic-npr.png";
+import itm from "../../../../public/images/icons/ic-itm.png";
+import banpu from "../../../../public/images/icons/ic-banpu.png";
+import psn from "../../../../public/images/icons/ic-psn.png";
+import freeport from "../../../../public/images/icons/ic-freeport.png";
+import indosat from "../../../../public/images/icons/ic-indosat.png";
+import pegadaian from "../../../../public/images/icons/ic-pegadaian.png";
+import sig from "../../../../public/images/icons/ic-sig.png";
+import telkomakses from "../../../../public/images/icons/ic-telkomakses.png";
+import telkomselsigma from "../../../../public/images/icons/ic-telkomsigma.png";
+import wir from "../../../../public/images/icons/ic-wir.png";
 
 //vertical
-import keuangan from "../../../public/images/icons/ic-keuangan.png";
-import kominfo from "../../../public/images/icons/ic-kominfo.png";
-import pertanian from "../../../public/images/icons/ic-pertanian.png";
-import bjb from "../../../public/images/icons/ic-bjb.png";
-import bri from "../../../public/images/icons/ic-bri.png";
-import bukopin from "../../../public/images/icons/ic-bukopin.png";
-import garuda from "../../../public/images/icons/ic-garuda.png";
-import len from "../../../public/images/icons/ic-len.png";
-import marga from "../../../public/images/icons/ic-marga.png";
-import peruri from "../../../public/images/icons/ic-peruri.png";
-import telkomsel from "../../../public/images/icons/ic-telkomsel.png";
+import keuangan from "../../../../public/images/icons/ic-keuangan.png";
+import kominfo from "../../../../public/images/icons/ic-kominfo.png";
+import pertanian from "../../../../public/images/icons/ic-pertanian.png";
+import bjb from "../../../../public/images/icons/ic-bjb.png";
+import bri from "../../../../public/images/icons/ic-bri.png";
+import bukopin from "../../../../public/images/icons/ic-bukopin.png";
+import garuda from "../../../../public/images/icons/ic-garuda.png";
+import len from "../../../../public/images/icons/ic-len.png";
+import marga from "../../../../public/images/icons/ic-marga.png";
+import peruri from "../../../../public/images/icons/ic-peruri.png";
+import telkomsel from "../../../../public/images/icons/ic-telkomsel.png";
 
-import Heading from "./Common/Heading";
+import Heading from "../Common/Heading";
 
 const CompanyLogo = () => {
     const logos = [

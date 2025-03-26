@@ -11,7 +11,10 @@ class CsrController extends Controller
 {
     public function index()
     {
-        $banner = Banner::all();
+        $banner = Banner::whereHas('page', function ($query) {
+            $query->where('name', 'CSR');
+        })->get();
+
         $csr = Csr::all();
         return Inertia::render('CSR', [
             'banner' => $banner,

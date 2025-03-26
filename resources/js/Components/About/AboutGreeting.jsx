@@ -1,8 +1,7 @@
 import React from "react";
-import { fadeIn } from "../utils/motion";
+import { fadeIn } from "../../utils/motion";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Server, Shield, Clock, Cpu, BarChart, Globe } from "lucide-react";
 
 const AboutGreeting = (props) => {
     const refHero = useRef(null);

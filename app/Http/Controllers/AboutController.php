@@ -12,7 +12,10 @@ class AboutController extends Controller
 {
     public function index()
     {
-        $banner = Banner::all();
+        $banner = Banner::whereHas('page', function ($query) {
+            $query->where('name', 'About');
+        })->get();
+
         $timeline = LMPHistory::all();
         $lmp_profiles = LMPProfile::all();
         $formatted_profiles = $lmp_profiles->map(function ($profile) {

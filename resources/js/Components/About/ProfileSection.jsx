@@ -1,10 +1,10 @@
 import React from "react";
-import { fadeIn } from "../utils/motion";
-import Heading from "./Common/Heading";
+import { fadeIn } from "../../utils/motion";
+import Heading from "../Common/Heading";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Server, Shield, Clock, Cpu, BarChart, Globe } from "lucide-react";
-import researchImage from "../../../public/images/researchdevelopment.png";
+import researchImage from "../../../../public/images/researchdevelopment.png";
 
 const ProfileSection = ({ lmp_profile }) => {
     const ref1 = useRef(null);

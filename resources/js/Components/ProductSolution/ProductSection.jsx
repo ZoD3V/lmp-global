@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { fadeIn, textVariant } from "../utils/motion";
-import Heading from "./Common/Heading";
-import CardProduct from "./Common/CardProduct";
+import { fadeIn, textVariant } from "../../utils/motion";
+import Heading from "../Common/Heading";
+import CardProduct from "../Common/CardProduct";
 
 const ProductSection = ({ dataProduct }) => {
     return (

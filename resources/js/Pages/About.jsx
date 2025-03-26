@@ -1,12 +1,12 @@
 import React from "react";
-import Hero from "../Components/Common/Hero";
-import ProfileSection from "../Components/ProfileSection";
-import AboutGreeting from "../Components/AboutGreeting";
-import ResearchDevelopmentSection from "../Components/ResearchDevelopmentSection";
-import TimelineSection from "../Components/TimelineSection";
-import Navbar from "../Components/Common/Navbar";
-import Footer from "../components/Common/Footer";
-import AboutProductSection from "../Components/AboutProductSection";
+import Navbar from "@/Components/Common/Navbar";
+import Footer from "@/Components/Common/Footer";
+import Hero from "@/Components/Common/Hero";
+import ResearchDevelopmentSection from "@/Components/About/ResearchDevelopmentSection";
+import AboutGreeting from "@/Components/About/AboutGreeting";
+import TimelineSection from "@/Components/About/TimelineSection";
+import AboutProductSection from "@/Components/About/AboutProductSection";
+import ProfileSection from "@/Components/About/ProfileSection";
 
 const About = ({ banner, timeline, product, lmp_profile }) => {
     return (
@@ -15,8 +15,8 @@ const About = ({ banner, timeline, product, lmp_profile }) => {
                 <Navbar />
                 <Hero
                     banner={banner}
-                    title="About LMP"
-                    description="LMP Networks is driven by a passion for Design Engineering, combining Mechanical-Electrical HVAC design, Enclosure Engineering, Digital Twins, and Modular Architecture to accelerate deployment and improve visualization of assets, transforming the modular data center and connectivity industry."
+                    title={banner[0].name}
+                    description={banner[0].description}
 
                 />
                 <AboutGreeting />

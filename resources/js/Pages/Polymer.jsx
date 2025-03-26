@@ -11,8 +11,8 @@ const Polymer = ({ banner, polymer }) => {
                 <Navbar />
                 <Hero
                     banner={banner}
-                    title="LMP Polymer"
-                    description="Since 2021 MTE expand new business to Design Prototyping, Mass Production Plastic product."
+                    title={banner[0].name}
+                    description={banner[0].description}
 
                 />
                 <PolymerSection polymerData={polymer} />

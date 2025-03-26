@@ -4,7 +4,7 @@ import Hero from "../Components/Common/Hero";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
 import Footer from "../components/Common/Footer";
-import CsrSection from "../Components/CsrSection";
+import CsrSection from "@/Components/Csr/CsrSection";
 
 const CSR = ({ banner, csr }) => {
     return (
@@ -13,9 +13,8 @@ const CSR = ({ banner, csr }) => {
                 <Navbar />
                 <Hero
                     banner={banner}
-                    title="Corporate Social Responsibility"
-
-                    description="Implementing corporate social responsibility (CSR) has become an important part of business sustainability. In this case, the Company realizes that every success achieved cannot be separated from the support of many parties, including employees, the community and the surrounding environment."
+                    title={banner[0].name}
+                    description={banner[0].description}
                 />
                 <motion.section
                     variants={fadeIn("up", 0.2)}
@@ -69,7 +68,7 @@ const CSR = ({ banner, csr }) => {
                                 <motion.h2 className="text-xl font-medium">
                                     CSR VISION
                                 </motion.h2>
-                                <ul class="list-disc list-inside text-sm">
+                                <ul className="list-disc list-inside text-sm">
                                     <li>
                                         The realization of a harmonious
                                         relationship between companies and
@@ -86,7 +85,7 @@ const CSR = ({ banner, csr }) => {
                                 <motion.h2 className="text-xl font-medium">
                                     CSR MISSION
                                 </motion.h2>
-                                <ul class="list-disc list-inside text-sm">
+                                <ul className="list-disc list-inside text-sm">
                                     <li>
                                         Maintaining environmental sustainability
                                     </li>

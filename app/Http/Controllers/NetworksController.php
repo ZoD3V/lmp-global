@@ -11,7 +11,10 @@ class NetworksController extends Controller
 {
     public function index()
     {
-        $banner = Banner::all();
+        $banner = Banner::whereHas('page', function ($query) {
+            $query->where('name', 'Network');
+        })->get();
+
         $lmpNetworks = LmpNetwork::with('images')->get();
 
         $formattedData = $lmpNetworks->map(function ($network) {

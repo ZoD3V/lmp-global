@@ -11,7 +11,10 @@ class EdgeDCController extends Controller
 {
     public function index()
     {
-        $banner = Banner::all();
+        $banner = Banner::whereHas('page', function ($query) {
+            $query->where('name', 'EdgeDc');
+        })->get();
+
         return Inertia::render('EdgeDc', [
             'banner' => $banner,
         ]);

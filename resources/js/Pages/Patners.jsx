@@ -4,75 +4,17 @@ import Hero from "../Components/Common/Hero";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
 import logo_ashrae from "../../../public/images/logo/logo_ashrae.png";
-import logo_akacp from "../../../public/images/logo/logo_akacp.png";
-import logo_carel from "../../../public/images/logo/logo_carel.png";
-import logo_corning from "../../../public/images/logo/logo_corning.png";
-import logo_ecfan from "../../../public/images/logo/logo_ecfan.png";
-import logo_mitsubishi from "../../../public/images/logo/logo_mitsubishi.png";
-import logo_panasonic from "../../../public/images/logo/logo_panasonic.png";
-import logo_redots from "../../../public/images/logo/logo_redots.png";
-import logo_sumitomo from "../../../public/images/logo/logo_sumitomo.png";
-import logo_viavi from "../../../public/images/logo/logo_viavi.png";
 import Footer from "../components/Common/Footer";
 
-const About = ({ banner }) => {
-    const patners = [
-        {
-            id: 2,
-            title: "AKACP",
-            image: logo_akacp,
-        },
-        {
-            id: 3,
-            title: "CAREL",
-            image: logo_carel,
-        },
-        {
-            id: 4,
-            title: "CORNING",
-            image: logo_corning,
-        },
-        {
-            id: 5,
-            title: "ECFAN",
-            image: logo_ecfan,
-        },
-        {
-            id: 6,
-            title: "MISTSUBISHI",
-            image: logo_mitsubishi,
-        },
-        {
-            id: 7,
-            title: "PANASONIC",
-            image: logo_panasonic,
-        },
-        {
-            id: 8,
-            title: "RED DOT",
-            image: logo_redots,
-        },
-        {
-            id: 9,
-            title: "SUMITOMO",
-            image: logo_sumitomo,
-        },
-        {
-            id: 10,
-            title: "VIAVI",
-            image: logo_viavi,
-        },
-    ];
-
+const About = ({ banner, patners }) => {
     return (
         <main className="relative min-h-screen overflow-x-hidden">
             <div className="overflow-hidden">
                 <Navbar />
                 <Hero
                     banner={banner}
-                    title="LMP Partner"
-
-                    description="We believe that collaboration is the key to achieving sustainable success. In every step of our journey, we are committed to building mutually beneficial and highly competitive partnerships with various parties. Together with our Partners, we strive to deliver innovation, quality, and solutions that meet the needs of our customers."
+                    title={banner[0].name}
+                    description={banner[0].description}
                 />
                 <motion.section
                     variants={fadeIn("up", 0.2)}
@@ -130,7 +72,7 @@ const About = ({ banner }) => {
                                         viewport={{ once: true }}
                                         whileHover={{ scale: 1.05 }}
                                         className="w-full h-full object-contain"
-                                        src={partner.image}
+                                        src={`/storage/${partner.image}`}
                                         alt={partner.title}
                                     />
                                 </motion.div>

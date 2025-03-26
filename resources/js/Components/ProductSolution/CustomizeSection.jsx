@@ -4,8 +4,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import { motion } from "framer-motion";
-import { fadeIn, textVariant } from "../utils/motion";
-import Heading from "./Common/Heading";
+import { fadeIn, textVariant } from "../../utils/motion";
+import Heading from "../Common/Heading";
 
 const cuztomize = [
     {

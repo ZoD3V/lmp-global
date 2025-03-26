@@ -11,8 +11,8 @@ const Volts = ({ banner, volts }) => {
                 <Navbar />
                 <Hero
                     banner={banner}
-                    title="LMP Volts"
-                    description="Quality improvements to unstable voltage, bad grounding & electromagnetic induction / noise disturbances."
+                    title={banner[0].name}
+                    description={banner[0].description}
                 />
                 <VoltsSection voltsData={volts} />
                 <Footer />

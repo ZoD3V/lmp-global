@@ -10,7 +10,10 @@ class ServicesController extends Controller
 {
     public function index()
     {
-        $banner = Banner::all();
+        $banner = Banner::whereHas('page', function ($query) {
+            $query->where('name', 'Services');
+        })->get();
+
         return Inertia::render('Services', [
             'banner' => $banner
         ]);

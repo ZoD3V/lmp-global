@@ -29,7 +29,7 @@ const FadeInSection = ({ children, className }) => {
 const ContactSection = () => {
     return (
         <section id="contact" className="w-full py-20 md:py-32 bg-white">
-            <div className="container px-4 md:px-6">
+            <div className="container px-4 md:px-6 xl:px-0 max-w-[1200px]">
                 <div className="grid gap-10 lg:grid-cols-2">
                     <FadeInSection>
                         <div className="space-y-6">

@@ -1,11 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Navbar from "../Components/Common/Navbar";
 import Footer from "../components/Common/Footer";
 import Hero from "../Components/Common/Hero";
-import ProductSection from "../Components/ProductSection";
-import SolutionSection from "../Components/SolutionSection";
-import ServiceProductSection from "../Components/ServicesProductSection";
-import CustomizeSection from "../Components/CustomizeSection";
+import ProductSection from "@/Components/ProductSolution/ProductSection";
+import SolutionSection from "@/Components/SolutionSection";
+import ServiceProductSection from "@/Components/ProductSolution/ServicesProductSection";
+import CustomizeSection from "@/Components/ProductSolution/CustomizeSection";
 
 const ProductSolution = ({ banner, categories }) => {
     return (
@@ -14,9 +14,8 @@ const ProductSolution = ({ banner, categories }) => {
                 <Navbar />
                 <Hero
                     banner={banner}
-                    title="Product & Solution"
-                    description="LMP offers essential infrastructure technology and specialized solutions that can be swiftly implemented to meet your business needs."
-
+                    title={banner[0].name}
+                    description={banner[0].description}
                 />
                 <ProductSection dataProduct={categories} />
                 <SolutionSection

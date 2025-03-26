@@ -11,7 +11,10 @@ class PolymerController extends Controller
 {
     public function index()
     {
-        $banner = Banner::all();
+        $banner = Banner::whereHas('page', function ($query) {
+            $query->where('name', 'Polymer');
+        })->get();
+
         $lmpPolymer = LMPPolymer::with('images')->get();
 
         return Inertia::render('Polymer', [

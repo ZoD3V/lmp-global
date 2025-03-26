@@ -10,7 +10,10 @@ class SupportController extends Controller
 {
     public function index()
     {
-        $banner = Banner::all();
+        $banner = Banner::whereHas('page', function ($query) {
+            $query->where('name', 'Support');
+        })->get();
+
         return Inertia::render('Support', [
             'banner' => $banner
         ]);

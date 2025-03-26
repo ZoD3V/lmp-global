@@ -38,8 +38,8 @@ const Services = ({ banner }) => {
                 <Navbar />
                 <Hero
                     banner={banner}
-                    title="LMP Service & Learning Center"
-                    description="Whether it's engineering, on-site project management, energy-consumption monitoring, or something else, LMP offers a wide ran ge of programs and services to support critical infrastructure needs."
+                    title={banner[0].name}
+                    description={banner[0].description}
 
                 />
                 <ServicesSection />

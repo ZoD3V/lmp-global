@@ -1,10 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Server, Cpu, Building2, Zap, ShieldCheck } from "lucide-react";
-import cert_tia from "../../../public/images/cert-tia.png";
-import cert_tia2 from "../../../public/images/cert-tia2.png";
-import cert_epi from "../../../public/images/cert-epi.png";
-import { Badge } from "./ui/badge";
+import cert_tia2 from "../../../../public/images/cert-tia2.png";
+import cert_epi from "../../../../public/images/cert-epi.png";
+import { Badge } from "../ui/badge";
 
 const CertificateSection = () => {
     const ratingCategories = [
