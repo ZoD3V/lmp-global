@@ -1,7 +1,7 @@
 import React from "react";
 import { Cpu, Gauge, Thermometer } from "lucide-react";
 import { motion } from "framer-motion";
-import { fadeIn, textVariant } from "../utils/motion";
+import { fadeIn } from "../utils/motion";
 const staggerContainer = {
     hidden: { opacity: 0 },
     visible: {

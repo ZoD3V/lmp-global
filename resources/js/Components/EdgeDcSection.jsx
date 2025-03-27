@@ -12,8 +12,8 @@ import {
     DollarSign,
     Shield,
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Button } from "./ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 
 const containerVariants = {
     hidden: { opacity: 0 },
