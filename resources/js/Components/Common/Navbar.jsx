@@ -12,7 +12,7 @@ import {
     DropdownMenuLabel,
     DropdownMenuSeparator,
     DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+} from "../ui/dropdown-menu";
 import { LogOut, UserIcon } from "lucide-react";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -115,13 +115,17 @@ const Navbar = () => {
                     >
                         <Button
                             variant="outline"
-                            onClick={() => handleClickRoute("/app/edit-profile")}
+                            onClick={() =>
+                                handleClickRoute("/app/edit-profile")
+                            }
                         >
                             Sign Up
                         </Button>
                         <Button
                             variant="theme"
-                            onClick={() => handleClickRoute("/app/edit-profile")}
+                            onClick={() =>
+                                handleClickRoute("/app/edit-profile")
+                            }
                         >
                             Sign in
                         </Button>
