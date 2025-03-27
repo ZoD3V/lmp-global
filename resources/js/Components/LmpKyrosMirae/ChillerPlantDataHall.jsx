@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Server, Thermometer, Droplet, Wind, Gauge } from "lucide-react";
 
 import { cn } from "@/lib/utils";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
 import chillerPlant from "../../../../public/images/chiller-plant.png";
 import dataHall from "../../../../public/images/data-hall.png";
 

@@ -6,7 +6,7 @@ import {
     FlaskConical,
     Gauge,
 } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+import { Badge } from "../ui/badge";
 
 const KyrosMiraeServiceSection = () => {
     return (

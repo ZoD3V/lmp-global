@@ -5,7 +5,7 @@ import {
     CardDescription,
     CardHeader,
     CardTitle,
-} from "@/components/ui/card";
+} from "../ui/card";
 import { Zap, LineChart, Settings, Database, Leaf } from "lucide-react";
 import thermalRisk1 from "../../../../public/images/thermal-risk-1.png";
 import thermalRisk2 from "../../../../public/images/thermal-risk-2.png";
