@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { fadeIn } from "../../utils/motion";
+import { fadeIn } from "@/utils/motion";
 import { Server, Users, Lightbulb } from "lucide-react";
 
 const SupportServiceSection = () => {

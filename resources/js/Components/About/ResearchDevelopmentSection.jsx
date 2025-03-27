@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { fadeIn, textVariant } from "../../utils/motion";
 import server from "../../../../public/images/researchdevelopment.png";
-import FeatureCard from "../common/FeaturedCard";
+import FeatureCard from "../Common/FeaturedCard";
+import { fadeIn,textVariant } from "@/utils/motion";
 
 const ResearchDevelopmentSection = () => {
     const dataProfile = [

@@ -14,6 +14,7 @@ import Hero from "@/Components/Common/Hero";
 import PurposeSection from "@/Components/PurposeSection";
 import { fadeIn } from "@/utils/motion";
 import Footer from "@/Components/Common/Footer";
+import FeaturesSection from "@/Components/FeatureSection";
 
 const FadeInSection = ({ children, className }) => {
     const [ref, inView] = useInView({

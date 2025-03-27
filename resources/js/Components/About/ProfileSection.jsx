@@ -1,5 +1,5 @@
 import React from "react";
-import { fadeIn } from "../../utils/motion";
+import { fadeIn } from "@/utils/motion";
 import Heading from "../Common/Heading";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
