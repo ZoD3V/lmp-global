@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Card, CardContent } from "./ui/card";
-import { Badge } from ".//ui/badge";
+import { Badge } from "./ui/badge";
 import Heading from "./Common/Heading";
 
 const CentriniumSection = ({ networkProduct }) => {

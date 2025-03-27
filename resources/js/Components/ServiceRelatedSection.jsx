@@ -5,7 +5,7 @@ import Heading from "./Common/Heading";
 import {
     Card,
     CardContent,
-} from "@/components/ui/card";
+} from "./ui/card";
 
 const ServicesRelatedSection = ({ features, title, showButton = false }) => {
     const containerVariants = {
