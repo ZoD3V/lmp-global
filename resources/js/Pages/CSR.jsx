@@ -1,10 +1,10 @@
 import React from "react";
-import Navbar from "../Components/Common/Navbar";
-import Hero from "../Components/Common/Hero";
 import { motion } from "framer-motion";
-import { fadeIn, textVariant } from "../utils/motion";
-import Footer from "../components/Common/Footer";
 import CsrSection from "@/Components/Csr/CsrSection";
+import Navbar from "@/Components/Common/Navbar";
+import Hero from "@/Components/Common/Hero";
+import Footer from "@/Components/Common/Footer";
+import { fadeIn, textVariant } from "@/utils/motion";
 
 const CSR = ({ banner, csr }) => {
     return (

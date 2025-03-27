@@ -1,20 +1,11 @@
 import React from "react";
-import Footer from "../components/Common/Footer";
-import Navbar from "../Components/Common/Navbar";
-import Hero from "../Components/Common/Hero";
 import AirConditioning from "@/Components/AirConditioning";
 import EnergyEfficiency from "@/Components/EnergyEfficiency";
 import IntelligentControlSystems from "@/Components/IntelligentControlSystems";
-import {
-    ArrowRight,
-    BarChart2,
-    Cpu,
-    Gauge,
-    Leaf,
-    Server,
-    Thermometer,
-} from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Navbar from "@/Components/Common/Navbar";
+import Hero from "@/Components/Common/Hero";
+import Footer from "@/Components/Common/Footer";
 
 const PAC = ({ banner }) => {
     return (

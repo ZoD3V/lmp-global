@@ -1,8 +1,8 @@
+import Footer from "@/Components/Common/Footer";
+import Hero from "@/Components/Common/Hero";
+import Navbar from "@/Components/Common/Navbar";
+import EdgeDcSection from "@/Components/EdgeDcSection";
 import React from "react";
-import Footer from "../components/Common/Footer";
-import Navbar from "../Components/Common/Navbar";
-import Hero from "../Components/Common/Hero";
-import EdgeDcSection from "../Components/EdgeDcSection";
 
 const EdgeDC = ({ banner, edgeDc }) => {
     return (

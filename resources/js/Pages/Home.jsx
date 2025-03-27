@@ -1,8 +1,4 @@
 import React from "react";
-import Navbar from "../Components/Common/Navbar";
-import Hero from "../Components/Common/Hero";
-import PurposeSection from "../Components/PurposeSection";
-import FeaturesSection from "../Components/FeatureSection";
 import Footer from "../components/Common/Footer";
 import { Badge } from "@/Components/ui/badge";
 import { Button } from "@/Components/ui/button";
@@ -10,11 +6,14 @@ import { Link } from "@inertiajs/react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { ArrowRight, Server, Leaf, Zap, ChevronUp } from "lucide-react";
-import { fadeIn } from "../utils/motion";
 import CertificateIsoSection from "@/Components/Home/CertificateIsoSection";
 import CertificateSection from "@/Components/Home/CertificateSection";
 import CompanyLogo from "@/Components/Home/CompanyLogo";
 import GroupSection from "@/Components/Home/GroupSection";
+import Navbar from "@/Components/Common/Navbar";
+import Hero from "@/Components/Common/Hero";
+import PurposeSection from "@/Components/PurposeSection";
+import { fadeIn } from "@/utils/motion";
 
 const FadeInSection = ({ children, className }) => {
     const [ref, inView] = useInView({

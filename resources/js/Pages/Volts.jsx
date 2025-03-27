@@ -1,8 +1,8 @@
+import Footer from "@/Components/Common/Footer";
+import Hero from "@/Components/Common/Hero";
+import Navbar from "@/Components/Common/Navbar";
+import VoltsSection from "@/Components/VoltsSection";
 import React from "react";
-import Footer from "../components/Common/Footer";
-import Navbar from "../Components/Common/Navbar";
-import VoltsSection from "../Components/VoltsSection";
-import Hero from "../Components/Common/Hero";
 
 const Volts = ({ banner, volts }) => {
     return (

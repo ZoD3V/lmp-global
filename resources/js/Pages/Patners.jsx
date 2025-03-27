@@ -1,10 +1,10 @@
 import React from "react";
-import Navbar from "../Components/Common/Navbar";
-import Hero from "../Components/Common/Hero";
 import { motion } from "framer-motion";
-import { fadeIn, textVariant } from "../utils/motion";
 import logo_ashrae from "../../../public/images/logo/logo_ashrae.png";
-import Footer from "../components/Common/Footer";
+import Navbar from "@/Components/Common/Navbar";
+import Hero from "@/Components/Common/Hero";
+import Footer from "@/Components/Common/Footer";
+import { fadeIn, textVariant } from "@/utils/motion";
 
 const About = ({ banner, patners }) => {
     return (
@@ -80,7 +80,7 @@ const About = ({ banner, patners }) => {
                         </motion.div>
                     </motion.div>
                 </motion.section>
-                <Footer />
+                <Footer/>
             </div>
         </main>
     );
