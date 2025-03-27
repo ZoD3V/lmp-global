@@ -1,5 +1,4 @@
 import {
-    ArrowRightIcon,
     BarChart3,
     CloudCog,
     Database,

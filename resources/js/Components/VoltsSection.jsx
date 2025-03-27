@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
 import { RiShieldFlashFill } from "react-icons/ri";

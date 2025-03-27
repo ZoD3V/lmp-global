@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
 import { ArrowRight, Server, Leaf, Zap } from "lucide-react";
 import { useInView } from "react-intersection-observer";
-import { Badge } from "@/Components/ui/badge";
-import { Button } from "@/Components/ui/button";
+import { Badge } from "./ui/badge";
+import { Button } from "./ui/button";
 import { Link } from "@inertiajs/react";
 
 const FadeInSection = ({ children, className }) => {

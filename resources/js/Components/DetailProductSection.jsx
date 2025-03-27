@@ -12,8 +12,8 @@ import {
 } from "lucide-react";
 
 import { Button } from "./ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from ".//ui/tabs";
-import { Badge } from ".//ui/badge";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
+import { Badge } from "./ui/badge";
 import ProductCard from "./Common/ProductCard";
 import { router } from "@inertiajs/react";
 
