@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "../ui/button";
 import { router } from "@inertiajs/react";
 
 const FeatureCard = ({

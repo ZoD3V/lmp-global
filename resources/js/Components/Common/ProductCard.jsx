@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { Button } from "../ui/button";
 import { router } from "@inertiajs/react";
 
 const ProductCard = ({ title, description, imageSrc, link }) => {

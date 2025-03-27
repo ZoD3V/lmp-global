@@ -3,7 +3,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../../utils/motion";
-import { Button } from "@/components/ui/button";
+import { Button } from "../ui/button";
 import { IoIosArrowForward } from "react-icons/io";
 
 const Hero = ({ title, description, banner, showButton }) => {
