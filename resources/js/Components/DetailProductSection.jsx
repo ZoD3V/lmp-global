@@ -11,10 +11,10 @@ import {
     ArrowRight,
 } from "lucide-react";
 
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Badge } from "@/components/ui/badge";
-import ProductCard from "@/Components/Common/ProductCard";
+import { Button } from "./ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from ".//ui/tabs";
+import { Badge } from ".//ui/badge";
+import ProductCard from "./Common/ProductCard";
 import { router } from "@inertiajs/react";
 
 const downloadFile = (filePath, fileName) => {
