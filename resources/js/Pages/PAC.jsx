@@ -2,10 +2,10 @@ import React from "react";
 import AirConditioning from "@/Components/AirConditioning";
 import EnergyEfficiency from "@/Components/EnergyEfficiency";
 import IntelligentControlSystems from "@/Components/IntelligentControlSystems";
-import { Button } from "@/components/ui/button";
 import Navbar from "@/Components/Common/Navbar";
 import Hero from "@/Components/Common/Hero";
 import Footer from "@/Components/Common/Footer";
+import { Button } from "@/Components/ui/button";
 
 const PAC = ({ banner }) => {
     return (
