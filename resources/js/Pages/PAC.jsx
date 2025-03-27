@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import Navbar from "@/Components/Common/Navbar";
 import Hero from "@/Components/Common/Hero";
 import Footer from "@/Components/Common/Footer";
+import { Button } from "@/components/ui/button";
 
 const PAC = ({ banner }) => {
     return (
