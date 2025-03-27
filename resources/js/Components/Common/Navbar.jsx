@@ -15,7 +15,7 @@ import {
 } from "../ui/dropdown-menu";
 import { LogOut, UserIcon } from "lucide-react";
 import { Avatar, AvatarFallback } from "../ui/avatar";
-import { Button } from "@/components/ui/button";
+import { Button } from "../ui/button";
 
 const Navbar = () => {
     const { auth } = usePage().props;
