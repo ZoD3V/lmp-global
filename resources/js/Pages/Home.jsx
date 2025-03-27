@@ -1,5 +1,4 @@
 import React from "react";
-import Footer from "../components/Common/Footer";
 import { Badge } from "@/Components/ui/badge";
 import { Button } from "@/Components/ui/button";
 import { Link } from "@inertiajs/react";
@@ -14,6 +13,7 @@ import Navbar from "@/Components/Common/Navbar";
 import Hero from "@/Components/Common/Hero";
 import PurposeSection from "@/Components/PurposeSection";
 import { fadeIn } from "@/utils/motion";
+import Footer from "@/Components/Common/Footer";
 
 const FadeInSection = ({ children, className }) => {
     const [ref, inView] = useInView({
