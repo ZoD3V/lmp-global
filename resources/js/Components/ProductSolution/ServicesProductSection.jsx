@@ -1,33 +1,30 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../../utils/motion";
-import { HiComputerDesktop } from "react-icons/hi2";
-import { HiServerStack } from "react-icons/hi2";
-import { GoContainer } from "react-icons/go";
-import { GrUserWorker } from "react-icons/gr";
+import { Container, Globe, LaptopIcon, Server } from "lucide-react";
 
-const ServiceProductSection = ({ banner, title, description }) => {
+const ServiceProductSection = () => {
     const dataServices = [
         {
-            icon: <HiComputerDesktop className="w-8 h-8 text-indigo-600" />,
+            icon: <LaptopIcon className="w-8 h-8 text-indigo-600" />,
             title: "Rapid Design",
             description:
                 "A simple, repeatable system that creates efficiency in construction, automatic design, and low-risk processes..",
         },
         {
-            icon: <HiServerStack className="w-8 h-8 text-amber-400" />,
+            icon: <Server className="w-8 h-8 text-amber-400" />,
             title: "Tailored Integration",
             description:
                 "ration of mechanical & electrical systems in a factory for optimal quality & production speed.",
         },
         {
-            icon: <GoContainer className="w-8 h-8 text-red-400" />,
+            icon: <Container className="w-8 h-8 text-red-400" />,
             title: "Simplistic Assembly",
             description:
                 "Good documentation and a dedicated  engineering team make it easier for  the factory team to assemble  modules smoothly",
         },
         {
-            icon: <GrUserWorker className="w-8 h-8 text-cyan-400" />,
+            icon: <Globe className="w-8 h-8 text-blue-600" />,
             title: "Global Service",
             description:
                 "Performing various types of maintenance and service performance enhancements  to improve efficiency and reduce  complexity at various locations.",

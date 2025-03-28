@@ -1,9 +1,9 @@
 {
     "compilerOptions": {
-      "baseUrl": ".", // Mengizinkan path absolut relatif terhadap root
+      "baseUrl": ".",
       "paths": {
-        "@/*": ["./resources/js/*"] // Alias untuk direktori resources/js
+        "@/*": ["./resources/js/*"]
       }
     },
-    "include": ["resources/js/**/*"] // Sesuaikan dengan lokasi file React Anda
+    "include": ["resources/js/**/*"]
   }

@@ -57,31 +57,32 @@ const Navbar = () => {
             className="fixed top-0 left-0 right-0 bg-white backdrop-blur-sm border-solid z-50 border-b border-gray-200"
         >
             <div className="flex justify-between items-center max-w-[1200px] container relative z-20 px-4 md:px-6 xl:px-0 h-16">
-                {/* Logo */}
-                <motion.a
-                    href="/"
-                    className="flex items-center gap-1 cursor-pointer"
-                >
-                    <motion.img
+                <div className="flex items-center gap-2">
+                    {/* Mobile Menu Button */}
+                    <motion.button
                         variants={fadeIn("right", 0.3)}
-                        className="w-15 h-7"
-                        src={logo_lmp}
-                        alt="Logo"
-                    />
-                </motion.a>
-
-                {/* Mobile Menu Button */}
-                <motion.button
-                    variants={fadeIn("left", 0.3)}
-                    className="lg:hidden p-2"
-                    onClick={() => setIsMenuOpen(!isMenuOpen)}
-                >
-                    {isMenuOpen ? (
-                        <HiX className="h-6 w-6" />
-                    ) : (
-                        <HiMenu className="h-6 w-6" />
-                    )}
-                </motion.button>
+                        className="lg:hidden p-2"
+                        onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    >
+                        {isMenuOpen ? (
+                            <HiX className="h-6 w-6" />
+                        ) : (
+                            <HiMenu className="h-6 w-6" />
+                        )}
+                    </motion.button>
+                    {/* Logo */}
+                    <motion.a
+                        href="/"
+                        className="flex items-center gap-1 cursor-pointer"
+                    >
+                        <motion.img
+                            variants={fadeIn("right", 0.3)}
+                            className="w-15 h-7"
+                            src={logo_lmp}
+                            alt="Logo"
+                        />
+                    </motion.a>
+                </div>
 
                 {/* links */}
                 <motion.div

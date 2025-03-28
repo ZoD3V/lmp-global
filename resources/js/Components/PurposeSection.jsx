@@ -1,72 +1,51 @@
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
 import { Badge } from "./ui/badge";
-import { useInView } from "react-intersection-observer";
 import { Leaf, Zap, Shield } from "lucide-react";
 import server from "../../../public/images/researchdevelopment.png";
-
-const FadeInSection = ({ children, className }) => {
-    const [ref, inView] = useInView({
-        triggerOnce: true,
-        threshold: 0.1,
-    });
-
-    return (
-        <motion.div
-            ref={ref}
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"}
-            variants={fadeIn}
-            className={className}
-        >
-            {children}
-        </motion.div>
-    );
-};
+import Heading from "./Common/Heading";
 
 const PurposeSection = () => {
-    const features = [
-        {
-            icon: "🟣",
-            title: "Built for impact",
-            description:
-                "We identify and nurture a truly diverse team of designers, developers and marketers",
-        },
-        {
-            icon: "🔴",
-            title: "In sync with you",
-            description:
-                "We work the way you do by adapting to your workflows and rhythm we aim to blend in for a seamless.",
-        },
-    ];
-
     return (
-        <section id="about" className="w-full py-20 md:py-32">
+        <section id="about" className="w-full py-16">
             <div className="container px-4 md:px-6 xl:px-0 max-w-[1200px]">
-                <FadeInSection className="flex flex-col items-center justify-center space-y-4 text-center">
+                <motion.div
+                    variants={fadeIn("up", 0.3)}
+                    viewport={{ once: true }}
+                    initial="hidden"
+                    whileInView="show"
+                    className="flex flex-col items-center justify-center space-y-4 text-center"
+                >
                     <motion.div
-                        variants={fadeIn("up", 0.3)}
+                        variants={fadeIn("down", 0.3)}
                         initial="hidden"
                         whileInView="show"
                         viewport={{ once: true }}
                         className="space-y-2"
                     >
-                        <Badge className="inline-flex" variant="outline">
+                        <Badge
+                            className="inline-flex bg-blue-500/10 text-blue-600 hover:bg-blue-500/20"
+                            variant="secondary"
+                        >
                             About LMP Solutions
                         </Badge>
-                        <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
-                            Innovative Data Center Solutions
-                        </h2>
-                        <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed">
-                            We provide cutting-edge data center technologies
-                            that optimize performance, enhance security, and
-                            promote sustainability.
-                        </p>
+                        <Heading
+                            title="Innovative Data Center Solutions"
+                            description={
+                                "We provide cutting-edge data center technologies that optimize performance, enhance security, and promote sustainability."
+                            }
+                        />
                     </motion.div>
-                </FadeInSection>
+                </motion.div>
 
                 <div className="mx-auto grid items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
-                    <FadeInSection className="order-2 lg:order-1">
+                    <motion.div
+                        variants={fadeIn("up", 0.3)}
+                        viewport={{ once: true }}
+                        initial="hidden"
+                        whileInView="show"
+                        className="order-2 lg:order-1"
+                    >
                         <div className="flex flex-col justify-center space-y-6">
                             <motion.div
                                 variants={fadeIn("right", 0.3)}
@@ -145,9 +124,15 @@ const PurposeSection = () => {
                                 </div>
                             </motion.div>
                         </div>
-                    </FadeInSection>
+                    </motion.div>
 
-                    <FadeInSection className="order-1 lg:order-2">
+                    <motion.div
+                        variants={fadeIn("up", 0.3)}
+                        viewport={{ once: true }}
+                        initial="hidden"
+                        whileInView="show"
+                        className="order-1 lg:order-2"
+                    >
                         <motion.div
                             variants={fadeIn("left", 0.3)}
                             initial="hidden"
@@ -164,7 +149,7 @@ const PurposeSection = () => {
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                         </motion.div>
-                    </FadeInSection>
+                    </motion.div>
                 </div>
             </div>
         </section>

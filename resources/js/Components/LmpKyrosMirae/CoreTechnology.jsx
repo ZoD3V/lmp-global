@@ -1,23 +1,32 @@
 import React from "react";
 import { Badge } from "../ui/badge";
 import digitalImage from "../../../../public/images/digital-twin.png";
-
+import Heading from "../Common/Heading";
+import { fadeIn } from "@/utils/motion";
+import { motion } from "framer-motion";
 
 const CoreTechnology = () => {
     return (
         <section className="py-16 bg-gradient-to-b from-slate-900 to-slate-800 text-white">
             <div className="container mx-auto max-w-[1200px] px-4 md:px-6 xl:px-0">
                 <div className="text-center mb-12">
-                    <Badge className="mb-4 px-3 py-1 bg-red-900 text-red-100 hover:bg-red-800 transition-colors">
-                        Innovation
-                    </Badge>
-                    <h2 className="text-3xl md:text-4xl font-bold text-white">
-                        Core Technology
-                    </h2>
-                    <p className="mt-4 text-xl text-slate-300 max-w-3xl mx-auto font-medium">
-                        Digital Twins Based, AI Driven, Award Winning, Industry
-                        Validated
-                    </p>
+                    <motion.div
+                        variants={fadeIn("down", 0.3)}
+                        initial="hidden"
+                        whileInView="show"
+                        viewport={{ once: true }}
+                    >
+                        <Badge className="mb-4 px-3 py-1 bg-red-900 text-red-100 hover:bg-red-800 transition-colors">
+                            Innovation
+                        </Badge>
+                    </motion.div>
+                    <Heading
+                        title={"Core Technology"}
+                        description={
+                            "Digital Twins Based, AI Driven, Award Winning, Industry Validated"
+                        }
+                        customClass="text-white"
+                    />
                 </div>
 
                 <div className="relative">
@@ -30,7 +39,6 @@ const CoreTechnology = () => {
                                 alt="LMP Kyros Mirae Technology Framework"
                                 className="object-contain"
                             />
-
                         </div>
                     </div>
                 </div>

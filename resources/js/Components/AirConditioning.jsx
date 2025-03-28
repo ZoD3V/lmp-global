@@ -2,6 +2,7 @@ import React from "react";
 import { Cpu, Gauge, Thermometer } from "lucide-react";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
+import Heading from "./Common/Heading";
 const staggerContainer = {
     hidden: { opacity: 0 },
     visible: {
@@ -28,7 +29,7 @@ const iconAnimation = {
 
 function AirConditioning() {
     return (
-        <section className="w-full py-12 md:py-24 bg-background">
+        <section className="w-full py-16 bg-background">
             <div className="max-w-[1200px] container px-4 md:px-6 xl:px-0">
                 <motion.div
                     className="flex flex-col items-center justify-center space-y-4 text-center"
@@ -38,30 +39,15 @@ function AirConditioning() {
                     variants={fadeIn}
                 >
                     <div className="space-y-2">
-                        <motion.h2
-                            variants={fadeIn("up", 0.3)}
-                            initial="hidden"
-                            whileInView="show"
-                            viewport={{ once: true }}
-                            className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl"
-                        >
-                            Why Precision Air Conditioning Matters
-                        </motion.h2>
-                        <motion.p
-                            variants={fadeIn("up", 0.3)}
-                            initial="hidden"
-                            whileInView="show"
-                            viewport={{ once: true }}
-                            className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
-                        >
-                            Unlike conventional systems, PACs provide exact
-                            temperature and humidity control within extremely
-                            narrow ranges, ensuring optimal performance of
-                            sensitive equipment.
-                        </motion.p>
+                        <Heading
+                        title={"Why Precision Air Conditioning Matters"}
+                        description={
+                            "Unlike conventional systems, PACs provide exact temperature and humidity control within extremely narrow ranges, ensuring optimal performance of sensitive equipment."
+                        }
+                        />
                     </div>
                 </motion.div>
-                <div className="mx-auto grid items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
+                <div className="mx-auto grid items-center gap-6 pt-12 lg:grid-cols-2 lg:gap-12">
                     <motion.div
                         className="flex flex-col justify-center space-y-4"
                         initial="hidden"

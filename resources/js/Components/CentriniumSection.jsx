@@ -63,7 +63,7 @@ const CentriniumSection = ({ networkProduct }) => {
     };
 
     return (
-        <section id="centrinium" className="w-full py-12 md:py-24">
+        <section id="edge-x" className="w-full py-16">
             <div className="container px-4 md:px-6 xl:px-0 max-w-[1200px]">
                 <motion.div
                     className="flex flex-col items-center justify-center space-y-4 text-center"
@@ -74,9 +74,9 @@ const CentriniumSection = ({ networkProduct }) => {
                 >
                     <Badge className="text-sm">Fiber Management</Badge>
                     <Heading
-                        title={" LMP Centrinium"}
+                        title={"Edge X"}
                         description={
-                            "Centrinium™ Rack Mount Drawer Indoor Fiber Enclosure ensures network reliability by housing, organizing, managing and protecting up to 144 fibre optic cable, terminations, splices, connectors and patch cords using 12 Modules Cassette adapter panels."
+                            "Edge X Rack Mount Drawer Indoor Fiber Enclosure ensures network reliability by housing, organizing, managing and protecting up to 144 fibre optic cable, terminations, splices, connectors and patch cords using 12 Modules Cassette adapter panels."
                         }
                     />
                 </motion.div>
@@ -105,7 +105,7 @@ const CentriniumSection = ({ networkProduct }) => {
                                     </div>
                                     <div className="p-6">
                                         <h3 className="text-lg font-bold mb-2">
-                                            LMP Centrinium®
+                                            Edge X
                                         </h3>
                                         <p className="text-sm font-medium line-clamp-1">
                                             {data.caption}

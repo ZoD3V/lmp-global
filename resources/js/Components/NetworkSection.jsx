@@ -63,7 +63,7 @@ const NetworkSection = ({ networkProduct }) => {
     };
 
     return (
-        <section id="networks" className="w-full py-20">
+        <section id="networks" className="w-full py-16">
             <div className="container px-4 md:px-6 xl:px-0 max-w-[1200px]">
                 <motion.div
                     className="flex flex-col items-center justify-center space-y-4 text-center"
@@ -72,7 +72,12 @@ const NetworkSection = ({ networkProduct }) => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5 }}
                 >
-                    <Badge className="text-sm">Connectivity Solutions</Badge>
+                    <Badge
+                        className="inline-flex bg-blue-500/10 text-blue-600 hover:bg-blue-500/20"
+                        variant="secondary"
+                    >
+                        Connectivity Solutions
+                    </Badge>
                     <Heading
                         title={networkProduct.title}
                         description={networkProduct.desc}
@@ -90,7 +95,9 @@ const NetworkSection = ({ networkProduct }) => {
                         <motion.div variants={item} key={index}>
                             <Card className="overflow-hidden">
                                 <CardContent className="p-0">
-                                    <div className={`relative h-60 flex items-center justify-center p-6 ${data.bg_color}`}>
+                                    <div
+                                        className={`relative h-60 flex items-center justify-center p-6 ${data.bg_color}`}
+                                    >
                                         <div className="w-full h-full flex items-center justify-center">
                                             <img
                                                 src={`/storage/${data.image_path}`}

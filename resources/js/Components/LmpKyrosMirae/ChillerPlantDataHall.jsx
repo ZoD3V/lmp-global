@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
 import chillerPlant from "../../../../public/images/chiller-plant.png";
 import dataHall from "../../../../public/images/data-hall.png";
+import Heading from "../Common/Heading";
 
 const ChillerPlantDataHall = () => {
     const [activeOptimization, setActiveOptimization] = useState("chiller");
@@ -20,13 +21,12 @@ const ChillerPlantDataHall = () => {
         <section className="py-16 px-4 md:px-6 xl:px-0">
             <div className="max-w-[1200px] mx-auto">
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                        Chiller Plant & Data Hall Optimisations
-                    </h2>
-                    <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                        Advanced cooling energy optimization solutions for
-                        maximum efficiency and sustainability
-                    </p>
+                    <Heading
+                        title={"Chiller Plant & Data Hall Optimisations"}
+                        description={
+                            "Advanced cooling energy optimization solutions for maximum efficiency and sustainability"
+                        }
+                    />
                 </div>
 
                 <Tabs
@@ -59,11 +59,12 @@ const ChillerPlantDataHall = () => {
                     </TabsList>
 
                     <motion.div
-                    key={activeOptimization}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="bg-white rounded-lg shadow-sm overflow-hidden border border-gray-200">
+                        key={activeOptimization}
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="bg-white rounded-lg shadow-sm overflow-hidden border border-gray-200"
+                    >
                         <TabsContent value="chiller" className="mt-0">
                             <div className="p-0">
                                 <div className="flex flex-col md:flex-row">

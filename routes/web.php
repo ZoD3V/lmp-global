@@ -3,6 +3,7 @@
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CsrController;
+use App\Http\Controllers\DcimNetworkController;
 use App\Http\Controllers\DesignCollaborationCenterController;
 use App\Http\Controllers\EdgeDCController;
 use App\Http\Controllers\EnergyController;
@@ -20,10 +21,6 @@ use App\Http\Controllers\SupportController;
 use App\Http\Controllers\VoltsController;
 use Illuminate\Support\Facades\Route;
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/about', [AboutController::class, 'index']);
 Route::get('/product', [ProductController::class, 'index']);
@@ -40,6 +37,7 @@ Route::get('/next-t', [NextTController::class, 'index']);
 Route::get('/services', [ServicesController::class, 'index']);
 Route::get('/energy', [EnergyController::class, 'index']);
 Route::get('/pac', [PACController::class, 'index']);
+Route::get('/dcim-network', [DcimNetworkController::class, 'index']);
 Route::get('/support', [SupportController::class, 'index']);
 Route::get('/kyros-mirae', [KyrosMiraeController::class, 'index']);
 Route::get('/design-collaboration-center', [DesignCollaborationCenterController::class, 'index']);

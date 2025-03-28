@@ -12,6 +12,7 @@ import {
     CardTitle,
 } from "../ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
+import Heading from "../Common/Heading";
 
 const KyrosLifecycle = () => {
     const [activeTab, setActiveTab] = useState("design");
@@ -30,13 +31,12 @@ const KyrosLifecycle = () => {
                     variants={fadeIn}
                     className="text-center mb-12"
                 >
-                    <h2 className="text-3xl font-bold mb-4 text-gray-900">
-                        Data Center Lifecycle Management
-                    </h2>
-                    <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                        Our comprehensive approach to optimizing data centers
-                        throughout their entire lifecycle
-                    </p>
+                    <Heading
+                        title={"Data  Center Lifecycle Management"}
+                        description={
+                            "Our comprehensive approach to optimizing data centers throughout their entire lifecycle"
+                        }
+                    />
                 </motion.div>
 
                 <Tabs

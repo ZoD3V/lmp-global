@@ -2,7 +2,12 @@ import React from "react";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../../utils/motion";
 
-const Heading = ({ title, description, align = "center" }) => {
+const Heading = ({
+    title,
+    description,
+    align = "center",
+    customClass = "text-gray-900",
+}) => {
     const alignmentStyles = {
         left: {
             container: "items-start text-left",
@@ -27,7 +32,7 @@ const Heading = ({ title, description, align = "center" }) => {
             viewport={{ once: true }}
         >
             <motion.h2
-                className="text-gray-900 text-3xl md:text-4xl font-bold font-manrope leading-normal"
+                className={`${customClass} text-3xl md:text-4xl font-bold font-manrope leading-normal`}
                 variants={textVariant(0.2)}
                 viewport={{ once: true }}
             >

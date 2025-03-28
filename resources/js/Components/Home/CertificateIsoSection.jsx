@@ -50,7 +50,7 @@ const CertificateIsoSection = () => {
     return (
         <section
             id="certifications"
-            className="w-full py-24 md:py-32 bg-white overflow-hidden"
+            className="w-full py-16 bg-white overflow-hidden"
         >
             <div className="container px-4 md:px-6 relative ">
                 {/* Decorative elements */}
@@ -63,7 +63,7 @@ const CertificateIsoSection = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
-                        className="inline-flex items-center justify-center p-1 px-4 rounded-full bg-blue-100/80 backdrop-blur-sm mb-4 border border-blue-200/50"
+                        className="inline-flex items-center justify-center p-1 px-4 rounded-full bg-blue-100/80 backdrop-blur-sm border border-blue-200/50"
                     >
                         <Badge
                             className="text-blue-700 bg-transparent font-medium"
@@ -77,7 +77,7 @@ const CertificateIsoSection = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.1 }}
-                        className="text-3xl md:text-5xl !leading-[2] font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-indigo-600 to-blue-700 mb-1"
+                        className="text-3xl md:text-4xl !leading-[2] font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-indigo-600 to-blue-700 mb-1"
                     >
                         Certified Through Excellence
                     </motion.h2>
@@ -86,7 +86,7 @@ const CertificateIsoSection = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.2 }}
-                        className="text-xl text-muted-foreground"
+                        className="text-lg text-muted-foreground"
                     >
                         Our commitment to quality, security, and sustainability
                         is validated through rigorous international

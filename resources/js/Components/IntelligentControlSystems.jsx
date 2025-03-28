@@ -29,7 +29,7 @@ const iconAnimation = {
 
 function IntelligentControlSystems() {
     return (
-        <section className="w-full py-12 md:py-24 bg-background">
+        <section className="w-full py-16 bg-background">
             <div className="max-w-[1200px] container px-4 md:px-6 xl:px-0">
                 <motion.div
                     className="flex flex-col items-center justify-center space-y-4 text-center"

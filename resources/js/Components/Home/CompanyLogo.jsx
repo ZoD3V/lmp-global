@@ -61,8 +61,8 @@ const CompanyLogo = () => {
     ];
 
     return (
-        <section className="w-full mb-12">
-            <div className="max-w-[1200px] container px-4 md:px-6 xl:px-0 py-20 overflow-hidden flex flex-col gap-20 tems-center justify-center">
+        <section className="w-full py-16">
+            <div className="max-w-[1200px] container px-4 md:px-6 xl:px-0 overflow-hidden flex flex-col gap-20 tems-center justify-center">
                 <Heading
                     title={"With great partners"}
                     description={

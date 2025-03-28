@@ -2,28 +2,9 @@ import React from "react";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
 import { Badge } from "./ui/badge";
-import { useInView } from "react-intersection-observer";
 import { Leaf, Shield, Clock, Award } from "lucide-react";
 import containment from "../../../public/images/containment_lmp.png";
-
-const FadeInSection = ({ children, className }) => {
-    const [ref, inView] = useInView({
-        triggerOnce: true,
-        threshold: 0.1,
-    });
-
-    return (
-        <motion.div
-            ref={ref}
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"}
-            variants={fadeIn}
-            className={className}
-        >
-            {children}
-        </motion.div>
-    );
-};
+import Heading from "./Common/Heading";
 
 function FeatureItem({ icon, title, description }) {
     return (
@@ -42,31 +23,16 @@ function FeatureItem({ icon, title, description }) {
 }
 
 const FeaturesSection = () => {
-    const features = [
-        {
-            icon: "🔍",
-            title: "Green Technology",
-            description:
-                "This technology enables a cleaner, greener world while allowing modern lifestyles without harming the Earth.",
-        },
-        {
-            icon: "⚙️",
-            title: "Renewable Energy",
-            description:
-                "Renewable energy sources are leading the way to a clean and sustainable future.",
-        },
-        {
-            icon: "🚀",
-            title: "Efficiency, Sustainability in Data Centers",
-            description:
-                "Energy cost savings, enhanced performance, sustainability, and regulatory compliance drive modern data center advancements.",
-        },
-    ];
-
     return (
-        <section id="features" className="w-full py-20 md:py-32 bg-white">
-            <div className="container px-4 md:px-6 xl:px-0 max-w-[1200px]">
-                <FadeInSection className="flex flex-col items-center justify-center space-y-4 text-center">
+        <section id="features" className="w-full py-16 bg-white">
+            <div className="container px-4 md:px-6 xl:px-0 max-w-[1200px] flex flex-col gap-10">
+                <motion.div
+                    variants={fadeIn("up", 0.3)}
+                    viewport={{ once: true }}
+                    initial="hidden"
+                    whileInView="show"
+                    className="flex flex-col items-center justify-center space-y-4 text-center"
+                >
                     <motion.div
                         variants={fadeIn("up", 0.3)}
                         viewport={{ once: true }}
@@ -80,21 +46,25 @@ const FeaturesSection = () => {
                         >
                             Why Choose Us
                         </Badge>
-                        <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
-                            Enterprise-Grade Solutions for Critical
-                            Infrastructure
-                        </h2>
-                        <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed">
-                            Our solutions are specifically designed to meet the
-                            demanding requirements of modern data centers,
-                            ensuring reliability, performance, and
-                            sustainability.
-                        </p>
+                        <Heading
+                            title={
+                                "Enterprise-Grade Solutions for Critical Infrastructure"
+                            }
+                            description={
+                                "Our solutions are specifically designed to meet the demanding requirements of modern data centers, ensuring reliability, performance, and sustainability."
+                            }
+                        />
                     </motion.div>
-                </FadeInSection>
+                </motion.div>
 
-                <div className="mx-auto grid items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
-                    <FadeInSection className="order-2 lg:order-1">
+                <div className="mx-auto grid items-center gap-6 lg:grid-cols-2 lg:gap-12">
+                    <motion.div
+                        variants={fadeIn("up", 0.3)}
+                        viewport={{ once: true }}
+                        initial="hidden"
+                        whileInView="show"
+                        className="order-2 lg:order-1"
+                    >
                         <motion.div
                             variants={fadeIn("right", 0.3)}
                             viewport={{ once: true }}
@@ -131,9 +101,15 @@ const FeaturesSection = () => {
                                 description="Our team of specialists provides comprehensive support to ensure smooth implementation and ongoing operation of our solutions."
                             />
                         </motion.div>
-                    </FadeInSection>
+                    </motion.div>
 
-                    <FadeInSection className="order-1 lg:order-2">
+                    <motion.div
+                        variants={fadeIn("up", 0.3)}
+                        viewport={{ once: true }}
+                        initial="hidden"
+                        whileInView="show"
+                        className="order-1 lg:order-2"
+                    >
                         <motion.div
                             variants={fadeIn("left", 0.3)}
                             viewport={{ once: true }}
@@ -150,7 +126,7 @@ const FeaturesSection = () => {
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                         </motion.div>
-                    </FadeInSection>
+                    </motion.div>
                 </div>
             </div>
         </section>

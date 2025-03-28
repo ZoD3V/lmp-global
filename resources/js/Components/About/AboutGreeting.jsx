@@ -1,9 +1,9 @@
 import React from "react";
-import { fadeIn } from "@/utils/motion";
+import { fadeIn } from "../../utils/motion";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
-const AboutGreeting = (props) => {
+const AboutGreeting = () => {
     const refHero = useRef(null);
     const isInViewHero = useInView(refHero, { once: true });
 
@@ -39,8 +39,7 @@ const AboutGreeting = (props) => {
 
                     {/* Orbit 1 - Horizontal */}
                     <motion.div
-                        className="absolute left-0 top-0 -translate-x-1/2 -translate-y-1/2
-            w-full h-full border-2 border-slate-200/20 rounded-full"
+                        className="absolute left-0 top-0 -translate-x-1/2 -translate-y-1/2 w-full h-full border-2 border-slate-200/20 rounded-full"
                         animate={{
                             rotate: 360,
                         }}
@@ -51,8 +50,7 @@ const AboutGreeting = (props) => {
                         }}
                     >
                         <motion.div
-                            className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2
-              w-5 h-5 bg-black rounded-full shadow-md shadow-blue-500/30"
+                            className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-5 h-5 bg-black rounded-full shadow-md shadow-blue-500/30"
                             animate={{
                                 rotate: -360, // Counter-rotation
                             }}
@@ -63,37 +61,32 @@ const AboutGreeting = (props) => {
                             }}
                         />
                     </motion.div>
+                    {/* Orbit 1 - Horizontal */}
 
-                    {/* Orbit 2 - Vertikal */}
-
-
-                    {/* Orbit 3 - Diagonal */}
                     <motion.div
-                        className="absolute left-0 top-0 -translate-x-1/2 -translate-y-1/2
-            w-[60%] h-[60%] border-2 border-slate-200/20 rounded-full"
-                        style={{ transformStyle: "preserve-3d" }}
+                        className="absolute left-[12%] top-[12%] translate-x-1/2 -translate-y-1/2 w-48 h-48 border-2 border-slate-200/20 rounded-full"
                         animate={{
-                            rotateX: 360,
+                            rotate: -360, // Rotasi berlawanan arah jarum jam
                         }}
                         transition={{
-                            duration: 20,
+                            duration: 18,
                             repeat: Infinity,
                             ease: "linear",
                         }}
                     >
                         <motion.div
-                            className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2
-              w-3 h-3 bg-black rounded-full shadow-sm shadow-blue-500/30"
+                            className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-black rounded-full shadow-md shadow-blue-500/30"
                             animate={{
-                                rotateX: -360,
+                                rotate: 360, // Counter-rotation untuk menjaga orientasi elektron
                             }}
                             transition={{
-                                duration: 20,
+                                duration: 18,
                                 repeat: Infinity,
                                 ease: "linear",
                             }}
                         />
                     </motion.div>
+
                 </motion.div>
 
                 <motion.h2

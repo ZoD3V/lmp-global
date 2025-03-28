@@ -4,6 +4,29 @@ import { motion } from "framer-motion";
 import { fadeIn } from "@/utils/motion";
 
 const DwinTechnologySection = () => {
+    const features = [
+        {
+            title: "Autonomous",
+            description: "From modeling to updating, each step is automated",
+        },
+        {
+            title: "Prescriptive",
+            description: "Combined with AI for control optimization",
+        },
+        {
+            title: "Predictive",
+            description: "What-if analysis for scenario planning",
+        },
+        {
+            title: "Descriptive",
+            description: "System state visualization and anomaly detection",
+        },
+        {
+            title: "Geometric",
+            description: "Spatial positioning and basic modeling",
+        },
+    ];
+
     return (
         <section className="py-16 px-4 md:px-8 lg:px-12">
             <div className="max-w-5xl mx-auto">
@@ -75,38 +98,21 @@ const DwinTechnologySection = () => {
                             </motion.p>
 
                             <ul className="space-y-3">
-                                <FeatureItem>
-                                    <span className="font-semibold">
-                                        Autonomous:
-                                    </span>
-                                    From modeling to updating, each step is
-                                    automated
-                                </FeatureItem>
-                                <FeatureItem>
-                                    <span className="font-semibold">
-                                        Prescriptive:
-                                    </span>
-                                    Combined with AI for control optimization
-                                </FeatureItem>
-                                <FeatureItem>
-                                    <span className="font-semibold">
-                                        Predictive:
-                                    </span>
-                                    What-if analysis for scenario planning
-                                </FeatureItem>
-                                <FeatureItem>
-                                    <span className="font-semibold">
-                                        Descriptive:
-                                    </span>
-                                    System state visualization and anomaly
-                                    detection
-                                </FeatureItem>
-                                <FeatureItem>
-                                    <span className="font-semibold">
-                                        Geometric:
-                                    </span>
-                                    Spatial positioning and basic modeling
-                                </FeatureItem>
+                                {features.map((feature, index) => (
+                                    <motion.div
+                                        key={feature.title}
+                                        variants={fadeIn("up", 0.2 * index)}
+                                        initial="hidden"
+                                        whileInView="show"
+                                    >
+                                        <FeatureItem>
+                                            <span className="font-semibold">
+                                                {feature.title}:
+                                            </span>
+                                            {feature.description}
+                                        </FeatureItem>
+                                    </motion.div>
+                                ))}
                             </ul>
                         </div>
                     </div>

@@ -1,10 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { fadeIn, textVariant } from "../utils/motion";
+import { fadeIn } from "../utils/motion";
 import { RiShieldFlashFill } from "react-icons/ri";
 import { LuSquareActivity } from "react-icons/lu";
 import { BiSolidZap } from "react-icons/bi";
 import { IoWifi } from "react-icons/io5";
+import Heading from "./Common/Heading";
 
 const VoltsSection = ({ voltsData }) => {
     const features = [
@@ -67,15 +68,17 @@ const VoltsSection = ({ voltsData }) => {
                 />
             </motion.div>
 
-            <div className="">
-                <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">
-                    Advanced Protection Features
-                </h2>
+            <div className="flex flex-col gap-12">
+                <Heading title={"Advanced Protection Features"} />
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {features.map((feature, index) => (
-                        <div
+                        <motion.div
                             key={index}
+                            variants={fadeIn("up", 0.3 * (index + 1))}
+                            viewport={{ once: true }}
+                            initial="hidden"
+                            whileInView="show"
                             className={`relative rounded-xl p-6 transition-all duration-300 border ${feature.borderColor} ${feature.bgColor}`}
                         >
                             <div className="flex items-start gap-4">
@@ -88,20 +91,15 @@ const VoltsSection = ({ voltsData }) => {
                                 </div>
 
                                 <div className="flex flex-col items-start justify-start gap-2">
-                                    <motion.h3
-                                        variants={textVariant(0.3)}
-                                        viewport={{ once: true }}
-                                        className="text-xl font-manrope font-semibold text-gray-900"
-                                    >
-                                        {" "}
+                                    <h3 className="text-xl font-manrope font-semibold text-gray-900">
                                         {feature.title}
-                                    </motion.h3>
+                                    </h3>
                                     <p className="text-gray-500 text-base font-normal leading-relaxed">
                                         {feature.description}
                                     </p>
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </div>

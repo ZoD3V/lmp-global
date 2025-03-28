@@ -36,7 +36,7 @@ const CertificateSection = () => {
     return (
         <section
             id="data-center-rating"
-            className="relative w-full py-24 md:py-32 overflow-hidden"
+            className="relative w-full py-16 overflow-hidden"
         >
             {/* Modern gradient background */}
             <div className="absolute inset-0 bg-gradient-to-b from-indigo-900 via-blue-900 to-blue-800 -z-10"></div>

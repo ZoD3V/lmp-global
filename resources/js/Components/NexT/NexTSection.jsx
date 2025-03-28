@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Cpu, Leaf, Zap, Server, Globe, Database,Info } from "lucide-react";
+import { Cpu, Leaf, Zap, Server, Globe, Database, Info } from "lucide-react";
 import {
     Card,
     CardContent,
@@ -11,6 +11,8 @@ import {
 } from "../ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
 import { Badge } from "../ui/badge";
+import Heading from "../Common/Heading";
+import { fadeIn } from "../../utils/motion";
 
 const NextTSection = ({ nexT }) => {
     const [activeTab, setActiveTab] = useState("overview");
@@ -23,15 +25,6 @@ const NextTSection = ({ nexT }) => {
     });
 
     const imageScale = useTransform(scrollYProgress, [0, 0.5], [1.05, 1]);
-
-    const fadeIn = {
-        hidden: { opacity: 0, y: 20 },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: { duration: 0.6 },
-        },
-    };
 
     const staggerContainer = {
         hidden: { opacity: 0 },
@@ -75,75 +68,76 @@ const NextTSection = ({ nexT }) => {
     };
 
     return (
-        <section className="container mx-auto py-16 max-w-[1200px] px-4 sm:px-6 xl:px-0 flex flex-col my-12 gap-12">
-            <div className="container px-4 mx-auto max-w-7xl">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8 }}
-                    className="flex flex-col items-center text-center mb-16"
+        <section className="container mx-auto py-16 max-w-[1200px] px-4 sm:px-6 xl:px-0 flex flex-col mt-12 gap-12">
+            <motion.div
+                variants={fadeIn("down", 0.5)}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
+                className="flex flex-col items-center text-center"
+            >
+                <Badge
+                    variant="outline"
+                    className="px-4 py-1 text-blue-600 dark:text-blue-400 border-blue-200 dark:border-blue-800 mb-4"
                 >
-                    <Badge
-                        variant="outline"
-                        className="px-4 py-1 text-blue-600 dark:text-blue-400 border-blue-200 dark:border-blue-800 mb-4"
-                    >
-                        Next Generation Data Centers
-                    </Badge>
-                    <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-white mb-4">
-                        <span className="text-gray-800 dark:text-blue-400">
-                            {nexT[0].title}
-                        </span>
-                    </h2>
-                    <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl">
-                        {nexT[0].sub_title}
-                    </p>
-                </motion.div>
+                    Next Generation Data Centers
+                </Badge>
+                <Heading
+                    title={nexT[0].title}
+                    description={nexT[0].sub_title}
+                />
+            </motion.div>
 
-                <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 items-center">
-                    <motion.div
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true, margin: "-100px" }}
-                        variants={fadeIn}
-                        className="order-2 lg:order-1"
-                    >
-                        <p
-                            className="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed"
-                            dangerouslySetInnerHTML={{
-                                __html: nexT[0].content,
-                            }}
-                        ></p>
+            <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 items-center">
+                <motion.div
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true }}
+                    variants={fadeIn("right", 0.5)}
+                    className="order-2 lg:order-1"
+                >
+                    <p
+                        className="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed"
+                        dangerouslySetInnerHTML={{
+                            __html: nexT[0].content,
+                        }}
+                    ></p>
 
-                        <Tabs
-                            defaultValue="overview"
-                            className="w-full"
-                            onValueChange={setActiveTab}
+                    <Tabs
+                        defaultValue="overview"
+                        className="w-full"
+                        onValueChange={setActiveTab}
+                    >
+                        <TabsList className="grid grid-cols-3 mb-8 bg-blue-100/50 dark:bg-blue-900/20">
+                            <TabsTrigger
+                                value="overview"
+                                className="data-[state=active]:bg-blue-600 data-[state=active]:text-white text-blue-600 hover:text-blue-800 transition-all"
+                            >
+                                <Info className="w-5 h-5 mr-2" />
+                                Overview
+                            </TabsTrigger>
+                            <TabsTrigger
+                                value="technology"
+                                className="data-[state=active]:bg-blue-600 data-[state=active]:text-white text-blue-600 hover:text-blue-800 transition-all"
+                            >
+                                <Cpu className="w-5 h-5 mr-2" />
+                                Technology
+                            </TabsTrigger>
+                            <TabsTrigger
+                                value="sustainability"
+                                className="data-[state=active]:bg-blue-600 data-[state=active]:text-white text-blue-600 hover:text-blue-800 transition-all"
+                            >
+                                <Leaf className="w-5 h-5 mr-2" />
+                                Sustainability
+                            </TabsTrigger>
+                        </TabsList>
+
+                        <motion.div
+                            key={activeTab}
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.3 }}
                         >
-                            <TabsList className="grid grid-cols-3 mb-8 bg-blue-100/50 dark:bg-blue-900/20">
-                                <TabsTrigger
-                                    value="overview"
-                                    className="data-[state=active]:bg-blue-600 data-[state=active]:text-white text-blue-600 hover:text-blue-800 transition-all"
-                                >
-                                    <Info className="w-5 h-5 mr-2" />
-                                    Overview
-                                </TabsTrigger>
-                                <TabsTrigger
-                                    value="technology"
-                                    className="data-[state=active]:bg-blue-600 data-[state=active]:text-white text-blue-600 hover:text-blue-800 transition-all"
-                                >
-                                    <Cpu className="w-5 h-5 mr-2" />
-                                    Technology
-                                </TabsTrigger>
-                                <TabsTrigger
-                                    value="sustainability"
-                                    className="data-[state=active]:bg-blue-600 data-[state=active]:text-white text-blue-600 hover:text-blue-800 transition-all"
-                                >
-                                    <Leaf className="w-5 h-5 mr-2" />
-                                    Sustainability
-                                </TabsTrigger>
-                            </TabsList>
-
                             <TabsContent value="overview" className="space-y-4">
                                 <motion.div
                                     initial="hidden"
@@ -380,67 +374,70 @@ const NextTSection = ({ nexT }) => {
                                     </motion.div>
                                 </motion.div>
                             </TabsContent>
-                        </Tabs>
-                    </motion.div>
+                        </motion.div>
+                    </Tabs>
+                </motion.div>
 
-                    <motion.div
-                        ref={imageRef}
-                        className="relative order-1 lg:order-2"
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 1 }}
-                    >
-                        <div className="aspect-square md:aspect-[4/3] relative rounded-2xl overflow-hidden bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/30 shadow-xl">
-                            {/* Decorative elements */}
-                            <div className="absolute inset-0 bg-[radial-gradient(#3b82f620_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
+                <motion.div
+                    ref={imageRef}
+                    className="relative order-1 lg:order-2"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1 }}
+                >
+                    <div className="aspect-square md:aspect-[4/3] relative rounded-2xl overflow-hidden bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/30 shadow-xl">
+                        {/* Decorative elements */}
+                        <div className="absolute inset-0 bg-[radial-gradient(#3b82f620_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
 
-                            <motion.div
-                                style={{ scale: imageScale }}
-                                className="h-full w-full relative p-8 flex items-center justify-center"
-                            >
-                                {/* Placeholder data center visualization */}
-                                <img
-                                    src={`/storage/${nexT[0].image}`}
-                                    alt="Data Center"
-                                />
-                            </motion.div>
+                        <motion.div
+                            initial="hidden"
+                            whileInView="show"
+                            viewport={{ once: true }}
+                            variants={fadeIn("left", 0.5)}
+                            className="h-full w-full relative p-8 flex items-center justify-center"
+                        >
+                            {/* Placeholder data center visualization */}
+                            <img
+                                src={`/storage/${nexT[0].image}`}
+                                alt="Data Center"
+                            />
+                        </motion.div>
 
-                            <motion.div
-                                className="absolute bottom-0 left-0 right-0 p-6 z-10 bg-gradient-to-t from-blue-900/80 to-transparent"
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.8, delay: 0.6 }}
-                            >
-                                <h3 className="text-white text-xl font-semibold mb-2">
-                                    Edge DC 360 Module
-                                </h3>
-                                <p className="text-gray-200 text-sm">
-                                    Modular edge data center with integrated
-                                    solar panels and advanced cooling systems
-                                </p>
-                            </motion.div>
+                        <motion.div
+                            className="absolute bottom-0 left-0 right-0 p-6 z-10 bg-gradient-to-t from-blue-900/80 to-transparent"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.6 }}
+                        >
+                            <h3 className="text-white text-xl font-semibold mb-2">
+                                Edge DC 360 Module
+                            </h3>
+                            <p className="text-gray-200 text-sm">
+                                Modular edge data center with integrated solar
+                                panels and advanced cooling systems
+                            </p>
+                        </motion.div>
 
-                            <motion.div
-                                className="absolute top-4 right-4 bg-blue-600/90 backdrop-blur-md rounded-full px-3 py-1 text-xs text-white font-medium"
-                                initial={{ opacity: 0, scale: 0.8 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                transition={{ duration: 0.5, delay: 0.8 }}
-                            >
-                                40% Less Emissions
-                            </motion.div>
+                        <motion.div
+                            className="absolute top-4 right-4 bg-blue-600/90 backdrop-blur-md rounded-full px-3 py-1 text-xs text-white font-medium"
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.5, delay: 0.8 }}
+                        >
+                            40% Less Emissions
+                        </motion.div>
 
-                            <motion.div
-                                className="absolute top-4 left-4 bg-purple-600/90 backdrop-blur-md rounded-full px-3 py-1 text-xs text-white font-medium"
-                                initial={{ opacity: 0, scale: 0.8 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                transition={{ duration: 0.5, delay: 1 }}
-                            >
-                                Solar Powered
-                            </motion.div>
-                        </div>
-                    </motion.div>
-                </div>
+                        <motion.div
+                            className="absolute top-4 left-4 bg-purple-600/90 backdrop-blur-md rounded-full px-3 py-1 text-xs text-white font-medium"
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.5, delay: 1 }}
+                        >
+                            Solar Powered
+                        </motion.div>
+                    </div>
+                </motion.div>
             </div>
         </section>
     );

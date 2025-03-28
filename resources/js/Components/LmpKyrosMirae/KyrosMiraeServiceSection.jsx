@@ -1,29 +1,31 @@
 import React from "react";
 import { motion } from "framer-motion";
-import {
-    BarChart3,
-    Brain,
-    FlaskConical,
-    Gauge,
-} from "lucide-react";
+import { BarChart3, Brain, FlaskConical, Gauge } from "lucide-react";
 import { Badge } from "../ui/badge";
+import Heading from "../Common/Heading";
+import { fadeIn } from "@/utils/motion";
 
 const KyrosMiraeServiceSection = () => {
     return (
-        <section className="py-24">
+        <section className="py-16">
             <div className="container mx-auto max-w-[1200px] px-4 md:px-6 lg:px-0">
                 <div className="text-center mb-16">
-                    <Badge className="mb-4 px-3 py-1 bg-blue-100 text-blue-700 hover:bg-blue-200 transition-colors">
-                        Comprehensive Support
-                    </Badge>
-                    <h2 className="text-3xl md:text-4xl font-bold">
-                        Our Services
-                    </h2>
-                    <p className="mt-4 text-lg text-slate-600 max-w-3xl mx-auto">
-                        The LMP Kyros Mirae comes with a suite of advanced
-                        services designed to maximize performance and
-                        reliability in your data center environment.
-                    </p>
+                    <motion.div
+                        variants={fadeIn("down", 0.3)}
+                        initial="hidden"
+                        whileInView="show"
+                        viewport={{ once: true }}
+                    >
+                        <Badge className="mb-4 px-3 py-1 bg-blue-100 text-blue-700 hover:bg-blue-200 transition-colors">
+                            Comprehensive Support
+                        </Badge>
+                    </motion.div>
+                    <Heading
+                        title={"Our Services"}
+                        description={
+                            "The LMP Kyros Mirae comes with a suite of advanced services designed to maximize performance and reliability in your data center environment."
+                        }
+                    />
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-x-12 gap-y-16">
@@ -99,7 +101,6 @@ const KyrosMiraeServiceSection = () => {
                                     power consumption with 3D visualization
                                     capabilities.
                                 </p>
-
                             </div>
                         </div>
                     </motion.div>
@@ -138,7 +139,6 @@ const KyrosMiraeServiceSection = () => {
                                     operational profiles, dynamically
                                     fine-tuning performance.
                                 </p>
-
                             </div>
                         </div>
                     </motion.div>
@@ -177,7 +177,6 @@ const KyrosMiraeServiceSection = () => {
                                     scenarios, and scaling projections to
                                     understand performance impacts.
                                 </p>
-
                             </div>
                         </div>
                     </motion.div>

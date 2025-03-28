@@ -11,7 +11,7 @@ const AboutProductSection = ({ dataProduct }) => {
     const isInView = useInView(ref, { once: true, margin: "-100px" });
 
     return (
-        <section className="w-full py-24 overflow-hidden">
+        <section className="w-full py-16 overflow-hidden">
             <div className="container px-4 md:px-6 xl:px-0 max-w-[1200px]">
                 <motion.div
                     initial={{ opacity: 0, y: -20 }}
