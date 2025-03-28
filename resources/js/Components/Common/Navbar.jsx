@@ -18,6 +18,8 @@ import { Avatar, AvatarFallback } from "../ui/avatar";
 import { Button } from "../ui/button";
 
 const Navbar = () => {
+    const { url } = usePage();
+
     const { auth } = usePage().props;
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeLink, setActiveLink] = useState("/home");
@@ -94,13 +96,7 @@ const Navbar = () => {
                             key={index}
                             variants={fadeIn("down", 0.1 * (index + 1))}
                             href={link.href}
-                            onClick={() => setActiveLink(link.href)}
-                            className={`text-sm font-medium relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-blue-600 after:transition-all
-                ${
-                    activeLink === link.href
-                        ? "text-blue-600 after:w-full  "
-                        : "text-slate-600 hover:text-gray-900"
-                }`}
+                            className={`text-sm font-medium relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-blue-600 after:transition-all ${ url === link.href ? "text-blue-600 after:w-full" : "text-slate-600 hover:text-gray-900" }`}
                         >
                             {link.label}
                         </motion.a>
