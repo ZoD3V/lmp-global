@@ -5,7 +5,7 @@ import {
     CardDescription,
     CardFooter,
     CardTitle,
-} from "@/components/ui/card";
+} from "../ui/card";
 import { Badge } from "../ui/badge";
 import { AspectRatio } from "../ui/aspect-ratio";
 import diagram1 from "../../../../public/images/diagram-1.png";
