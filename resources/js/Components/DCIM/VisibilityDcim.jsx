@@ -6,8 +6,8 @@ import {
     CardFooter,
     CardTitle,
 } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Badge } from "../ui/badge";
+import { AspectRatio } from "../ui/aspect-ratio";
 import diagram1 from "../../../../public/images/diagram-1.png";
 import Heading from "../Common/Heading";
 import { motion } from "framer-motion";
