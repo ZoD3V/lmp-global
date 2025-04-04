@@ -12,6 +12,7 @@ use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\MultiSelect;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -49,7 +50,7 @@ class ProductResource extends Resource
     {
         return $form->schema([
             Card::make()->schema([
-                Forms\Components\TextInput::make('name')
+                TextInput::make('name')
                     ->required()
                     ->maxLength(255),
                 Textarea::make('desc')
@@ -71,7 +72,8 @@ class ProductResource extends Resource
                     ->required(),
                 Textarea::make('product_overview')
                     ->label('Product Overview')
-                    ->required()
+                    ->nullable()
+                    ->default(null)
                     ->maxLength(500),
                 FileUpload::make('image')
                     ->image()

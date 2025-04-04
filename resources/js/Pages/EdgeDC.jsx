@@ -4,7 +4,7 @@ import Navbar from "@/Components/Common/Navbar";
 import EdgeDcSection from "@/Components/EdgeDcSection";
 import React from "react";
 
-const EdgeDC = ({ banner, edgeDc }) => {
+const EdgeDC = ({ banner }) => {
     return (
         <main className="relative min-h-screen overflow-x-hidden">
             <div className="overflow-hidden">
@@ -15,7 +15,7 @@ const EdgeDC = ({ banner, edgeDc }) => {
                     description={banner[0].description}
 
                 />
-                <EdgeDcSection edgeDc={edgeDc} />
+                <EdgeDcSection />
                 <Footer />
             </div>
         </main>

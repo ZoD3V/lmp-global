@@ -39,15 +39,10 @@ const Navbar = () => {
     };
 
     const handleLogout = (e) => {
-        router.post("/logout", {
-            _token: auth.csrf_token,
-        });
+        router.get("/logout");
 
         localStorage.clear();
         sessionStorage.clear();
-        setTimeout(() => {
-            window.location.href = "/";
-        }, 500);
     };
 
     return (
@@ -96,7 +91,11 @@ const Navbar = () => {
                             key={index}
                             variants={fadeIn("down", 0.1 * (index + 1))}
                             href={link.href}
-                            className={`text-sm font-medium relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-blue-600 after:transition-all ${ url === link.href ? "text-blue-600 after:w-full" : "text-slate-600 hover:text-gray-900" }`}
+                            className={`text-sm font-medium relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-blue-600 after:transition-all ${
+                                url === link.href
+                                    ? "text-blue-600 after:w-full"
+                                    : "text-slate-600 hover:text-gray-900"
+                            }`}
                         >
                             {link.label}
                         </motion.a>

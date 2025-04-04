@@ -8,7 +8,11 @@ const CardProduct = ({ item, index, fadeIn, textVariant, children }) => {
     const [isHovered, setIsHovered] = useState(false);
 
     const navigateDetailProduct = (item) => {
-        if (item.link !== null && item.link !== undefined && item.link?.length > 0) {
+        if (
+            item.link !== null &&
+            item.link !== undefined &&
+            item.link?.length > 0
+        ) {
             router.visit(`/${item.link}`);
         }
     };
@@ -16,7 +20,7 @@ const CardProduct = ({ item, index, fadeIn, textVariant, children }) => {
     return (
         <motion.div
             key={index}
-            variants={fadeIn("up", 0.3 * (index + 1))}
+            variants={fadeIn("up", 0.2 * (index + 1))}
             viewport={{ once: true }}
             className="relative flex flex-col gap-4 cursor-pointer"
             onClick={() => navigateDetailProduct(item)}
@@ -39,7 +43,7 @@ const CardProduct = ({ item, index, fadeIn, textVariant, children }) => {
             >
                 {/* Judul produk */}
                 <motion.h3
-                    variants={textVariant(0.3)}
+                    variants={textVariant(0.3 * (index + 1))}
                     viewport={{ once: true }}
                     className="font-medium text-xl leading-8 text-black"
                 >

@@ -7,8 +7,8 @@
     <meta name="description" content="Lmp Global">
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Lmp Global</title>
-    <link rel="icon" href="{{ asset('images/favicon_lmp.svg') }}" type="image/png" />
+    <title>LMP</title>
+    <link rel="icon" href="{{ asset('images/lmp-tab.png') }}"type="image/x-icon" />
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />

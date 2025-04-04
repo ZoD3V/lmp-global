@@ -11,9 +11,13 @@ import {
     Clock,
     DollarSign,
     Shield,
+    BookCopyIcon,
+    DatabaseIcon,
+    LucideContainer,
 } from "lucide-react";
 import { Button } from "./ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
+import Heading from "./Common/Heading";
 
 const containerVariants = {
     hidden: { opacity: 0 },
@@ -163,15 +167,12 @@ const EdgeDcSection = () => {
                     transition={{ duration: 0.5 }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">
-                        Data Center Infrastructure Solutions
-                    </h2>
-                    <p className="text-slate-600 max-w-3xl mx-auto text-lg md:text-xl">
-                        Optimize your data center operations with our
-                        comprehensive range of infrastructure solutions designed
-                        to enhance efficiency, reduce costs, and ensure
-                        reliability.
-                    </p>
+                    <Heading
+                        title={"Data Center Infrastructure Solutions"}
+                        description={
+                            "Optimize your data center operations with our comprehensive range of infrastructure solutions designed to enhance efficiency, reduce costs, and ensure reliability."
+                        }
+                    />
                 </motion.div>
 
                 <Tabs
@@ -182,13 +183,25 @@ const EdgeDcSection = () => {
                 >
                     <div className="flex justify-center mb-12">
                         <TabsList className="grid grid-cols-3 w-full max-w-2xl">
-                            <TabsTrigger value="containment">
+                            <TabsTrigger
+                                value="containment"
+                                className="data-[state=active]:bg-blue-600 data-[state=active]:text-white text-blue-600 hover:text-blue-800 transition-all"
+                            >
+                                <LucideContainer className="w-5 h-5 mr-2" />
                                 Containment Solutions
                             </TabsTrigger>
-                            <TabsTrigger value="micro">
+                            <TabsTrigger
+                                value="micro"
+                                className="data-[state=active]:bg-blue-600 data-[state=active]:text-white text-blue-600 hover:text-blue-800 transition-all"
+                            >
+                                <DatabaseIcon className="w-5 h-5 mr-2" />
                                 Micro Data Centers
                             </TabsTrigger>
-                            <TabsTrigger value="modular">
+                            <TabsTrigger
+                                value="modular"
+                                className="data-[state=active]:bg-blue-600 data-[state=active]:text-white text-blue-600 hover:text-blue-800 transition-all"
+                            >
+                                <BookCopyIcon className="w-5 h-5 mr-2" />
                                 Modular Data Centers
                             </TabsTrigger>
                         </TabsList>

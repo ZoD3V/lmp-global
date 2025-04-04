@@ -44,7 +44,7 @@ class KeyCharacterResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('name'),
+                TextColumn::make('name')->searchable(),
 
             ])
             ->filters([
@@ -75,5 +75,10 @@ class KeyCharacterResource extends Resource
             'create' => Pages\CreateKeyCharacter::route('/create'),
             'edit' => Pages\EditKeyCharacter::route('/{record}/edit'),
         ];
+    }
+
+    public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
     }
 }

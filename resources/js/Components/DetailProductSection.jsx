@@ -86,7 +86,7 @@ const DetailProductSection = ({
                         initial={{ opacity: 0 }}
                         animate={{ opacity: imageLoaded ? 1 : 0 }}
                         transition={{ duration: 0.3 }}
-                        className="relative min-w-[350px] h-[350px]"
+                        className="relative min-w-[350px]"
                     >
                         <img
                             src={`/storage/${detailData.image}`}

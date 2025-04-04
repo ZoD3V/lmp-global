@@ -12,6 +12,7 @@ import { Badge } from "../ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
 import Heading from "../Common/Heading";
 import { motion } from "framer-motion";
+import { fadeIn } from "@/utils/motion";
 
 const SpeedDeployment = () => {
     const [activeTab, setActiveTab] = useState("overview");
@@ -35,14 +36,21 @@ const SpeedDeployment = () => {
             </div>
 
             <div className="container px-4 md:px-6 xl:px-0 max-w-[1200px] relative z-10">
-                <div className="flex flex-col items-center justify-center space-y-4 text-center mb-16">
-                    <Badge
-                        variant="outline"
-                        className="px-4 py-1.5 bg-blue-500/10 backdrop-blur-sm border border-blue-500/20 text-blue-500"
+                <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+                    <motion.div
+                        variants={fadeIn("down", 0.3)}
+                        initial="hidden"
+                        whileInView="show"
+                        viewport={{ once: true }}
                     >
-                        <Clock className="w-4 h-4 mr-2" />
-                        Operational Efficiency
-                    </Badge>
+                        <Badge
+                            variant="outline"
+                            className="px-4 py-1.5 bg-blue-500/10 backdrop-blur-sm border border-blue-500/20 text-blue-500"
+                        >
+                            <Clock className="w-4 h-4 mr-2" />
+                            Operational Efficiency
+                        </Badge>
+                    </motion.div>
                     <Heading
                         title={"Speed of Deployment"}
                         description={
@@ -51,7 +59,13 @@ const SpeedDeployment = () => {
                     />
                 </div>
 
-                <div className="mb-12">
+                <motion.div
+                    variants={fadeIn("down", 0.3)}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true }}
+                    className="mb-12"
+                >
                     <Card className="bg-gradient-to-br from-blue-500/5 to-transparent border-blue-500/10">
                         <CardContent className="p-6">
                             <h3 className="text-xl font-semibold text-blue-500 mb-2 flex items-center">
@@ -64,7 +78,7 @@ const SpeedDeployment = () => {
                             </p>
                         </CardContent>
                     </Card>
-                </div>
+                </motion.div>
 
                 <Tabs
                     onValueChange={setActiveTab}

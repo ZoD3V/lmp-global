@@ -15,6 +15,7 @@ const Hero = ({ title, description, banner, showButton }) => {
                 backgroundImage: `url('/storage/${banner[0].image}')`,
             }}
         >
+            <div className="absolute inset-0 bg-black bg-opacity-20 xl:rounded-bl-[290px]"></div>
             <div className="max-w-[1200px] container px-4 md:px-6 xl:px-0 h-full flex items-center justify-center xl:justify-start">
                 <div className="w-[567px] flex flex-col items-center text-center xl:text-left xl:items-start z-10 gap-8">
                     <motion.h1
