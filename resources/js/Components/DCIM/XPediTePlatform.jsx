@@ -33,12 +33,18 @@ export default function XPediTePlatform() {
 
                 {/* Main content */}
                 <div className="grid gap-6 xl:grid-cols-2 lg:gap-12 pb-16 items-center">
-                    <div className="flex flex-col justify-center space-y-4 order-2 xl:order-1">
+                    <motion.div
+                        initial="hidden"
+                        whileInView="show"
+                        variants={fadeIn("right", 0.3)}
+                        viewport={{ once: true }}
+                        className="flex flex-col justify-center space-y-4 order-2 xl:order-1"
+                    >
                         <div className="space-y-2">
                             <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl">
                                 Beyond DCIM — From Passive to Proactive
                             </h2>
-                            <p className="text-slate-500 md:text-lg">
+                            <p className="text-slate-500 text-base">
                                 XPediTe is the only system in the market which
                                 gives our clients a solution that connects
                                 infrastructure and network in one platform,
@@ -47,7 +53,7 @@ export default function XPediTePlatform() {
                             </p>
                         </div>
                         <div className="space-y-2">
-                            <p className="text-slate-500 md:text-lg">
+                            <p className="text-slate-500 text-base">
                                 In fact, no other provider can fully integrate
                                 your physical facilities with your IT
                                 infrastructure. XPediTe provides 100% real time,
@@ -64,14 +70,20 @@ export default function XPediTePlatform() {
                                 easy-to-control management system.
                             </p>
                         </div>
-                    </div>
-                    <div className="relative overflow-hidden rounded-xl order-1 xl:order-2">
+                    </motion.div>
+                    <motion.div
+                        initial="hidden"
+                        whileInView="show"
+                        variants={fadeIn("left", 0.3)}
+                        viewport={{ once: true }}
+                        className="relative overflow-hidden rounded-xl order-1 xl:order-2"
+                    >
                         <img
                             src={expeditePlatform}
                             alt="XPediTe Platform Architecture"
                             className="object-contain"
                         />
-                    </div>
+                    </motion.div>
                 </div>
 
                 {/* Features */}

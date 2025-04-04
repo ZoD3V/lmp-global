@@ -11,7 +11,7 @@ class LoginResponse extends BaseLoginResponse
 {
     public function toResponse($request): RedirectResponse|Redirector
     {
-        if (Auth::user()->hasRole(['Super-Admin', 'Admin'])) {
+        if (Auth::user()->hasRole(['Super-Admin', 'Admin', 'Maintained'])) {
             return redirect()->to(Dashboard::getUrl(panel: 'admin'));
         }
 

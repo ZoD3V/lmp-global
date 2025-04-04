@@ -3,11 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Banner;
-use App\Models\EdgeDc;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
-class EdgeDCController extends Controller
+class EdgeDcController extends Controller
 {
     public function index()
     {

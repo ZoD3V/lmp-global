@@ -51,30 +51,22 @@ const VisibilityDcim = () => {
 
     return (
         <section className="w-full py-16 bg-white relative overflow-hidden">
-            {/* Background elements */}
-            <div className="absolute inset-0 overflow-hidden">
-                <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_30%,rgba(59,130,246,0.05)_0%,rgba(59,130,246,0)_50%)]"></div>
-                <svg
-                    className="absolute bottom-0 left-0 w-full h-64 text-slate-50"
-                    viewBox="0 0 1440 320"
-                    preserveAspectRatio="none"
-                >
-                    <path
-                        fill="currentColor"
-                        d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,224C1248,203,1344,181,1392,170.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-                    ></path>
-                </svg>
-            </div>
-
             <div className="container xl:px-0 max-w-[1200px] px-4 md:px-6 relative z-10">
-                <div className="flex flex-col items-center justify-center space-y-4 text-center mb-16">
-                    <Badge
-                        variant="outline"
-                        className="px-4 py-1.5 bg-blue-500/10 backdrop-blur-sm border border-blue-500/20 text-blue-500"
+                <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+                    <motion.div
+                        variants={fadeIn("down", 0.3)}
+                        initial="hidden"
+                        whileInView="show"
+                        viewport={{ once: true }}
                     >
-                        <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
-                        Interface Showcase
-                    </Badge>
+                        <Badge
+                            variant="outline"
+                            className="px-4 py-1.5 bg-blue-500/10 backdrop-blur-sm border border-blue-500/20 text-blue-500"
+                        >
+                            <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                            Interface Showcase
+                        </Badge>
+                    </motion.div>
                     <Heading
                         title={"Visibility"}
                         description={
@@ -125,17 +117,6 @@ const VisibilityDcim = () => {
                             </Card>
                         </motion.div>
                     ))}
-                </div>
-
-                <div className="mt-16 text-center">
-                    <Card className="inline-block bg-white/80 backdrop-blur-sm border border-slate-200/70">
-                        <CardContent className="px-6 py-3">
-                            <p className="text-slate-600 text-sm">
-                                Experience the intuitive interface that makes
-                                complex data center management simple
-                            </p>
-                        </CardContent>
-                    </Card>
                 </div>
             </div>
         </section>

@@ -11,16 +11,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    # 1. Get the latest code from the repository
     - name: 🚚 Get latest code
       uses: actions/checkout@v4
 
-    # Set up Node.js for React frontend
+    # 2. Set up Node.js for React frontend
     - name: Use Node.js 23.6.0
       uses: actions/setup-node@v4
       with:
         node-version: '23.6.0'
 
-    # Cache Node.js dependencies
+    # 3. Cache Node.js dependencies
     - name: Cache Node.js dependencies
       uses: actions/cache@v4
       with:
@@ -29,33 +30,33 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-npm-
 
-    # Build the React.js Project (for production)
+    # 4. Build the React.js Project (for production)
     - name: 🔨 Build React Project
       run: |
         npm install
         npm run build   # Use 'npm run build' for production
 
-    # Set up PHP and Composer for Laravel backend
+    # 5. Set up PHP and Composer for Laravel backend
     - name: Install PHP and Composer
       uses: shivammathur/setup-php@v2
       with:
         php-version: '8.4'
         tools: 'composer'
 
-    # Cache Composer dependencies
+    # 6. Cache Composer dependencies
     - name: Cache Composer dependencies
       uses: actions/cache@v4
       with:
-        path: node_modules/
-        key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
+        path: ~/.composer/cache
+        key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
         restore-keys: |
-          ${{ runner.os }}-npm-
+          ${{ runner.os }}-composer-
 
-    # Install Laravel dependencies
+    # 7. Install Laravel dependencies
     - name: Install PHP dependencies
       run: composer install --no-dev --optimize-autoloader --no-interaction
 
-    # Sync the files to your FTP server
+    # 8. Sync the files to your FTP server
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:

@@ -24,12 +24,12 @@ const ProductCard = ({ title, description, imageSrc, link }) => {
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
             >
-                <div className="relative h-48 bg-gray-100 dark:bg-gray-800 overflow-hidden">
+                <div className="relative h-48 bg-gray-100 dark:bg-gray-800 overflow-hidden flex items-center justify-center">
                     <img
                         src={imageSrc || "/placeholder.svg"}
                         alt={title}
                         fill="none"
-                        className="object-cover p-4"
+                        className="object-cover p-4 object-center"
                     />
                     <motion.div
                         className="absolute inset-0 bg-black/60 flex items-center justify-center"

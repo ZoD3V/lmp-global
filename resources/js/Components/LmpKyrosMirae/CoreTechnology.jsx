@@ -33,13 +33,19 @@ const CoreTechnology = () => {
                     <div className="absolute -inset-1 bg-gradient-to-r from-red-500 via-blue-500 to-green-500 rounded-2xl blur-md opacity-30"></div>
                     <div className="relative bg-slate-800 md:p-4 rounded-xl shadow-2xl border border-slate-700">
                         {/* 16:9 aspect ratio image */}
-                        <div className="relative overflow-hidden rounded-lg">
+                        <motion.div
+                            variants={fadeIn("down", 0.3)}
+                            initial="hidden"
+                            whileInView="show"
+                            viewport={{ once: true }}
+                            className="relative overflow-hidden rounded-lg"
+                        >
                             <img
                                 src={digitalImage}
                                 alt="LMP Kyros Mirae Technology Framework"
                                 className="object-contain"
                             />
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </div>

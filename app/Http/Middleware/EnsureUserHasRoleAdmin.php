@@ -17,7 +17,7 @@ class EnsureUserHasRoleAdmin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (!Auth::user()->hasAnyRole(['Super-Admin', 'Admin'])) {
+        if (!Auth::user()->hasAnyRole(['Super-Admin', 'Admin', 'Maintained'])) {
             return redirect()->to('/app');
         }
 

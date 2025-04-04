@@ -38,7 +38,7 @@ const DwinTechnologySection = () => {
                         whileInView="show"
                         viewport={{ once: true }}
                     >
-                        <span className="text-red-600">5 Tier</span>
+                        <span className="text-red-600">5 Tier{" "}</span>
                         <span className="text-blue-600">
                             Digital Twin Technology
                         </span>
@@ -104,6 +104,7 @@ const DwinTechnologySection = () => {
                                         variants={fadeIn("up", 0.2 * index)}
                                         initial="hidden"
                                         whileInView="show"
+                                        viewport={{ once: true }}
                                     >
                                         <FeatureItem>
                                             <span className="font-semibold">
