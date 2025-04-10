@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
 import { Badge } from "./ui/badge";
 import { Leaf, Shield, Clock, Award } from "lucide-react";
-import containment from "../../../public/images/containment_lmp.png";
+import containment from "../../../public/images/feature-section-image.png";
 import Heading from "./Common/Heading";
 
 function FeatureItem({ icon, title, description }) {
@@ -44,7 +44,7 @@ const FeaturesSection = () => {
                             className="inline-flex bg-blue-500/10 text-blue-600 hover:bg-blue-500/20"
                             variant="secondary"
                         >
-                            Why Choose Us
+                            Industry Technology
                         </Badge>
                         <Heading
                             title={

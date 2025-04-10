@@ -7,6 +7,7 @@ import AboutGreeting from "@/Components/About/AboutGreeting";
 import TimelineSection from "@/Components/About/TimelineSection";
 import AboutProductSection from "@/Components/About/AboutProductSection";
 import ProfileSection from "@/Components/About/ProfileSection";
+import Directors from "@/Components/Directors";
 
 const About = ({ banner, timeline, product, lmp_profile }) => {
     return (
@@ -17,10 +18,10 @@ const About = ({ banner, timeline, product, lmp_profile }) => {
                     banner={banner}
                     title={banner[0].name}
                     description={banner[0].description}
-
                 />
                 <AboutGreeting />
                 <ProfileSection lmp_profile={lmp_profile} />
+                <Directors />
                 <ResearchDevelopmentSection />
                 <AboutProductSection dataProduct={product} />
                 <TimelineSection timeline={timeline} />

@@ -2,10 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
 import Heading from "./Common/Heading";
-import {
-    Card,
-    CardContent,
-} from "./ui/card";
 
 const ServicesRelatedSection = ({ features, title, showButton = false }) => {
     const containerVariants = {
@@ -52,23 +48,20 @@ const ServicesRelatedSection = ({ features, title, showButton = false }) => {
                     {features.map((data, index) => (
                         <motion.div
                             key={index}
-                            className="rounded-xl overflow-hidden"
+                            className="group relative overflow-hidden rounded-lg w-42 h-42"
                             variants={itemVariants}
                         >
-                            <Card className="overflow-hidden">
-                                <div className="relative h-64 w-full">
-                                    <img
-                                        src={data.image}
-                                        alt="Design Engineering"
-                                        className="object-cover h-full w-full"
-                                    />
-                                </div>
-                                <CardContent className="p-6">
-                                    <h3 className="text-xl font-bold text-gray-900 text-center">
-                                        {data.name}
-                                    </h3>
-                                </CardContent>
-                            </Card>
+                            <img
+                                src={data.image}
+                                alt="Design Engineering"
+                                className="brightness-75 group-hover:brightness-90 transition-all duration-300 w-full h-full"
+                            />
+                            <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-all duration-300"></div>
+                            <div className="absolute inset-0 flex items-center justify-center">
+                                <h2 className="text-white text-2xl font-medium text-center">
+                                    {data.name}
+                                </h2>
+                            </div>
                         </motion.div>
                     ))}
                 </motion.div>

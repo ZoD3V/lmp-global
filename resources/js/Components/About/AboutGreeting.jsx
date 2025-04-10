@@ -2,6 +2,7 @@ import React from "react";
 import { fadeIn } from "../../utils/motion";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import atom from "../../../../public/images/icons/ic-atom.png";
 
 const AboutGreeting = () => {
     const refHero = useRef(null);
@@ -17,77 +18,9 @@ const AboutGreeting = () => {
         >
             <div
                 ref={refHero}
-                className="flex flex-col items-center justify-center text-center"
+                className="flex flex-col items-center justify-center text-center gap-10"
             >
-                <motion.div
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
-                    className="relative w-64 h-64"
-                >
-                    {/* Inti Atom di Tengah */}
-                    <motion.div
-                        className="absolute inset-0 m-auto w-12 h-12 bg-black rounded-full shadow-xl shadow-blue-500/30 z-10"
-                        animate={{
-                            scale: [1, 1.15, 1],
-                        }}
-                        transition={{
-                            duration: 2,
-                            repeat: Infinity,
-                            ease: "easeInOut",
-                        }}
-                    />
-
-                    {/* Orbit 1 - Horizontal */}
-                    <motion.div
-                        className="absolute left-0 top-0 -translate-x-1/2 -translate-y-1/2 w-full h-full border-2 border-slate-200/20 rounded-full"
-                        animate={{
-                            rotate: 360,
-                        }}
-                        transition={{
-                            duration: 12,
-                            repeat: Infinity,
-                            ease: "linear",
-                        }}
-                    >
-                        <motion.div
-                            className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-5 h-5 bg-black rounded-full shadow-md shadow-blue-500/30"
-                            animate={{
-                                rotate: -360, // Counter-rotation
-                            }}
-                            transition={{
-                                duration: 12,
-                                repeat: Infinity,
-                                ease: "linear",
-                            }}
-                        />
-                    </motion.div>
-                    {/* Orbit 1 - Horizontal */}
-
-                    <motion.div
-                        className="absolute left-[12%] top-[12%] translate-x-1/2 -translate-y-1/2 w-48 h-48 border-2 border-slate-200/20 rounded-full"
-                        animate={{
-                            rotate: -360, // Rotasi berlawanan arah jarum jam
-                        }}
-                        transition={{
-                            duration: 18,
-                            repeat: Infinity,
-                            ease: "linear",
-                        }}
-                    >
-                        <motion.div
-                            className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-black rounded-full shadow-md shadow-blue-500/30"
-                            animate={{
-                                rotate: 360, // Counter-rotation untuk menjaga orientasi elektron
-                            }}
-                            transition={{
-                                duration: 18,
-                                repeat: Infinity,
-                                ease: "linear",
-                            }}
-                        />
-                    </motion.div>
-
-                </motion.div>
+                <img src={atom} alt="atom" className="w-36  h-36 object-contain" />
 
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}

@@ -36,7 +36,7 @@ const CertificateSection = () => {
     return (
         <section
             id="data-center-rating"
-            className="relative w-full py-16 overflow-hidden"
+            className="pt-32 relative w-full py-16 overflow-hidden xl:rounded-bl-[290px]"
         >
             {/* Modern gradient background */}
             <div className="absolute inset-0 bg-gradient-to-b from-indigo-900 via-blue-900 to-blue-800 -z-10"></div>
@@ -95,7 +95,7 @@ const CertificateSection = () => {
                         </div>
                     </motion.div>
 
-                    <div className="flex flex-col items-center text-center mb-16 max-w-3xl mx-auto">
+                    <div className="flex flex-col items-center text-center mb-10 max-w-3xl mx-auto">
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -164,7 +164,7 @@ const CertificateSection = () => {
                     </motion.div>
                 </div>
 
-                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 mb-16">
+                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
                     {ratingCategories.map((category, index) => (
                         <motion.div
                             key={category.id}

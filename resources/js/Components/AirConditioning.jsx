@@ -31,112 +31,40 @@ function AirConditioning() {
     return (
         <section className="w-full py-16 bg-background">
             <div className="max-w-[1200px] container px-4 md:px-6 xl:px-0">
-                <motion.div
-                    className="flex flex-col items-center justify-center space-y-4 text-center"
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, margin: "-100px" }}
-                    variants={fadeIn}
-                >
-                    <div className="space-y-2">
-                        <Heading
-                        title={"Why Precision Air Conditioning Matters"}
-                        description={
-                            "Unlike conventional systems, PACs provide exact temperature and humidity control within extremely narrow ranges, ensuring optimal performance of sensitive equipment."
-                        }
-                        />
-                    </div>
-                </motion.div>
-                <div className="mx-auto grid items-center gap-6 pt-12 lg:grid-cols-2 lg:gap-12">
+                <div className="mx-auto grid items-center">
                     <motion.div
-                        className="flex flex-col justify-center space-y-4"
+                        className="flex flex-col justify-center space-y-4 gap-4"
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, margin: "-100px" }}
                         variants={staggerContainer}
                     >
-                        <ul className="grid gap-6">
-                            <motion.li
-                                className="flex items-start gap-4"
-                                variants={fadeIn}
-                            >
-                                <motion.div
-                                    className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-100 text-blue-600"
-                                    variants={iconAnimation}
-                                >
-                                    <Thermometer className="h-5 w-5" />
-                                </motion.div>
-                                <div className="space-y-2">
-                                    <h3 className="font-bold">
-                                        Precise Temperature Control
-                                    </h3>
-                                    <p className="text-muted-foreground">
-                                        Maintains temperature within ±0.5°C,
-                                        preventing hotspots and equipment
-                                        failures that can lead to costly
-                                        downtime.
-                                    </p>
-                                </div>
-                            </motion.li>
-                            <motion.li
-                                className="flex items-start gap-4"
-                                variants={fadeIn}
-                            >
-                                <motion.div
-                                    className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-purple-100 text-purple-600"
-                                    variants={iconAnimation}
-                                >
-                                    <Gauge className="h-5 w-5" />
-                                </motion.div>
-                                <div className="space-y-2">
-                                    <h3 className="font-bold">
-                                        Humidity Regulation
-                                    </h3>
-                                    <p className="text-muted-foreground">
-                                        Controls humidity levels between 40-60%,
-                                        eliminating static electricity risks and
-                                        preventing moisture-related damage to
-                                        sensitive components.
-                                    </p>
-                                </div>
-                            </motion.li>
-                            <motion.li
-                                className="flex items-start gap-4"
-                                variants={fadeIn}
-                            >
-                                <motion.div
-                                    className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-amber-100 text-amber-600"
-                                    variants={iconAnimation}
-                                >
-                                    <Cpu className="h-5 w-5" />
-                                </motion.div>
-                                <div className="space-y-2">
-                                    <h3 className="font-bold">
-                                        Equipment Longevity
-                                    </h3>
-                                    <p className="text-muted-foreground">
-                                        Extends the lifespan of servers and
-                                        network equipment by up to 40% through
-                                        consistent environmental conditions,
-                                        reducing capital expenditure.
-                                    </p>
-                                </div>
-                            </motion.li>
-                        </ul>
-                    </motion.div>
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true, margin: "-100px" }}
-                        transition={{ duration: 0.6 }}
-                    >
-                        <img
-                            src="/placeholder.svg?height=400&width=600"
-                            width={600}
-                            height={400}
-                            alt="Data center server room with cooling equipment"
-                            className="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last"
-                        />
+                        <p className="text-lg/relaxed text-justify">
+                            Precision Air Conditioning (PAC) is an air cooling
+                            system designed to provide very precise temperature
+                            control in a room. These systems are typically used
+                            in environments where temperature and humidity must
+                            be strictly maintained, such as data centers,
+                            laboratories, server rooms, or other areas that
+                            require stable environmental conditions.
+                        </p>
+                        <p className="text-lg/relaxed text-justify">
+                            Unlike conventional air conditioning systems that
+                            may only focus on maintaining the general
+                            temperature in a room, PACs are designed to provide
+                            very precise temperature regulation. This can
+                            include the ability to control temperature within a
+                            very small range, often within degrees Celsius.
+                            Apart from that, PACs can also be equipped with
+                            features to maintain humidity and clean the air.
+                        </p>
+                        <p className="text-lg/relaxed text-justify">
+                            By providing very precise control over indoor
+                            environmental conditions, Precision Air Conditioning
+                            helps maintain the performance and reliability of
+                            electronic equipment and systems that are very
+                            sensitive to changes in temperature and humidity.
+                        </p>
                     </motion.div>
                 </div>
             </div>
