@@ -6,6 +6,7 @@ import { ArrowRight } from "lucide-react";
 import Heading from "../Common/Heading";
 
 const AboutProductSection = ({ dataProduct }) => {
+    console.log(dataProduct)
     const [hoveredCard, setHoveredCard] = useState(null);
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });

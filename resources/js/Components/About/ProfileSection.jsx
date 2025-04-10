@@ -3,7 +3,6 @@ import { fadeIn } from "@/utils/motion";
 import Heading from "../Common/Heading";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import researchImage from "../../../../public/images/researchdevelopment.png";
 
 const ProfileSection = ({ lmp_profile }) => {
     const ref1 = useRef(null);
@@ -55,7 +54,7 @@ const ProfileSection = ({ lmp_profile }) => {
                         <div className="absolute inset-0 bg-slate-200 rounded-2xl transform rotate-3 scale-95 opacity-20"></div>
                         <div className="relative overflow-hidden rounded-2xl shadow-xl">
                             <img
-                                src={researchImage}
+                                src={`/storage/${lmp_profile[0].img}`}
                                 alt="Data Center Infrastructure"
                                 width={800}
                                 height={600}
@@ -79,7 +78,7 @@ const ProfileSection = ({ lmp_profile }) => {
                         <div className="absolute inset-0 bg-slate-200 rounded-2xl transform rotate-3 scale-95 opacity-20"></div>
                         <div className="relative overflow-hidden rounded-2xl shadow-xl">
                             <img
-                                src={researchImage}
+                                src={`/storage/${lmp_profile[1].img}`}
                                 alt="Comprehensive Data Center Solutions"
                                 width={800}
                                 height={600}
@@ -131,7 +130,7 @@ const ProfileSection = ({ lmp_profile }) => {
                         <div className="absolute inset-0 bg-slate-200 rounded-2xl transform rotate-3 scale-95 opacity-20"></div>
                         <div className="relative overflow-hidden rounded-2xl shadow-xl">
                             <img
-                                src={researchImage}
+                                src={`/storage/${lmp_profile[2].img}`}
                                 alt="Sustainable Data Center Solutions"
                                 width={800}
                                 height={600}
