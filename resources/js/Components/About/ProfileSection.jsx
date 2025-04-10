@@ -3,7 +3,6 @@ import { fadeIn } from "@/utils/motion";
 import Heading from "../Common/Heading";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Server, Shield, Clock, Cpu, BarChart, Globe } from "lucide-react";
 import researchImage from "../../../../public/images/researchdevelopment.png";
 
 const ProfileSection = ({ lmp_profile }) => {
@@ -141,39 +140,6 @@ const ProfileSection = ({ lmp_profile }) => {
                         </div>
                     </motion.div>
                 </div>
-
-                {/* Stats Section */}
-                {/* <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={isInView3 ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.7, delay: 0.5 }}
-                className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-24 text-center"
-            >
-                <div className="bg-slate-50 p-6 rounded-xl shadow-sm border border-slate-100">
-                    <div className="text-3xl md:text-4xl font-bold text-slate-800 mb-2">
-                        50K+
-                    </div>
-                    <p className="text-slate-700">Parts in Inventory</p>
-                </div>
-                <div className="bg-slate-50 p-6 rounded-xl shadow-sm border border-slate-100">
-                    <div className="text-3xl md:text-4xl font-bold text-slate-800 mb-2">
-                        99.8%
-                    </div>
-                    <p className="text-slate-700">Fulfillment Rate</p>
-                </div>
-                <div className="bg-slate-50 p-6 rounded-xl shadow-sm border border-slate-100">
-                    <div className="text-3xl md:text-4xl font-bold text-slate-800 mb-2">
-                        24h
-                    </div>
-                    <p className="text-slate-700">Emergency Delivery</p>
-                </div>
-                <div className="bg-slate-50 p-6 rounded-xl shadow-sm border border-slate-100">
-                    <div className="text-3xl md:text-4xl font-bold text-slate-800 mb-2">
-                        100+
-                    </div>
-                    <p className="text-slate-700">Countries Served</p>
-                </div>
-            </motion.div> */}
             </motion.div>
         </section>
     );

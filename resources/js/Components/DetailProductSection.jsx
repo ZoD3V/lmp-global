@@ -5,21 +5,14 @@ import {
     Download,
     ShoppingCart,
     Info,
-    Server,
-    Cable,
     CheckCircle2,
     ArrowRight,
-    Cpu,
-    GalleryThumbnailsIcon,
-    List,
 } from "lucide-react";
 
 import { Button } from "./ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 import { Badge } from "./ui/badge";
 import ProductCard from "./Common/ProductCard";
 import { router } from "@inertiajs/react";
-import { cn } from "@/lib/utils";
 
 const downloadFile = (filePath, fileName) => {
     fetch(filePath)
@@ -46,10 +39,6 @@ const handleClick = () => {
 const DetailProductSection = ({
     detailData,
     popularProducts,
-    designFeatures,
-    performanceBenefits,
-    PhysicalSpecifications,
-    Capacity,
 }) => {
     const [imageLoaded, setImageLoaded] = useState(false);
     const [activeOptimization, setActiveOptimization] = useState("details");
@@ -169,190 +158,6 @@ const DetailProductSection = ({
                     </motion.div>
                 </motion.div>
             </div>
-
-            {/* Tabs Section */}
-            <Tabs
-                defaultValue="details"
-                value={activeOptimization}
-                onValueChange={setActiveOptimization}
-            >
-                <TabsList className="grid w-full grid-cols-3 mb-8">
-                    <TabsTrigger
-                        value="details"
-                        className={cn(
-                            "data-[state=active]:bg-blue-600 data-[state=active]:text-white",
-                            "hover:text-blue-600 transition-all bg-blue-50 text-blue-500"
-                        )}
-                    >
-                        <List className="w-5 h-5 mr-2" />
-                        Details
-                    </TabsTrigger>
-                    <TabsTrigger
-                        value="features"
-                        className={cn(
-                            "data-[state=active]:bg-blue-600 data-[state=active]:text-white",
-                            "hover:text-blue-600 transition-all bg-blue-50 text-blue-500"
-                        )}
-                    >
-                        <GalleryThumbnailsIcon className="w-5 h-5 mr-2" />
-                        Features
-                    </TabsTrigger>
-                    <TabsTrigger
-                        value="specs"
-                        className={cn(
-                            "data-[state=active]:bg-blue-600 data-[state=active]:text-white",
-                            "hover:text-blue-600 transition-all bg-blue-50 text-blue-500"
-                        )}
-                    >
-                        <Cpu className="w-5 h-5 mr-2" />
-                        Specsifications
-                    </TabsTrigger>
-                </TabsList>
-                <motion.div
-                    key={activeOptimization}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.3 }}
-                >
-                    <TabsContent value="details" className="space-y-4">
-                        <div className="bg-white dark:bg-gray-800 rounded-xl p-6">
-                            <h3 className="text-xl font-semibold mb-4 flex items-center">
-                                <Server className="mr-2 h-5 w-5 text-primary" />
-                                Product Overview
-                            </h3>
-                            <p className="mb-4 text-gray-500">
-                                {detailData.product_overview
-                                    ? detailData.product_overview
-                                    : "No product overview available."}
-                            </p>
-                        </div>
-                    </TabsContent>
-                    <TabsContent value="features" className="space-y-4">
-                        <div className="bg-white dark:bg-gray-800 rounded-xl p-6">
-                            <h3 className="text-xl font-semibold mb-4 flex items-center">
-                                <Cable className="mr-2 h-5 w-5 text-primary" />
-                                Features & Benefits
-                            </h3>
-                            <div className="grid md:grid-cols-2 gap-6">
-                                <div className="space-y-3">
-                                    <h4 className="font-medium">
-                                        Design Features
-                                    </h4>
-                                    {designFeatures &&
-                                    designFeatures.length > 0 ? (
-                                        <ul className="space-y-2">
-                                            {designFeatures.map(
-                                                (item, index) => (
-                                                    <li
-                                                        key={index}
-                                                        className="flex items-start"
-                                                    >
-                                                        <CheckCircle2 className="h-5 w-5 mr-2 text-primary shrink-0 mt-0.5" />
-                                                        <span>{item.name}</span>
-                                                    </li>
-                                                )
-                                            )}
-                                        </ul>
-                                    ) : (
-                                        <p className="text-gray-500">
-                                            No design features available.
-                                        </p>
-                                    )}
-                                </div>
-                                <div className="space-y-3">
-                                    <h4 className="font-medium">
-                                        Performance Benefits
-                                    </h4>
-                                    {performanceBenefits.length > 0 ? (
-                                        <ul className="space-y-2">
-                                            {performanceBenefits.map(
-                                                (item, index) => (
-                                                    <li
-                                                        key={index}
-                                                        className="flex items-start"
-                                                    >
-                                                        <CheckCircle2 className="h-5 w-5 mr-2 text-primary shrink-0 mt-0.5" />
-                                                        <span>{item.name}</span>
-                                                    </li>
-                                                )
-                                            )}
-                                        </ul>
-                                    ) : (
-                                        <p className="text-gray-500">
-                                            No performance available.
-                                        </p>
-                                    )}
-                                </div>
-                            </div>
-                        </div>
-                    </TabsContent>
-                    <TabsContent value="specs" className="space-y-4">
-                        <div className="bg-white dark:bg-gray-800 rounded-xl p-6">
-                            <h3 className="text-xl font-semibold mb-4">
-                                Technical Specifications
-                            </h3>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div>
-                                    <h4 className="font-medium mb-2">
-                                        Physical Specifications
-                                    </h4>
-                                    <ul className="space-y-2">
-                                        {PhysicalSpecifications &&
-                                        PhysicalSpecifications.length > 0 ? (
-                                            PhysicalSpecifications.map(
-                                                (spec, index) => (
-                                                    <li
-                                                        key={index}
-                                                        className="flex justify-between border-b pb-2"
-                                                    >
-                                                        <span className="text-muted-foreground">
-                                                            {spec.spec_name}
-                                                        </span>
-                                                        <span className="font-medium">
-                                                            {spec.spec_value}
-                                                        </span>
-                                                    </li>
-                                                )
-                                            )
-                                        ) : (
-                                            <p className="text-gray-500">
-                                                No physical specifications
-                                                available.
-                                            </p>
-                                        )}
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h4 className="font-medium mb-2">
-                                        Capacity
-                                    </h4>
-                                    <ul className="space-y-2">
-                                        {Capacity && Capacity.length > 0 ? (
-                                            Capacity.map((spec, index) => (
-                                                <li
-                                                    key={index}
-                                                    className="flex justify-between border-b pb-2"
-                                                >
-                                                    <span className="text-muted-foreground">
-                                                        {spec.spec_name}
-                                                    </span>
-                                                    <span className="font-medium">
-                                                        {spec.spec_value}
-                                                    </span>
-                                                </li>
-                                            ))
-                                        ) : (
-                                            <p className="text-gray-500">
-                                                No capacity available.
-                                            </p>
-                                        )}
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </TabsContent>
-                </motion.div>
-            </Tabs>
 
             {/* Similar Products */}
             <motion.div
