@@ -9,10 +9,6 @@ const DetailProduct = () => {
     const {
         product,
         popularProducts,
-        designFeatures,
-        performanceBenefits,
-        PhysicalSpecifications,
-        Capacity
     } = props;
 
     return (
@@ -21,10 +17,6 @@ const DetailProduct = () => {
             <DetailProductSection
                 detailData={product}
                 popularProducts={popularProducts}
-                performanceBenefits={performanceBenefits}
-                designFeatures={designFeatures}
-                PhysicalSpecifications={PhysicalSpecifications}
-                Capacity={Capacity}
             />
             <Footer />
         </main>

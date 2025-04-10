@@ -129,7 +129,7 @@ const CertificateSection = () => {
                             className="flex items-center justify-center mb-6"
                         >
                             <div className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-300 via-blue-100 to-blue-300">
-                                RATED-3
+                                RATED 3
                             </div>
                         </motion.div>
 
