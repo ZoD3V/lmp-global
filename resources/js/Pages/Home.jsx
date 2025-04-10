@@ -6,26 +6,17 @@ import CertificateSection from "@/Components/Home/CertificateSection";
 import CompanyLogo from "@/Components/Home/CompanyLogo";
 import GroupSection from "@/Components/Home/GroupSection";
 import Navbar from "@/Components/Common/Navbar";
-import Hero from "@/Components/Common/Hero";
 import PurposeSection from "@/Components/PurposeSection";
 import Footer from "@/Components/Common/Footer";
 import FeaturesSection from "@/Components/FeatureSection";
 import ContactSection from "@/Components/ContactSection";
 
-const Home = ({ banner }) => {
+const Home = () => {
     return (
         <main className="relative min-h-screen overflow-x-hidden">
             <div className="overflow-hidden">
                 <Navbar />
-                <Hero
-                    banner={banner}
-                    title={banner[0].name}
-                    description={banner[0].description}
-                    showButton={true}
-                    buttonText="See All Product"
-                    buttonLink="/product"
-                />
-
+                <CertificateSection />
                 <div className="fixed bottom-6 left-6 z-50">
                     <Button
                         aria-label="Name"
@@ -42,7 +33,6 @@ const Home = ({ banner }) => {
                 <PurposeSection />
                 <GroupSection />
                 <CertificateIsoSection />
-                <CertificateSection />
                 <FeaturesSection />
                 <CompanyLogo />
                 <ContactSection />

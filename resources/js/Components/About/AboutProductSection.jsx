@@ -20,9 +20,9 @@ const AboutProductSection = ({ dataProduct }) => {
                     className="text-center mb-20"
                 >
                     <Heading
-                        title={"Data Center Solutions"}
+                        title={"Our Product"}
                         description={
-                            "Premium components and spare parts engineered for maximum performance, reliability, and efficiency in modern data center environments."
+                            "Leading Data Center Solution for Maximum Performance."
                         }
                     />
                 </motion.div>

@@ -188,6 +188,7 @@ const ContactSection = () => {
                         initial="hidden"
                         whileInView="show"
                         variants={fadeIn("up", 0.3)}
+                        viewport={{ once: true }}
                     >
                         <div
                             id="contact-form"

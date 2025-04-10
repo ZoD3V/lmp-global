@@ -31,20 +31,6 @@ const ProductCard = ({ title, description, imageSrc, link }) => {
                         fill="none"
                         className="object-cover p-4 object-center"
                     />
-                    <motion.div
-                        className="absolute inset-0 bg-black/60 flex items-center justify-center"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: isHovered ? 1 : 0 }}
-                        transition={{ duration: 0.2 }}
-                    >
-                        <Button
-                            variant="secondary"
-                            size="sm"
-                            onClick={handleClick}
-                        >
-                            View Details
-                        </Button>
-                    </motion.div>
                 </div>
                 <CardContent className="flex-grow p-4">
                     <h3 className="font-semibold text-lg mb-1">{title}</h3>

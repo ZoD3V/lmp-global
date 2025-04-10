@@ -130,7 +130,7 @@ const CertificateIsoSection = () => {
                                     </div>
 
                                     <div className="flex-grow">
-                                        <h3 className="text-lg font-bold mb-2">
+                                        <h3 className="text-sm font-bold mb-2">
                                             {cert.title}
                                         </h3>
                                         <p className="text-sm text-muted-foreground">
@@ -139,7 +139,7 @@ const CertificateIsoSection = () => {
                                     </div>
 
                                     <div className="mt-4 pt-4 border-t border-blue-50">
-                                        <div className="flex items-center text-sm text-blue-600">
+                                        <div className="flex items-center text-xs text-blue-600">
                                             <CheckCircle2 className="h-4 w-4 mr-1" />
                                             <span>
                                                 Internationally Recognized

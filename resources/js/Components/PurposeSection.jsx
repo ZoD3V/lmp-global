@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
 import { Badge } from "./ui/badge";
-import { Leaf, Zap, Shield } from "lucide-react";
-import server from "../../../public/images/researchdevelopment.png";
+import { Leaf, Recycle, Lightbulb } from "lucide-react";
+import server from "../../../public/images/purpose-section-image.jpeg";
 import Heading from "./Common/Heading";
 
 const PurposeSection = () => {
@@ -27,12 +27,12 @@ const PurposeSection = () => {
                             className="inline-flex bg-blue-500/10 text-blue-600 hover:bg-blue-500/20"
                             variant="secondary"
                         >
-                            About LMP Solutions
+                            Industry Technology
                         </Badge>
                         <Heading
-                            title="Innovative Data Center Solutions"
+                            title="Your business needs a competitive advantage"
                             description={
-                                "We provide cutting-edge data center technologies that optimize performance, enhance security, and promote sustainability."
+                                "Stay fast and connected by implementing digital services closest to where data is generated and network density to grow your business and achieve success."
                             }
                         />
                     </motion.div>
@@ -54,17 +54,11 @@ const PurposeSection = () => {
                                 viewport={{ once: true }}
                                 className="space-y-2"
                             >
-                                <h3 className="text-2xl font-bold">
-                                    Our Mission
-                                </h3>
+                                <h3 className="text-2xl font-bold text-green-600">GREEN</h3>
                                 <p className="text-muted-foreground">
-                                    At LMP Solutions, we're committed to
-                                    developing innovative data center
-                                    technologies that help businesses optimize
-                                    performance while reducing environmental
-                                    impact. Our comprehensive range of products
-                                    addresses the complex challenges faced by
-                                    modern data centers.
+                                    Environmentally friendly technology plays a
+                                    crucial role in preserving the
+                                    sustainability of our planet
                                 </p>
                             </motion.div>
 
@@ -76,49 +70,49 @@ const PurposeSection = () => {
                                 className="space-y-4"
                             >
                                 <div className="flex items-start gap-4">
-                                    <div className="rounded-full bg-blue-500/10 p-2">
-                                        <Shield className="h-5 w-5 text-blue-600" />
-                                    </div>
-                                    <div className="space-y-1">
-                                        <h4 className="font-bold">
-                                            Enterprise-Grade Security
-                                        </h4>
-                                        <p className="text-sm text-muted-foreground">
-                                            Our solutions incorporate advanced
-                                            security measures to protect your
-                                            critical infrastructure.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="flex items-start gap-4">
                                     <div className="rounded-full bg-green-500/10 p-2">
                                         <Leaf className="h-5 w-5 text-green-600" />
                                     </div>
                                     <div className="space-y-1">
-                                        <h4 className="font-bold">
-                                            Sustainable Technology
-                                        </h4>
+                                        <h4 className="font-bold">Green</h4>
                                         <p className="text-sm text-muted-foreground">
-                                            We're committed to developing
-                                            eco-friendly solutions that reduce
-                                            energy consumption and environmental
-                                            impact.
+                                            This technology paves the way to a
+                                            cleaner and greener world, as much
+                                            as we can live a modern lifestyle
+                                            without distractions the earth where
+                                            we live.
                                         </p>
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-4">
-                                    <div className="rounded-full bg-amber-500/10 p-2">
-                                        <Zap className="h-5 w-5 text-amber-600" />
+                                    <div className="rounded-full bg-yellow-500/10 p-2">
+                                        <Recycle className="h-5 w-5 text-yellow-600" />
                                     </div>
                                     <div className="space-y-1">
                                         <h4 className="font-bold">
-                                            Optimized Performance
+                                            Renewable Energy
                                         </h4>
                                         <p className="text-sm text-muted-foreground">
-                                            Our technologies are designed to
-                                            maximize efficiency and performance
-                                            in demanding enterprise
-                                            environments.
+                                            Renewable energy sources are
+                                            emerging as bright stars in the
+                                            shift towards a clean and
+                                            sustainable future.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="flex items-start gap-4">
+                                    <div className="rounded-full bg-blue-500/10 p-2">
+                                        <Lightbulb className="h-5 w-5 text-blue-600" />
+                                    </div>
+                                    <div className="space-y-1">
+                                        <h4 className="font-bold">
+                                            Increasing PUE
+                                        </h4>
+                                        <p className="text-sm text-muted-foreground">
+                                            Energy cost savings, better data
+                                            center performance,Sustainability
+                                            and environmental friendliness,
+                                            Regulatory compliance
                                         </p>
                                     </div>
                                 </div>

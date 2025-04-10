@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
 import { Leaf, Server, BarChart2 } from "lucide-react";
-import  Lmp_Pad  from "../../../public/images/lmp_pac2.png";
+import  Lmp_Pad  from "../../../public/images/lmp_pac1.png";
 
 const staggerContainer = {
     hidden: { opacity: 0 },
