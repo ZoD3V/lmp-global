@@ -58,7 +58,7 @@ const Navbar = () => {
                     {/* Mobile Menu Button */}
                     <motion.button
                         variants={fadeIn("right", 0.3)}
-                        className="lg:hidden p-2"
+                        className="lg:hidden"
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                     >
                         {isMenuOpen ? (

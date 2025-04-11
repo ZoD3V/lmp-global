@@ -56,7 +56,7 @@ const AboutProductSection = ({ dataProduct }) => {
                                         src={`/storage/${category.image}`}
                                         alt={category.name}
                                         fill="none"
-                                        className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                                        className="object-cover transition-transform duration-700 ease-out group-hover:scale-105 w-full h-full"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
 
