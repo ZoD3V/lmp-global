@@ -10,6 +10,7 @@ import PurposeSection from "@/Components/PurposeSection";
 import Footer from "@/Components/Common/Footer";
 import FeaturesSection from "@/Components/FeatureSection";
 import ContactSection from "@/Components/ContactSection";
+import CSRSection from "@/Components/Home/CSRSection";
 
 const Home = () => {
     return (
@@ -32,6 +33,7 @@ const Home = () => {
 
                 <PurposeSection />
                 <GroupSection />
+                <CSRSection />
                 <CertificateIsoSection />
                 <FeaturesSection />
                 <CompanyLogo />

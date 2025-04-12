@@ -31,7 +31,7 @@ const FeatureCard = ({
                 <motion.img
                     variants={fadeIn("right", 0.3)}
                     viewport={{ once: true }}
-                    className="card-img w-full h-full object-cover"
+                    className="card-img w-full h-full object-contain"
                     src={item.img}
                     alt="Featured Image"
                 />

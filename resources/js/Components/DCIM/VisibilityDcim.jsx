@@ -50,7 +50,7 @@ const VisibilityDcim = () => {
     ];
 
     return (
-        <section className="w-full py-16 bg-white relative overflow-hidden">
+        <section className="w-full py-16 relative overflow-hidden">
             <div className="container xl:px-0 max-w-[1200px] px-4 md:px-6 relative z-10">
                 <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
                     <motion.div

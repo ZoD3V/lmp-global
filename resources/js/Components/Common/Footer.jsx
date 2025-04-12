@@ -6,17 +6,21 @@ import logo_lmp from "../../../../public/images/logo_lmp.png";
 
 const Footer = () => {
     const footerLinks = {
-        company: [
-            { name: "About", href: "#" },
-            { name: "Terms of Use", href: "#" },
-            { name: "Privacy Policy", href: "#" },
-            { name: "How it Works", href: "#" },
-            { name: "Contact Us", href: "#" },
+        home: [
+            { name: "About", href: "/about" },
+            { name: "Product & Service", href: "/product" },
+            { name: "Solutions", href: "#" },
+            { name: "Partners", href: "/patner" },
+            { name: "Support", href: "/support" },
+            { name: "Contact Us", href: "/contact" },
         ],
-        getHelp: [
-            { name: "Support Carrer", href: "#" },
-            { name: "24h Service", href: "#" },
-            { name: "Quick Chat", href: "#" },
+        product: [
+            { name: "LMP Networks", href: "/network" },
+            { name: "LMP Renewable Energy", href: "/energy" },
+            { name: "LMP Nex-T Edge DC 360", href: "/next-t" },
+            { name: "LMP Polymer", href: "/polymer" },
+            { name: "LMP Service", href: "/services" },
+            { name: "PAC", href: "/pac" },
         ],
         support: [
             { name: "FAQ", href: "#" },

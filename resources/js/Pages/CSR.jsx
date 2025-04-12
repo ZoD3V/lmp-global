@@ -39,7 +39,7 @@ const CSR = ({ banner, csr }) => {
                             initial="hidden"
                             whileInView="show"
                             viewport={{ once: true }}
-                            className="flex flex-col col-span-2 gap-4 max-w-2xl custom-rich-editor"
+                            className="flex flex-col col-span-2 gap-4 max-w-2xl"
                         >
                             <motion.h2
                                 variants={textVariant(0.2)}
@@ -56,7 +56,7 @@ const CSR = ({ banner, csr }) => {
                                     display: "block",
                                     listStyleType: "auto",
                                 }}
-                                className="text-justify"
+                                className="text-justify custom-rich-editor"
                                 dangerouslySetInnerHTML={{
                                     __html: csr[0].content,
                                 }}

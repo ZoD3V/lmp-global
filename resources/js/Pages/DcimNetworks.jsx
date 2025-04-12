@@ -2,6 +2,8 @@ import Footer from "@/Components/Common/Footer";
 import Hero from "@/Components/Common/Hero";
 import Navbar from "@/Components/Common/Navbar";
 import FeaturesOperational from "@/Components/DCIM/FeaturesOperational";
+import RackServer from "@/Components/DCIM/RackServer";
+import RiskMitigation from "@/Components/DCIM/RiskMitigation";
 import SpeedDeployment from "@/Components/DCIM/SpeedDeployment";
 import VisibilityDcim from "@/Components/DCIM/VisibilityDcim";
 import XPediTePlatform from "@/Components/DCIM/XPediTePlatform";
@@ -21,6 +23,8 @@ const DcimNetworks = ({ banner }) => {
                 <VisibilityDcim />
                 <FeaturesOperational />
                 <SpeedDeployment />
+                <RiskMitigation />
+                <RackServer />
                 <Footer />
             </div>
         </main>

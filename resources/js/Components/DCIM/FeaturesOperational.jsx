@@ -51,7 +51,7 @@ const FeaturesOperational = () => {
     ];
 
     return (
-        <section className="w-full py-16 bg-gradient-to-b from-white to-gray-50">
+        <section className="w-full py-16">
             <div className="container px-4 md:px-6 xl:px-0 max-w-[1200px]">
                 <div className="flex flex-col items-center text-center space-y-4 mb-12">
                     <motion.div
@@ -134,7 +134,7 @@ const FeaturesOperational = () => {
                             variants={cardVariants}
                             transition={{ delay: index * 0.2 }}
                         >
-                            <Card className="border-0 shadow-md hover:shadow-lg transition-shadow">
+                            <Card>
                                 <CardHeader className="pb-2">
                                     <div
                                         className={`flex items-center justify-center w-12 h-12 rounded-full ${card.iconBg} mb-2`}

@@ -64,9 +64,9 @@ const CompanyLogo = () => {
         <section className="w-full py-16">
             <div className="max-w-[1200px] container px-4 md:px-6 xl:px-0 overflow-hidden flex flex-col gap-20 tems-center justify-center">
                 <Heading
-                    title={"With great partners"}
+                    title={"Clients"}
                     description={
-                        "Our customers are the best in the industry, and we're proud to work with them."
+                        "​We are proud and committed to helping our customers every step of the way and providing benefits solutions to meet all their needs."
                     }
                 />
                 <div className="marquee-container overflow-hidden relative w-full">

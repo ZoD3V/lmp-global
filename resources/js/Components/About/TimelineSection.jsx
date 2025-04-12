@@ -1,37 +1,18 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../../utils/motion";
+import Heading from "../Common/Heading";
 
 const TimelineSection = ({ timeline }) => {
-
     return (
         <motion.section
             variants={fadeIn("up", 0.2)}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="max-w-[1200px] mx-auto py-16"
+            className="max-w-[1200px] mx-auto py-16 flex flex-col gap-10"
         >
-            <motion.div
-                variants={fadeIn("up", 0.3)}
-                viewport={{ once: true }}
-                className="text-center mb-12"
-            >
-                <motion.h2
-                    variants={textVariant(0.2)}
-                    viewport={{ once: true }}
-                    className="text-3xl font-bold mb-4"
-                >
-                    LMP History
-                </motion.h2>
-                <motion.p
-                    variants={fadeIn("up", 0.4)}
-                    viewport={{ once: true }}
-                    className="text-slate-600"
-                >
-                    When you resell besnik, you build trust and increase
-                </motion.p>
-            </motion.div>
+            <Heading title={"LMP History"} />
             <div className="row example-centered">
                 <div className="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
                     <ul className="timeline timeline-centered">

@@ -10,6 +10,7 @@ import ThermalRisk from "@/Components/LmpKyrosMirae/ThermalRisk";
 import Navbar from "@/Components/Common/Navbar";
 import Hero from "@/Components/Common/Hero";
 import Footer from "@/Components/Common/Footer";
+import SuccessStories from "@/Components/LmpKyrosMirae/SuccessStories";
 
 const KyrosMirae = ({ banner }) => {
     return (
@@ -22,6 +23,7 @@ const KyrosMirae = ({ banner }) => {
                     description={banner[0].description}
                 />
                 <KyrosMiraeServiceSection />
+                <SuccessStories />
                 <CoreTechnology />
                 <KyrosLifecycle />
                 <DwinTechnologySection />
