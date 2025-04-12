@@ -10,7 +10,7 @@ import {
     MonitorCheck,
     Calculator,
 } from "lucide-react";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Card, CardContent, CardHeader } from "../ui/card";
 import Heading from "../Common/Heading";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "@/utils/motion";
