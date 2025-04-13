@@ -5,14 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class LmpNetwork extends Model
+class LMPNetwork extends Model
 {
     use HasFactory;
+    protected $table = 'lmp_networks';
 
     protected $fillable = ['title', 'desc', 'module_info', 'patch_cord_info', 'title_image'];
 
     public function images()
     {
-        return $this->hasMany(Image::class);
+        return $this->hasMany(Image::class, "lmp_network_id");
     }
 }

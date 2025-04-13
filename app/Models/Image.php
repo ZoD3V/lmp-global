@@ -16,13 +16,15 @@ class Image extends Model
         'image_path',
         'caption',
     ];
+
     public function lmpNetwork(): BelongsTo
     {
-        return $this->belongsTo(LmpNetwork::class);
+        return $this->belongsTo(LMPNetwork::class, 'lmp_network_id');
     }
 
     public function lmpPolymer(): BelongsTo
     {
-        return $this->belongsTo(LmpPolymer::class, 'lmp_polymer_id');
+        return $this->belongsTo(LMPPolymer::class, 'lmp_polymer_id');
     }
 }
+
