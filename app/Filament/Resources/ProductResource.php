@@ -60,11 +60,6 @@ class ProductResource extends Resource
                     ->default(null)
                     ->nullable()
                     ->preload(),
-                MultiSelect::make('features')
-                    ->relationship('features', 'name')
-                    ->default(null)
-                    ->nullable()
-                    ->preload(),
                 Select::make('category_id')
                     ->relationship('category', 'name')
                     ->searchable()
@@ -74,20 +69,24 @@ class ProductResource extends Resource
                     ->label('Product Overview')
                     ->nullable()
                     ->default(null)
-                    ->maxLength(500),
+                    ->maxLength(500)
+                    ->columnSpan(2)
+                ,
                 FileUpload::make('image')
                     ->image()
                     ->required()
                     ->disk('public')
                     ->directory('products')
                     ->maxSize(1024)
+                    ->columnSpan(2)
                 ,
                 FileUpload::make('brochure')
                     ->image()
                     ->required()
                     ->disk('public')
                     ->directory('brochure')
-                    ->maxSize(1024)
+                    ->columnSpan(2)
+
             ])->columns(2),
         ]);
     }

@@ -20,7 +20,7 @@ const CardProduct = ({ item, index, fadeIn, textVariant, children }) => {
     return (
         <motion.div
             key={index}
-            variants={fadeIn("up", 0.2 * (index + 1))}
+            variants={fadeIn("up", index * 0.1)}
             viewport={{ once: true }}
             className="relative flex flex-col gap-4 cursor-pointer"
             onClick={() => navigateDetailProduct(item)}
@@ -43,7 +43,7 @@ const CardProduct = ({ item, index, fadeIn, textVariant, children }) => {
             >
                 {/* Judul produk */}
                 <motion.h3
-                    variants={textVariant(0.3 * (index + 1))}
+                    variants={textVariant(index * 0.1)}
                     viewport={{ once: true }}
                     className="font-medium text-xl leading-8 text-black"
                 >
@@ -52,7 +52,7 @@ const CardProduct = ({ item, index, fadeIn, textVariant, children }) => {
 
                 {/* Deskripsi produk */}
                 <motion.p
-                    variants={fadeIn("up", 0.3 * (index + 1))}
+                    variants={fadeIn("up", index * 0.1)}
                     viewport={{ once: true }}
                     className="font-normal text-sm leading-6 text-gray-500"
                 >

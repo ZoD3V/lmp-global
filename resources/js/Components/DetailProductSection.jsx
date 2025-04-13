@@ -36,10 +36,7 @@ const handleClick = () => {
     router.visit("/product");
 };
 
-const DetailProductSection = ({
-    detailData,
-    popularProducts,
-}) => {
+const DetailProductSection = ({ detailData, popularProducts }) => {
     const [imageLoaded, setImageLoaded] = useState(false);
     const [activeOptimization, setActiveOptimization] = useState("details");
 
@@ -108,7 +105,7 @@ const DetailProductSection = ({
                     <motion.div variants={fadeIn} className="flex gap-4 mb-6">
                         <Button variant="theme">
                             <ShoppingCart className="mr-2 h-4 w-4" />
-                            Pre Order
+                            Order
                         </Button>
                         <Button
                             variant="outline"
