@@ -36,7 +36,7 @@ const CertificateSection = () => {
     return (
         <section
             id="data-center-rating"
-            className="pt-32 relative w-full py-16 overflow-hidden xl:rounded-bl-[290px]"
+            className="pt-32 2xl:h-[740px] relative w-full py-16 overflow-hidden xl:rounded-bl-[290px]"
         >
             {/* Modern gradient background */}
             <div className="absolute inset-0 bg-gradient-to-b from-indigo-900 via-blue-900 to-blue-800 -z-10"></div>
@@ -77,7 +77,7 @@ const CertificateSection = () => {
 
             <div className="max-w-[1200px] container px-4 md:px-6 xl:px-0 relative">
                 {/* Certification logos - moved to top */}
-                <div className="flex justify-between items-center gap-6 mb-16 mx-auto">
+                <div className="flex justify-between items-center gap-6 mx-auto">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}

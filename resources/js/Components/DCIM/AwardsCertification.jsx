@@ -19,22 +19,22 @@ export default function AwardsCertification() {
             image: awards1,
             alt: "Certified Indonesia 2022-2023",
             title: "Certified Indonesia",
-            issuer: "PT. Budi Citra Informatika",
+            issuer: "RiT Tech",
             year: "2022-2023",
         },
         {
             id: 2,
             image: awards2,
-            alt: "Top Rated Data Center Management Software",
+            alt: "DCS AWARDS WINNER 2021",
             title: "Top Rated Software",
             issuer: "SoftwareWorld",
-            year: "2023",
+            year: "2021",
         },
         {
             id: 3,
             image: awards3,
             alt: "DCS Awards Winner 2021",
-            title: "DCS Awards Winner",
+            title: "Data Center Management Software",
             issuer: "Data Centre Solutions",
             year: "2021",
         },
@@ -42,15 +42,15 @@ export default function AwardsCertification() {
             id: 4,
             image: awards4,
             alt: "Most Promising Data Center Solution Provider 2021",
-            title: "Most Promising Provider",
-            issuer: "CIOReview",
+            title: "DATA CENTER SOLUTION PROVIDERS",
+            issuer: "RiT Tech",
             year: "2021",
         },
         {
             id: 5,
             image: awards5,
             alt: "Excellence Awards - DCIM Solution of the Year 2020",
-            title: "Excellence Award",
+            title: "Data Centre ICT Automation",
             issuer: "RiT Tech",
             year: "2020",
         },
@@ -58,16 +58,16 @@ export default function AwardsCertification() {
             id: 6,
             image: awards6,
             alt: "AI Excellence Award 2025",
-            title: "AI Excellence Award",
-            issuer: "Data Center World",
-            year: "2025",
+            title: "DCIM Solution of the Year",
+            issuer: "RiT Tech",
+            year: "2024",
         },
         {
             id: 7,
             image: awards7,
-            alt: "AI Excellence Award 2025",
+            alt: "DATA CENTRE WORLD",
             title: "AI Excellence Award",
-            issuer: "Data Center World",
+            issuer: "RiT Tech",
             year: "2025",
         },
     ];
@@ -125,7 +125,7 @@ export default function AwardsCertification() {
 
                     {/* Certification Grid */}
                     <motion.div
-                        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
                         variants={containerVariants}
                         initial="hidden"
                         whileInView="visible"
@@ -156,7 +156,7 @@ export default function AwardsCertification() {
 
                                     <div className="p-5">
                                         <div className="flex items-start justify-between mb-1">
-                                            <h3 className="font-semibold text-lg">
+                                            <h3 className="font-semibold text-lg line-clamp-1">
                                                 {cert.title}
                                             </h3>
                                             <BadgeCheck className="h-5 w-5 text-primary flex-shrink-0 mt-1" />
