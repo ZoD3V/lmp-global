@@ -54,11 +54,14 @@ const PurposeSection = () => {
                                 viewport={{ once: true }}
                                 className="space-y-2"
                             >
-                                <h3 className="text-2xl font-bold text-green-600">GREEN</h3>
-                                <p className="text-muted-foreground">
-                                    Environmentally friendly technology plays a
-                                    crucial role in preserving the
-                                    sustainability of our planet
+                                <h3 className="text-2xl font-bold text-green-600">
+                                    GREEN
+                                </h3>
+                                <p className="text-muted-foreground text-justify">
+                                    Ultra High Density Edge Data Center For
+                                    Greener Data Center, Environmentally
+                                    friendly technology plays a crucial role in
+                                    preserving the sustainability of our planet
                                 </p>
                             </motion.div>
 
