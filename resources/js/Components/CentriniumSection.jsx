@@ -72,7 +72,12 @@ const CentriniumSection = ({ networkProduct }) => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5 }}
                 >
-                    <Badge className="text-sm">Fiber Management</Badge>
+                    <Badge
+                        className="inline-flex bg-blue-500/10 text-blue-600 hover:bg-blue-500/20"
+                        variant="secondary"
+                    >
+                        Fiber Management
+                    </Badge>
                     <Heading
                         title={"Edge X"}
                         description={

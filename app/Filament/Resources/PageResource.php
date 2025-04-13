@@ -41,7 +41,7 @@ class PageResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('name')->label('Page Name'),
+                TextColumn::make('name')->label('Page Name')->searchable(),
                 TextColumn::make('created_at')->label('Created At')->date(),
             ])
             ->filters([

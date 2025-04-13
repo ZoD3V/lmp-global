@@ -16,7 +16,7 @@ const Networks = ({ banner, networks }) => {
                     description={banner[0].description}
                 />
                 {networks[0] && <NetworkSection networkProduct={networks[0]} />}
-                {networks[1] && <CentriniumSection networkProduct={networks[0]} />}
+                {networks[1] && <CentriniumSection networkProduct={networks[1]} />}
                 <Footer />
             </div>
         </main>

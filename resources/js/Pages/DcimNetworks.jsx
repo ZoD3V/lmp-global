@@ -1,6 +1,7 @@
 import Footer from "@/Components/Common/Footer";
 import Hero from "@/Components/Common/Hero";
 import Navbar from "@/Components/Common/Navbar";
+import AwardsCertification from "@/Components/DCIM/AwardsCertification";
 import FeaturesOperational from "@/Components/DCIM/FeaturesOperational";
 import RackServer from "@/Components/DCIM/RackServer";
 import RiskMitigation from "@/Components/DCIM/RiskMitigation";
@@ -19,6 +20,7 @@ const DcimNetworks = ({ banner }) => {
                     title={banner[0].name}
                     description={banner[0].description}
                 />
+                <AwardsCertification />
                 <XPediTePlatform />
                 <VisibilityDcim />
                 <FeaturesOperational />
