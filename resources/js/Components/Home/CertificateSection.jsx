@@ -198,7 +198,7 @@ const CertificateSection = () => {
                                             <div className="flex items-center">
                                                 <ShieldCheck className="h-4 w-4 mr-1 text-blue-300" />
                                                 <span className="font-bold text-blue-100">
-                                                    Rated-3
+                                                    Rated 3
                                                 </span>
                                             </div>
                                         </div>

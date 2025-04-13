@@ -177,7 +177,7 @@ const ContactSection = () => {
                                 </Button>
                                 <Button asChild variant="outline" size="lg">
                                     <Link href="tel:+18005551234">
-                                        Call Sales: 1-800-555-1234
+                                        Call Sales: 0823-2021-8200
                                     </Link>
                                 </Button>
                             </div>

@@ -1,5 +1,4 @@
 import {
-    ArrowRightIcon,
     Leaf,
     Lightbulb,
     LineChart,
@@ -128,10 +127,6 @@ export default function AdvantageSection() {
                                     practices, creating a more sustainable
                                     energy ecosystem for future generations.
                                 </p>
-                            </div>
-                            <div className="mt-4 md:mt-0 md:ml-auto flex items-center text-emerald-400 font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <span className="mr-2">Learn more</span>
-                                <ArrowRightIcon className="w-4 h-4" />
                             </div>
                         </div>
                     </div>

@@ -6,6 +6,7 @@ import { LuSquareActivity } from "react-icons/lu";
 import { BiSolidZap } from "react-icons/bi";
 import { IoWifi } from "react-icons/io5";
 import Heading from "./Common/Heading";
+import { FilterIcon } from "lucide-react";
 
 const VoltsSection = ({ voltsData }) => {
     const features = [
@@ -40,7 +41,7 @@ const VoltsSection = ({ voltsData }) => {
             title: "Noise Filtration",
             description:
                 "Filters electrical quality disturbances in the form of NOISE or voltage disturbances caused by electromagnetic fields.",
-            icon: IoWifi,
+            icon: FilterIcon,
             iconColor: "text-purple-500",
             bgColor: "bg-purple-50",
             borderColor: "border-purple-200",

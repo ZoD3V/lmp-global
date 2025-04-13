@@ -3,6 +3,7 @@ import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../../utils/motion";
 import logo_lmp from "../../../../public/images/logo_lmp.png";
+import { InstagramIcon } from "lucide-react";
 
 const Footer = () => {
     const footerLinks = {
@@ -83,16 +84,7 @@ const Footer = () => {
                             <motion.a
                                 whileHover={{ scale: 1.1 }}
                                 viewport={{ once: true }}
-                                href="#"
-                                aria-label="Facebook"
-                                className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-slate-600 hover:bg-blue-600 hover:text-white transition-colors"
-                            >
-                                <FaFacebookF className="w-5 h-5" />
-                            </motion.a>
-                            <motion.a
-                                whileHover={{ scale: 1.1 }}
-                                viewport={{ once: true }}
-                                href="#"
+                                href="https://x.com/lmp_networks"
                                 aria-label="X"
                                 className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-slate-600 hover:bg-blue-400 hover:text-white transition-colors"
                             >
@@ -101,7 +93,16 @@ const Footer = () => {
                             <motion.a
                                 whileHover={{ scale: 1.1 }}
                                 viewport={{ once: true }}
-                                href="#"
+                                href="https://www.instagram.com/lmp.networks/"
+                                aria-label="X"
+                                className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-slate-600 hover:bg-blue-400 hover:text-white transition-colors"
+                            >
+                                <InstagramIcon className="w-5 h-5" />
+                            </motion.a>
+                            <motion.a
+                                whileHover={{ scale: 1.1 }}
+                                viewport={{ once: true }}
+                                href="https://id.linkedin.com/company/lmp-networks"
                                 aria-label="Linkedin"
                                 className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-slate-600 hover:bg-blue-700 hover:text-white transition-colors"
                             >

@@ -16,34 +16,23 @@ const cuztomize = [
     },
     {
         id: 2,
-        title: "Edge Data Center",
-        sub_title: "Customize your edge computing with LMP global solutions",
-        text: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.",
+        title: "Micro Data Center",
+        sub_title: "LMP micro data centers tailored for your needs",
+        text: "LMP Global Solutions revolutionizes data centers, harmonizing power, cooling, monitoring, and racks to match your unique business demands.",
     },
     {
         id: 3,
-        title: "Micro Data Center",
-        sub_title: "LMP micro data centers tailored for your needs",
-        text: "When she reached the first hills of the Mountains, she had a last view back on the of her hometown Bookmarksgrove, the headline.",
+        title: "Cable Landing Station",
+        sub_title:
+            "Leverage LMP global solutions for customized cable landing stations",
+        text: "LMP Global Solutions boasts an unparalleled global presence in crafting modular data centers, spanning the globe with successful cable landing station setups on  six continents.",
     },
     {
         id: 4,
-        title: "Edge Data Center",
+        title: "Core Data Center",
         sub_title:
-            "Leverage LMP global solutions for customized cable landing stations",
-        text: "The customer service has been exceptional. They went above and beyond to help me solve my problems and were always available when I needed them.",
-    },
-    {
-        id: 5,
-        title: "Edge Data Center",
-        sub_title: "Edge Data Center",
-        text: "I've been using their services for over a year now and couldn't be happier. The platform is intuitive and the features are exactly what I needed for my business.",
-    },
-    {
-        id: 6,
-        title: "Edge Data Center",
-        sub_title: "Edge Data Center",
-        text: "What impressed me most was how quickly they responded to my requests. The team is professional, knowledgeable, and truly cares about their customers' success.",
+            "Build flexible, scalable and efficient core data centers with LMP",
+        text: "LMP Global Solutions streamlines core data center expansion effortlessly. Our innovative modular approach empowers clients, contractors, and consulting allies to seamlessly plan and construct data centers worldwide.",
     },
 ];
 

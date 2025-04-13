@@ -23,7 +23,7 @@ const Hero = ({ title, description, banner, showButton }) => {
                         initial="hidden"
                         whileInView="show"
                         viewport={{ once: true }}
-                        className="text-5xl md:text-6xl xl:text-7xl leading-none font-bold tracking-wide text-white"
+                        className="text-5xl md:text-6xl leading-none font-bold tracking-wide text-white"
                     >
                         {title}
                     </motion.h1>

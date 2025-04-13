@@ -79,10 +79,8 @@ const CentriniumSection = ({ networkProduct }) => {
                         Fiber Management
                     </Badge>
                     <Heading
-                        title={"Edge X"}
-                        description={
-                            "Edge X Rack Mount Drawer Indoor Fiber Enclosure ensures network reliability by housing, organizing, managing and protecting up to 144 fibre optic cable, terminations, splices, connectors and patch cords using 12 Modules Cassette adapter panels."
-                        }
+                        title={networkProduct.title}
+                        description={networkProduct.desc}
                     />
                 </motion.div>
 

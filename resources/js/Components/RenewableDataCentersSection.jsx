@@ -62,7 +62,6 @@ export default function RenewableDataCentersSection() {
                                                     strokeWidth="1"
                                                     strokeDasharray="5,5"
                                                     fill="none"
-                                                    className="animate-[spin_15s_linear_infinite]"
                                                 />
                                                 <defs>
                                                     <linearGradient
@@ -176,7 +175,7 @@ export default function RenewableDataCentersSection() {
                 </div>
 
                 {/* Stats section */}
-                <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+                {/* <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div className="bg-white rounded-xl p-6 border border-slate-200 hover:border-emerald-500/50 transition-all duration-300 text-center shadow-md">
                         <div className="text-4xl font-bold text-emerald-500 mb-2">
                             75%
@@ -204,7 +203,7 @@ export default function RenewableDataCentersSection() {
                             Major tech companies committed to renewable energy
                         </p>
                     </div>
-                </div>
+                </div> */}
             </div>
         </section>
     );
