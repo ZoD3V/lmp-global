@@ -60,18 +60,9 @@ class ProductController extends Controller
     {
         $banner = Banner::all();
 
-        $product = Product::with('keyCharacters', 'features')->findOrFail($id);
+        $product = Product::with('keyCharacters')->findOrFail($id);
 
         $product->keyCharacters->makeHidden('pivot');
-        $product->features->makeHidden('pivot');
-
-        $designFeatures = $product->features->filter(function ($feature) {
-            return $feature->category === 'Design Features';
-        });
-
-        $performanceBenefits = $product->features->filter(function ($feature) {
-            return $feature->category === 'Performance Benefits';
-        });
 
         $categoryId = $product->category_id;
 
@@ -80,23 +71,10 @@ class ProductController extends Controller
             ->take(4)
             ->get();
 
-        $PhysicalSpecifications = ProductTechnicalSpec::where('product_id', $id)
-            ->where('category', 'Physical Specifications')
-            ->get();
-
-        $Capacity = ProductTechnicalSpec::where('product_id', $id)
-            ->where('category', 'Capacity')
-            ->get();
-
-
         return Inertia::render('DetailProduct', [
             'banner' => $banner,
             'product' => $product,
-            'designFeatures' => $designFeatures,
-            'performanceBenefits' => $performanceBenefits,
             'popularProducts' => $popularProducts,
-            'PhysicalSpecifications' => $PhysicalSpecifications,
-            'Capacity' => $Capacity,
         ]);
     }
 

@@ -26,14 +26,4 @@ class Product extends Model
         return $this->belongsToMany(KeyCharacter::class,'product_key_character');
     }
 
-    public function features()
-    {
-        return $this->belongsToMany(Feature::class, 'product_feature');
-    }
-
-    public function technicalSpecs()
-    {
-        return $this->hasMany(ProductTechnicalSpec::class);
-    }
-
 }
