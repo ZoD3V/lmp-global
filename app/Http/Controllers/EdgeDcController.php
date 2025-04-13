@@ -14,7 +14,7 @@ class EdgeDcController extends Controller
             $query->where('name', 'EdgeDc');
         })->get();
 
-        return Inertia::render('EdgeDc', [
+        return Inertia::render('EdgeDC', [
             'banner' => $banner,
         ]);
     }
