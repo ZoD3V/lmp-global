@@ -6,7 +6,7 @@ import Navbar from "@/Components/Common/Navbar";
 import Hero from "@/Components/Common/Hero";
 import Footer from "@/Components/Common/Footer";
 
-const Support = ({ banner }) => {
+const Support = ({ banner, Supportbanner }) => {
     return (
         <main className="relative min-h-screen overflow-x-hidden">
             <div className="overflow-hidden">
@@ -18,7 +18,7 @@ const Support = ({ banner }) => {
                 />
                 <SupportServiceSection />
                 <SolutionSection
-                    banner={banner}
+                    banner={Supportbanner}
                     title="Contact Support"
                     description="Get ongoing support for products already purchased. (021 888869727)"
                 />

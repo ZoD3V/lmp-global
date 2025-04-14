@@ -14,8 +14,14 @@ class SupportController extends Controller
             $query->where('name', 'Support');
         })->get();
 
+        $Supportbanner = Banner::whereHas('page', function ($query) {
+            $query->where('name', 'ProductSolution');
+        })->get();
+
+
         return Inertia::render('Support', [
-            'banner' => $banner
+            'banner' => $banner,
+            'Supportbanner' => $Supportbanner,
         ]);
     }
 }
