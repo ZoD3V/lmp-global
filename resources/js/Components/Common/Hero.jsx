@@ -32,7 +32,7 @@ const Hero = ({ title, description, banner, showButton }) => {
                         initial="hidden"
                         whileInView="show"
                         viewport={{ once: true }}
-                        className="font-light text-gray-100/90 xl:text-xl"
+                        className="font-light text-gray-100/90 xl:text-xl text-justify"
                     >
                         {description}
                     </motion.p>

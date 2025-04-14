@@ -1,9 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/utils/motion";
-import logo_lmp from "../../../../public/images/containment_lmp.png";
-import product1 from "../../../../public/images/product1.png";
-import product2 from "../../../../public/images/product2.jpeg";
+import csr1 from "../../../../public/images/csr/csr-1.jpeg";
+import csr2 from "../../../../public/images/csr/csr-2.jpeg";
+import csr3 from "../../../../public/images/csr/csr-3.jpeg";
 import { Card, CardContent } from "../ui/card";
 import Heading from "../Common/Heading";
 
@@ -33,15 +33,15 @@ const CsrSection = () => {
 
     const features = [
         {
-            img: logo_lmp,
+            img: csr1,
             title: "Main Tank & Storage Tank",
         },
         {
-            img: product1,
+            img: csr2,
             title: "Installation of 3 inch PE pipe 550M long",
         },
         {
-            img: product2,
+            img: csr3,
             title: "Installation of 1,100M long 2 inch PE pipe",
         },
     ];

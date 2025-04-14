@@ -70,11 +70,9 @@ const Footer = () => {
                         <motion.p
                             variants={fadeIn("up", 0.6)}
                             viewport={{ once: true }}
-                            className="text-slate-600 mb-6"
+                            className="text-slate-900 mb-6 font-semibold text-xl"
                         >
-                            The copy warned the Little Blind Text, that where it
-                            came from it would have been rewritten a thousand
-                            times.
+                            Connect with us
                         </motion.p>
                         <motion.div
                             variants={fadeIn("up", 0.7)}

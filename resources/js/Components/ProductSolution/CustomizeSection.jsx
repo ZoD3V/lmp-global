@@ -12,27 +12,27 @@ const cuztomize = [
         id: 1,
         title: "Edge Data Center",
         sub_title: "Customize your edge computing with LMP global solutions",
-        text: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast.",
+        text: "LMP Global Solutions revolutionizes the edge with cutting-edge, tailored data centers that supercharge deployment, reduce risks, and optimize expenses. Deploy an array of custom modular edge data centers, ranging from dozens to hundreds, to amplify flexibility, enhance scalability, and elevate efficiency.",
     },
     {
         id: 2,
-        title: "Micro Data Center",
-        sub_title: "LMP micro data centers tailored for your needs",
-        text: "LMP Global Solutions revolutionizes data centers, harmonizing power, cooling, monitoring, and racks to match your unique business demands.",
-    },
-    {
-        id: 3,
-        title: "Cable Landing Station",
-        sub_title:
-            "Leverage LMP global solutions for customized cable landing stations",
-        text: "LMP Global Solutions boasts an unparalleled global presence in crafting modular data centers, spanning the globe with successful cable landing station setups on  six continents.",
-    },
-    {
-        id: 4,
         title: "Core Data Center",
         sub_title:
             "Build flexible, scalable and efficient core data centers with LMP",
-        text: "LMP Global Solutions streamlines core data center expansion effortlessly. Our innovative modular approach empowers clients, contractors, and consulting allies to seamlessly plan and construct data centers worldwide.",
+        text: "LMP Global Solutions streamlines core data center expansion effortlessly. Our innovative modular approach empowers clients, contractors, and consulting allies to seamlessly plan and construct data centers worldwide. We provide adaptable, scalable, and eco-efficient solutions that are pre-engineered, prefabricated, and rigorously pre-tested, ensuring swift on-site deployment and assembly. Our dedicated solutions team collaborates with IT, facilities, network, and security stakeholders, guiding you from inception to project completion.",
+    },
+    {
+        id: 3,
+        title: "Micro Data Center",
+        sub_title: "LMP micro data centers tailored for your needs",
+        text: "LMP Global Solutions revolutionizes data centers, harmonizing power, cooling, monitoring, and racks to match your unique business demands. Our expert team partners with you, guiding from inception to implementation, freeing you to prioritize your core mission. Our micro data centers offer an innovative approach to flexibly deploy capacity anywhere.",
+    },
+    {
+        id: 4,
+        title: "Cable Landing Station",
+        sub_title:
+            "Leverage LMP global solutions for customized cable landing stations",
+        text: "LMP Global Solutions boasts an unparalleled global presence in crafting modular  data centers, spanning the globe with successful cable landing station setups on six continents. We specialize in providing tailor-made, pre-validated, and factory-integrated cable landing station solutions that seamlessly blend value and rapid delivery. Our swift data center component deployments enable streamlined on-site assembly, requiring fewer personnel, no matter where you are in the world.",
     },
 ];
 
@@ -68,7 +68,7 @@ const CustomizeSection = () => {
                             slidesPerView: 2,
                         },
                         1024: {
-                            slidesPerView: 3,
+                            slidesPerView: 2,
                         },
                     }}
                     className="testimonials-swiper md:mb-12"
@@ -81,19 +81,19 @@ const CustomizeSection = () => {
                             <motion.div
                                 variants={fadeIn("up", 0.3 * (index + 1))}
                                 viewport={{ once: true }}
-                                className="text-start swiper-slide flex flex-col group bg-white border border-solid h-auto border-gray-300 rounded-lg p-5 xl:p-6 transition-all duration-500 w-full hover:border-indigo-600 slide-active:border-indigo-600"
+                                className="text-start swiper-slide flex flex-col group bg-white border border-solid border-gray-300 rounded-lg p-4 transition-all duration-500 w-full hover:border-indigo-600 slide-active:border-indigo-600"
                             >
-                                <div className="flex flex-col gap-1 h-24">
+                                <div className="flex flex-col gap-1 mb-4">
                                     <motion.h2
                                         variants={textVariant(0.3)}
                                         viewport={{ once: true }}
-                                        className="font-semibold"
+                                        className="font-bold"
                                     >
                                         {testimonial.title}
                                     </motion.h2>
                                     <motion.h3
                                         variants={textVariant(0.3)}
-                                        className="font-medium text-sm xl:text-base"
+                                        className="font-semibold text-sm"
                                     >
                                         {testimonial.sub_title}
                                     </motion.h3>
@@ -101,7 +101,7 @@ const CustomizeSection = () => {
                                 <motion.p
                                     variants={fadeIn("up", 0.3 * (index + 1))}
                                     viewport={{ once: true }}
-                                    className="text-slate-600 h-24 text-sm"
+                                    className="text-slate-900 text-xs text-justify font-medium"
                                 >
                                     {testimonial.text}
                                 </motion.p>

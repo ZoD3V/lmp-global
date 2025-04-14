@@ -11,10 +11,14 @@ import thermalRisk1 from "../../../../public/images/thermal-risk-1.png";
 import thermalRisk2 from "../../../../public/images/thermal-risk-2.png";
 import { fadeIn } from "@/utils/motion";
 import { motion } from "framer-motion";
+import Heading from "../Common/Heading";
 
 const ThermalRisk = () => {
     return (
-        <section className="py-16 px-4 md:px-6 xl:px-0">
+        <section className="py-16 px-4 md:px-6 xl:px-0 flex flex-col gap-10">
+            <Heading
+                title={"Thermal Risk Management & Energy Dashboard View"}
+            />
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 max-w-[1200px] mx-auto">
                 <motion.div
                     variants={fadeIn("right", 0.3)}
