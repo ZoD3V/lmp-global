@@ -27,7 +27,7 @@ const Navbar = () => {
     const navLinks = [
         { href: "/about", label: "About" },
         { href: "/next-t", label: "Next-T" },
-        { href: "/product", label: "Product & Solution" },
+        { href: "/product", label: "Product & DC Solution" },
         { href: "/services", label: "Services" },
         { href: "/patner", label: "Patner" },
         { href: "/contact", label: "Contact" },
