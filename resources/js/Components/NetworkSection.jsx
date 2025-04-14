@@ -108,7 +108,7 @@ const NetworkSection = ({ networkProduct }) => {
                                     </div>
                                     <div className="p-6">
                                         <h3 className="text-lg font-bold mb-2">
-                                            LMP Networks®
+                                            {data.title}
                                         </h3>
                                         <p className="text-sm font-medium line-clamp-1">
                                             {data.caption}

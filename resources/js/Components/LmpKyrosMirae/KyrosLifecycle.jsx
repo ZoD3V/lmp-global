@@ -57,14 +57,14 @@ const KyrosLifecycle = () => {
                             <span>Design</span>
                         </TabsTrigger>
                         <TabsTrigger
-                            value="validation"
+                            value="built"
                             className={cn(
                                 "data-[state=active]:bg-blue-500 data-[state=active]:text-white",
                                 "text-blue-600 hover:text-blue-800 transition-all"
                             )}
                         >
                             <Shield className="w-5 h-5 mr-2" />
-                            <span>Validation</span>
+                            <span>Built</span>
                         </TabsTrigger>
                         <TabsTrigger
                             value="operation"
@@ -145,11 +145,11 @@ const KyrosLifecycle = () => {
                             </Card>
                         </TabsContent>
 
-                        <TabsContent value="validation" className="mt-0">
+                        <TabsContent value="built" className="mt-0">
                             <Card className="bg-white border-gray-200 shadow-sm">
                                 <CardHeader>
                                     <CardTitle className="text-2xl md:text-3xl text-gray-900">
-                                        Validation
+                                        Built
                                     </CardTitle>
                                     <CardDescription className="text-gray-600">
                                         Ensuring efficiency metrics meet
@@ -162,38 +162,38 @@ const KyrosLifecycle = () => {
                                             <span className="font-semibold">
                                                 Power Usage Effectiveness (PUE)
                                             </span>{" "}
-                                            validation
+                                            Built
                                         </FeatureItem>
                                         <FeatureItem>
                                             <span className="font-semibold">
                                                 Water Usage Effectiveness (WUE)
                                             </span>{" "}
-                                            validation
+                                            Built
                                         </FeatureItem>
                                         <FeatureItem>
                                             <span className="font-semibold">
                                                 Carbon Usage Effectiveness (CUE)
                                             </span>{" "}
-                                            validation
+                                            Built
                                         </FeatureItem>
                                         <FeatureItem>
                                             <span className="font-semibold">
                                                 Data Center Infrastructure
                                                 Efficiency (DCIE)
                                             </span>{" "}
-                                            validation
+                                            Built
                                         </FeatureItem>
                                         <FeatureItem>
                                             <span className="font-semibold">
                                                 Data Center Power Density (DCPD)
                                             </span>{" "}
-                                            validation
+                                            Built
                                         </FeatureItem>
                                         <FeatureItem>
                                             <span className="font-semibold">
                                                 Space Utilization Rate (SUR)
                                             </span>{" "}
-                                            validation
+                                            Built
                                         </FeatureItem>
                                     </ul>
                                 </CardContent>
