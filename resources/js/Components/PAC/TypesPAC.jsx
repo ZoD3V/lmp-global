@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Wind, Droplets, GitMerge } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 
 const TypesPAC = () => {
     const container = {
