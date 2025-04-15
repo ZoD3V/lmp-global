@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import kementrian from "../../../../public/images/network/kementrianRepublikIndonesia.png";
 
 const SavvyProgrammes = () => {
