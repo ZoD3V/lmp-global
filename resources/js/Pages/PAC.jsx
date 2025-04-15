@@ -6,6 +6,7 @@ import Navbar from "@/Components/Common/Navbar";
 import Hero from "@/Components/Common/Hero";
 import Footer from "@/Components/Common/Footer";
 import { Button } from "@/Components/ui/button";
+import TypesPAC from "@/Components/PAC/TypesPAC";
 
 const PAC = ({ banner }) => {
     return (
@@ -17,6 +18,7 @@ const PAC = ({ banner }) => {
                     title={banner[0].name}
                     description={banner[0].description}
                 />
+                <TypesPAC />
                 <AirConditioning />
                 <EnergyEfficiency />
                 <IntelligentControlSystems />

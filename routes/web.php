@@ -27,7 +27,7 @@ Route::get('/product', [ProductController::class, 'index']);
 Route::get('/product/{id}', [ProductController::class, 'detail']);
 Route::get('/contact', [ContactController::class, 'index']);
 Route::get('/research-development', [ResearchDevelopmentController::class, 'index']);
-Route::get('/patner', [PatnersController::class, 'index']);
+Route::get('/partners', [PatnersController::class, 'index']);
 Route::get('/networks', [NetworksController::class, 'index']);
 Route::get('/edge-dc', [EdgeDcController::class, 'index']);
 Route::get('/csr', [CsrController::class, 'index']);

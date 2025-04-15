@@ -1,9 +1,10 @@
 import React from "react";
-import NetworkSection from "@/Components/NetworkSection";
-import CentriniumSection from "@/Components/CentriniumSection";
 import Navbar from "@/Components/Common/Navbar";
 import Hero from "@/Components/Common/Hero";
 import Footer from "@/Components/Common/Footer";
+import CentriniumSection from "@/Components/Network/CentriniumSection";
+import NetworkSection from "@/Components/Network/NetworkSection";
+import SavvyProgrammes from "@/Components/Network/SavvyProgrammes";
 
 const Networks = ({ banner, networks }) => {
     return (
@@ -16,7 +17,10 @@ const Networks = ({ banner, networks }) => {
                     description={banner[0].description}
                 />
                 {networks[0] && <NetworkSection networkProduct={networks[0]} />}
-                {networks[1] && <CentriniumSection networkProduct={networks[1]} />}
+                {networks[1] && (
+                    <CentriniumSection networkProduct={networks[1]} />
+                )}
+                <SavvyProgrammes />
                 <Footer />
             </div>
         </main>

@@ -3,7 +3,8 @@ import Heading from "../Common/Heading";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Server, ArrowRight, Globe } from "lucide-react";
-import researchImage from "../../../../public/images/researchdevelopment.png";
+import brain from "../../../../public/images/support/brain.png";
+import design from "../../../../public/images/support/design.png";
 import { Button } from "../ui/button";
 import { Link } from "@inertiajs/react";
 
@@ -25,13 +26,13 @@ const CentersSection = () => {
 
             <div
                 ref={ref1}
-                className="grid md:grid-cols-2 gap-8 items-center mb-24"
+                className="grid md:grid-cols-2 gap-8 items-center mb-4"
             >
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}
                     animate={isInView1 ? { opacity: 1, x: 0 } : {}}
                     transition={{ duration: 0.7, delay: 0.1 }}
-                    className="space-y-6"
+                    className="space-y-6 order-2 md:order-1"
                 >
                     <div className="inline-flex items-center gap-2 bg-slate-100 px-4 py-2 rounded-full">
                         <Server className="h-5 w-5 text-blue-600" />
@@ -62,12 +63,12 @@ const CentersSection = () => {
                     initial={{ opacity: 0, x: 50 }}
                     animate={isInView1 ? { opacity: 1, x: 0 } : {}}
                     transition={{ duration: 0.7, delay: 0.3 }}
-                    className="relative"
+                    className="relative order-1 md:order-2"
                 >
                     <div className="absolute inset-0 bg-slate-200 rounded-2xl transform rotate-3 scale-95 opacity-20"></div>
                     <div className="relative overflow-hidden rounded-2xl shadow-xl">
                         <img
-                            src={researchImage}
+                            src={brain}
                             alt="Data Center Infrastructure"
                             width={800}
                             height={600}
@@ -88,7 +89,7 @@ const CentersSection = () => {
                     <div className="absolute inset-0 bg-slate-200 rounded-2xl transform rotate-3 scale-95 opacity-20"></div>
                     <div className="relative overflow-hidden rounded-2xl shadow-xl">
                         <img
-                            src={researchImage}
+                            src={design}
                             alt="Sustainable Data Center Solutions"
                             width={800}
                             height={600}

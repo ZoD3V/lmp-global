@@ -1,5 +1,6 @@
 import Footer from "@/Components/Common/Footer";
 import Navbar from "@/Components/Common/Navbar";
+import NexTIndustries from "@/Components/NexT/NexTIndustries";
 import NextTSection from "@/Components/NexT/NexTSection";
 import React from "react";
 
@@ -9,7 +10,8 @@ const NextT = ({ nexT }) => {
             <div className="overflow-hidden">
                 <Navbar />
                 <NextTSection nexT={nexT} />
-                <Footer/>
+                <NexTIndustries />
+                <Footer />
             </div>
         </main>
     );

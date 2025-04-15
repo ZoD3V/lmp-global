@@ -8,11 +8,15 @@ import {
     Zap,
     CheckCircle,
     Loader2,
+    LocateFixedIcon,
+    Mail,
 } from "lucide-react";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { Link } from "@inertiajs/react";
 import { Alert, AlertDescription, AlertTitle } from "./ui/alert";
+import { BsTelephone, BsWhatsapp } from "react-icons/bs";
+import { BiLogoGmail } from "react-icons/bi";
 
 const ContactSection = () => {
     const [isSuccess, setIsSuccess] = useState(false);
@@ -118,47 +122,46 @@ const ContactSection = () => {
                             <div className="space-y-4">
                                 <div className="flex items-start gap-4">
                                     <div className="rounded-full bg-blue-500/10 p-2">
-                                        <Server className="h-5 w-5 text-blue-600" />
+                                        <LocateFixedIcon className="h-5 w-5 text-blue-600" />
                                     </div>
                                     <div className="space-y-1">
-                                        <h3 className="font-bold">
-                                            Product Inquiries
-                                        </h3>
+                                        <h3 className="font-bold">Visit Us</h3>
                                         <p className="text-sm text-muted-foreground">
-                                            Need help finding the right
-                                            solution? Our product specialists
-                                            can help.
+                                            Harapan Indah Boulevard Jl. Sentra
+                                            Niaga No.7 Bekasi - Jawa Barat
                                         </p>
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-4">
                                     <div className="rounded-full bg-green-500/10 p-2">
-                                        <Leaf className="h-5 w-5 text-green-600" />
+                                        <BsWhatsapp className="h-5 w-5 text-green-600" />
                                     </div>
                                     <div className="space-y-1">
-                                        <h3 className="font-bold">
-                                            Sustainability Consulting
-                                        </h3>
+                                        <h3 className="font-bold">WhatsApp</h3>
                                         <p className="text-sm text-muted-foreground">
-                                            Looking to reduce your data center's
-                                            environmental impact? Our
-                                            sustainability experts are ready to
-                                            assist.
+                                            (+62) 823 2021 8200
                                         </p>
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-4">
                                     <div className="rounded-full bg-amber-500/10 p-2">
-                                        <Zap className="h-5 w-5 text-amber-600" />
+                                        <BsTelephone className="h-5 w-5 text-amber-600" />
                                     </div>
                                     <div className="space-y-1">
-                                        <h3 className="font-bold">
-                                            Custom Solutions
-                                        </h3>
+                                        <h3 className="font-bold">Call Us</h3>
                                         <p className="text-sm text-muted-foreground">
-                                            Need specialized solutions for your
-                                            unique challenges? We can create
-                                            custom solutions for your needs.
+                                            087771614000
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="flex items-start gap-4">
+                                    <div className="rounded-full bg-yellow-500/10 p-2">
+                                        <Mail className="h-5 w-5 text-yellow-600" />
+                                    </div>
+                                    <div className="space-y-1">
+                                        <h3 className="font-bold">Email</h3>
+                                        <p className="text-sm text-muted-foreground">
+                                            info@lmp-networks.com
                                         </p>
                                     </div>
                                 </div>
@@ -270,8 +273,6 @@ const ContactSection = () => {
                                         type="number"
                                         name="phone"
                                         required
-                                        maxLength={12}
-                                        max={12}
                                         className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                                         placeholder="(555) 555-5555"
                                     />

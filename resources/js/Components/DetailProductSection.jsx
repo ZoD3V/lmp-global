@@ -32,6 +32,14 @@ const downloadFile = (filePath, fileName) => {
         });
 };
 
+const handleWhatsAppClick = (product) => {
+    const message = `Hello, I'm interested in the product. ${product}`;
+    const whatsappUrl = `https://wa.me/6282320218200?text=${encodeURIComponent(
+        message
+    )}`;
+    window.open(whatsappUrl, "_blank");
+};
+
 const handleClick = () => {
     router.visit("/product");
 };
@@ -103,7 +111,10 @@ const DetailProductSection = ({ detailData, popularProducts }) => {
                     </motion.div>
 
                     <motion.div variants={fadeIn} className="flex gap-4 mb-6">
-                        <Button variant="theme">
+                        <Button
+                            variant="theme"
+                            onClick={() => handleWhatsAppClick(detailData.name)}
+                        >
                             <ShoppingCart className="mr-2 h-4 w-4" />
                             Order
                         </Button>

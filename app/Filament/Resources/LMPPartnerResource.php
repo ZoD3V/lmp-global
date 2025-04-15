@@ -22,7 +22,7 @@ class LMPPartnerResource extends Resource
 
     protected static ?string $navigationGroup = 'Manage LMP Content';
 
-    protected static ?string $navigationLabel = 'LMP Patner';
+    protected static ?string $navigationLabel = 'LMP Partners';
 
     protected static ?int $navigationSort = 3;
 

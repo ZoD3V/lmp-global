@@ -33,7 +33,7 @@ export default function SuccessStories() {
     ];
 
     return (
-        <section className="py-16 bg-gradient-to-b from-white to-slate-50">
+        <section className="py-16">
             <div className="container px-4 md:px-6 xl:px-0 max-w-[1200px]">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold font-manrope leading-normal mb-6">

@@ -28,8 +28,8 @@ const Navbar = () => {
         { href: "/about", label: "About" },
         { href: "/next-t", label: "Next-T" },
         { href: "/product", label: "Product & DC Solution" },
-        { href: "/services", label: "Services" },
-        { href: "/patner", label: "Patner" },
+        { href: "/services", label: "Service" },
+        { href: "/partners", label: "Partner" },
         { href: "/contact", label: "Contact" },
         { href: "/support", label: "Support" },
     ];
