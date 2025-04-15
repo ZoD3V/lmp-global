@@ -11,9 +11,10 @@ const FeatureCard = ({
     textVariant,
     showButton,
     buttonLink,
+    objectImage = "object-contain",
 }) => {
     const handleClick = () => {
-        router.visit(buttonLink)
+        router.visit(buttonLink);
     };
 
     return (
@@ -26,12 +27,12 @@ const FeatureCard = ({
             <motion.div
                 variants={fadeIn("down", 0.5)}
                 viewport={{ once: true }}
-                className="md:mx-0 mx-auto h-full md:h-[350px] lg:h-[400px]"
+                className="md:mx-0 mx-auto h-full md:h-[350px]"
             >
                 <motion.img
                     variants={fadeIn("right", 0.3)}
                     viewport={{ once: true }}
-                    className="card-img w-full h-full object-contain"
+                    className={`rounded-2xl w-full h-full ${objectImage}`}
                     src={item.img}
                     alt="Featured Image"
                 />

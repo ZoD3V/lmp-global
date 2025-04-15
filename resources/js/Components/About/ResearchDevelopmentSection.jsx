@@ -1,13 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
-import server from "../../../../public/images/researchdevelopment.png";
+import researchDevelopment from "../../../../public/images/research&development/research&developmentlanding.png";
 import FeatureCard from "../Common/FeaturedCard";
 import { fadeIn,textVariant } from "@/utils/motion";
 
 const ResearchDevelopmentSection = () => {
     const dataProfile = [
         {
-            img: server,
+            img: researchDevelopment,
             title: "Research & Development",
             description:
                 "The multidisciplinary nature of our focused Philosophy Research Center has been the major strength of our research since we began our work in 2018.",
@@ -34,6 +34,7 @@ const ResearchDevelopmentSection = () => {
                         textVariant={textVariant}
                         showButton={true}
                         buttonLink={item.buttonLink}
+                        objectImage="object-cover"
                     />
                 ))}
             </motion.div>

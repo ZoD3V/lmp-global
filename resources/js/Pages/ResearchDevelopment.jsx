@@ -1,12 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
-import server from "../../../public/images/researchdevelopment.png";
+import researchDevelopment from "../../../public/images/research&development/research&development.png";
 import Navbar from "@/Components/Common/Navbar";
 import Hero from "@/Components/Common/Hero";
 import Footer from "@/Components/Common/Footer";
 import { fadeIn, textVariant } from "@/utils/motion";
 
-const About = ({ banner }) => {
+const ResearchDevelopment = ({ banner }) => {
     return (
         <main className="relative min-h-screen overflow-x-hidden">
             <div className="overflow-hidden">
@@ -70,7 +70,7 @@ const About = ({ banner }) => {
                                 variants={fadeIn("left", 0.3)}
                                 viewport={{ once: true }}
                                 className="card-img h-full w-full object-cover"
-                                src={server}
+                                src={researchDevelopment}
                                 alt="Logo"
                             />
                         </motion.div>
@@ -82,4 +82,4 @@ const About = ({ banner }) => {
     );
 };
 
-export default About;
+export default ResearchDevelopment;

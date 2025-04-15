@@ -8,7 +8,10 @@ import {
 } from "../ui/card";
 import { Badge } from "../ui/badge";
 import { AspectRatio } from "../ui/aspect-ratio";
-import diagram1 from "../../../../public/images/diagram-1.png";
+import diagram1 from "../../../../public/images/dcim/dcim1.png";
+import diagram2 from "../../../../public/images/dcim/dcim2.png";
+import diagram3 from "../../../../public/images/dcim/dcim3.png";
+import diagram4 from "../../../../public/images/dcim/dcim4.png";
 import Heading from "../Common/Heading";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/utils/motion";
@@ -28,7 +31,7 @@ const VisibilityDcim = () => {
             title: "GUI 2: Site power dashboard",
             description:
                 "Monitor power consumption and efficiency metrics with intuitive gauge displays for quick assessment of site performance.",
-            image: diagram1,
+            image: diagram2,
             alt: "Site power dashboard",
         },
         {
@@ -36,7 +39,7 @@ const VisibilityDcim = () => {
             title: "GUI 3: Resources dashboard",
             description:
                 "Track resource allocation and utilization with comprehensive charts and gauges for optimized infrastructure management.",
-            image: diagram1,
+            image: diagram3,
             alt: "Resources dashboard",
         },
         {
@@ -44,7 +47,7 @@ const VisibilityDcim = () => {
             title: "GUI 4: Capacity dashboard",
             description:
                 "Analyze capacity trends and forecast future needs with detailed charts and graphs for proactive infrastructure planning.",
-            image: diagram1,
+            image: diagram4,
             alt: "Capacity dashboard",
         },
     ];
