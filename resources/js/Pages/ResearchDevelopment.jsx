@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import researchDevelopment from "../../../public/images/research&development/research&development.png";
+import researchDevelopment from "../../../public/images/research&development/research&development.webp";
 import Navbar from "@/Components/Common/Navbar";
 import Hero from "@/Components/Common/Hero";
 import Footer from "@/Components/Common/Footer";
@@ -40,7 +40,7 @@ const ResearchDevelopment = ({ banner }) => {
                                 initial="hidden"
                                 whileInView="show"
                                 viewport={{ once: true }}
-                                className="text-slate-600 text-lg mb-4 text-justify md:text-start"
+                                className="text-slate-600 text-lg mb-4 text-justify"
                             >
                                 We thrive on change and have built a culture
                                 that enables us to remain at the forefront of
@@ -52,7 +52,7 @@ const ResearchDevelopment = ({ banner }) => {
                                 initial="hidden"
                                 viewport={{ once: true }}
                                 whileInView="show"
-                                className="text-slate-600 text-lg mb-4 text-justify md:text-start"
+                                className="text-slate-600 text-lg mb-4 text-justify"
                             >
                                 Our R&D teams regularly share expertise across
                                 both materials and businesses, enabling us to

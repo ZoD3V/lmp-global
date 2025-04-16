@@ -47,7 +47,7 @@ class BannerResource extends Resource
                         ->required()
                         ->disk('public')
                         ->directory('banners')
-                        ->maxSize(4096),
+                        ->maxSize(1024),
                     Select::make('page_id')
                         ->label('Page')
                         ->options(Page::all()->pluck('name', 'id'))

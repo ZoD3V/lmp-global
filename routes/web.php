@@ -13,6 +13,7 @@ use App\Http\Controllers\NetworksController;
 use App\Http\Controllers\NextTController;
 use App\Http\Controllers\PACController;
 use App\Http\Controllers\PatnersController;
+use App\Http\Controllers\PhylaxController;
 use App\Http\Controllers\PolymerController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ResearchDevelopmentController;
@@ -39,6 +40,7 @@ Route::get('/energy', [EnergyController::class, 'index']);
 Route::get('/pac', [PACController::class, 'index']);
 Route::get('/dcim-network', [DcimNetworkController::class, 'index']);
 Route::get('/support', [SupportController::class, 'index']);
+Route::get('/phylax', [PhylaxController::class, 'index']);
 Route::get('/kyros-mirae', [KyrosMiraeController::class, 'index']);
 Route::get('/design-collaboration-center', [DesignCollaborationCenterController::class, 'index']);
 Route::get('/logout', function () {

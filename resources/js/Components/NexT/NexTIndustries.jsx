@@ -2,12 +2,12 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Droplet, HardHat, Shield, Stethoscope, Wifi } from "lucide-react";
 import { cn } from "@/lib/utils";
-import oil from "../../../../public/images/nex-t/oil.png";
-import health from "../../../../public/images/nex-t/health.png";
-import manufacturing from "../../../../public/images/nex-t/manufacturing.png";
-import military from "../../../../public/images/nex-t/military.png";
-import mining from "../../../../public/images/nex-t/mining.png";
-import telecommunication from "../../../../public/images/nex-t/telecommunication.png";
+import oil from "../../../../public/images/nex-t/oil.webp";
+import health from "../../../../public/images/nex-t/health.webp";
+import manufacturing from "../../../../public/images/nex-t/manufacturing.webp";
+import military from "../../../../public/images/nex-t/military.webp";
+import mining from "../../../../public/images/nex-t/mining.webp";
+import telecommunication from "../../../../public/images/nex-t/telecommunication.webp";
 import Heading from "../Common/Heading";
 
 const NexTIndustries = () => {

@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import researchDevelopment from "../../../../public/images/research&development/research&developmentlanding.png";
+import researchDevelopment from "../../../../public/images/research&development/research&developmentlanding.webp";
 import FeatureCard from "../Common/FeaturedCard";
 import { fadeIn,textVariant } from "@/utils/motion";
 

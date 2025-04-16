@@ -1,23 +1,9 @@
 import React, { useState } from "react";
-import containment1 from "../../../public/images/containment.png";
-import containment2 from "../../../public/images/containment2.png";
-import containment3 from "../../../public/images/containment3.png";
 import { motion } from "framer-motion";
-import {
-    ChevronRight,
-    Zap,
-    Thermometer,
-    Recycle,
-    Clock,
-    DollarSign,
-    Shield,
-    BookCopyIcon,
-    DatabaseIcon,
-    LucideContainer,
-} from "lucide-react";
 import { Button } from "./ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 import Heading from "./Common/Heading";
+import { ChevronRight } from "lucide-react";
 
 const containerVariants = {
     hidden: { opacity: 0 },
@@ -41,122 +27,8 @@ const itemVariants = {
     },
 };
 
-const EdgeDcSection = () => {
-    const [activeTab, setActiveTab] = useState("containment");
-
-    const solutions = [
-        {
-            id: "containment",
-            title: "Data Center Containment Solutions",
-            description:
-                "Advanced airflow management systems that optimize cooling efficiency and reduce operational costs.",
-            image: containment1,
-            benefits: [
-                {
-                    icon: <Thermometer className="h-5 w-5 text-red-500" />,
-                    iconBg: "bg-red-100",
-                    title: "Temperature Control",
-                    description:
-                        "Separates hot and cold air to prevent mixing, allowing cooling systems to operate at optimal efficiency and reducing energy consumption by up to 30%.",
-                },
-                {
-                    icon: <Zap className="h-5 w-5 text-amber-500" />,
-                    iconBg: "bg-amber-100",
-                    title: "Energy Efficiency",
-                    description:
-                        "Reduces cooling power requirements by maintaining consistent airflow patterns, leading to significant reductions in electricity costs and carbon footprint.",
-                },
-                {
-                    icon: <Clock className="h-5 w-5 text-blue-500" />,
-                    iconBg: "bg-blue-100",
-                    title: "Extended Equipment Lifespan",
-                    description:
-                        "Consistent cooling prevents thermal stress on servers and IT equipment, extending their operational life and reducing the frequency of replacement parts.",
-                },
-                {
-                    icon: <DollarSign className="h-5 w-5 text-emerald-500" />,
-                    iconBg: "bg-emerald-100",
-                    title: "Cost Reduction",
-                    description:
-                        "Lower cooling costs, reduced maintenance requirements, and fewer equipment failures translate to substantial operational savings.",
-                },
-            ],
-        },
-        {
-            id: "micro",
-            title: "Micro Data Center Solutions",
-            description:
-                "Compact, self-contained systems that integrate computing, storage, networking, and cooling in a single enclosure.",
-            image: containment2,
-            benefits: [
-                {
-                    icon: <Recycle className="h-5 w-5 text-teal-500" />,
-                    iconBg: "bg-teal-100",
-                    title: "Rapid Deployment",
-                    description:
-                        "Pre-engineered solutions that can be deployed in days rather than months, enabling quick response to changing business needs.",
-                },
-                {
-                    icon: <Shield className="h-5 w-5 text-purple-500" />,
-                    iconBg: "bg-purple-100",
-                    title: "Enhanced Security",
-                    description:
-                        "Integrated physical security features protect critical IT assets in edge locations or branch offices where dedicated security staff may not be present.",
-                },
-                {
-                    icon: <Zap className="h-5 w-5 text-amber-500" />,
-                    iconBg: "bg-amber-100",
-                    title: "Optimized Performance",
-                    description:
-                        "Purpose-built cooling and power systems designed specifically for the enclosed IT equipment ensure optimal performance.",
-                },
-                {
-                    icon: <DollarSign className="h-5 w-5 text-emerald-500" />,
-                    iconBg: "bg-emerald-100",
-                    title: "Reduced Footprint",
-                    description:
-                        "Compact design requires minimal floor space while delivering enterprise-grade computing capabilities.",
-                },
-            ],
-        },
-        {
-            id: "modular",
-            title: "Modular Data Center Solutions",
-            description:
-                "Scalable, containerized data centers that can be rapidly deployed and easily expanded as needs grow.",
-            image: containment3,
-            benefits: [
-                {
-                    icon: <Clock className="h-5 w-5 text-blue-500" />,
-                    iconBg: "bg-blue-100",
-                    title: "Rapid Scalability",
-                    description:
-                        "Additional capacity can be added in modular increments without disrupting existing operations, enabling just-in-time capacity expansion.",
-                },
-                {
-                    icon: <Zap className="h-5 w-5 text-amber-500" />,
-                    iconBg: "bg-amber-100",
-                    title: "Predictable Performance",
-                    description:
-                        "Factory-tested systems deliver consistent, predictable performance regardless of deployment location.",
-                },
-                {
-                    icon: <DollarSign className="h-5 w-5 text-emerald-500" />,
-                    iconBg: "bg-emerald-100",
-                    title: "Capital Efficiency",
-                    description:
-                        "Pay-as-you-grow approach aligns capital expenditure with actual capacity needs rather than projected future requirements.",
-                },
-                {
-                    icon: <Recycle className="h-5 w-5 text-teal-500" />,
-                    iconBg: "bg-teal-100",
-                    title: "Deployment Flexibility",
-                    description:
-                        "Can be deployed in non-traditional locations including outdoors, in warehouses, or in repurposed buildings.",
-                },
-            ],
-        },
-    ];
+const EdgeDcSection = ({ title, description, tabsConfig, dataProducts }) => {
+    const [activeTab, setActiveTab] = useState(tabsConfig[0].value);
 
     return (
         <section className="py-16 bg-gradient-to-b from-slate-50 to-white overflow-hidden">
@@ -167,47 +39,33 @@ const EdgeDcSection = () => {
                     transition={{ duration: 0.5 }}
                     className="text-center mb-16"
                 >
-                    <Heading
-                        title={"Data Center Infrastructure Solutions"}
-                        description={
-                            "Optimize your data center operations with our comprehensive range of infrastructure solutions designed to enhance efficiency, reduce costs, and ensure reliability."
-                        }
-                    />
+                    <Heading title={title} description={description} />
                 </motion.div>
 
                 <Tabs
-                    defaultValue="containment"
+                    defaultValue={tabsConfig[0].value}
                     value={activeTab}
                     onValueChange={setActiveTab}
                     className="w-full"
                 >
                     <div className="flex justify-center mb-12">
-                        <TabsList className="grid grid-cols-3 w-full max-w-2xl">
-                            <TabsTrigger
-                                value="containment"
-                                className="data-[state=active]:bg-blue-600 data-[state=active]:text-white text-blue-600 hover:text-blue-800 transition-all"
-                            >
-                                <LucideContainer className="w-5 h-5 mr-2" />
-                                Containment Solutions
-                            </TabsTrigger>
-                            <TabsTrigger
-                                value="micro"
-                                className="data-[state=active]:bg-blue-600 data-[state=active]:text-white text-blue-600 hover:text-blue-800 transition-all"
-                            >
-                                <DatabaseIcon className="w-5 h-5 mr-2" />
-                                Micro Data Centers
-                            </TabsTrigger>
-                            <TabsTrigger
-                                value="modular"
-                                className="data-[state=active]:bg-blue-600 data-[state=active]:text-white text-blue-600 hover:text-blue-800 transition-all"
-                            >
-                                <BookCopyIcon className="w-5 h-5 mr-2" />
-                                Modular Data Centers
-                            </TabsTrigger>
+                        <TabsList
+                            className={`grid w-full max-w-2xl grid-cols-${tabsConfig.length}`}
+                        >
+                            {tabsConfig.map((tab) => (
+                                <TabsTrigger
+                                    key={tab.value}
+                                    value={tab.value}
+                                    className="data-[state=active]:bg-blue-600 data-[state=active]:text-white text-blue-600 hover:text-blue-800 transition-all"
+                                >
+                                    <tab.icon className="w-5 h-5 mr-2" />
+                                    {tab.label}
+                                </TabsTrigger>
+                            ))}
                         </TabsList>
                     </div>
 
-                    {solutions.map((solution) => (
+                    {dataProducts.map((solution) => (
                         <TabsContent
                             key={solution.id}
                             value={solution.id}
