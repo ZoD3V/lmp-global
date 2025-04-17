@@ -4,7 +4,6 @@ import Navbar from "@/Components/Common/Navbar";
 import EdgeDcSection from "@/Components/EdgeDcSection";
 import React from "react";
 import {
-    ChevronRight,
     Zap,
     Thermometer,
     Recycle,
@@ -18,8 +17,48 @@ import {
 import containment1 from "../../../public/images/containment.png";
 import containment2 from "../../../public/images/containment2.png";
 import containment3 from "../../../public/images/containment3.png";
+import tkdn1 from "../../../public/images/edge-dc/tkdn1.webp";
+import tkdndetail1 from "../../../public/images/edge-dc/tkdndetail1.webp";
+import tkdn2 from "../../../public/images/edge-dc/tkdn2.webp";
+import tkdndetail2 from "../../../public/images/edge-dc/tkdndetail2.webp";
+import tkdn3 from "../../../public/images/edge-dc/tkdn3.webp";
+import tkdn4 from "../../../public/images/edge-dc/tkdn4.webp";
+import CertificateTKDN from "@/Components/CertificateTKDN";
 
 const EdgeDC = ({ banner }) => {
+    const certificates = [
+        {
+            id: "cert1",
+            src: tkdn1,
+            alt: "TKDN Certificate - Optical Patch Cord for FTTH",
+        },
+        {
+            id: "cert2",
+            src: tkdndetail1,
+            alt: "TKDN Certificate - Optical Patch Cord for FTTH",
+        },
+        {
+            id: "cert3",
+            src: tkdn2,
+            alt: "TKDN Certificate - Optical Patch Cord for FTTH",
+        },
+        {
+            id: "cert4",
+            src: tkdndetail2,
+            alt: "TKDN Certificate - Optical Patch Cord for FTTH",
+        },
+        {
+            id: "cert5",
+            src: tkdn3,
+            alt: "TKDN Certificate - Optical Patch Cord for FTTH",
+        },
+        {
+            id: "cert6",
+            src: tkdn4,
+            alt: "TKDN Certificate - Optical Patch Cord for FTTH",
+        },
+    ];
+
     const tabItems = [
         {
             value: "containment",
@@ -169,6 +208,7 @@ const EdgeDC = ({ banner }) => {
                     dataProducts={solutions}
                     tabsConfig={tabItems}
                 />
+                <CertificateTKDN certificates={certificates} />
                 <Footer />
             </div>
         </main>

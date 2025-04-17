@@ -8,6 +8,7 @@ import TimelineSection from "@/Components/About/TimelineSection";
 import AboutProductSection from "@/Components/About/AboutProductSection";
 import ProfileSection from "@/Components/About/ProfileSection";
 import Directors from "@/Components/Directors";
+import BrandLogos from "@/Components/About/BrandLogo";
 
 const About = ({ banner, timeline, product, lmp_profile }) => {
     return (
@@ -24,6 +25,7 @@ const About = ({ banner, timeline, product, lmp_profile }) => {
                 <Directors />
                 <ResearchDevelopmentSection />
                 <AboutProductSection dataProduct={product} />
+                <BrandLogos />
                 <TimelineSection timeline={timeline} />
                 <Footer />
             </div>

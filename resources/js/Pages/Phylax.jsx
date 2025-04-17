@@ -10,10 +10,10 @@ import {
     Thermometer,
     DatabaseIcon,
     LucideContainer,
-    ShieldCheck,
-    BarChart2,
-    Cable,
     Bolt,
+    Settings,
+    DollarSign,
+    Server,
 } from "lucide-react";
 
 const Phylax = ({ banner }) => {
@@ -35,43 +35,42 @@ const Phylax = ({ banner }) => {
             id: "rack",
             title: "Rack Cabinet",
             description:
-                "Advanced airflow management systems that optimize cooling efficiency and reduce operational costs.",
+                "Advanced airflow management systems that optimize cooling efficiency and reduce operational costs",
             image: rack,
             benefits: [
                 {
-                    icon: <Thermometer className="h-5 w-5 text-red-500" />,
-                    iconBg: "bg-red-100",
-                    title: "Precision Cooling",
-                    description:
-                        "Active cooling system with real-time temperature monitoring for high-density network equipment.",
-                },
-                {
-                    icon: <Zap className="h-5 w-5 text-amber-500" />,
-                    iconBg: "bg-amber-100",
-                    title: "Power Optimization",
-                    description:
-                        "Smart power distribution reduces energy consumption by up to 30% compared to conventional systems.",
-                },
-                {
-                    icon: <ShieldCheck className="h-5 w-5 text-blue-500" />, // Ganti Clock ke ShieldCheck
+                    icon: <Thermometer className="h-5 w-5 text-blue-500" />, // Changed to blue for cooling
                     iconBg: "bg-blue-100",
-                    title: "Hardware Protection",
+                    title: "High-Density Cooling",
                     description:
-                        "Thermal management extends equipment lifespan by preventing overheating damage.",
+                        "Engineered solution designed for high-density network and storage switches and cabling",
                 },
                 {
-                    icon: <BarChart2 className="h-5 w-5 text-emerald-500" />, // Ganti DollarSign ke BarChart2
+                    icon: <Zap className="h-5 w-5 text-green-500" />, // Changed to green for energy efficiency
+                    iconBg: "bg-green-100",
+                    title: "Aisle Containment Integration",
+                    description:
+                        "Provides complete separation of hot and cold air within the cabinet to expand your data center Aisle Containment strategy to your network infrastructure",
+                },
+                {
+                    icon: <Settings className="h-5 w-5 text-indigo-500" />, // Changed to settings for configuration
+                    iconBg: "bg-indigo-100",
+                    title: "Custom Airflow Configuration",
+                    description:
+                        "Order pre-configured for front-to-rear, front to-top, side-to-rear or side-to-top airflow",
+                },
+                {
+                    icon: <DollarSign className="h-5 w-5 text-emerald-500" />, // Changed to dollar for ROI
                     iconBg: "bg-emerald-100",
-                    title: "ROI Maximization",
+                    title: "Infrastructure Efficiency",
                     description:
-                        "Modular design reduces deployment costs by 40% with standardized configurations.",
+                        "Includes large cable entry ports on the top panel, T-shaped cable guides on the front mounting rails and a front-to-rear cable manager to organize cables; vertical cable managers are available as accessories",
                 },
                 {
-                    icon: <Cable className="h-5 w-5 text-purple-500" />, // Tambahan benefit baru
+                    icon: <Server className="h-5 w-5 text-purple-500" />, // Changed to server for rack sizes
                     iconBg: "bg-purple-100",
-                    title: "Smart Cable Management",
-                    description:
-                        "Integrated routing channels with tool-less access for effortless maintenance.",
+                    title: "Flexible Rack Sizing",
+                    description: "Available in 42U, 45U, 48U sizes",
                 },
             ],
         },

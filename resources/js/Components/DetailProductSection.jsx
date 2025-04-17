@@ -46,7 +46,6 @@ const handleClick = () => {
 
 const DetailProductSection = ({ detailData, popularProducts }) => {
     const [imageLoaded, setImageLoaded] = useState(false);
-    const [activeOptimization, setActiveOptimization] = useState("details");
 
     const fadeIn = {
         hidden: { opacity: 0, y: 20 },

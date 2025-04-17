@@ -3,9 +3,6 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
 import {
     ArrowRight,
-    Server,
-    Leaf,
-    Zap,
     CheckCircle,
     Loader2,
     LocateFixedIcon,
@@ -16,7 +13,6 @@ import { Button } from "./ui/button";
 import { Link } from "@inertiajs/react";
 import { Alert, AlertDescription, AlertTitle } from "./ui/alert";
 import { BsTelephone, BsWhatsapp } from "react-icons/bs";
-import { BiLogoGmail } from "react-icons/bi";
 
 const ContactSection = () => {
     const [isSuccess, setIsSuccess] = useState(false);
