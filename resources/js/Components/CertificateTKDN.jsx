@@ -1,9 +1,9 @@
 import React from "react";
 import { Download } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "./ui/button";
 import { motion } from "framer-motion";
 import Heading from "./Common/Heading";
-import { fadeIn } from "@/utils/motion";
+import { fadeIn } from "../utils/motion";
 
 const CertificateTKDN = ({ certificates }) => {
     const handleDownload = (certificate, index) => {
@@ -38,7 +38,11 @@ const CertificateTKDN = ({ certificates }) => {
                             whileInView={"show"}
                             variants={fadeIn("up", 0.2 * index)}
                             viewport={{ once: true }}
-                            className={`${certificates.length === 1 ? "max-w-xl" : "w-full"}`}
+                            className={`${
+                                certificates.length === 1
+                                    ? "max-w-xl"
+                                    : "w-full"
+                            }`}
                         >
                             <div className="group rounded-xl overflow-hidden bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 h-full">
                                 <div className="relative">
