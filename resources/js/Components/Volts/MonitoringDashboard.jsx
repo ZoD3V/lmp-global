@@ -11,9 +11,9 @@ import {
     Waves,
 } from "lucide-react";
 import { motion } from "framer-motion";
-import { cn } from "@/lib/utils";
-import { Card, CardContent } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { cn } from "../../lib/utils";
+import { Card, CardContent } from "../ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
 import Heading from "../Common/Heading";
 import dashboard from "../../../../public/images/volts/dashboard.webp";
 import voltage from "../../../../public/images/volts/voltage.webp";
@@ -24,7 +24,7 @@ import energy from "../../../../public/images/volts/energy.webp";
 import powerfactor from "../../../../public/images/volts/powerfactor.webp";
 import thdv from "../../../../public/images/volts/thdv.webp";
 import thdi from "../../../../public/images/volts/thdi.webp";
-import { fadeIn } from "@/utils/motion";
+import { fadeIn } from "../../utils/motion";
 
 const MonitoringDashboard = () => {
     const [activeTab, setActiveTab] = useState("dashboard");
@@ -146,7 +146,7 @@ const MonitoringDashboard = () => {
 
                 {/* Desktop View - Side by side previews */}
                 <div className="hidden lg:grid grid-cols-2 gap-8 mb-4">
-                    {dashboards.map((dashboard,index) => (
+                    {dashboards.map((dashboard, index) => (
                         <motion.div
                             key={dashboard.id}
                             initial={"hidden"}
