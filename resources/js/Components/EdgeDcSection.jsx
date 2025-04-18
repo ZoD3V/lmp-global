@@ -31,7 +31,7 @@ const EdgeDcSection = ({ title, description, tabsConfig, dataProducts }) => {
     const [activeTab, setActiveTab] = useState(tabsConfig[0].value);
 
     return (
-        <section className="py-16 bg-gradient-to-b from-slate-50 to-white overflow-hidden">
+        <section className="py-16">
             <div className="container max-w-[1200px] px-4 md:px-6 xl:px-0">
                 <motion.div
                     initial={{ opacity: 0, y: -20 }}
@@ -50,7 +50,7 @@ const EdgeDcSection = ({ title, description, tabsConfig, dataProducts }) => {
                 >
                     <div className="flex justify-center mb-12">
                         <TabsList
-                            className={`grid w-full max-w-2xl grid-cols-${tabsConfig.length}`}
+                            className={`grid w-full max-w-2xl grid-cols-${tabsConfig?.length}`}
                         >
                             {tabsConfig.map((tab) => (
                                 <TabsTrigger
@@ -59,7 +59,9 @@ const EdgeDcSection = ({ title, description, tabsConfig, dataProducts }) => {
                                     className="data-[state=active]:bg-blue-600 data-[state=active]:text-white text-blue-600 hover:text-blue-800 transition-all"
                                 >
                                     <tab.icon className="w-5 h-5 mr-2" />
-                                    {tab.label}
+                                    <span className="hidden sm:inline text-xs font-medium">
+                                        {tab.label}
+                                    </span>
                                 </TabsTrigger>
                             ))}
                         </TabsList>

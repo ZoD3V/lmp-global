@@ -15,6 +15,8 @@ import {
     DollarSign,
     Server,
 } from "lucide-react";
+import LogoBrandSection from "@/Components/LogoBrandSection";
+import phylaxLogo from "../../../public/images/logo/phylax.png";
 
 const Phylax = ({ banner }) => {
     const tabItems = [
@@ -100,6 +102,7 @@ const Phylax = ({ banner }) => {
                     title={banner[0].name}
                     description={banner[0].description}
                 />
+                <LogoBrandSection logo={phylaxLogo} />
                 <EdgeDcSection
                     title={"Data Center Infrastructure Solutions"}
                     description={

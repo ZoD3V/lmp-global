@@ -7,6 +7,8 @@ import Hero from "@/Components/Common/Hero";
 import Footer from "@/Components/Common/Footer";
 import { Button } from "@/Components/ui/button";
 import TypesPAC from "@/Components/PAC/TypesPAC";
+import kyrosLogo from "../../../public/images/logo/kyros.png";
+import LogoBrandSection from "@/Components/LogoBrandSection";
 
 const PAC = ({ banner }) => {
     return (
@@ -18,6 +20,7 @@ const PAC = ({ banner }) => {
                     title={banner[0].name}
                     description={banner[0].description}
                 />
+                <LogoBrandSection logo={kyrosLogo} />
                 <TypesPAC />
                 <AirConditioning />
                 <EnergyEfficiency />

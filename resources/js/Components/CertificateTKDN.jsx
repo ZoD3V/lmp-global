@@ -36,8 +36,8 @@ const CertificateTKDN = ({ certificates }) => {
                             key={certificate.id}
                             initial={"hidden"}
                             whileInView={"show"}
-                            variants={fadeIn("up", 0.2 * index)}
                             viewport={{ once: true }}
+                            variants={fadeIn("up", 0.2 * index)}
                             className={`${
                                 certificates.length === 1
                                     ? "max-w-xl"

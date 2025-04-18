@@ -65,13 +65,13 @@ export default function BrandLogos() {
                             variants={itemVariants}
                             className="group"
                         >
-                            <div className="h-32 md:h-40 flex items-center justify-center p-6 rounded-xl bg-white border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 hover:border-blue-100 hover:-translate-y-1">
+                            <div className="h-32 md:h-40 flex items-center justify-center p-6 rounded-xl grayscale opacity-70 hover:grayscale-0 hover:opacity-100 bg-white border border-slate-100 transition-all duration-300 hover:border-blue-200 hover:-translate-y-1">
                                 <img
                                     src={logo.src}
                                     alt={logo.alt}
                                     width={150}
                                     height={80}
-                                    className="object-contain h-16 md:h-20 transition-transform duration-300 group-hover:scale-110"
+                                    className="object-contain h-16 md:h-20 transition-all"
                                 />
                             </div>
                         </motion.div>

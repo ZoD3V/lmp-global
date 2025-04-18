@@ -24,6 +24,8 @@ import tkdndetail2 from "../../../public/images/edge-dc/tkdndetail2.webp";
 import tkdn3 from "../../../public/images/edge-dc/tkdn3.webp";
 import tkdn4 from "../../../public/images/edge-dc/tkdn4.webp";
 import CertificateTKDN from "@/Components/CertificateTKDN";
+import edgeXLogo from "../../../public/images/logo/edge-x.png";
+import LogoBrandSection from "@/Components/LogoBrandSection";
 
 const EdgeDC = ({ banner }) => {
     const certificates = [
@@ -200,6 +202,7 @@ const EdgeDC = ({ banner }) => {
                     title={banner[0].name}
                     description={banner[0].description}
                 />
+                <LogoBrandSection logo={edgeXLogo} />
                 <EdgeDcSection
                     title={"Data Center Infrastructure Solutions"}
                     description={

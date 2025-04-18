@@ -32,7 +32,7 @@ const Heading = ({
             viewport={{ once: true }}
         >
             <motion.h2
-                className={`${customClass} text-3xl md:text-4xl font-bold font-manrope leading-normal bg-clip-text text-transparent bg-gradient-to-r from-gray-800 to-gray-600`}
+                className={`${customClass} text-3xl md:text-4xl font-bold font-manrope leading-normal`}
                 variants={textVariant(0.2)}
                 viewport={{ once: true }}
             >

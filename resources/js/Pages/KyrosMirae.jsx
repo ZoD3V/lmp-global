@@ -11,6 +11,9 @@ import Navbar from "@/Components/Common/Navbar";
 import Hero from "@/Components/Common/Hero";
 import Footer from "@/Components/Common/Footer";
 import SuccessStories from "@/Components/LmpKyrosMirae/SuccessStories";
+import LogoBrandSection from "@/Components/LogoBrandSection";
+import kyrosLogo from "../../../public/images/logo/kyros-mirae.png";
+import redDotsLogo from "../../../public/images/logo/red-dots.png";
 
 const KyrosMirae = ({ banner }) => {
     return (
@@ -22,8 +25,10 @@ const KyrosMirae = ({ banner }) => {
                     title={banner[0].name}
                     description={banner[0].description}
                 />
+                <LogoBrandSection logo={kyrosLogo} />
                 <KyrosMiraeServiceSection />
                 <SuccessStories />
+                <LogoBrandSection logo={redDotsLogo} customClass="pb-16"/>
                 <CoreTechnology />
                 <KyrosLifecycle />
                 <DwinTechnologySection />

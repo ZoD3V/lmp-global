@@ -11,6 +11,8 @@ import tkdndetail1 from "../../../public/images/network/tkdndetail1.webp";
 import tkdn2 from "../../../public/images/network/tkdn2.webp";
 import tkdndetail2 from "../../../public/images/network/tkdndetail2.webp";
 import tkdn3 from "../../../public/images/network/tkdn3.webp";
+import LogoBrandSection from "@/Components/LogoBrandSection";
+import lmpLogo from "../../../public/images/logo/logo_lmp.png";
 
 const Networks = ({ banner, networks }) => {
     const certificates = [
@@ -50,6 +52,7 @@ const Networks = ({ banner, networks }) => {
                     title={banner[0].name}
                     description={banner[0].description}
                 />
+                <LogoBrandSection logo={lmpLogo} />
                 {networks[0] && <NetworkSection networkProduct={networks[0]} />}
                 {networks[1] && (
                     <CentriniumSection networkProduct={networks[1]} />
