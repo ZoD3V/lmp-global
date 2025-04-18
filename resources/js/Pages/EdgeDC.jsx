@@ -210,6 +210,7 @@ const EdgeDC = ({ banner }) => {
                     }
                     dataProducts={solutions}
                     tabsConfig={tabItems}
+                    customGrid={3}
                 />
                 <CertificateTKDN certificates={certificates} />
                 <Footer />

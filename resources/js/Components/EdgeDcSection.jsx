@@ -27,7 +27,13 @@ const itemVariants = {
     },
 };
 
-const EdgeDcSection = ({ title, description, tabsConfig, dataProducts }) => {
+const EdgeDcSection = ({
+    title,
+    description,
+    tabsConfig,
+    dataProducts,
+    customGrid = 3,
+}) => {
     const [activeTab, setActiveTab] = useState(tabsConfig[0].value);
 
     return (
@@ -50,7 +56,7 @@ const EdgeDcSection = ({ title, description, tabsConfig, dataProducts }) => {
                 >
                     <div className="flex justify-center mb-12">
                         <TabsList
-                            className={`grid w-full max-w-2xl grid-cols-${tabsConfig?.length}`}
+                            className={`grid w-full max-w-2xl grid-cols-${customGrid}`}
                         >
                             {tabsConfig.map((tab) => (
                                 <TabsTrigger

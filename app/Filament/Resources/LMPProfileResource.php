@@ -11,6 +11,7 @@ use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
+use Filament\Pages\SubNavigationPosition;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Columns\ImageColumn;
@@ -25,13 +26,15 @@ class LMPProfileResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-user-circle';
 
-    protected static ?string $navigationGroup = 'Manage LMP Content';
-
     protected static ?string $navigationLabel = 'LMP Profile';
 
     protected static ?int $navigationSort = 1;
 
     protected static ?string $slug = 'lmp-profiles';
+
+    protected static ?string $cluster = \App\Filament\Clusters\LMP::class;
+
+    protected static SubNavigationPosition $subNavigationPosition = SubNavigationPosition::Top;
 
     public static function form(Form $form): Form
     {

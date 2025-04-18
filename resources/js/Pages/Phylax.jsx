@@ -110,6 +110,7 @@ const Phylax = ({ banner }) => {
                     }
                     dataProducts={solutions}
                     tabsConfig={tabItems}
+                    customGrid={2}
                 />
                 <Footer />
             </div>

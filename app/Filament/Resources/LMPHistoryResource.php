@@ -8,6 +8,7 @@ use App\Models\LMPHistory;
 use Filament\Forms;
 use Filament\Forms\Components\Card;
 use Filament\Forms\Form;
+use Filament\Pages\SubNavigationPosition;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
@@ -20,13 +21,15 @@ class LMPHistoryResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-calendar';
 
-    protected static ?string $navigationGroup = 'Manage LMP Content';
-
     protected static ?string $navigationLabel = 'LMP History';
 
     protected static ?int $navigationSort = 2;
 
     protected static ?string $slug = 'lmp-histories';
+
+    protected static ?string $cluster = \App\Filament\Clusters\LMP::class;
+
+    protected static SubNavigationPosition $subNavigationPosition = SubNavigationPosition::Top;
 
     public static function getGloballySearchableAttributes(): array
     {

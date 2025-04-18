@@ -8,6 +8,7 @@ use App\Models\LMPPartner;
 use Filament\Forms;
 use Filament\Forms\Components\Card;
 use Filament\Forms\Form;
+use Filament\Pages\SubNavigationPosition;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
@@ -20,13 +21,16 @@ class LMPPartnerResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-users';
 
-    protected static ?string $navigationGroup = 'Manage LMP Content';
-
     protected static ?string $navigationLabel = 'LMP Partners';
 
     protected static ?int $navigationSort = 3;
 
     protected static ?string $slug = 'lmp-patners';
+
+    protected static ?string $cluster = \App\Filament\Clusters\LMP::class;
+
+    protected static SubNavigationPosition $subNavigationPosition = SubNavigationPosition::Top;
+
     public static function form(Form $form): Form
     {
         return $form

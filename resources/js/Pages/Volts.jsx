@@ -163,6 +163,7 @@ const Volts = ({ banner, volts }) => {
                     description={""}
                     dataProducts={solutions}
                     tabsConfig={tabItems}
+                    customGrid={3}
                 />
                 <MonitoringDashboard />
                 <LogoBrandSection logo={savvyLogo} />

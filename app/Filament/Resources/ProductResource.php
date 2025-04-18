@@ -3,7 +3,6 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\ProductResource\Pages;
-use App\Filament\Resources\ProductResource\RelationManagers;
 use App\Models\Product;
 use Filament\Forms;
 use Filament\Forms\Components\Card;
@@ -14,6 +13,7 @@ use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
+use Filament\Pages\SubNavigationPosition;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
@@ -26,13 +26,16 @@ class ProductResource extends Resource
 {
     protected static ?string $model = Product::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-shopping-bag';
-
-    protected static ?string $navigationGroup = 'Manage Content';
+    protected static ?string $navigationIcon = 'heroicon-o-squares-2x2';
 
     protected static ?int $navigationSort = 2;
 
     protected static ?string $navigationLabel = 'Product';
+
+    protected static ?string $cluster = \App\Filament\Clusters\Product::class;
+
+    protected static SubNavigationPosition $subNavigationPosition = SubNavigationPosition::Top;
+
 
     public static function getGloballySearchableAttributes(): array
     {

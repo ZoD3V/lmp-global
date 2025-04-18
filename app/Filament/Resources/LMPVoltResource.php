@@ -9,6 +9,7 @@ use Filament\Forms;
 use Filament\Forms\Components\Card;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Form;
+use Filament\Pages\SubNavigationPosition;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
@@ -25,8 +26,11 @@ class LMPVoltResource extends Resource
 
     protected static ?string $slug = 'lmp-volts';
 
-    protected static ?string $navigationGroup = 'Manage LMP Content';
     protected static ?int $navigationSort = 6;
+
+    protected static ?string $cluster = \App\Filament\Clusters\LMP::class;
+
+    protected static SubNavigationPosition $subNavigationPosition = SubNavigationPosition::Top;
 
     public static function form(Form $form): Form
     {

@@ -9,6 +9,7 @@ use App\Models\LMPNetwork;
 use Filament\Forms;
 use Filament\Forms\Components\Card;
 use Filament\Forms\Form;
+use Filament\Pages\SubNavigationPosition;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
@@ -22,13 +23,15 @@ class LMPNetworkResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-chart-bar-square';
 
-    protected static ?string $navigationGroup = 'Manage LMP Content';
-
     protected static ?string $navigationLabel = 'LMP Network';
 
     protected static ?int $navigationSort = 3;
 
     protected static ?string $slug = 'lmp-networks';
+
+    protected static ?string $cluster = \App\Filament\Clusters\LMP::class;
+
+    protected static SubNavigationPosition $subNavigationPosition = SubNavigationPosition::Top;
 
     public static function getGloballySearchableAttributes(): array
     {

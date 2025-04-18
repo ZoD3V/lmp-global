@@ -1,0 +1,14 @@
+<?php
+
+namespace App\Filament\Clusters;
+
+use Filament\Clusters\Cluster;
+
+class Product extends Cluster
+{
+    protected static ?string $navigationIcon = 'heroicon-o-shopping-bag';
+
+    protected static ?string $navigationGroup = 'Manage Content';
+
+
+}
