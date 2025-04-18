@@ -55,9 +55,7 @@ const EdgeDcSection = ({
                     className="w-full"
                 >
                     <div className="flex justify-center mb-12">
-                        <TabsList
-                            className={`grid w-full max-w-2xl grid-cols-${customGrid}`}
-                        >
+                        <TabsList>
                             {tabsConfig.map((tab) => (
                                 <TabsTrigger
                                     key={tab.value}
@@ -65,9 +63,7 @@ const EdgeDcSection = ({
                                     className="data-[state=active]:bg-blue-600 data-[state=active]:text-white text-blue-600 hover:text-blue-800 transition-all"
                                 >
                                     <tab.icon className="w-5 h-5 mr-2" />
-                                    <span className="hidden sm:inline text-xs font-medium">
-                                        {tab.label}
-                                    </span>
+                                    {tab.label}
                                 </TabsTrigger>
                             ))}
                         </TabsList>
