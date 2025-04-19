@@ -55,11 +55,11 @@ const Navbar = () => {
             className="fixed top-0 left-0 right-0 bg-white backdrop-blur-sm border-solid z-50 border-b border-gray-200"
         >
             <div className="flex justify-between items-center max-w-[1200px] container relative z-20 px-4 md:px-6 xl:px-0 h-16">
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 w-full xl:w-auto">
                     {/* Mobile Menu Button */}
                     <motion.button
-                        variants={fadeIn("right", 0.3)}
-                        className="lg:hidden"
+                        variants={fadeIn("right", 0.2)}
+                        className="xl:hidden"
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                     >
                         {isMenuOpen ? (
@@ -69,28 +69,33 @@ const Navbar = () => {
                         )}
                     </motion.button>
                     {/* Logo */}
-                    <motion.a
-                        href="/"
-                        className="flex items-center gap-1 cursor-pointer"
-                    >
-                        <motion.img
-                            variants={fadeIn("right", 0.3)}
-                            className="w-15 h-7"
-                            src={logo_lmp}
-                            alt="Logo"
-                        />
-                    </motion.a>
+                    <div className="flex items-center justify-between w-full">
+                        <motion.a
+                            href="/"
+                            className="flex items-center gap-1 cursor-pointer"
+                        >
+                            <motion.img
+                                variants={fadeIn("right", 0.3)}
+                                className="w-15 h-7"
+                                src={logo_lmp}
+                                alt="Logo"
+                            />
+                        </motion.a>
+                        <div className="block xl:hidden">
+                            <SearchModal />
+                        </div>
+                    </div>
                 </div>
 
                 {/* links */}
                 <motion.div
                     variants={fadeIn("down", 0.3)}
-                    className="hidden lg:flex items-center gap-10"
+                    className="hidden xl:flex items-center gap-10"
                 >
                     {navLinks.map((link, index) => (
                         <motion.a
                             key={index}
-                            variants={fadeIn("down", 0.1 * (index + 1))}
+                            variants={fadeIn("down", 0.1 * (index))}
                             href={link.href}
                             className={`text-sm font-medium relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-blue-600 after:transition-all ${
                                 url === link.href
@@ -107,8 +112,9 @@ const Navbar = () => {
                 {!auth.user && (
                     <motion.div
                         variants={fadeIn("left", 0.3)}
-                        className="hidden lg:flex items-center gap-4"
+                        className="hidden xl:flex items-center gap-4"
                     >
+                        <SearchModal />
                         <Button
                             variant="outline"
                             onClick={() =>
@@ -125,7 +131,6 @@ const Navbar = () => {
                         >
                             Sign in
                         </Button>
-                        <SearchModal />
                     </motion.div>
                 )}
 
@@ -141,7 +146,7 @@ const Navbar = () => {
                                     className="relative h-10 w-10 rounded-full"
                                 >
                                     <Avatar className="h-10 w-10">
-                                        <AvatarFallback className="font-medium text-lg">
+                                        <AvatarFallback className="font-medium text-xl">
                                             {auth.user.name
                                                 .charAt(0)
                                                 .toUpperCase()}
@@ -194,7 +199,7 @@ const Navbar = () => {
                     variants={fadeIn("down", 0.2)}
                     initial="hidden"
                     animate="show"
-                    className="lg:hidden bg-white border-t border-gray-100 py-4"
+                    className="xl:hidden bg-white border-t border-gray-100 py-4"
                 >
                     <motion.div
                         variants={fadeIn("down", 0.3)}
