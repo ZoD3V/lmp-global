@@ -55,12 +55,14 @@ const EdgeDcSection = ({
                     className="w-full"
                 >
                     <div className="flex justify-center mb-12">
-                        <TabsList>
+                        <TabsList
+                        className="w-fit flex flex-wrap items-start"
+                        >
                             {tabsConfig.map((tab) => (
                                 <TabsTrigger
                                     key={tab.value}
                                     value={tab.value}
-                                    className="data-[state=active]:bg-blue-600 data-[state=active]:text-white text-blue-600 hover:text-blue-800 transition-all"
+                                    className="data-[state=active]:bg-blue-600 text-xs md:text-sm data-[state=active]:text-white text-blue-600 hover:text-blue-800 transition-all"
                                 >
                                     <tab.icon className="w-5 h-5 mr-2" />
                                     {tab.label}

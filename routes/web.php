@@ -19,6 +19,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ResearchDevelopmentController;
 use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\SupportController;
+use App\Http\Controllers\TestimoniController;
 use App\Http\Controllers\VoltsController;
 use Illuminate\Support\Facades\Route;
 
@@ -41,6 +42,7 @@ Route::get('/pac', [PACController::class, 'index']);
 Route::get('/dcim-network', [DcimNetworkController::class, 'index']);
 Route::get('/support', [SupportController::class, 'index']);
 Route::get('/phylax', [PhylaxController::class, 'index']);
+Route::get('/testimoni', [TestimoniController::class, 'index']);
 Route::get('/kyros-mirae', [KyrosMiraeController::class, 'index']);
 Route::get('/design-collaboration-center', [DesignCollaborationCenterController::class, 'index']);
 Route::get('/logout', function () {

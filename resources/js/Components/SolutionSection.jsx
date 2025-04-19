@@ -24,12 +24,12 @@ const SolutionSection = ({ banner, title, description }) => {
                     initial="hidden"
                     whileInView="show"
                     viewport={{ once: true }}
-                    className="container max-w-[1200px] flex flex-col items-center text-white z-10 gap-8 text-center"
+                    className="container max-w-[1200px] flex flex-col items-center text-white z-10 gap-8"
                 >
-                    <h1 className="text-5xl md:text-6xl leading-none font-bold tracking-wide">
+                    <h1 className="text-5xl md:text-6xl leading-none font-bold tracking-wide text-center">
                         {title}
                     </h1>
-                    <p className="font-light text-gray-100/90 xl:text-xl">
+                    <p className="font-light text-gray-100/90 xl:text-xl text-justify md:text-center">
                         {description}
                     </p>
                 </motion.div>

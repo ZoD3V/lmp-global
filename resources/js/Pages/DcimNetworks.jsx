@@ -8,7 +8,9 @@ import RiskMitigation from "@/Components/DCIM/RiskMitigation";
 import SpeedDeployment from "@/Components/DCIM/SpeedDeployment";
 import VisibilityDcim from "@/Components/DCIM/VisibilityDcim";
 import XPediTePlatform from "@/Components/DCIM/XPediTePlatform";
+import ritLogo from "../../../public/images/logo/rit.png";
 import React from "react";
+import LogoBrandSection from "@/Components/LogoBrandSection";
 
 const DcimNetworks = ({ banner }) => {
     return (
@@ -20,6 +22,7 @@ const DcimNetworks = ({ banner }) => {
                     title={banner[0].name}
                     description={banner[0].description}
                 />
+                <LogoBrandSection logo={ritLogo} />
                 <AwardsCertification />
                 <XPediTePlatform />
                 <VisibilityDcim />
