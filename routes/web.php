@@ -45,6 +45,8 @@ Route::get('/phylax', [PhylaxController::class, 'index']);
 Route::get('/testimoni', [TestimoniController::class, 'index']);
 Route::get('/kyros-mirae', [KyrosMiraeController::class, 'index']);
 Route::get('/design-collaboration-center', [DesignCollaborationCenterController::class, 'index']);
+Route::get('/api/search', [ProductController::class, 'search'])
+     ->middleware(['web']);
 Route::get('/logout', function () {
     auth()->logout();
     session()->invalidate();

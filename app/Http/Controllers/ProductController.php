@@ -78,4 +78,35 @@ class ProductController extends Controller
         ]);
     }
 
+    public function search(Request $request)
+    {
+        $keyword = $request->input('keyword');
+        $columns = [
+            'name',
+        ];
+
+        $query = Product::query();
+
+        if ($keyword) {
+            $results = Product::query()
+                ->select('id', 'name')
+                ->when($keyword, fn($q) => $q->whereAny([
+                    'name',
+                ], 'LIKE', "%$keyword%"))
+                ->limit(10)
+                ->get()
+                ->map(function ($item) {
+                    return [
+                        'id' => $item->id,
+                        'name' => $item->name,
+                    ];
+                });
+        }
+
+        return response()->json([
+            'results' => $results,
+            'keyword' => $keyword
+        ]);
+    }
+
 }

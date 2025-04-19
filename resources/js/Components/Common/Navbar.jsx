@@ -16,6 +16,7 @@ import {
 import { LogOut, UserIcon } from "lucide-react";
 import { Avatar, AvatarFallback } from "../ui/avatar";
 import { Button } from "../ui/button";
+import SearchModal from "./SearchModal";
 
 const Navbar = () => {
     const { url } = usePage();
@@ -124,57 +125,66 @@ const Navbar = () => {
                         >
                             Sign in
                         </Button>
+                        <SearchModal />
                     </motion.div>
                 )}
 
                 {/* User Menu */}
                 {auth.user && (
-                    <DropdownMenu>
-                        <DropdownMenuTrigger asChild>
-                            <Button
-                                variant="ghost"
-                                className="relative h-10 w-10 rounded-full"
+                    <div className="flex items-center gap-4">
+                        <SearchModal />
+
+                        <DropdownMenu>
+                            <DropdownMenuTrigger asChild>
+                                <Button
+                                    variant="ghost"
+                                    className="relative h-10 w-10 rounded-full"
+                                >
+                                    <Avatar className="h-10 w-10">
+                                        <AvatarFallback className="font-medium text-lg">
+                                            {auth.user.name
+                                                .charAt(0)
+                                                .toUpperCase()}
+                                        </AvatarFallback>
+                                    </Avatar>
+                                </Button>
+                            </DropdownMenuTrigger>
+                            <DropdownMenuContent
+                                className="w-56"
+                                align="end"
+                                forceMount
                             >
-                                <Avatar className="h-10 w-10">
-                                    <AvatarFallback className="font-medium text-lg">
-                                        {auth.user.name.charAt(0).toUpperCase()}
-                                    </AvatarFallback>
-                                </Avatar>
-                            </Button>
-                        </DropdownMenuTrigger>
-                        <DropdownMenuContent
-                            className="w-56"
-                            align="end"
-                            forceMount
-                        >
-                            <DropdownMenuLabel className="font-normal">
-                                <div className="flex flex-col space-y-1">
-                                    <p className="text-sm font-medium leading-none">
-                                        {auth.user.name}
-                                    </p>
-                                    <p className="text-xs leading-none text-muted-foreground">
-                                        {auth.user.email}
-                                    </p>
-                                </div>
-                            </DropdownMenuLabel>
-                            <DropdownMenuSeparator />
-                            <DropdownMenuGroup
-                                onClick={() =>
-                                    handleClickRoute("/app/edit-profile")
-                                }
-                            >
-                                <DropdownMenuItem>
-                                    <UserIcon className="mr-2 h-4 w-4" />
-                                    <span>Profile</span>
+                                <DropdownMenuLabel className="font-normal">
+                                    <div className="flex flex-col space-y-1">
+                                        <p className="text-sm font-medium leading-none">
+                                            {auth.user.name}
+                                        </p>
+                                        <p className="text-xs leading-none text-muted-foreground">
+                                            {auth.user.email}
+                                        </p>
+                                    </div>
+                                </DropdownMenuLabel>
+                                <DropdownMenuSeparator />
+                                <DropdownMenuGroup
+                                    onClick={() =>
+                                        handleClickRoute("/app/edit-profile")
+                                    }
+                                >
+                                    <DropdownMenuItem>
+                                        <UserIcon className="mr-2 h-4 w-4" />
+                                        <span>Profile</span>
+                                    </DropdownMenuItem>
+                                </DropdownMenuGroup>
+                                <DropdownMenuSeparator />
+                                <DropdownMenuItem
+                                    onClick={() => handleLogout()}
+                                >
+                                    <LogOut className="mr-2 h-4 w-4" />
+                                    <span>Log out</span>
                                 </DropdownMenuItem>
-                            </DropdownMenuGroup>
-                            <DropdownMenuSeparator />
-                            <DropdownMenuItem onClick={() => handleLogout()}>
-                                <LogOut className="mr-2 h-4 w-4" />
-                                <span>Log out</span>
-                            </DropdownMenuItem>
-                        </DropdownMenuContent>
-                    </DropdownMenu>
+                            </DropdownMenuContent>
+                        </DropdownMenu>
+                    </div>
                 )}
             </div>
 
