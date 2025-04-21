@@ -18,15 +18,15 @@ const Services = ({ banner }) => {
         },
         {
             image: product2,
-            name: "Connectivity",
-            desc: "Get connected with high-speed data solutions.",
-            link: "/connectivity",
-        },
-        {
-            image: product1,
             name: "HVAC Services",
             desc: "Explore our HVAC installation and maintenance services.",
             link: "/hvac-services",
+        },
+        {
+            image: product1,
+            name: "Connectivity",
+            desc: "Get connected with high-speed data solutions.",
+            link: "/connectivity",
         },
     ];
 
