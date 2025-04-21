@@ -63,6 +63,7 @@ jobs:
         server: ${{ secrets.SERVER }}
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
+        timeout: 200000
         exclude: |
           **/.git*
           **/.git*/**
