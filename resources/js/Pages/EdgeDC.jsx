@@ -20,9 +20,9 @@ import containment3 from "../../../public/images/containment3.png";
 import tkdn1 from "../../../public/images/edge-dc/tkdn1.webp";
 import tkdndetail1 from "../../../public/images/edge-dc/tkdndetail1.webp";
 import tkdn2 from "../../../public/images/edge-dc/tkdn2.webp";
-import tkdndetail2 from "../../../public/images/edge-dc/tkdndetail2.webp";
 import tkdn3 from "../../../public/images/edge-dc/tkdn3.webp";
 import tkdn4 from "../../../public/images/edge-dc/tkdn4.webp";
+import tkdn5 from "../../../public/images/edge-dc/tkdn5.webp";
 import CertificateTKDN from "@/Components/CertificateTKDN";
 import edgeXLogo from "../../../public/images/logo/edge-x.png";
 import LogoBrandSection from "@/Components/LogoBrandSection";
@@ -30,33 +30,33 @@ import LogoBrandSection from "@/Components/LogoBrandSection";
 const EdgeDC = ({ banner }) => {
     const certificates = [
         {
-            id: "cert1",
+            id: 1,
             src: tkdn1,
             alt: "TKDN Certificate - Optical Patch Cord for FTTH",
         },
         {
-            id: "cert2",
+            id: 2,
             src: tkdndetail1,
             alt: "TKDN Certificate - Optical Patch Cord for FTTH",
         },
         {
-            id: "cert3",
+            id: 3,
             src: tkdn2,
             alt: "TKDN Certificate - Optical Patch Cord for FTTH",
         },
         {
-            id: "cert4",
-            src: tkdndetail2,
+            id: 4,
+            src: tkdn4,
             alt: "TKDN Certificate - Optical Patch Cord for FTTH",
         },
         {
-            id: "cert5",
+            id: 5,
             src: tkdn3,
             alt: "TKDN Certificate - Optical Patch Cord for FTTH",
         },
         {
-            id: "cert6",
-            src: tkdn4,
+            id: 6,
+            src: tkdn5,
             alt: "TKDN Certificate - Optical Patch Cord for FTTH",
         },
     ];
