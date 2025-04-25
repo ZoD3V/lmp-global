@@ -26,6 +26,8 @@ import tkdn5 from "../../../public/images/edge-dc/tkdn5.webp";
 import CertificateTKDN from "@/Components/CertificateTKDN";
 import edgeXLogo from "../../../public/images/logo/edge-x.png";
 import LogoBrandSection from "@/Components/LogoBrandSection";
+import ResearchDevelopmentSection from "@/Components/About/ResearchDevelopmentSection";
+import testimoni from "../../../public/images/testimoni/testimoni.webp";
 
 const EdgeDC = ({ banner }) => {
     const certificates = [
@@ -193,6 +195,17 @@ const EdgeDC = ({ banner }) => {
         },
     ];
 
+    const dataTestimoni = [
+        {
+            img: testimoni,
+            title: "Testimonials & Use Cases from Various Industries",
+            description:
+                "We don’t just design data center solutions — we help companies maintain the performance, efficiency, and resilience of their digital infrastructure.",
+            buttonLink: "/testimoni",
+            showButton: true,
+        },
+    ];
+
     return (
         <main className="relative min-h-screen overflow-x-hidden">
             <div className="overflow-hidden">
@@ -212,6 +225,7 @@ const EdgeDC = ({ banner }) => {
                     tabsConfig={tabItems}
                     customGrid={3}
                 />
+                <ResearchDevelopmentSection data={dataTestimoni} />
                 <CertificateTKDN certificates={certificates} />
                 <Footer />
             </div>

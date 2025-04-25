@@ -13,6 +13,8 @@ import middle from "../../../public/images/volts/middle.png";
 import high from "../../../public/images/volts/high.png";
 import { Bolt, DatabaseIcon, LucideContainer } from "lucide-react";
 import MonitoringDashboard from "@/Components/Volts/MonitoringDashboard";
+import testimoni from "../../../public/images/testimoni/testimoni.webp";
+import ResearchDevelopmentSection from "@/Components/About/ResearchDevelopmentSection";
 
 const Volts = ({ banner, volts }) => {
     const tabItems = [
@@ -147,6 +149,17 @@ const Volts = ({ banner, volts }) => {
         },
     ];
 
+    const dataTestimoni = [
+        {
+            img: testimoni,
+            title: "Testimonials & Use Cases from Various Industries",
+            description:
+                "We don’t just design data center solutions — we help companies maintain the performance, efficiency, and resilience of their digital infrastructure.",
+            buttonLink: "/testimoni",
+            showButton: true,
+        },
+    ];
+
     return (
         <main className="relative min-h-screen overflow-x-hidden">
             <div className="overflow-hidden">
@@ -168,6 +181,7 @@ const Volts = ({ banner, volts }) => {
                 <MonitoringDashboard />
                 <LogoBrandSection logo={savvyLogo} />
                 <SavvySection />
+                <ResearchDevelopmentSection data={dataTestimoni} />
                 <Footer />
             </div>
         </main>
