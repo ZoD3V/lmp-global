@@ -4,6 +4,7 @@ import { Button } from "./ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 import Heading from "./Common/Heading";
 import { ChevronRight } from "lucide-react";
+import { router } from "@inertiajs/react";
 
 const containerVariants = {
     hidden: { opacity: 0 },
@@ -36,6 +37,10 @@ const EdgeDcSection = ({
 }) => {
     const [activeTab, setActiveTab] = useState(tabsConfig[0].value);
 
+    const handleClick = (link) => {
+        router.visit(link);
+    };
+
     return (
         <section className="py-16">
             <div className="container max-w-[1200px] px-4 md:px-6 xl:px-0">
@@ -55,9 +60,7 @@ const EdgeDcSection = ({
                     className="w-full"
                 >
                     <div className="flex justify-center mb-12">
-                        <TabsList
-                        className="w-fit flex flex-wrap items-start"
-                        >
+                        <TabsList className="w-fit flex flex-wrap items-start">
                             {tabsConfig.map((tab) => (
                                 <TabsTrigger
                                     key={tab.value}
@@ -126,6 +129,7 @@ const EdgeDcSection = ({
                                         size="lg"
                                         variant="theme"
                                         className="group text-base"
+                                        onClick={() => handleClick("/contact")}
                                     >
                                         Request Consultation
                                         <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />

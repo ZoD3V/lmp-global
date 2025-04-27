@@ -16,9 +16,6 @@ const ProductSection = ({ dataProduct }) => {
             >
                 <Heading
                     title={"Our Product"}
-                    description={
-                        "ivamus a ligula ut velit placerat egestas at id leo. Nulla ac volutpat nunc. Suspendisse ut magna porttitor, sollicitudin ligula at, molestie dolor."
-                    }
                 />
 
                 <motion.div

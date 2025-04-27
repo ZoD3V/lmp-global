@@ -6,7 +6,7 @@ import { Server, ArrowRight, Globe } from "lucide-react";
 import brain from "../../../../public/images/support/brain.png";
 import design from "../../../../public/images/support/design.png";
 import { Button } from "../ui/button";
-import { Link } from "@inertiajs/react";
+import { Link, router } from "@inertiajs/react";
 
 const CentersSection = () => {
     const ref1 = useRef(null);
@@ -14,6 +14,10 @@ const CentersSection = () => {
     const ref3 = useRef(null);
     const isInView1 = useInView(ref1, { once: true, margin: "-100px" });
     const isInView3 = useInView(ref3, { once: true, margin: "-100px" });
+
+    const handleClick = (buttonLink) => {
+        router.visit(buttonLink);
+    };
 
     return (
         <section className="py-24 bg-white max-w-[1200px] flex flex-col gap-12 container mx-auto px-4 sm:px-6 xl:px-0">
@@ -52,7 +56,11 @@ const CentersSection = () => {
                         at your location upon request.
                     </p>
                     <motion.div>
-                        <Button variant="theme" size="lg">
+                        <Button
+                            variant="theme"
+                            size="lg"
+                            onClick={() => handleClick("/services")}
+                        >
                             Read More
                             <ArrowRight className="ml-2 h-4 w-4" />
                         </Button>
@@ -119,7 +127,7 @@ const CentersSection = () => {
                     </p>
                     <motion.div>
                         <Button variant="theme" size="lg" asChild>
-                            <Link href="/login">
+                            <Link href="/design-collaboration-center">
                                 Read More
                                 <ArrowRight className="ml-2 h-4 w-4" />
                             </Link>

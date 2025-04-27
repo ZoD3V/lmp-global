@@ -23,13 +23,17 @@ const Footer = () => {
             { name: "LMP Service", href: "/services" },
             { name: "PAC", href: "/pac" },
         ],
-        support: [
-            { name: "FAQ", href: "#" },
-            { name: "Policy", href: "#" },
-            { name: "Business", href: "#" },
+        about: [
+            { name: "About LMP", href: "/about" },
+            { name: "History LMP", href: "/about" },
+            { name: "Events", href: "#" },
+            { name: "News Room", href: "#" },
+            { name: "LMP Leadership", href: "#" },
+            { name: "Carrer Opportunity", href: "#" },
+            { name: "Ethics & Complience", href: "#" },
         ],
         contact: [
-            { name: "WhatsApp", href: "#" },
+            { name: "WhatsApp", href: "http://wa.me/+6282320218200" },
             { name: "Support 24", href: "#" },
         ],
     };

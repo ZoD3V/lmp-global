@@ -22,9 +22,6 @@ const ProfileSection = ({ lmp_profile }) => {
         >
             <Heading
                 title={"LMP Profile"}
-                description={
-                    "ivamus a ligula ut velit placerat egestas at id leo. Nulla ac volutpat nunc. Suspendisse ut magna porttitor, sollicitudin ligula at, molestie dolor.."
-                }
             />
             <div
                 ref={ref1}

@@ -9,8 +9,13 @@ import { Button } from "@/Components/ui/button";
 import TypesPAC from "@/Components/PAC/TypesPAC";
 import kyrosLogo from "../../../public/images/logo/kyros.png";
 import LogoBrandSection from "@/Components/LogoBrandSection";
+import { router } from "@inertiajs/react";
 
 const PAC = ({ banner }) => {
+    const handleClick = (link) => {
+        router.visit(link);
+    };
+
     return (
         <main className="relative min-h-screen overflow-x-hidden">
             <div className="overflow-hidden">
@@ -42,6 +47,7 @@ const PAC = ({ banner }) => {
                                     size="lg"
                                     variant="secondary"
                                     className="w-full"
+                                    onClick={() => handleClick("/contact")}
                                 >
                                     Request a Consultation
                                 </Button>

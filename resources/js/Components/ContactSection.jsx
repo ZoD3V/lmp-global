@@ -56,7 +56,7 @@ const ContactSection = () => {
             setIsError(true);
             setTimeout(() => setIsError(false), 5000);
         } finally {
-            setIsSubmitting(false); // Reset loading state
+            setIsSubmitting(false);
         }
     };
 
@@ -169,15 +169,21 @@ const ContactSection = () => {
                                     size="lg"
                                     className="bg-gradient-to-r from-blue-600 to-blue-500 group"
                                 >
-                                    <Link href="#contact-form">
+                                    <Link href="/contact">
                                         Request a Demo{" "}
                                         <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                                     </Link>
                                 </Button>
-                                <Button asChild variant="outline" size="lg">
-                                    <Link href="tel:+18005551234">
-                                        Call Sales: 0823-2021-8200
-                                    </Link>
+                                <Button
+                                    as="button"
+                                    variant="outline"
+                                    size="lg"
+                                    onClick={() =>
+                                        (window.location.href =
+                                            "https://wa.me/+6282320218200")
+                                    }
+                                >
+                                    Call Sales: 0823-2021-8200
                                 </Button>
                             </div>
                         </div>

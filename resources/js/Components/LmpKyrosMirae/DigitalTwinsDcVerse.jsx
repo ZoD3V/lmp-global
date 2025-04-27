@@ -1,29 +1,31 @@
 import React from "react";
 import dcVerse1 from "../../../../public/images/dc-verse-1.png";
 import dcVerse2 from "../../../../public/images/dc-verse-2.png";
+import dcVerse3 from "../../../../public/images/dc-verse-3.png";
+import dcVerse4 from "../../../../public/images/dc-verse-4.png";
 import { fadeIn } from "@/utils/motion";
 import { motion } from "framer-motion";
 
 const DigitalTwinsDcVerse = () => {
     const imageItems = [
         {
-            id: 1,
-            src: dcVerse1,
-            alt: "Simulation & Control Indoor & Outdoor",
-        },
-        {
             id: 2,
             src: dcVerse2,
             alt: "Digital Native Model Generation by AIGC",
         },
         {
-            id: 3,
+            id: 1,
             src: dcVerse1,
+            alt: "Simulation & Control Indoor & Outdoor",
+        },
+        {
+            id: 3,
+            src: dcVerse3,
             alt: "High-speed CFD Indoor Simulation For Smart Computing DC",
         },
         {
             id: 4,
-            src: dcVerse1,
+            src: dcVerse4,
             alt: "Multi-Dimensional Data Monitoring And Statistics",
         },
     ];

@@ -106,31 +106,13 @@ const CentriniumSection = ({ networkProduct }) => {
                                             />
                                         </div>
                                     </div>
-                                    <div className="p-6 h-11rem">
+                                    <div className="p-6">
                                         <h3 className="text-lg font-bold mb-2">
                                             {data.title}
                                         </h3>
                                         <p className="text-sm font-medium">
                                             {data.caption}
                                         </p>
-                                        <div className="mt-4 space-y-2">
-                                            <div className="flex items-center gap-2">
-                                                {data.badges.map(
-                                                    (badge, index) => (
-                                                        <Badge
-                                                            key={index}
-                                                            variant="outline"
-                                                            className="bg-slage-50"
-                                                        >
-                                                            {badge}
-                                                        </Badge>
-                                                    )
-                                                )}
-                                            </div>
-                                            <p className="text-sm text-muted-foreground line-clamp-2">
-                                                {data.details}
-                                            </p>
-                                        </div>
                                     </div>
                                 </CardContent>
                             </Card>

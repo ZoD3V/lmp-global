@@ -117,7 +117,7 @@ export default function RiskMitigation() {
                                 whileInView="show"
                                 viewport={{ once: true }}
                             >
-                                <Card className="transition-all duration-300 hover:shadow-md hover:translate-y-[-4px] border-gray-100">
+                                <Card className="transition-all duration-300 hover:shadow-md hover:translate-y-[-4px] border-gray-100 min-h-[250px]">
                                     <CardHeader className="pb-2">
                                         <div
                                             className={`p-3 ${feature.bgColor} rounded-lg w-fit`}
@@ -129,7 +129,7 @@ export default function RiskMitigation() {
                                         <h4 className="text-lg font-semibold mb-2 line-clamp-1">
                                             {feature.title}
                                         </h4>
-                                        <p className="text-gray-600 line-clamp-2">
+                                        <p className="text-gray-600">
                                             {feature.description}
                                         </p>
                                     </CardContent>
