@@ -15,6 +15,9 @@ import { Bolt, DatabaseIcon, LucideContainer } from "lucide-react";
 import MonitoringDashboard from "@/Components/Volts/MonitoringDashboard";
 import testimoni from "../../../public/images/testimoni/testimoni.webp";
 import ResearchDevelopmentSection from "@/Components/About/ResearchDevelopmentSection";
+import Button from "@/Components/Common/Button";
+import { fadeIn } from "../utils/motion";
+import { motion } from "framer-motion";
 
 const Volts = ({ banner, volts }) => {
     const tabItems = [
@@ -182,6 +185,22 @@ const Volts = ({ banner, volts }) => {
                 <LogoBrandSection logo={savvyLogo} />
                 <SavvySection />
                 <ResearchDevelopmentSection data={dataTestimoni} />
+                <div className="flex max-w-[1200px] px-4 md:px-6 xl:px-0 pb-16 w-full mx-auto">
+                    <motion.div
+                        variants={fadeIn("up", 0.5)}
+                        initial="hidden"
+                        whileInView="show"
+                        viewport={{ once: true }}
+                        className="md:ml-auto w-full lg:w-fit"
+                    >
+                        <Button
+                            buttonText="All Product"
+                            buttonLink={"/product"}
+                            showArrow={true}
+                            outline={true}
+                        />
+                    </motion.div>
+                </div>
                 <Footer />
             </div>
         </main>

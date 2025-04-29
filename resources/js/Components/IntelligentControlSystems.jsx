@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
 import Lmp_Pad from "../../../public/images/lmp_pac2.png";
+import Button from "./Common/Button";
 
 const staggerContainer = {
     hidden: { opacity: 0 },
@@ -49,7 +50,7 @@ function IntelligentControlSystems() {
                         </p>
                     </div>
                 </motion.div>
-                <div className="grid gap-6 py-12 lg:grid-cols-2 lg:gap-12">
+                <div className="grid gap-6 pt-12 lg:grid-cols-2 lg:gap-12">
                     <motion.div
                         className="flex justify-center items-center"
                         initial={{ opacity: 0, scale: 0.8 }}
@@ -166,6 +167,20 @@ function IntelligentControlSystems() {
                                 </div>
                             </motion.li>
                         </ul>
+                    </motion.div>
+                    <motion.div
+                        variants={fadeIn("up", 0.5)}
+                        initial="hidden"
+                        whileInView="show"
+                        viewport={{ once: true }}
+                        className="md:ml-auto col-span-2"
+                    >
+                        <Button
+                            buttonText="All Product"
+                            buttonLink={"/product"}
+                            showArrow={true}
+                            outline={true}
+                        />
                     </motion.div>
                 </div>
             </div>

@@ -43,7 +43,7 @@ class BannerResource extends Resource
                         ->maxLength(1000)
                         ->rows(4),
                     FileUpload::make('image')
-                        ->image()
+                        ->acceptedFileTypes(['image/webp'])
                         ->required()
                         ->disk('public')
                         ->directory('banners')

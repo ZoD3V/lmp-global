@@ -10,7 +10,9 @@ const PolymerSection = ({ polymerData }) => {
         <section className="container mx-auto py-16 max-w-[1200px] px-4 sm:px-6 xl:px-0 flex flex-col gap-12">
             <Heading
                 title={"Our Product LMP Polymer"}
-                description={"Renewable energy in data centers refers to the use of renewable energy sources such as solar, wind, hydro, or biomass to operate IT infrastructure in a more environmentally friendly manner."}
+                description={
+                    "Renewable energy in data centers refers to the use of renewable energy sources such as solar, wind, hydro, or biomass to operate IT infrastructure in a more environmentally friendly manner."
+                }
             />
 
             {polymerData.map((polymer, index) => (
@@ -50,22 +52,6 @@ const PolymerSection = ({ polymerData }) => {
                     </div>
                 </motion.div>
             ))}
-            {polymerData.length > 0 && (
-                <motion.div
-                    variants={fadeIn("up", 0.5)}
-                    initial="hidden"
-                    whileInView="show"
-                    viewport={{ once: true }}
-                    className="md:ml-auto"
-                >
-                    <Button
-                        buttonText="All Product"
-                        buttonLink={"/product"}
-                        showArrow={true}
-                        outline={true}
-                    />
-                </motion.div>
-            )}
         </section>
     );
 };

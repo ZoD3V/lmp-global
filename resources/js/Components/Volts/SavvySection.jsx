@@ -75,7 +75,7 @@ const SavvySection = () => {
             </div>
 
             {/* Features Section */}
-            <div className="container px-4 md:px-6 xl:px-0 max-w-[1200px] py-16">
+            <div className="container px-4 md:px-6 xl:px-0 max-w-[1200px] pt-16">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
                     {/* Why Choose Savvy */}
                     <div className="space-y-8">

@@ -11,7 +11,7 @@ const NextT = ({ nexT }) => {
         <main className="relative min-h-screen overflow-x-hidden">
             <div className="overflow-hidden">
                 <Navbar />
-                <LogoBrandSection logo={edgeDcLogo} customClass="mt-16" />
+                <LogoBrandSection logo={edgeDcLogo} customClass="mt-16" customWidth="w-64" />
                 <NextTSection nexT={nexT} />
                 <NexTIndustries />
                 <Footer />

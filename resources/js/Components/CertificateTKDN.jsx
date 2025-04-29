@@ -2,8 +2,9 @@ import React from "react";
 import { motion } from "framer-motion";
 import Heading from "./Common/Heading";
 import { fadeIn } from "../utils/motion";
+import Button from "./Common/Button";
 
-const CertificateTKDN = ({ certificates }) => {
+const CertificateTKDN = ({ certificates, showAllProductButton = true }) => {
     return (
         <section className="max-w-[1200px] px-4 sm:px-6 xl:px-0 py-16 w-full mx-auto">
             {/* Background Pattern */}
@@ -51,6 +52,23 @@ const CertificateTKDN = ({ certificates }) => {
                         </motion.div>
                     ))}
                 </div>
+
+                {showAllProductButton && (
+                    <motion.div
+                        variants={fadeIn("up", 0.5)}
+                        initial="hidden"
+                        whileInView="show"
+                        viewport={{ once: true }}
+                        className="md:ml-auto"
+                    >
+                        <Button
+                            buttonText="All Product"
+                            buttonLink={"/product"}
+                            showArrow={true}
+                            outline={true}
+                        />
+                    </motion.div>
+                )}
             </div>
         </section>
     );

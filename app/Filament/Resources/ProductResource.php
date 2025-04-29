@@ -84,7 +84,7 @@ class ProductResource extends Resource
                     ->columnSpan(2)
                 ,
                 FileUpload::make('brochure')
-                    ->image()
+                    ->acceptedFileTypes(['application/pdf'])
                     ->required()
                     ->disk('public')
                     ->directory('brochure')

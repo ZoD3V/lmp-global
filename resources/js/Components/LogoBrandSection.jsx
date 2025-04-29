@@ -2,7 +2,7 @@ import React from "react";
 import { fadeIn } from "@/utils/motion";
 import { motion } from "framer-motion";
 
-const LogoBrandSection = ({ logo, customClass = "" }) => {
+const LogoBrandSection = ({ logo, customClass = "", customWidth = "w-52" }) => {
     return (
         <section
             className={`container px-4 md:px-6 xl:px-0 max-w-[1200px] pt-16 mx-auto ${customClass}`}
@@ -15,7 +15,7 @@ const LogoBrandSection = ({ logo, customClass = "" }) => {
                     viewport={{ once: true }}
                     src={logo}
                     alt="Logo brand"
-                    className={`w-52 h-fit object-contain object-center`}
+                    className={`${customWidth} h-fit object-contain object-center`}
                 />
             </div>
         </section>
