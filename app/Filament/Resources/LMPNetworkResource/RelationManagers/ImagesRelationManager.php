@@ -35,6 +35,10 @@ class ImagesRelationManager extends RelationManager
                 TextInput::make('caption')
                     ->label('Caption')
                     ->maxLength(255),
+
+                TextInput::make('link_product')
+                    ->label('Link Product')
+                    ->maxLength(255),
             ]);
     }
 

@@ -91,33 +91,54 @@ const CentriniumSection = ({ networkProduct }) => {
                     whileInView="show"
                     viewport={{ once: true }}
                 >
-                    {combinedData.map((data, index) => (
-                        <motion.div variants={item} key={index}>
-                            <Card className="overflow-hidden">
-                                <CardContent className="p-0">
-                                    <div
-                                        className={`relative h-60 flex items-center justify-center p-6 ${data.bg_color}`}
-                                    >
-                                        <div className="w-full h-full flex items-center justify-center">
-                                            <img
-                                                src={`/storage/${data.image_path}`}
-                                                alt="Single Mode OS1/OS2 Jumper LC-LC"
-                                                className="object-contain max-h-full"
-                                            />
+                    {combinedData.map((data, index) => {
+                        const hasLink = Boolean(data.link_product);
+                        return (
+                            <motion.div
+                                variants={item}
+                                key={index}
+                                className="flex"
+                            >
+                                <Card
+                                    onClick={
+                                        hasLink
+                                            ? () => {
+                                                  window.location.href =
+                                                      data.link_product;
+                                              }
+                                            : undefined
+                                    }
+                                    className={`h-full w-full flex flex-col overflow-hidden ${
+                                        hasLink
+                                            ? "cursor-pointer hover:shadow-md"
+                                            : ""
+                                    }`}
+                                >
+                                    <CardContent className="p-0 flex flex-col flex-1">
+                                        <div
+                                            className={`relative h-60 flex items-center justify-center p-6 ${data.bg_color}`}
+                                        >
+                                            <div className="w-full h-full flex items-center justify-center">
+                                                <img
+                                                    src={`/storage/${data.image_path}`}
+                                                    alt={data.title}
+                                                    className="object-contain max-h-full"
+                                                />
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div className="p-6">
-                                        <h3 className="text-lg font-bold mb-2">
-                                            {data.title}
-                                        </h3>
-                                        <p className="text-sm font-medium">
-                                            {data.caption}
-                                        </p>
-                                    </div>
-                                </CardContent>
-                            </Card>
-                        </motion.div>
-                    ))}
+                                        <div className="p-6 flex-1 flex flex-col">
+                                            <h3 className="text-lg font-bold mb-2">
+                                                {data.title}
+                                            </h3>
+                                            <p className="text-sm font-medium flex-1">
+                                                {data.caption}
+                                            </p>
+                                        </div>
+                                    </CardContent>
+                                </Card>
+                            </motion.div>
+                        );
+                    })}
                 </motion.div>
 
                 <motion.div

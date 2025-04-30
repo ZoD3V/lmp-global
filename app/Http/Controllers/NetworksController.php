@@ -28,6 +28,7 @@ class NetworksController extends Controller
                         'id' => $image->id,
                         'image_path' => $image->image_path,
                         'caption' => $image->caption,
+                        'link_product' => $image->link_product,
                     ];
                 }),
             ];

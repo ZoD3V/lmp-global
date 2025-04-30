@@ -1,6 +1,30 @@
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import kementrian from "../../../../public/images/network/kementrianRepublikIndonesia.png";
+import preOrder from "../../../../public/images/icons/ic-pre-order.png";
+import production from "../../../../public/images/icons/ic-production.png";
+import qc from "../../../../public/images/icons/ic-quality-control.png";
+import testing from "../../../../public/images/icons/ic-testing.png";
+import { ChevronDown, ChevronRight } from "lucide-react";
+
+const combinedData = [
+    {
+        title: "Pre Order",
+        icon: preOrder,
+    },
+    {
+        title: "Production",
+        icon: production,
+    },
+    {
+        title: "Quality Control",
+        icon: qc,
+    },
+    {
+        title: "Testing",
+        icon: testing,
+    },
+];
 
 const SavvyProgrammes = () => {
     return (
@@ -72,8 +96,42 @@ const SavvyProgrammes = () => {
                                 </div>
                             </div>
                         </div>
+                        <div className="container mx-auto px-4 mt-8">
+                            <div className="flex flex-col md:flex-row items-center justify-center">
+                                {combinedData.map((data, idx) => (
+                                    <React.Fragment key={idx}>
+                                        {/* Step */}
+                                        <div className="flex flex-col items-center">
+                                            <img
+                                                src={data.icon}
+                                                alt={data.title}
+                                                className="w-14 h-14 md:w-12 md:h-12"
+                                            />
+                                            <span className="mt-2 text-white font-medium">
+                                                {data.title}
+                                            </span>
+                                        </div>
 
+                                        {/* Connector */}
+                                        {idx < combinedData.length - 1 && (
+                                            <>
+                                                {/* Vertical on small */}
+                                                <div className="flex flex-col items-center mt-4 mb-4 md:hidden">
+                                                    <span className="h-12 border-l-2 border-dashed border-gray-400"></span>
+                                                    <ChevronDown className="w-5 h-5 text-gray-400 mt-1" />
+                                                </div>
 
+                                                {/* Horizontal on md+ */}
+                                                <div className="hidden md:flex items-center mx-6">
+                                                    <span className="w-24 border-t-2 border-dashed border-gray-400"></span>
+                                                    <ChevronRight className="w-5 h-5 text-gray-400 ml-2" />
+                                                </div>
+                                            </>
+                                        )}
+                                    </React.Fragment>
+                                ))}
+                            </div>
+                        </div>
                     </CardContent>
                 </Card>
             </div>

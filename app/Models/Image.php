@@ -15,6 +15,7 @@ class Image extends Model
         'lmp_polymer_id',
         'image_path',
         'caption',
+        'link_product',
     ];
 
     public function lmpNetwork(): BelongsTo
