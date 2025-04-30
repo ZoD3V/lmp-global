@@ -5,6 +5,7 @@ import preOrder from "../../../../public/images/icons/ic-pre-order.png";
 import production from "../../../../public/images/icons/ic-production.png";
 import qc from "../../../../public/images/icons/ic-quality-control.png";
 import testing from "../../../../public/images/icons/ic-testing.png";
+import delivery from "../../../../public/images/icons/ic-delivery.png";
 import { ChevronDown, ChevronRight } from "lucide-react";
 
 const combinedData = [
@@ -23,6 +24,10 @@ const combinedData = [
     {
         title: "Testing",
         icon: testing,
+    },
+    {
+        title: "Delivery",
+        icon: delivery,
     },
 ];
 

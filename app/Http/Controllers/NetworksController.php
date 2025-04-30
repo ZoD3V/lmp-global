@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Banner;
-use App\Models\LmpNetwork;
+use App\Models\LMPNetwork;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
@@ -15,7 +15,7 @@ class NetworksController extends Controller
             $query->where('name', 'Network');
         })->get();
 
-        $lmpNetworks = LmpNetwork::with('images')->get();
+        $lmpNetworks = LMPNetwork::with('images')->get();
 
         $formattedData = $lmpNetworks->map(function ($network) {
             return [
