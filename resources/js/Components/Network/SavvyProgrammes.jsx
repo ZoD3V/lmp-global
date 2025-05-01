@@ -101,12 +101,12 @@ const SavvyProgrammes = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="container mx-auto px-4 mt-8">
-                            <div className="flex flex-col md:flex-row items-center justify-center">
+                        <div className="mt-8">
+                            <div className="flex flex-col md:flex-row items-center md:justify-center gap-6 flex-wrap">
                                 {combinedData.map((data, idx) => (
                                     <React.Fragment key={idx}>
                                         {/* Step */}
-                                        <div className="flex flex-col items-center">
+                                        <div className="flex flex-col items-center text-center">
                                             <img
                                                 src={data.icon}
                                                 alt={data.title}
@@ -120,15 +120,15 @@ const SavvyProgrammes = () => {
                                         {/* Connector */}
                                         {idx < combinedData.length - 1 && (
                                             <>
-                                                {/* Vertical on small */}
-                                                <div className="flex flex-col items-center mt-4 mb-4 md:hidden">
-                                                    <span className="h-12 border-l-2 border-dashed border-gray-400"></span>
+                                                {/* Mobile (Vertical connector) */}
+                                                <div className="flex flex-col items-center md:hidden">
+                                                    <span className="h-10 border-l-2 border-dashed border-gray-400"></span>
                                                     <ChevronDown className="w-5 h-5 text-gray-400 mt-1" />
                                                 </div>
 
-                                                {/* Horizontal on md+ */}
-                                                <div className="hidden md:flex items-center mx-6">
-                                                    <span className="w-24 border-t-2 border-dashed border-gray-400"></span>
+                                                {/* Desktop (Horizontal connector) */}
+                                                <div className="hidden md:flex items-center">
+                                                    <span className="w-20 border-t-2 border-dashed border-gray-400"></span>
                                                     <ChevronRight className="w-5 h-5 text-gray-400 ml-2" />
                                                 </div>
                                             </>
