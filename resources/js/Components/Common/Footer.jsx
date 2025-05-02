@@ -26,7 +26,7 @@ const Footer = () => {
         about: [
             // { name: "About LMP", href: "/about" },
             // { name: "History LMP", href: "/about" },
-            { name: "Events", href: "#" },
+            { name: "Events", href: "/event" },
             // { name: "News Room", href: "#" },
             // { name: "LMP Leadership", href: "#" },
             // { name: "Carrer Opportunity", href: "#" },

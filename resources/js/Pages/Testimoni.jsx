@@ -32,7 +32,7 @@ import poldaTestimoni from "../../../public/images/testimoni/poldaTestimoni.webp
 import jtTestimoni from "../../../public/images/testimoni/jtTestimoni.webp";
 import tniauTestimoni from "../../../public/images/testimoni/tniauTestimoni.webp";
 
-const Testimoni = ({ banner }) => {
+const Testimoni = ({ banner, testimonials }) => {
     const testimonialsData = [
         {
             title: "Container Data Center",
@@ -49,19 +49,6 @@ const Testimoni = ({ banner }) => {
                         {
                             name: "PSN",
                             img: psnTestimoni2,
-                        },
-                    ],
-                },
-                {
-                    logo: iconplus,
-                    testimoni: [
-                        {
-                            name: "Icon +",
-                            img: iconTestimoni1,
-                        },
-                        {
-                            name: "Icon +",
-                            img: iconTestimoni2,
                         },
                     ],
                 },

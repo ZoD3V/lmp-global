@@ -7,6 +7,7 @@ use App\Http\Controllers\DcimNetworkController;
 use App\Http\Controllers\DesignCollaborationCenterController;
 use App\Http\Controllers\EdgeDcController;
 use App\Http\Controllers\EnergyController;
+use App\Http\Controllers\EventController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\KyrosMiraeController;
 use App\Http\Controllers\NetworksController;
@@ -41,12 +42,13 @@ Route::get('/energy', [EnergyController::class, 'index']);
 Route::get('/pac', [PACController::class, 'index']);
 Route::get('/dcim-network', [DcimNetworkController::class, 'index']);
 Route::get('/support', [SupportController::class, 'index']);
+Route::get('/event', [EventController::class, 'index']);
 Route::get('/phylax', [PhylaxController::class, 'index']);
 Route::get('/testimoni', [TestimoniController::class, 'index']);
 Route::get('/kyros-mirae', [KyrosMiraeController::class, 'index']);
 Route::get('/design-collaboration-center', [DesignCollaborationCenterController::class, 'index']);
 Route::get('/api/search', [ProductController::class, 'search'])
-     ->middleware(['web']);
+    ->middleware(['web']);
 Route::get('/logout', function () {
     auth()->logout();
     session()->invalidate();

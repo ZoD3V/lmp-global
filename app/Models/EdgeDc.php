@@ -8,9 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class EdgeDc extends Model
 {
     use HasFactory;
-
     protected $table = 'edge_dc';
-
 
     protected $fillable = [
         'title',
