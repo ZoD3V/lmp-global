@@ -173,7 +173,7 @@ const Testimoni = ({ banner, testimonials }) => {
                     title={banner[0].name}
                     description={banner[0].description}
                 />
-                {testimonialsData.map((section, index) => (
+                {testimonials.map((section, index) => (
                     <TestimoniSection key={index} useCases={section} />
                 ))}
                 <Footer />
