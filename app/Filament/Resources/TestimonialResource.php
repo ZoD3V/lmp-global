@@ -32,6 +32,8 @@ class TestimonialResource extends Resource
                     ->required(),
                 Forms\Components\FileUpload::make('image')
                     ->image()
+                    ->acceptedFileTypes(['image/webp'])
+                    ->maxSize(1024)
                     ->required(),
             ]);
     }
