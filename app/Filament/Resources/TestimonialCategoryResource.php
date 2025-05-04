@@ -8,6 +8,7 @@ use App\Filament\Resources\TestimonialCategoryResource\RelationManagers\Testimon
 use App\Filament\Resources\TestimonialCategoryResource\RelationManagers\UseCasesRelationManager;
 use App\Models\TestimonialCategory;
 use Filament\Forms;
+use Filament\Forms\Components\Card;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
@@ -32,10 +33,13 @@ class TestimonialCategoryResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('title')
-                    ->required(),
-                Textarea::make('description')
-                    ->required(),
+                Card::make()->schema([
+                    TextInput::make('title')
+                        ->required(),
+                    Textarea::make('description')
+                        ->required(),
+                ])
+
             ]);
     }
 

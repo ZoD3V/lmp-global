@@ -6,6 +6,9 @@ use App\Filament\Resources\TestimonialResource\Pages;
 use App\Filament\Resources\TestimonialResource\RelationManagers;
 use App\Models\Testimonial;
 use Filament\Forms;
+use Filament\Forms\Components\Card;
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Form;
 use Filament\Pages\SubNavigationPosition;
 use Filament\Resources\Resource;
@@ -27,14 +30,17 @@ class TestimonialResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\Select::make('use_case_id')
-                    ->relationship('useCase', 'company_name')
-                    ->required(),
-                Forms\Components\FileUpload::make('image')
-                    ->image()
-                    ->acceptedFileTypes(['image/webp'])
-                    ->maxSize(1024)
-                    ->required(),
+                Card::make()->schema([
+                    Select::make('use_case_id')
+                        ->relationship('useCase', 'company_name')
+                        ->required(),
+                    FileUpload::make('image')
+                        ->image()
+                        ->acceptedFileTypes(['image/webp'])
+                        ->maxSize(1024)
+                        ->required(),
+
+                ])
             ]);
     }
 
