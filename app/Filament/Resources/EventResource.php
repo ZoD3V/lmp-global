@@ -23,6 +23,11 @@ class EventResource extends Resource
 {
     protected static ?string $model = Video::class;
 
+    protected static ?string $modelLabel = 'Event';
+    protected static ?string $pluralModelLabel = 'Events';
+    protected static ?string $navigationLabel = 'Events';
+    protected static ?string $recordTitleAttribute = 'title';
+
     protected static ?string $navigationIcon = 'heroicon-o-video-camera';
     protected static ?string $navigationGroup = 'Manage Content';
 

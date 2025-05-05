@@ -21,6 +21,7 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Support\Facades\DB;
 
 class ProductResource extends Resource
 {
@@ -59,7 +60,11 @@ class ProductResource extends Resource
                 Textarea::make('desc')
                     ->required(),
                 MultiSelect::make('keyCharacters')
-                    ->relationship('keyCharacters', 'name')
+                    ->relationship(
+                        name: 'keyCharacters',
+                        titleAttribute: 'name',
+                        modifyQueryUsing: fn(Builder $query) => $query->whereDoesntHave('products')
+                    )
                     ->default(null)
                     ->nullable()
                     ->preload(),

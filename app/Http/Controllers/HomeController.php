@@ -3,18 +3,19 @@
 namespace App\Http\Controllers;
 
 use App\Models\Banner;
+use App\Models\CarouselIndustry;
 use Inertia\Inertia;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        $banner = Banner::whereHas('page', function ($query) {
-            $query->where('name', 'Home');
-        })->get();
+        $images = CarouselIndustry::where('is_active', true)
+            ->orderBy('order')
+            ->get();
 
         return Inertia::render('Home', [
-            'banner' => $banner
+            'images' => $images,
         ]);
     }
 }

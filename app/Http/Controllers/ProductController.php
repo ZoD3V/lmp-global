@@ -30,25 +30,35 @@ class ProductController extends Controller
             ])
             ->get(['id', 'name', 'image', 'link', 'desc']);
 
-        $formattedCategories = $categories->map(function ($category) {
-            return [
-                'name' => $category->name,
-                'image' => $category->image,
-                'desc' => $category->desc,
-                'link' => $category->link,
-                'children' => $category->children->map(function ($child) {
-                    return [
-                        'name' => $child->name,
-                        'products' => $child->products->map(function ($product) {
-                            return [
-                                'id' => $product->id,
-                                'name' => $product->name,
-                            ];
-                        })
-                    ];
-                })
-            ];
-        });
+        $formattedCategories = Category::with([
+            'children' => function ($query) {
+                $query->orderBy('order'); // Urutkan children berdasarkan order
+            }
+        ])
+            ->whereNull('parent_id') // Hanya kategori utama
+            ->orderBy('created_at') // Urutkan kategori utama berdasarkan created_at
+            ->get()
+            ->map(function ($category) {
+                return [
+                    'name' => $category->name,
+                    'image' => $category->image,
+                    'desc' => $category->desc,
+                    'link' => $category->link,
+                    'created_at' => $category->created_at, // Tambahkan jika perlu
+                    'children' => $category->children->map(function ($child) {
+                        return [
+                            'name' => $child->name,
+                            'order' => $child->order, // Sertakan order number
+                            'products' => $child->products->map(function ($product) {
+                                return [
+                                    'id' => $product->id,
+                                    'name' => $product->name,
+                                ];
+                            })
+                        ];
+                    })
+                ];
+            });
 
         return Inertia::render('ProductSolution', [
             'banner' => $banner,

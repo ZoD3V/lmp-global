@@ -42,7 +42,9 @@ class ImagesRelationManager extends RelationManager
             ->recordTitleAttribute('image_path')
             ->columns([
                 ImageColumn::make('image_path')
-                    ->label('Image'),
+                    ->label('Image')
+                    ->acceptedFileTypes(['image/webp'])
+                ,
                 TextColumn::make('order')
                     ->sortable(),
             ])

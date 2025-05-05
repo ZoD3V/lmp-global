@@ -28,7 +28,7 @@ class ImagesRelationManager extends RelationManager
                 FileUpload::make('image_path')
                     ->label('Image URL or Path')
                     ->disk('public')
-                    ->directory('lmp_network_images')
+                    ->directory('network_images')
                     ->image()
                     ->required(),
 

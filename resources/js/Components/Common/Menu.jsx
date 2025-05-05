@@ -68,7 +68,7 @@ const Menu = ({ menuData }) => {
                     </div>
 
                     {item.products?.length > 0 && isOpen && (
-                        <ul className="absolute left-[105%] top-0 ml-1 w-48 px-4 bg-white border border-gray-200 rounded-lg z-10">
+                        <ul className="absolute left-[105%] top-0 ml-1 w-56 px-4 bg-white border border-gray-200 rounded-lg z-10">
                             {renderMenu(item.products, level + 1, currentPath)}
                         </ul>
                     )}
@@ -79,7 +79,7 @@ const Menu = ({ menuData }) => {
 
     return (
         <div className="relative" ref={menuRef}>
-            <ul className="w-36 mt-2 text-sm font-medium">{renderMenu(menuData)}</ul>
+            <ul className="w-40 mt-2 text-sm font-medium">{renderMenu(menuData)}</ul>
         </div>
     );
 };

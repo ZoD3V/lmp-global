@@ -50,6 +50,10 @@ class CategoryResource extends Resource
                         ->default(null)
                         ->searchable()
                         ->placeholder('Select Parent Category'),
+                    Forms\Components\TextInput::make('order')
+                        ->numeric()
+                        ->default(0)
+                        ->visible(fn($get) => $get('parent_id')),
 
                     TextInput::make('link')
                         ->nullable()
@@ -74,7 +78,6 @@ class CategoryResource extends Resource
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('parent.name')->label('Parent Category')->sortable()->searchable(),
-
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
