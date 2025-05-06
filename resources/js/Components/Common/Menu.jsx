@@ -6,7 +6,7 @@ import {
     DropdownMenuSub,
     DropdownMenuSubContent,
     DropdownMenuSubTrigger,
-} from "@/components/ui/dropdown-menu";
+} from "../ui/dropdown-menu";
 import { ChevronRight } from "lucide-react";
 import { router } from "@inertiajs/react";
 
@@ -54,7 +54,7 @@ const Menu = ({ menuData }) => {
     };
 
     return (
-        <div className="w-1/2">
+        <div className="w-40 md:w-1/2">
             {filteredMenuData?.map((item, index) => (
                 <DropdownMenu key={index}>
                     <DropdownMenuTrigger asChild className="outline-none">
