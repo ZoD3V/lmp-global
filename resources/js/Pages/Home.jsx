@@ -11,8 +11,9 @@ import Footer from "@/Components/Common/Footer";
 import FeaturesSection from "@/Components/FeatureSection";
 import ContactSection from "@/Components/ContactSection";
 import CSRSection from "@/Components/Home/CSRSection";
+import ImageSlider from "@/Components/Home/ImageSlider";
 
-const Home = () => {
+const Home = ({ images }) => {
     return (
         <main className="relative min-h-screen overflow-x-hidden">
             <div className="overflow-hidden">
@@ -30,7 +31,7 @@ const Home = () => {
                         <ChevronUp className="h-5 w-5" />
                     </Button>
                 </div>
-
+                {images.length > 0 && <ImageSlider images={images} />}
                 <PurposeSection />
                 <GroupSection />
                 <CSRSection />
