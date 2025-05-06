@@ -1,8 +1,9 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper/modules";
+import { Pagination, Autoplay, EffectCreative } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/effect-creative";
 
 const ImageSlider = ({ images }) => {
     const activeImages = images?.filter((image) => image.is_active);
@@ -11,9 +12,20 @@ const ImageSlider = ({ images }) => {
     return (
         <div className="relative w-full container px-4 md:px-6 py-16">
             <Swiper
-                spaceBetween={15}
                 centeredSlides={true}
-                modules={[Pagination, Autoplay]}
+                effect={"creative"}
+                grabCursor={true}
+                creativeEffect={{
+                    prev: {
+                        shadow: true,
+                        translate: ["-120%", 0, -500],
+                    },
+                    next: {
+                        shadow: true,
+                        translate: ["120%", 0, -500],
+                    },
+                }}
+                modules={[Pagination, Autoplay, EffectCreative]}
                 autoplay={{
                     delay: 5000,
                     disableOnInteraction: false,
@@ -23,7 +35,7 @@ const ImageSlider = ({ images }) => {
                     clickable: true,
                     el: ".custom-pagination",
                 }}
-                className="image-slider"
+                className="image-slider h-auto md:h-[350px] lg:h-[550px]"
             >
                 {activeImages?.map((image) => (
                     <SwiperSlide key={image.id}>
