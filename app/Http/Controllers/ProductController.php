@@ -32,11 +32,11 @@ class ProductController extends Controller
 
         $formattedCategories = Category::with([
             'children' => function ($query) {
-                $query->orderBy('order'); // Urutkan children berdasarkan order
+                $query->orderBy('order');
             }
         ])
-            ->whereNull('parent_id') // Hanya kategori utama
-            ->orderBy('created_at') // Urutkan kategori utama berdasarkan created_at
+            ->whereNull('parent_id')
+            ->orderBy('created_at')
             ->get()
             ->map(function ($category) {
                 return [
@@ -44,7 +44,7 @@ class ProductController extends Controller
                     'image' => $category->image,
                     'desc' => $category->desc,
                     'link' => $category->link,
-                    'created_at' => $category->created_at, // Tambahkan jika perlu
+                    'created_at' => $category->created_at,
                     'children' => $category->children->map(function ($child) {
                         return [
                             'name' => $child->name,

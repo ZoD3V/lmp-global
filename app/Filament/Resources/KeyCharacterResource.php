@@ -40,6 +40,12 @@ class KeyCharacterResource extends Resource
                     TextInput::make('name')
                         ->minLength(2)
                         ->maxLength(255)
+                        ->unique(table: 'key_characters', column: 'name', ignoreRecord: true)
+                        ->validationMessages([
+                            'unique' => 'This Key Character name is already in use, please choose another name',
+                            'min' => 'Minimum name 2 characters',
+                            'max' => 'Maximum name 255 characters',
+                        ])
                 ])
             ]);
     }

@@ -4,13 +4,8 @@ import { Badge } from "./ui/badge";
 import { Leaf, Recycle, Lightbulb } from "lucide-react";
 import server from "../../../public/images/purpose-section-image.jpeg";
 import Heading from "./Common/Heading";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, EffectFade } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/effect-fade";
 
-const PurposeSection = ({ images }) => {
+const PurposeSection = () => {
     return (
         <section id="about" className="w-full py-16">
             <div className="container px-4 md:px-6 xl:px-0 max-w-[1200px]">
@@ -142,48 +137,13 @@ const PurposeSection = ({ images }) => {
                             viewport={{ once: true }}
                             className="relative overflow-hidden rounded-2xl shadow-2xl w-full"
                         >
-                            <Swiper
-                                slidesPerView={1}
-                                loop={true}
-                                centeredSlides={true}
-                                effect={"fade"}
-                                modules={[Autoplay, EffectFade]}
-                                autoplay={{
-                                    delay: 3000,
-                                    disableOnInteraction: false,
-                                }}
-                            >
-                                {images?.filter(
-                                    (image) => image.is_active === 1
-                                ).length > 0 ? (
-                                    images
-                                        .filter((image) => image.is_active)
-                                        .map((image, index) => (
-                                            <SwiperSlide key={index}>
-                                                <img
-                                                    src={`/storage/${image.image}`}
-                                                    alt={
-                                                        image.title ||
-                                                        "Data Center Infrastructure"
-                                                    }
-                                                    width={500}
-                                                    height={400}
-                                                    className="w-full object-cover"
-                                                />
-                                            </SwiperSlide>
-                                        ))
-                                ) : (
-                                    <SwiperSlide>
-                                        <img
-                                            src={server}
-                                            alt="Default Server Image"
-                                            width={500}
-                                            height={400}
-                                            className="w-full object-cover"
-                                        />
-                                    </SwiperSlide>
-                                )}
-                            </Swiper>
+                            <img
+                                src={server}
+                                alt="Default Server Image"
+                                width={500}
+                                height={400}
+                                className="w-full object-cover"
+                            />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                         </motion.div>
                     </motion.div>

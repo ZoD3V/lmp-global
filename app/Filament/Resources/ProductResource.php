@@ -3,6 +3,7 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\ProductResource\Pages;
+use App\Models\KeyCharacter;
 use App\Models\Product;
 use Filament\Forms;
 use Filament\Forms\Components\Card;
@@ -59,15 +60,30 @@ class ProductResource extends Resource
                     ->maxLength(255),
                 Textarea::make('desc')
                     ->required(),
-                MultiSelect::make('keyCharacters')
-                    ->relationship(
-                        name: 'keyCharacters',
-                        titleAttribute: 'name',
-                        modifyQueryUsing: fn(Builder $query) => $query->whereDoesntHave('products')
-                    )
-                    ->default(null)
-                    ->nullable()
-                    ->preload(),
+                Select::make('keyCharacters')
+                    ->relationship('keyCharacters', 'name')
+                    ->multiple()
+                    ->preload()
+                    ->searchable()
+                    ->createOptionForm([
+                        TextInput::make('name')
+                            ->required()
+                            ->maxLength(255)
+                            ->unique('key_characters', 'name')
+                            ->validationMessages([
+                                'unique' => 'A Key Character with this name already exists',
+                            ]),
+                    ])
+                    ->createOptionUsing(function (array $data) {
+                        try {
+                            return KeyCharacter::create($data)->id;
+                        } catch (\Illuminate\Database\QueryException $e) {
+                            if (str_contains($e->getMessage(), 'Duplicate entry')) {
+                                return KeyCharacter::where('name', $data['name'])->first()->id;
+                            }
+                            throw $e;
+                        }
+                    }),
                 Select::make('category_id')
                     ->relationship('category', 'name')
                     ->searchable()

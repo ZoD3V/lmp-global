@@ -22,8 +22,7 @@ const CardProduct = ({ item, index, fadeIn, textVariant, children }) => {
             key={index}
             variants={fadeIn("up", index * 0.1)}
             viewport={{ once: true }}
-            className="relative flex flex-col gap-4 cursor-pointer"
-            onClick={() => navigateDetailProduct(item)}
+            className="relative flex flex-col gap-4"
         >
             {/* Tooltip */}
             <div
@@ -37,9 +36,10 @@ const CardProduct = ({ item, index, fadeIn, textVariant, children }) => {
             </div>
 
             <div
-                className="flex flex-col gap-4"
+                className="flex flex-col gap-4 cursor-pointer"
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
+                onClick={() => navigateDetailProduct(item)}
             >
                 {/* Judul produk */}
                 <motion.h3

@@ -12,7 +12,7 @@ import FeaturesSection from "@/Components/FeatureSection";
 import ContactSection from "@/Components/ContactSection";
 import CSRSection from "@/Components/Home/CSRSection";
 
-const Home = ({ images }) => {
+const Home = () => {
     return (
         <main className="relative min-h-screen overflow-x-hidden">
             <div className="overflow-hidden">
@@ -31,7 +31,7 @@ const Home = ({ images }) => {
                     </Button>
                 </div>
 
-                <PurposeSection images={images} />
+                <PurposeSection />
                 <GroupSection />
                 <CSRSection />
                 <CertificateIsoSection />

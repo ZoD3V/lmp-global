@@ -1,85 +1,77 @@
-import React, { useState, useEffect, useRef } from "react";
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuTrigger,
+    DropdownMenuSub,
+    DropdownMenuSubContent,
+    DropdownMenuSubTrigger,
+} from "@/components/ui/dropdown-menu";
+import { ChevronRight } from "lucide-react";
 import { router } from "@inertiajs/react";
-import { IoMdArrowDropright } from "react-icons/io";
 
 const Menu = ({ menuData }) => {
-    const [openMenus, setOpenMenus] = useState([]);
-    const menuRef = useRef(null);
+    const filteredMenuData = menuData?.filter(
+        (item) => item.products?.length > 0
+    );
 
-    useEffect(() => {
-        const handleClickOutside = (e) => {
-            if (menuRef.current && !menuRef.current.contains(e.target)) {
-                setOpenMenus([]);
-            }
-        };
-
-        document.addEventListener("mousedown", handleClickOutside);
-        return () => {
-            document.removeEventListener("mousedown", handleClickOutside);
-        };
-    }, []);
-
-    const toggleMenu = (path) => {
-        setOpenMenus((prev) => {
-            const newPath = prev.join("-") === path ? [] : path.split("-");
-            return newPath;
-        });
+    const handleRouter = (e) => {
+        router.visit(`/product/${e.id}`);
     };
 
-    const handleItemClick = (item, currentPath, e) => {
-        e.stopPropagation();
-
-        if (!item.products?.length && item.id) {
-            router.visit(`/product/${item.id}`);
-        }
-        else if (item.products?.length) {
-            toggleMenu(currentPath);
-        }
-    };
-
-    const renderMenu = (items, level = 0, parentPath = "") => {
+    const renderMenu = (items) => {
         return items?.map((item, index) => {
-            const currentPath = parentPath
-                ? `${parentPath}-${index}`
-                : `${index}`;
-            const isOpen = openMenus[level] === String(index);
+            if (item.products?.length) {
+                return (
+                    <DropdownMenuSub key={`${item.id}-${index}`}>
+                        <DropdownMenuSubTrigger className="cursor-pointer">
+                            <span className="flex items-center justify-between w-full">
+                                {item.name}
+                                <ChevronRight className="ml-2 h-4 w-4" />
+                            </span>
+                        </DropdownMenuSubTrigger>
+                        <DropdownMenuSubContent
+                            side="right"
+                            align="start"
+                            className="ml-1 min-w-[8rem]"
+                        >
+                            {renderMenu(item.products)}
+                        </DropdownMenuSubContent>
+                    </DropdownMenuSub>
+                );
+            }
 
             return (
-                <li
-                    key={currentPath}
-                    className="relative group"
-                    onClick={(e) => handleItemClick(item, currentPath, e)}
+                <DropdownMenuItem
+                    key={`${item.id}-${index}`}
+                    className="cursor-pointer"
+                    onClick={() => handleRouter(item)}
                 >
-                    <div
-                        className={`py-2 flex justify-between items-center transition-opacity duration-300 ease-in-out ${
-                            !item.products?.length && item.id
-                                ? "text-blue-600 hover:text-blue-800 cursor-pointer"
-                                : ""
-                        } ${
-                            item.products?.length
-                                ? "cursor-pointer"
-                                : "cursor-default"
-                        }`}
-                    >
-                        <span>{item.name}</span>
-                        {item.products?.length > 0 && (
-                            <IoMdArrowDropright className="text-xl" />
-                        )}
-                    </div>
-
-                    {item.products?.length > 0 && isOpen && (
-                        <ul className="absolute left-[105%] top-0 ml-1 w-56 px-4 bg-white border border-gray-200 rounded-lg z-10">
-                            {renderMenu(item.products, level + 1, currentPath)}
-                        </ul>
-                    )}
-                </li>
+                    {item.name}
+                </DropdownMenuItem>
             );
         });
     };
 
     return (
-        <div className="relative" ref={menuRef}>
-            <ul className="w-40 mt-2 text-sm font-medium">{renderMenu(menuData)}</ul>
+        <div className="w-1/2">
+            {filteredMenuData?.map((item, index) => (
+                <DropdownMenu key={index}>
+                    <DropdownMenuTrigger asChild className="outline-none">
+                        <button className="w-full text-left text-sm py-2 font-medium flex items-center justify-between cursor-pointer">
+                            <span>{item.name}</span>
+                            <ChevronRight className="h-4 w-4" />
+                        </button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent
+                        side="right"
+                        align="start"
+                        className="w-56"
+                    >
+                        {renderMenu(item.products)}
+                    </DropdownMenuContent>
+                </DropdownMenu>
+            ))}
         </div>
     );
 };
