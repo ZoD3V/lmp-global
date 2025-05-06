@@ -7,7 +7,6 @@ import "swiper/css/effect-creative";
 
 const ImageSlider = ({ images }) => {
     const activeImages = images?.filter((image) => image.is_active);
-    console.log(activeImages);
 
     return (
         <div className="relative w-full container px-4 md:px-6 py-16">
