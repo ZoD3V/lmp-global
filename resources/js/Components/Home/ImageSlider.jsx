@@ -29,25 +29,39 @@ const ImageSlider = ({ images }) => {
                     delay: 5000,
                     disableOnInteraction: false,
                 }}
-                slidesPerView={1.2}
+                slidesPerView={1}
+                breakpoints={{
+                    768: {
+                        slidesPerView: 1.2,
+                        spaceBetween: 20,
+                    },
+                }}
                 pagination={{
                     clickable: true,
                     el: ".custom-pagination",
                 }}
-                className="image-slider h-auto md:h-[350px] lg:h-[550px]"
+                className="image-slider w-full h-[180px] sm:h-[200px] md:h-[300px] lg:h-[400px]"
             >
                 {activeImages?.map((image) => (
                     <SwiperSlide key={image.id}>
-                        <img
-                            src={`/storage/${image.image}`}
-                            alt={`slide ${image.id}`}
-                            className="w-full object-cover h-full rounded-xl shadow-lg"
-                        />
+                        <div className="w-full h-full flex items-center justify-center bg-gray-100 rounded-xl">
+                            <img
+                                src={`/storage/${image.image}`}
+                                alt={`slide ${image.id}`}
+                                className="object-cover w-full h-full rounded-xl"
+                            />
+                        </div>
                     </SwiperSlide>
                 ))}
             </Swiper>
-
-            <div className="custom-pagination absolute bottom-[-25px] w-full text-center p-4 mr-3"></div>
+            <div
+                className="custom-pagination absolute bottom-[-25px] w-full text-center p-4 mr-2"
+                style={{
+                    "--swiper-pagination-bullet-width": "10px",
+                    "--swiper-pagination-bullet-height": "10px",
+                    "--swiper-pagination-bullet-horizontal-gap": "4px",
+                }}
+            ></div>{" "}
         </div>
     );
 };
