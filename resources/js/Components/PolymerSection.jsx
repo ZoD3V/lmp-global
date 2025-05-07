@@ -2,7 +2,6 @@ import React from "react";
 import NetworkProductCard from "./Common/NetworkProductCard";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
-import Button from "./Common/Button";
 import Heading from "./Common/Heading";
 
 const PolymerSection = ({ polymerData }) => {

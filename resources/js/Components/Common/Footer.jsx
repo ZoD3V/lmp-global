@@ -18,7 +18,7 @@ const Footer = () => {
         product: [
             { name: "LMP Networks", href: "/network" },
             { name: "LMP Renewable Energy", href: "/energy" },
-            { name: "LMP Nex-T Edge DC 360", href: "/next-t" },
+            { name: "LMP Nex-T Edge DC 360", href: "/nex-t" },
             { name: "LMP Polymer", href: "/polymer" },
             { name: "LMP Service", href: "/services" },
             { name: "PAC", href: "/pac" },

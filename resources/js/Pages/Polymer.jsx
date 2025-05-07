@@ -1,10 +1,10 @@
 import React from "react";
-import Footer from "@/Components/Common/Footer";
-import Navbar from "@/Components/Common/Navbar";
-import Hero from "@/Components/Common/Hero";
-import PolymerSection from "@/Components/PolymerSection";
+import Footer from "@/components/Common/Footer";
+import Navbar from "@/components/Common/Navbar";
+import Hero from "@/components/Common/Hero";
+import PolymerSection from "@/components/PolymerSection";
 import tkdn1 from "../../../public/images/polymer/tkdn1.webp";
-import CertificateTKDN from "@/Components/CertificateTKDN";
+import CertificateTKDN from "@/components/CertificateTKDN";
 
 const Polymer = ({ banner, polymer }) => {
     const certificates = [

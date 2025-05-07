@@ -1,11 +1,11 @@
 import React from "react";
-import ProductSection from "@/Components/ProductSolution/ProductSection";
-import SolutionSection from "@/Components/SolutionSection";
-import ServiceProductSection from "@/Components/ProductSolution/ServicesProductSection";
-import CustomizeSection from "@/Components/ProductSolution/CustomizeSection";
-import Navbar from "@/Components/Common/Navbar";
-import Hero from "@/Components/Common/Hero";
-import Footer from "@/Components/Common/Footer";
+import ProductSection from "@/components/ProductSolution/ProductSection";
+import SolutionSection from "@/components/SolutionSection";
+import ServiceProductSection from "@/components/ProductSolution/ServicesProductSection";
+import CustomizeSection from "@/components/ProductSolution/CustomizeSection";
+import Navbar from "@/components/Common/Navbar";
+import Hero from "@/components/Common/Hero";
+import Footer from "@/components/Common/Footer";
 
 const ProductSolution = ({ banner, categories }) => {
     return (

@@ -36,7 +36,7 @@ Route::get('/edge-dc', [EdgeDcController::class, 'index']);
 Route::get('/csr', [CsrController::class, 'index']);
 Route::get('/volts', [VoltsController::class, 'index']);
 Route::get('/polymer', [PolymerController::class, 'index']);
-Route::get('/next-t', [NextTController::class, 'index']);
+Route::get('/nex-t', [NextTController::class, 'index']);
 Route::get('/services', [ServicesController::class, 'index']);
 Route::get('/energy', [EnergyController::class, 'index']);
 Route::get('/pac', [PACController::class, 'index']);

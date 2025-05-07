@@ -1,17 +1,17 @@
 import React from "react";
-import Navbar from "@/Components/Common/Navbar";
-import Hero from "@/Components/Common/Hero";
-import Footer from "@/Components/Common/Footer";
-import CentriniumSection from "@/Components/Network/CentriniumSection";
-import NetworkSection from "@/Components/Network/NetworkSection";
-import SavvyProgrammes from "@/Components/Network/SavvyProgrammes";
-import CertificateTKDN from "@/Components/CertificateTKDN";
+import Navbar from "@/components/Common/Navbar";
+import Hero from "@/components/Common/Hero";
+import Footer from "@/components/Common/Footer";
+import CentriniumSection from "@/components/Network/CentriniumSection";
+import NetworkSection from "@/components/Network/NetworkSection";
+import SavvyProgrammes from "@/components/Network/SavvyProgrammes";
+import CertificateTKDN from "@/components/CertificateTKDN";
 import tkdn1 from "../../../public/images/network/tkdn1.webp";
 import tkdndetail1 from "../../../public/images/network/tkdndetail1.webp";
 import tkdn2 from "../../../public/images/network/tkdn2.webp";
 import tkdndetail2 from "../../../public/images/network/tkdndetail2.webp";
 import tkdn3 from "../../../public/images/network/tkdn3.webp";
-import LogoBrandSection from "@/Components/LogoBrandSection";
+import LogoBrandSection from "@/components/LogoBrandSection";
 import lmpLogo from "../../../public/images/logo/logo_lmp.png";
 
 const Networks = ({ banner, networks }) => {

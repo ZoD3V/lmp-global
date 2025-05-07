@@ -1,7 +1,7 @@
-import Footer from "@/Components/Common/Footer";
-import Hero from "@/Components/Common/Hero";
-import Navbar from "@/Components/Common/Navbar";
-import EventSection from "@/Components/Event/EventSection";
+import Footer from "@/components/Common/Footer";
+import Hero from "@/components/Common/Hero";
+import Navbar from "@/components/Common/Navbar";
+import EventSection from "@/components/Event/EventSection";
 import React from "react";
 
 const Event = ({ banner, videos }) => {

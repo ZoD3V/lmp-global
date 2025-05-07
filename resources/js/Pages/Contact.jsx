@@ -1,9 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { textVariant } from "@/utils/motion";
-import Navbar from "@/Components/Common/Navbar";
-import ContactSection from "@/Components/ContactSection";
-import Footer from "@/Components/Common/Footer";
+import Navbar from "@/components/Common/Navbar";
+import ContactSection from "@/components/ContactSection";
+import Footer from "@/components/Common/Footer";
 
 const Contact = (banner) => {
     return (

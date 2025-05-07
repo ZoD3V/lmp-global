@@ -1,8 +1,8 @@
-import Footer from "@/Components/Common/Footer";
-import Navbar from "@/Components/Common/Navbar";
-import LogoBrandSection from "@/Components/LogoBrandSection";
-import NexTIndustries from "@/Components/NexT/NexTIndustries";
-import NextTSection from "@/Components/NexT/NexTSection";
+import Footer from "@/components/Common/Footer";
+import Navbar from "@/components/Common/Navbar";
+import LogoBrandSection from "@/components/LogoBrandSection";
+import NexTIndustries from "@/components/NexT/NexTIndustries";
+import NextTSection from "@/components/NexT/NexTSection";
 import edgeDcLogo from "../../../public/images/logo/edge-dc.png";
 import React from "react";
 

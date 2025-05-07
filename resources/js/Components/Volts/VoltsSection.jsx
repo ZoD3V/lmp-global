@@ -1,11 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { fadeIn } from "../utils/motion";
+import { fadeIn } from "../../utils/motion";
 import { RiShieldFlashFill } from "react-icons/ri";
 import { LuSquareActivity } from "react-icons/lu";
 import { BiSolidZap } from "react-icons/bi";
-import { IoWifi } from "react-icons/io5";
-import Heading from "./Common/Heading";
+import Heading from "../Common/Heading";
 import { FilterIcon } from "lucide-react";
 
 const VoltsSection = ({ voltsData }) => {

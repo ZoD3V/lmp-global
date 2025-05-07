@@ -1,9 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import researchDevelopment from "../../../public/images/research&development/research&development.webp";
-import Navbar from "@/Components/Common/Navbar";
-import Hero from "@/Components/Common/Hero";
-import Footer from "@/Components/Common/Footer";
+import Navbar from "@/components/Common/Navbar";
+import Hero from "@/components/Common/Hero";
+import Footer from "@/components/Common/Footer";
 import { fadeIn, textVariant } from "@/utils/motion";
 
 const ResearchDevelopment = ({ banner }) => {
