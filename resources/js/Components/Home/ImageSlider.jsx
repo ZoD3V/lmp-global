@@ -1,9 +1,13 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay, EffectCreative } from "swiper/modules";
+import {
+    Pagination,
+    Autoplay,
+    EffectCoverflow,
+} from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import "swiper/css/effect-creative";
+import "swiper/css/effect-coverflow";
 
 const ImageSlider = ({ images }) => {
     const activeImages = images?.filter((image) => image.is_active);
@@ -12,19 +16,16 @@ const ImageSlider = ({ images }) => {
         <div className="relative w-full container px-4 md:px-6 py-16">
             <Swiper
                 centeredSlides={true}
-                effect={"creative"}
+                effect={"coverflow"}
                 grabCursor={true}
-                creativeEffect={{
-                    prev: {
-                        shadow: true,
-                        translate: ["-120%", 0, -500],
-                    },
-                    next: {
-                        shadow: true,
-                        translate: ["120%", 0, -500],
-                    },
+                coverflowEffect={{
+                    rotate: 0,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 1,
+                    slideShadows: true,
                 }}
-                modules={[Pagination, Autoplay, EffectCreative]}
+                modules={[Pagination, Autoplay, EffectCoverflow]}
                 autoplay={{
                     delay: 5000,
                     disableOnInteraction: false,
@@ -40,7 +41,7 @@ const ImageSlider = ({ images }) => {
                     clickable: true,
                     el: ".custom-pagination",
                 }}
-                className="image-slider w-full h-[180px] sm:h-[200px] md:h-[300px] lg:h-[400px]"
+                className="image-slider w-full h-[200px] md:h-[300px] lg:h-[400px]"
             >
                 {activeImages?.map((image) => (
                     <SwiperSlide key={image.id}>
