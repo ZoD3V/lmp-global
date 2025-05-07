@@ -1,16 +1,16 @@
-import Footer from "@/components/Common/Footer";
-import Hero from "@/components/Common/Hero";
-import Navbar from "@/components/Common/Navbar";
-import AwardsCertification from "@/components/DCIM/AwardsCertification";
-import FeaturesOperational from "@/components/DCIM/FeaturesOperational";
-import RackServer from "@/components/DCIM/RackServer";
-import RiskMitigation from "@/components/DCIM/RiskMitigation";
-import SpeedDeployment from "@/components/DCIM/SpeedDeployment";
-import VisibilityDcim from "@/components/DCIM/VisibilityDcim";
-import XPediTePlatform from "@/components/DCIM/XPediTePlatform";
+import Footer from "@/Components/Common/Footer";
+import Hero from "@/Components/Common/Hero";
+import Navbar from "@/Components/Common/Navbar";
+import AwardsCertification from "@/Components/DCIM/AwardsCertification";
+import FeaturesOperational from "@/Components/DCIM/FeaturesOperational";
+import RackServer from "@/Components/DCIM/RackServer";
+import RiskMitigation from "@/Components/DCIM/RiskMitigation";
+import SpeedDeployment from "@/Components/DCIM/SpeedDeployment";
+import VisibilityDcim from "@/Components/DCIM/VisibilityDcim";
+import XPediTePlatform from "@/Components/DCIM/XPediTePlatform";
 import ritLogo from "../../../public/images/logo/rit.png";
 import React from "react";
-import LogoBrandSection from "@/components/LogoBrandSection";
+import LogoBrandSection from "@/Components/LogoBrandSection";
 
 const DcimNetworks = ({ banner }) => {
     return (

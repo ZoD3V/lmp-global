@@ -2,11 +2,11 @@ import React from "react";
 import product1 from "../../../public/images/learning-center/connectivity.png";
 import product2 from "../../../public/images/learning-center/designengineering.jpeg";
 import product3 from "../../../public/images/learning-center/hvac.png";
-import Navbar from "@/components/Common/Navbar";
-import Hero from "@/components/Common/Hero";
-import ServicesSection from "@/components/ServicesSection";
-import ServicesRelatedSection from "@/components/ServiceRelatedSection";
-import Footer from "@/components/Common/Footer";
+import Navbar from "@/Components/Common/Navbar";
+import Hero from "@/Components/Common/Hero";
+import ServicesSection from "@/Components/ServicesSection";
+import ServicesRelatedSection from "@/Components/ServiceRelatedSection";
+import Footer from "@/Components/Common/Footer";
 
 const Services = ({ banner }) => {
     const features = [

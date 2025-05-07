@@ -1,17 +1,17 @@
 import React from "react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/Components/ui/button";
 import { ChevronUp } from "lucide-react";
-import CertificateIsoSection from "@/components/Home/CertificateIsoSection";
-import CertificateSection from "@/components/Home/CertificateSection";
-import CompanyLogo from "@/components/Home/CompanyLogo";
-import GroupSection from "@/components/Home/GroupSection";
-import Navbar from "@/components/Common/Navbar";
-import PurposeSection from "@/components/PurposeSection";
-import Footer from "@/components/Common/Footer";
-import FeaturesSection from "@/components/FeatureSection";
-import ContactSection from "@/components/ContactSection";
-import CSRSection from "@/components/Home/CSRSection";
-import ImageSlider from "@/components/Home/ImageSlider";
+import CertificateIsoSection from "@/Components/Home/CertificateIsoSection";
+import CertificateSection from "@/Components/Home/CertificateSection";
+import CompanyLogo from "@/Components/Home/CompanyLogo";
+import GroupSection from "@/Components/Home/GroupSection";
+import Navbar from "@/Components/Common/Navbar";
+import PurposeSection from "@/Components/PurposeSection";
+import Footer from "@/Components/Common/Footer";
+import FeaturesSection from "@/Components/FeatureSection";
+import ContactSection from "@/Components/ContactSection";
+import CSRSection from "@/Components/Home/CSRSection";
+import ImageSlider from "@/Components/Home/ImageSlider";
 
 const Home = ({ images }) => {
     return (

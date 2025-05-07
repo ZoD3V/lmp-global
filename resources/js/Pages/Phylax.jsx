@@ -1,7 +1,7 @@
-import Footer from "@/components/Common/Footer";
-import Hero from "@/components/Common/Hero";
-import Navbar from "@/components/Common/Navbar";
-import EdgeDcSection from "@/components/EdgeDcSection";
+import Footer from "@/Components/Common/Footer";
+import Hero from "@/Components/Common/Hero";
+import Navbar from "@/Components/Common/Navbar";
+import EdgeDcSection from "@/Components/EdgeDcSection";
 import React from "react";
 import rack from "../../../public/images/phylax/rack-kabinet.png";
 import phylax from "../../../public/images/phylax/controller.png";
@@ -15,7 +15,7 @@ import {
     DollarSign,
     Server,
 } from "lucide-react";
-import LogoBrandSection from "@/components/LogoBrandSection";
+import LogoBrandSection from "@/Components/LogoBrandSection";
 import phylaxLogo from "../../../public/images/logo/phylax.png";
 
 const Phylax = ({ banner }) => {

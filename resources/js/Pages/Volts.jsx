@@ -1,23 +1,23 @@
 import React from "react";
-import Footer from "@/components/Common/Footer";
-import Hero from "@/components/Common/Hero";
-import Navbar from "@/components/Common/Navbar";
-import LogoBrandSection from "@/components/LogoBrandSection";
-import SavvySection from "@/components/Volts/SavvySection";
+import Footer from "@/Components/Common/Footer";
+import Hero from "@/Components/Common/Hero";
+import Navbar from "@/Components/Common/Navbar";
+import LogoBrandSection from "@/Components/LogoBrandSection";
+import SavvySection from "@/Components/Volts/SavvySection";
 import voltsLogo from "../../../public/images/logo/volts.png";
 import savvyLogo from "../../../public/images/logo/savvy.png";
-import EdgeDcSection from "@/components/EdgeDcSection";
+import EdgeDcSection from "@/Components/EdgeDcSection";
 import low from "../../../public/images/volts/low.png";
 import middle from "../../../public/images/volts/middle.png";
 import high from "../../../public/images/volts/high.png";
 import { Bolt, DatabaseIcon, LucideContainer } from "lucide-react";
-import MonitoringDashboard from "@/components/Volts/MonitoringDashboard";
+import MonitoringDashboard from "@/Components/Volts/MonitoringDashboard";
 import testimoni from "../../../public/images/testimoni/testimoni.webp";
-import ResearchDevelopmentSection from "@/components/About/ResearchDevelopmentSection";
-import Button from "@/components/Common/Button";
+import ResearchDevelopmentSection from "@/Components/About/ResearchDevelopmentSection";
+import Button from "@/Components/Common/Button";
 import { fadeIn } from "../utils/motion";
 import { motion } from "framer-motion";
-import VoltsSection from "@/components/Volts/VoltsSection";
+import VoltsSection from "@/Components/Volts/VoltsSection";
 
 const Volts = ({ banner, volts }) => {
     const tabItems = [

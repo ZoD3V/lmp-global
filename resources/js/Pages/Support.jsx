@@ -1,10 +1,10 @@
 import React from "react";
-import SupportServiceSection from "@/components/Support/SupportServiceSection";
-import SolutionSection from "@/components/SolutionSection";
-import CentersSection from "@/components/Support/CentersSection";
-import Navbar from "@/components/Common/Navbar";
-import Hero from "@/components/Common/Hero";
-import Footer from "@/components/Common/Footer";
+import SupportServiceSection from "@/Components/Support/SupportServiceSection";
+import SolutionSection from "@/Components/SolutionSection";
+import CentersSection from "@/Components/Support/CentersSection";
+import Navbar from "@/Components/Common/Navbar";
+import Hero from "@/Components/Common/Hero";
+import Footer from "@/Components/Common/Footer";
 
 const Support = ({ banner, Supportbanner }) => {
     return (

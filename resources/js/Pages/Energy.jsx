@@ -1,9 +1,9 @@
 import React from "react";
-import AdvantageSection from "@/components/AdvantageSection";
-import RenewableDataCentersSection from "@/components/RenewableDataCentersSection";
-import Navbar from "@/components/Common/Navbar";
-import Hero from "@/components/Common/Hero";
-import Footer from "@/components/Common/Footer";
+import AdvantageSection from "@/Components/AdvantageSection";
+import RenewableDataCentersSection from "@/Components/RenewableDataCentersSection";
+import Navbar from "@/Components/Common/Navbar";
+import Hero from "@/Components/Common/Hero";
+import Footer from "@/Components/Common/Footer";
 
 const Energy = ({ banner }) => {
     return (

@@ -1,14 +1,14 @@
 import React from "react";
-import AirConditioning from "@/components/AirConditioning";
-import EnergyEfficiency from "@/components/EnergyEfficiency";
-import IntelligentControlSystems from "@/components/IntelligentControlSystems";
-import Navbar from "@/components/Common/Navbar";
-import Hero from "@/components/Common/Hero";
-import Footer from "@/components/Common/Footer";
-import { Button } from "@/components/ui/button";
-import TypesPAC from "@/components/PAC/TypesPAC";
+import AirConditioning from "@/Components/AirConditioning";
+import EnergyEfficiency from "@/Components/EnergyEfficiency";
+import IntelligentControlSystems from "@/Components/IntelligentControlSystems";
+import Navbar from "@/Components/Common/Navbar";
+import Hero from "@/Components/Common/Hero";
+import Footer from "@/Components/Common/Footer";
+import { Button } from "@/Components/ui/button";
+import TypesPAC from "@/Components/PAC/TypesPAC";
 import kyrosLogo from "../../../public/images/logo/kyros.png";
-import LogoBrandSection from "@/components/LogoBrandSection";
+import LogoBrandSection from "@/Components/LogoBrandSection";
 import { router } from "@inertiajs/react";
 
 const PAC = ({ banner }) => {

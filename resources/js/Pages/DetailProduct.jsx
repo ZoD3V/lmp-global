@@ -1,8 +1,8 @@
 import React from "react";
 import { usePage } from "@inertiajs/react";
-import Navbar from "@/components/Common/Navbar";
-import Footer from "@/components/Common/Footer";
-import DetailProductSection from "@/components/DetailProductSection";
+import Navbar from "@/Components/Common/Navbar";
+import Footer from "@/Components/Common/Footer";
+import DetailProductSection from "@/Components/DetailProductSection";
 
 const DetailProduct = () => {
     const { props } = usePage();
