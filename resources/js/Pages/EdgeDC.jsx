@@ -65,9 +65,9 @@ const EdgeDC = ({ banner }) => {
 
     const tabItems = [
         {
-            value: "containment",
-            label: "Containment Solutions",
-            icon: LucideContainer,
+            value: "modular",
+            label: "Modular Data Centers",
+            icon: BookCopyIcon,
         },
         {
             value: "micro",
@@ -75,9 +75,9 @@ const EdgeDC = ({ banner }) => {
             icon: DatabaseIcon,
         },
         {
-            value: "modular",
-            label: "Modular Data Centers",
-            icon: BookCopyIcon,
+            value: "containment",
+            label: "Containment Solutions",
+            icon: LucideContainer,
         },
     ];
 
