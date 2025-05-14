@@ -28,8 +28,9 @@ import edgeXLogo from "../../../public/images/logo/edge-x.png";
 import LogoBrandSection from "@/Components/LogoBrandSection";
 import ResearchDevelopmentSection from "@/Components/About/ResearchDevelopmentSection";
 import testimoni from "../../../public/images/testimoni/testimoni.webp";
+import EdgeDcMonitoring from "@/Components/EdgeDc/EdgeDcMonitoring";
 
-const EdgeDC = ({ banner }) => {
+const EdgeDC = ({ banner, monitorings }) => {
     const certificates = [
         {
             id: 1,
@@ -225,6 +226,7 @@ const EdgeDC = ({ banner }) => {
                     tabsConfig={tabItems}
                     customGrid={3}
                 />
+                <EdgeDcMonitoring monitorings={monitorings} />
                 <ResearchDevelopmentSection data={dataTestimoni} />
                 <CertificateTKDN certificates={certificates} />
                 <Footer />

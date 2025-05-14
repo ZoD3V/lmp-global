@@ -7,6 +7,7 @@ const Heading = ({
     description,
     align = "center",
     customClass = "text-gray-900",
+    customParagraph = "max-w-[900px]",
 }) => {
     const alignmentStyles = {
         left: {
@@ -40,7 +41,7 @@ const Heading = ({
             </motion.h2>
 
             <motion.p
-                className={`${alignmentStyles[align].paragraph} max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed`}
+                className={`${alignmentStyles[align].paragraph} ${customParagraph} text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-lg/relaxed`}
                 variants={fadeIn("down", 0.5)}
             >
                 {description}
