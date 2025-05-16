@@ -84,11 +84,11 @@ const EdgeDcSection = ({
                                 initial="hidden"
                                 animate="visible"
                                 variants={containerVariants}
-                                className="grid md:grid-cols-2 gap-12 items-center"
+                                className="grid lg:grid-cols-2 gap-12 items-center"
                             >
                                 <motion.div
                                     variants={itemVariants}
-                                    className="order-2 md:order-1"
+                                    className="order-2 lg:order-1"
                                 >
                                     <h3 className="text-2xl md:text-4xl font-bold text-slate-900 mb-6">
                                         {solution.title}
@@ -138,7 +138,7 @@ const EdgeDcSection = ({
 
                                 <motion.div
                                     variants={itemVariants}
-                                    className="order-1 md:order-2 flex justify-center"
+                                    className="order-1 lg:order-2 flex justify-center"
                                 >
                                     <motion.div
                                         className="relative w-full max-w-lg"
