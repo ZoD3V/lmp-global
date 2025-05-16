@@ -10,7 +10,7 @@ const PolymerSection = ({ polymerData }) => {
             <Heading
                 title={"Our Product LMP Polymer"}
                 description={
-                    "Renewable energy in data centers refers to the use of renewable energy sources such as solar, wind, hydro, or biomass to operate IT infrastructure in a more environmentally friendly manner."
+                    "LMP Polymer is our flagship product line based on high-quality plastic (polymer) materials, custom designed to meet the needs of network infrastructure and electronic devices."
                 }
             />
 
