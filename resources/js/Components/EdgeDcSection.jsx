@@ -141,7 +141,7 @@ const EdgeDcSection = ({
                                     className="order-1 md:order-2 flex justify-center"
                                 >
                                     <motion.div
-                                        className="relative w-full max-w-md"
+                                        className="relative w-full max-w-lg"
                                         initial={{ scale: 0.9, opacity: 0 }}
                                         animate={{ scale: 1, opacity: 1 }}
                                         transition={{
