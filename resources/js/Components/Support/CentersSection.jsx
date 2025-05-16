@@ -24,7 +24,7 @@ const CentersSection = () => {
             <Heading
                 title={"Our Centers"}
                 description={
-                    " As a Web Development Services, We are Committed to Building Custom Web Solutions that Drive Business Success."
+                    ""
                 }
             />
 
