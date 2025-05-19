@@ -218,7 +218,7 @@ const EdgeDC = ({ banner, monitorings }) => {
                 />
                 <LogoBrandSection logo={edgeXLogo} />
                 <EdgeDcSection
-                    title={"Data Center Infrastructure Solutions"}
+                    title={"Modular Data Center Infrastructure Solutions"}
                     description={
                         "Optimize your data center operations with our comprehensive range of infrastructure solutions designed to enhance efficiency, reduce costs, and ensure reliability."
                     }

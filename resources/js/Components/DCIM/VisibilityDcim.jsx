@@ -8,10 +8,10 @@ import {
 } from "../ui/card";
 import { Badge } from "../ui/badge";
 import { AspectRatio } from "../ui/aspect-ratio";
-import diagram1 from "../../../../public/images/dcim/dcim1.png";
-import diagram2 from "../../../../public/images/dcim/dcim2.png";
-import diagram3 from "../../../../public/images/dcim/dcim3.png";
-import diagram4 from "../../../../public/images/dcim/dcim4.png";
+import diagram1 from "../../../../public/images/dcim/dcim1.jpeg";
+import diagram2 from "../../../../public/images/dcim/dcim2.jpeg";
+import diagram3 from "../../../../public/images/dcim/dcim3.jpeg";
+import diagram4 from "../../../../public/images/dcim/dcim4.jpeg";
 import Heading from "../Common/Heading";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/utils/motion";

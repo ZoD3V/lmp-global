@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { motion } from "framer-motion";
-import lmp from "../../../../public/images/logo_lmp.png";
+import lmp from "../../../../public/images/lmp_networks.png";
 import edgeDc from "../../../../public/images/logo/edge-dc.png";
 import edgeX from "../../../../public/images/logo/edge-x.png";
 import kyrosMirae from "../../../../public/images/logo/kyros-mirae.png";
