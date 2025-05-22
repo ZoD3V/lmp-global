@@ -3,9 +3,9 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Clusters\Monitorings;
-use App\Filament\Resources\EdgeDcMonitoringResource\Pages;
-use App\Filament\Resources\EdgeDcMonitoringResource\RelationManagers;
-use App\Models\EdgeDcMonitoring;
+use App\Filament\Resources\ContainmentMonitoringResource\Pages;
+use App\Filament\Resources\ContainmentMonitoringResource\RelationManagers;
+use App\Models\ContainmentMonitoring;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Pages\SubNavigationPosition;
@@ -15,16 +15,15 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class EdgeDcMonitoringResource extends Resource
+class ContainmentMonitoringResource extends Resource
 {
-    protected static ?string $model = EdgeDcMonitoring::class;
+    protected static ?string $model = ContainmentMonitoring::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-computer-desktop';
 
     protected static ?string $cluster = Monitorings::class;
 
     protected static SubNavigationPosition $subNavigationPosition = SubNavigationPosition::Top;
-
 
     public static function form(Form $form): Form
     {
@@ -33,22 +32,21 @@ class EdgeDcMonitoringResource extends Resource
                 Forms\Components\TextInput::make('title')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('description')
-                    ->default(null)
-                    ->maxLength(255),
                 Forms\Components\FileUpload::make('image')
                     ->image()
-                    ->directory('edge-dc-monitoring')
+                    ->directory('containment-monitoring')
                     ->disk('public')
                     ->acceptedFileTypes(['image/webp'])
                     ->required(),
+                Forms\Components\TextInput::make('description')
+                    ->default(null)
+                    ->maxLength(255),
                 Forms\Components\TextInput::make('order')
                     ->required()
                     ->numeric()
                     ->default(0),
                 Forms\Components\Toggle::make('is_active')
-                    ->required()
-                    ->default(true),
+                    ->required(),
             ]);
     }
 
@@ -59,6 +57,8 @@ class EdgeDcMonitoringResource extends Resource
                 Tables\Columns\TextColumn::make('title')
                     ->searchable(),
                 Tables\Columns\ImageColumn::make('image'),
+                Tables\Columns\TextColumn::make('description')
+                    ->searchable(),
                 Tables\Columns\TextColumn::make('order')
                     ->numeric()
                     ->sortable(),
@@ -96,9 +96,9 @@ class EdgeDcMonitoringResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListEdgeDcMonitorings::route('/'),
-            'create' => Pages\CreateEdgeDcMonitoring::route('/create'),
-            'edit' => Pages\EditEdgeDcMonitoring::route('/{record}/edit'),
+            'index' => Pages\ListContainmentMonitorings::route('/'),
+            'create' => Pages\CreateContainmentMonitoring::route('/create'),
+            'edit' => Pages\EditContainmentMonitoring::route('/{record}/edit'),
         ];
     }
 }

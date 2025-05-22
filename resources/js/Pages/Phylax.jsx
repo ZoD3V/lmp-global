@@ -17,8 +17,9 @@ import {
 } from "lucide-react";
 import LogoBrandSection from "@/Components/LogoBrandSection";
 import phylaxLogo from "../../../public/images/logo/phylax.png";
+import ContainmentMonitoring from "@/Components/Phylax/ContainmentMonitoring";
 
-const Phylax = ({ banner }) => {
+const Phylax = ({ banner, monitorings }) => {
     const tabItems = [
         {
             value: "rack",
@@ -112,6 +113,7 @@ const Phylax = ({ banner }) => {
                     tabsConfig={tabItems}
                     customGrid={2}
                 />
+                <ContainmentMonitoring monitorings={monitorings} />
                 <Footer />
             </div>
         </main>
