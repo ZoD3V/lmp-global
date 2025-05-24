@@ -12,12 +12,12 @@ import FeaturesSection from "@/Components/FeatureSection";
 import ContactSection from "@/Components/ContactSection";
 import CSRSection from "@/Components/Home/CSRSection";
 import ImageSlider from "@/Components/Home/ImageSlider";
+import Layout from "@/Layouts/Layouts";
 
 const Home = ({ images }) => {
     return (
-        <main className="relative min-h-screen overflow-x-hidden">
+        <div className="relative min-h-screen overflow-x-hidden">
             <div className="overflow-hidden">
-                <Navbar />
                 <CertificateSection />
                 <div className="fixed bottom-6 left-6 z-50">
                     <Button
@@ -39,11 +39,11 @@ const Home = ({ images }) => {
                 <FeaturesSection />
                 <CompanyLogo />
                 <ContactSection />
-
-                <Footer />
             </div>
-        </main>
+        </div>
     );
 };
+
+Home.layout = (page) => <Layout children={page} />;
 
 export default Home;
