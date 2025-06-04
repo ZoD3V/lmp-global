@@ -1,16 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
 import logo_ashrae from "../../../public/images/logo/logo_ashrae.png";
-import Navbar from "@/Components/Common/Navbar";
 import Hero from "@/Components/Common/Hero";
-import Footer from "@/Components/Common/Footer";
 import { fadeIn, textVariant } from "@/utils/motion";
+import Layout from "@/Layouts/Layouts";
 
-const About = ({ banner, patners }) => {
+const Patners = ({ banner, patners }) => {
     return (
         <main className="relative min-h-screen overflow-x-hidden">
             <div className="overflow-hidden">
-                <Navbar />
                 <Hero
                     banner={banner}
                     title={banner[0].name}
@@ -80,10 +78,10 @@ const About = ({ banner, patners }) => {
                         </motion.div>
                     </motion.div>
                 </motion.section>
-                <Footer/>
             </div>
         </main>
     );
 };
 
-export default About;
+Patners.layout = (page) => <Layout children={page} />;
+export default Patners;

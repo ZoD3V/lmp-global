@@ -1,8 +1,7 @@
 import React from "react";
 import { usePage } from "@inertiajs/react";
-import Navbar from "@/Components/Common/Navbar";
-import Footer from "@/Components/Common/Footer";
 import DetailProductSection from "@/Components/DetailProductSection";
+import Layout from "@/Layouts/Layouts";
 
 const DetailProduct = () => {
     const { props } = usePage();
@@ -13,14 +12,13 @@ const DetailProduct = () => {
 
     return (
         <main className="relative min-h-screen overflow-x-hidden">
-            <Navbar />
             <DetailProductSection
                 detailData={product}
                 popularProducts={popularProducts}
             />
-            <Footer />
         </main>
     );
 };
 
+DetailProduct.layout = (page) => <Layout children={page} />;
 export default DetailProduct;

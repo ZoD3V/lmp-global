@@ -2,14 +2,13 @@ import React from "react";
 import AirConditioning from "@/Components/AirConditioning";
 import EnergyEfficiency from "@/Components/EnergyEfficiency";
 import IntelligentControlSystems from "@/Components/IntelligentControlSystems";
-import Navbar from "@/Components/Common/Navbar";
 import Hero from "@/Components/Common/Hero";
-import Footer from "@/Components/Common/Footer";
 import { Button } from "@/Components/ui/button";
 import TypesPAC from "@/Components/PAC/TypesPAC";
 import kyrosLogo from "../../../public/images/logo/kyros.png";
 import LogoBrandSection from "@/Components/LogoBrandSection";
 import { router } from "@inertiajs/react";
+import Layout from "@/Layouts/Layouts";
 
 const PAC = ({ banner }) => {
     const handleClick = (link) => {
@@ -19,7 +18,6 @@ const PAC = ({ banner }) => {
     return (
         <main className="relative min-h-screen overflow-x-hidden">
             <div className="overflow-hidden">
-                <Navbar />
                 <Hero
                     banner={banner}
                     title={banner[0].name}
@@ -58,10 +56,10 @@ const PAC = ({ banner }) => {
                         </div>
                     </div>
                 </section>
-                <Footer />
             </div>
         </main>
     );
 };
 
+PAC.layout = (page) => <Layout children={page} />;
 export default PAC;

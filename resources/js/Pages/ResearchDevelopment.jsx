@@ -1,16 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
 import researchDevelopment from "../../../public/images/research&development/research&development.webp";
-import Navbar from "@/Components/Common/Navbar";
 import Hero from "@/Components/Common/Hero";
-import Footer from "@/Components/Common/Footer";
 import { fadeIn, textVariant } from "@/utils/motion";
+import Layout from "@/Layouts/Layouts";
 
 const ResearchDevelopment = ({ banner }) => {
     return (
         <main className="relative min-h-screen overflow-x-hidden">
             <div className="overflow-hidden">
-                <Navbar />
                 <Hero
                     banner={banner}
                     title={banner[0].name}
@@ -76,10 +74,10 @@ const ResearchDevelopment = ({ banner }) => {
                         </motion.div>
                     </motion.div>
                 </motion.section>
-                <Footer />
             </div>
         </main>
     );
 };
 
+ResearchDevelopment.layout = (page) => <Layout children={page} />;
 export default ResearchDevelopment;

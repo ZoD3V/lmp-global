@@ -1,6 +1,4 @@
 import React from "react";
-import Navbar from "@/Components/Common/Navbar";
-import Footer from "@/Components/Common/Footer";
 import Hero from "@/Components/Common/Hero";
 import ResearchDevelopmentSection from "@/Components/About/ResearchDevelopmentSection";
 import AboutGreeting from "@/Components/About/AboutGreeting";
@@ -11,6 +9,7 @@ import Directors from "@/Components/Directors";
 import BrandLogos from "@/Components/About/BrandLogo";
 import researchDevelopment from "../../../public/images/research&development/research&developmentlanding.webp";
 import testimoni from "../../../public/images/testimoni/testimoni.webp";
+import Layout from "@/Layouts/Layouts";
 
 const About = ({ banner, timeline, product, lmp_profile }) => {
     const dataProfile = [
@@ -38,7 +37,6 @@ const About = ({ banner, timeline, product, lmp_profile }) => {
     return (
         <main className="relative min-h-screen overflow-x-hidden">
             <div className="overflow-hidden">
-                <Navbar />
                 <Hero
                     banner={banner}
                     title={banner[0].name}
@@ -52,10 +50,11 @@ const About = ({ banner, timeline, product, lmp_profile }) => {
                 <BrandLogos />
                 <ResearchDevelopmentSection data={dataTestimoni} />
                 <TimelineSection timeline={timeline} />
-                <Footer />
             </div>
         </main>
     );
 };
+
+About.layout = (page) => <Layout children={page} />;
 
 export default About;

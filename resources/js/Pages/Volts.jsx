@@ -1,7 +1,5 @@
 import React from "react";
-import Footer from "@/Components/Common/Footer";
 import Hero from "@/Components/Common/Hero";
-import Navbar from "@/Components/Common/Navbar";
 import LogoBrandSection from "@/Components/LogoBrandSection";
 import SavvySection from "@/Components/Volts/SavvySection";
 import voltsLogo from "../../../public/images/logo/volts.png";
@@ -18,6 +16,7 @@ import Button from "@/Components/Common/Button";
 import { fadeIn } from "../utils/motion";
 import { motion } from "framer-motion";
 import VoltsSection from "@/Components/Volts/VoltsSection";
+import Layout from "@/Layouts/Layouts";
 
 const Volts = ({ banner, volts }) => {
     const tabItems = [
@@ -166,7 +165,6 @@ const Volts = ({ banner, volts }) => {
     return (
         <main className="relative min-h-screen overflow-x-hidden">
             <div className="overflow-hidden">
-                <Navbar />
                 <Hero
                     banner={banner}
                     title={banner[0].name}
@@ -201,10 +199,10 @@ const Volts = ({ banner, volts }) => {
                         />
                     </motion.div>
                 </div>
-                <Footer />
             </div>
         </main>
     );
 };
 
+Volts.layout = (page) => <Layout children={page} />;
 export default Volts;

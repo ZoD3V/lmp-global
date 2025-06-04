@@ -1,6 +1,4 @@
-import Footer from "@/Components/Common/Footer";
 import Hero from "@/Components/Common/Hero";
-import Navbar from "@/Components/Common/Navbar";
 import AwardsCertification from "@/Components/DCIM/AwardsCertification";
 import FeaturesOperational from "@/Components/DCIM/FeaturesOperational";
 import RackServer from "@/Components/DCIM/RackServer";
@@ -11,12 +9,12 @@ import XPediTePlatform from "@/Components/DCIM/XPediTePlatform";
 import ritLogo from "../../../public/images/logo/rit.png";
 import React from "react";
 import LogoBrandSection from "@/Components/LogoBrandSection";
+import Layout from "@/Layouts/Layouts";
 
 const DcimNetworks = ({ banner }) => {
     return (
         <main className="relative min-h-screen overflow-x-hidden">
             <div className="overflow-hidden">
-                <Navbar />
                 <Hero
                     banner={banner}
                     title={banner[0].name}
@@ -30,10 +28,11 @@ const DcimNetworks = ({ banner }) => {
                 <SpeedDeployment />
                 <RiskMitigation />
                 <RackServer />
-                <Footer />
             </div>
         </main>
     );
 };
+
+DcimNetworks.layout = (page) => <Layout children={page} />;
 
 export default DcimNetworks;

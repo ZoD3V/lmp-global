@@ -3,15 +3,13 @@ import ProductSection from "@/Components/ProductSolution/ProductSection";
 import SolutionSection from "@/Components/SolutionSection";
 import ServiceProductSection from "@/Components/ProductSolution/ServicesProductSection";
 import CustomizeSection from "@/Components/ProductSolution/CustomizeSection";
-import Navbar from "@/Components/Common/Navbar";
 import Hero from "@/Components/Common/Hero";
-import Footer from "@/Components/Common/Footer";
+import Layout from "@/Layouts/Layouts";
 
 const ProductSolution = ({ banner, categories }) => {
     return (
         <main className="relative min-h-screen overflow-x-hidden">
             <div className="overflow-hidden">
-                <Navbar />
                 <Hero
                     banner={banner}
                     title={banner[0].name}
@@ -25,10 +23,10 @@ const ProductSolution = ({ banner, categories }) => {
                 />
                 <ServiceProductSection />
                 <CustomizeSection />
-                <Footer />
             </div>
         </main>
     );
 };
 
+ProductSolution.layout = (page) => <Layout children={page} />;
 export default ProductSolution;

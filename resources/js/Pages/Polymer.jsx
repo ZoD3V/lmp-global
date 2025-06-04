@@ -1,10 +1,9 @@
 import React from "react";
-import Footer from "@/Components/Common/Footer";
-import Navbar from "@/Components/Common/Navbar";
 import Hero from "@/Components/Common/Hero";
 import PolymerSection from "@/Components/PolymerSection";
 import tkdn1 from "../../../public/images/polymer/tkdn1.webp";
 import CertificateTKDN from "@/Components/CertificateTKDN";
+import Layout from "@/Layouts/Layouts";
 
 const Polymer = ({ banner, polymer }) => {
     const certificates = [
@@ -17,7 +16,6 @@ const Polymer = ({ banner, polymer }) => {
     return (
         <main className="relative min-h-screen overflow-x-hidden">
             <div className="overflow-hidden">
-                <Navbar />
                 <Hero
                     banner={banner}
                     title={banner[0].name}
@@ -25,10 +23,10 @@ const Polymer = ({ banner, polymer }) => {
                 />
                 <PolymerSection polymerData={polymer} />
                 <CertificateTKDN certificates={certificates} />
-                <Footer />
             </div>
         </main>
     );
 };
 
+Polymer.layout = (page) => <Layout children={page} />;
 export default Polymer;

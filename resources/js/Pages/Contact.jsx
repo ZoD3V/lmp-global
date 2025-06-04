@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { textVariant } from "@/utils/motion";
 import Navbar from "@/Components/Common/Navbar";
 import ContactSection from "@/Components/ContactSection";
-import Footer from "@/Components/Common/Footer";
+import Layout from "@/Layouts/Layouts";
 
 const Contact = (banner) => {
     return (
@@ -42,9 +42,10 @@ const Contact = (banner) => {
                 referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
 
-            <Footer />
         </section>
     );
 };
+
+Contact.layout = (page) => <Layout children={page} />;
 
 export default Contact;

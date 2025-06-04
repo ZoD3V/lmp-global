@@ -18,6 +18,7 @@ import {
 import LogoBrandSection from "@/Components/LogoBrandSection";
 import phylaxLogo from "../../../public/images/logo/phylax.png";
 import ContainmentMonitoring from "@/Components/Phylax/ContainmentMonitoring";
+import Layout from "@/Layouts/Layouts";
 
 const Phylax = ({ banner, monitorings }) => {
     const tabItems = [
@@ -97,7 +98,6 @@ const Phylax = ({ banner, monitorings }) => {
     return (
         <main className="relative min-h-screen overflow-x-hidden">
             <div className="overflow-hidden">
-                <Navbar />
                 <Hero
                     banner={banner}
                     title={banner[0].name}
@@ -114,10 +114,10 @@ const Phylax = ({ banner, monitorings }) => {
                     customGrid={2}
                 />
                 <ContainmentMonitoring monitorings={monitorings} />
-                <Footer />
             </div>
         </main>
     );
 };
 
+Phylax.layout = (page) => <Layout children={page} />;
 export default Phylax;

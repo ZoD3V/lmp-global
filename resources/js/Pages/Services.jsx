@@ -2,11 +2,10 @@ import React from "react";
 import product1 from "../../../public/images/learning-center/connectivity.png";
 import product2 from "../../../public/images/learning-center/designengineering.jpeg";
 import product3 from "../../../public/images/learning-center/hvac.png";
-import Navbar from "@/Components/Common/Navbar";
 import Hero from "@/Components/Common/Hero";
 import ServicesSection from "@/Components/ServicesSection";
 import ServicesRelatedSection from "@/Components/ServiceRelatedSection";
-import Footer from "@/Components/Common/Footer";
+import Layout from "@/Layouts/Layouts";
 
 const Services = ({ banner }) => {
     const features = [
@@ -33,7 +32,6 @@ const Services = ({ banner }) => {
     return (
         <main className="relative min-h-screen overflow-x-hidden">
             <div className="overflow-hidden">
-                <Navbar />
                 <Hero
                     banner={banner}
                     title={banner[0].name}
@@ -45,10 +43,10 @@ const Services = ({ banner }) => {
                     title="Learning Center"
                     showButton={false}
                 />
-                <Footer />
             </div>
         </main>
     );
 };
 
+Services.layout = (page) => <Layout children={page} />;
 export default Services;

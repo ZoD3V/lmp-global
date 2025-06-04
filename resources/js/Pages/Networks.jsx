@@ -1,7 +1,5 @@
 import React from "react";
-import Navbar from "@/Components/Common/Navbar";
 import Hero from "@/Components/Common/Hero";
-import Footer from "@/Components/Common/Footer";
 import CentriniumSection from "@/Components/Network/CentriniumSection";
 import NetworkSection from "@/Components/Network/NetworkSection";
 import SavvyProgrammes from "@/Components/Network/SavvyProgrammes";
@@ -13,6 +11,7 @@ import tkdndetail2 from "../../../public/images/network/tkdndetail2.webp";
 import tkdn3 from "../../../public/images/network/tkdn3.webp";
 import LogoBrandSection from "@/Components/LogoBrandSection";
 import lmpLogo from "../../../public/images/logo/logo_lmp.png";
+import Layout from "@/Layouts/Layouts";
 
 const Networks = ({ banner, networks }) => {
     const certificates = [
@@ -46,7 +45,6 @@ const Networks = ({ banner, networks }) => {
     return (
         <main className="relative min-h-screen overflow-x-hidden">
             <div className="overflow-hidden">
-                <Navbar />
                 <Hero
                     banner={banner}
                     title={banner[0].name}
@@ -59,10 +57,10 @@ const Networks = ({ banner, networks }) => {
                 )}
                 <SavvyProgrammes />
                 <CertificateTKDN certificates={certificates} />
-                <Footer />
             </div>
         </main>
     );
 };
 
+Networks.layout = (page) => <Layout children={page} />;
 export default Networks;

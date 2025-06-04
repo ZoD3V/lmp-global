@@ -7,19 +7,17 @@ import DigitalTwinsDcVerse from "@/Components/LmpKyrosMirae/DigitalTwinsDcVerse"
 import ChillerPlantDataHall from "@/Components/LmpKyrosMirae/ChillerPlantDataHall";
 import FeatureHighlights from "@/Components/LmpKyrosMirae/FeatureHighlights";
 import ThermalRisk from "@/Components/LmpKyrosMirae/ThermalRisk";
-import Navbar from "@/Components/Common/Navbar";
 import Hero from "@/Components/Common/Hero";
-import Footer from "@/Components/Common/Footer";
 import SuccessStories from "@/Components/LmpKyrosMirae/SuccessStories";
 import LogoBrandSection from "@/Components/LogoBrandSection";
 import kyrosLogo from "../../../public/images/logo/kyros-mirae.png";
 import redDotsLogo from "../../../public/images/logo/red-dots.png";
+import Layout from "@/Layouts/Layouts";
 
 const KyrosMirae = ({ banner }) => {
     return (
         <main className="relative min-h-screen overflow-x-hidden">
             <div className="overflow-hidden">
-                <Navbar />
                 <Hero
                     banner={banner}
                     title={banner[0].name}
@@ -36,10 +34,10 @@ const KyrosMirae = ({ banner }) => {
                 <ChillerPlantDataHall />
                 <ThermalRisk />
                 <FeatureHighlights />
-                <Footer />
             </div>
         </main>
     );
 };
 
+KyrosMirae.layout = (page) => <Layout children={page} />;
 export default KyrosMirae;

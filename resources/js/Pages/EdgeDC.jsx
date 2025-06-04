@@ -1,6 +1,4 @@
-import Footer from "@/Components/Common/Footer";
 import Hero from "@/Components/Common/Hero";
-import Navbar from "@/Components/Common/Navbar";
 import EdgeDcSection from "@/Components/EdgeDcSection";
 import React from "react";
 import {
@@ -29,6 +27,7 @@ import LogoBrandSection from "@/Components/LogoBrandSection";
 import ResearchDevelopmentSection from "@/Components/About/ResearchDevelopmentSection";
 import testimoni from "../../../public/images/testimoni/testimoni.webp";
 import EdgeDcMonitoring from "@/Components/EdgeDc/EdgeDcMonitoring";
+import Layout from "@/Layouts/Layouts";
 
 const EdgeDC = ({ banner, monitorings }) => {
     const certificates = [
@@ -210,7 +209,6 @@ const EdgeDC = ({ banner, monitorings }) => {
     return (
         <main className="relative min-h-screen overflow-x-hidden">
             <div className="overflow-hidden">
-                <Navbar />
                 <Hero
                     banner={banner}
                     title={banner[0].name}
@@ -229,10 +227,10 @@ const EdgeDC = ({ banner, monitorings }) => {
                 <EdgeDcMonitoring monitorings={monitorings} />
                 <ResearchDevelopmentSection data={dataTestimoni} />
                 <CertificateTKDN certificates={certificates} />
-                <Footer />
             </div>
         </main>
     );
 };
 
+EdgeDC.layout = (page) => <Layout children={page} />;
 export default EdgeDC;

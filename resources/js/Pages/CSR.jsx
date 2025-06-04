@@ -1,16 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
 import CsrSection from "@/Components/Csr/CsrSection";
-import Navbar from "@/Components/Common/Navbar";
 import Hero from "@/Components/Common/Hero";
-import Footer from "@/Components/Common/Footer";
 import { fadeIn, textVariant } from "@/utils/motion";
+import Layout from "@/Layouts/Layouts";
 
 const CSR = ({ banner, csr }) => {
     return (
         <main className="relative min-h-screen overflow-x-hidden">
             <div className="overflow-hidden">
-                <Navbar />
                 <Hero
                     banner={banner}
                     title={banner[0].name}
@@ -105,10 +103,11 @@ const CSR = ({ banner, csr }) => {
 
                     <CsrSection />
                 </motion.section>
-                <Footer />
             </div>
         </main>
     );
 };
+
+CSR.layout = (page) => <Layout children={page} />;
 
 export default CSR;
