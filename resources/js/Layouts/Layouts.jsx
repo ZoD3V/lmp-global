@@ -3,7 +3,7 @@ import Navbar from "@/Components/Common/Navbar";
 
 export default function Layout({ children }) {
     return (
-        <main>
+        <main className="w-full h-full overflow-hidden">
             <Navbar />
             <section>{children}</section>
             <Footer />
