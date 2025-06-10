@@ -4,6 +4,7 @@ import { textVariant } from "@/utils/motion";
 import Navbar from "@/Components/Common/Navbar";
 import ContactSection from "@/Components/ContactSection";
 import Layout from "@/Layouts/Layouts";
+import Footer from "@/Components/Common/Footer";
 
 const Contact = (banner) => {
     return (
@@ -41,7 +42,7 @@ const Contact = (banner) => {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
-
+            <Footer />
         </section>
     );
 };
