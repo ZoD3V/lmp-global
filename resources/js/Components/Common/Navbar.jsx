@@ -17,6 +17,7 @@ import { LogOut, UserIcon } from "lucide-react";
 import { Avatar, AvatarFallback } from "../ui/avatar";
 import { Button } from "../ui/button";
 import SearchModal from "./SearchModal";
+import { useMediaQuery } from "@/lib/UseMediaQuery";
 
 const Navbar = () => {
     const { url } = usePage();
@@ -24,6 +25,7 @@ const Navbar = () => {
     const { auth } = usePage().props;
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeLink, setActiveLink] = useState("/home");
+    const isDesktop = useMediaQuery("(max-width: 1280px)");
 
     const navLinks = [
         { href: "/about", label: "About" },
@@ -81,9 +83,10 @@ const Navbar = () => {
                                 alt="Logo"
                             />
                         </motion.a>
-                        <div className="block xl:hidden">
-                            <SearchModal />
-                        </div>
+                        {isDesktop && <SearchModal />}
+                        {/* <div className="block xl:hidden">
+                             <SearchModal />
+                        </div> */}
                     </div>
                 </div>
 
@@ -95,7 +98,7 @@ const Navbar = () => {
                     {navLinks.map((link, index) => (
                         <motion.a
                             key={index}
-                            variants={fadeIn("down", 0.1 * (index))}
+                            variants={fadeIn("down", 0.1 * index)}
                             href={link.href}
                             className={`text-sm font-medium relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-blue-600 after:transition-all ${
                                 url === link.href
@@ -114,7 +117,9 @@ const Navbar = () => {
                         variants={fadeIn("left", 0.3)}
                         className="hidden xl:flex items-center gap-4"
                     >
-                        <SearchModal />
+                        {!isDesktop && <SearchModal />}
+
+                        {/* <SearchModal /> */}
                         <Button
                             variant="outline"
                             onClick={() =>
